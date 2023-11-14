@@ -1,15 +1,17 @@
 # About
-This is the beta branch, any new features that i decide to add will be implemented here first. That said, this branch will probably have the most broken code. 
+A small website where you can watch kdramas.
 
-didn't wanted to pay for netflix (or didn't have the money), so i made this
+# Where to access?
+Beta: https://dramalama.ddns.net
+Main: https://dramalama.vercel.app
 
-# How to Access
-go to releases sections and you will find the URLs
+The Main site is very far behind the Beta branch and the UI there is also bad. IDK why it exists but it does exist.
 
-# How I made it?
-the backend relies heavily on consumet api [thanks guys](https://github.com/consumet/api.consumet.org)
+# Technologies used
+Backend relies heavily on Consumet api Here[https://github.com/consumet/api.consumet.org] and the rest is HTML, CSS and Javascript
 
-websites are hosted on vercel and videos are played using hls.js library
+# Current issues
+Some videos don't play due to cross origin fuckery, and there is no fix for that. A proxy server may fix it but I am unsure and also I don't know how to make a proxy server.
 
-# Current Problems
-some videos do not play due to cors error and idk how to bypass it. Any help on that would be appreciated!
+# Contributions
+I would be more than happy if someone helps me improve this website
