@@ -1,8 +1,11 @@
 body {
-	background-color: black;
-	font-family: "Atkinson Hyperlegible";
-	margin: 0;
-	padding: 0;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: "Atkinson Hyperlegible";
 }
 
 .heading {
@@ -26,9 +29,10 @@ input {
 input[type="text"] {
 	padding: 5px;
 	font-family: "Atkinson Hyperlegible";
+	color: white;
 	border: none;
 	border-radius: 3px;
-	background-color: #D8DEE9;
+	background-color: rgba(87, 85, 85, 0.593);
 }
 
 .movie-heading {
@@ -43,15 +47,20 @@ input[type="text"] {
 	margin: auto;
 	align-items: center;
 	justify-content: center;
-	width: 215px;
-	height: 300px;
+	width: 205px;
+	height: 305px;
 	border-radius: 5px;
+}
+
+.movie-poster:hover {
+	transform: scale(1.07);
+	transition: transform 0.2s ease-in-out;
 }
 
 .watch-button {
 	font-family: "Silkscreen";
-	font-size: 14px;
-	align-items: center;
+	font-size: 16px;
+	/* align-items: center; */
 	background-color: #d08770;
 	justify-content: center;
 	display: block;
@@ -63,17 +72,18 @@ input[type="text"] {
 }
 
 .watch-button:hover {
-	/* background-color: #D08770; */
 	transform: scale(1.1)
 }
 
 .movie-desc {
+	font-family: "Atkinson Hyperlegible";
 	color: #88C0D0;
 	text-align: center;
 	justify-content: center;
 	margin: 10px auto 10px;
-	font-family: "Atkinson Hyperlegible";
-	max-width: 400px;
+	max-width: 500px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 .loading-overlay {
@@ -91,12 +101,21 @@ input[type="text"] {
 
 /* Loader animation styles */
 .loader {
-	border: 5px solid #414141;
-	border-top: 5px solid #EBCB8B;
+	border: 5px solid rgba(87, 85, 85, 0.593);
+	border-top: 5px solid #d08770;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
 	animation: spin 2s cubic-bezier(1, 0.5, 0.2, 0.7) infinite;
+}
+
+.foot {
+	text-align: center;
+    font-family: "Atkinson Hyperlegible";
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 @keyframes spin {

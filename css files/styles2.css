@@ -4,6 +4,9 @@ body {
 	font-family: "Silkscreen";
 	margin: 0;
 	padding: 0;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -43,6 +46,16 @@ h1 {
 	height: auto;
 	border-radius: 10px;
 	border: none;
+}
+
+.foot {
+	text-align: center;
+    font-family: "Atkinson Hyperlegible";
+    color: white;
+    background-color: black;
+    padding: 10px;
+	padding-top: 20px;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 @media (min-width: 768px) {
