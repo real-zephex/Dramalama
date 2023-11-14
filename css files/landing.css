@@ -85,7 +85,7 @@ a {
 /* Adjustments for tablets */
 @media (max-width: 768px) {
     .head_section {
-        font-size: 120px;
+        font-size: 60px;
         padding-top: 40px;
     }
 
@@ -128,7 +128,7 @@ a {
 /* Adjustments for mobile devices */
 @media (max-width: 480px) {
     .head_section {
-        font-size: 80px;
+        font-size: 60px;
         padding-top: 20px;
     }
 
