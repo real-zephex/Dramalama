@@ -3,6 +3,7 @@ A small website where you can watch kdramas.
 
 # Where to access?
 Beta: https://dramalama.ddns.net
+
 Main: https://dramalama.vercel.app
 
 The Main site is very far behind the Beta branch and the UI there is also bad. IDK why it exists but it does exist.
