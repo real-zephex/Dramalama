@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    padding-left: 30px;
+    text-decoration: none;
+    color: #ebcb8b;
+}
+
+.main {
+    background-color: black;
+    text-align: center;
+}
+
+.head_section {
+    font-family: "Silkscreen";
+    font-size: 180px;
+    color: #d08770;
+    padding-top: 80px;
+}
+
+.redirect_section {
+    font-family: "Atkinson Hyperlegible";
+    font-size: 22px;
+    color: orange;
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.info {
+    background-color: #d08770;
+    padding: 80px;
+}
+
+/* do not touch */
+.welcome_section {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Dramalama */
+.heading {
+    float: left;
+    font-size: 50px;
+    font-family: "Silkscreen";
+    padding-right: 50px;
+}
+
+.info_para {
+    font-family: "Atkinson Hyperlegible";
+    font-size: 22px;
+    padding-top: 35px;
+}
+
+.heading2 {
+    float: right;
+    font-size: 40px;
+    font-family: "Silkscreen";
+    padding-left: 50px;
+    text-align: right;
+    max-width: 750px;
+    padding-bottom: 20px;
+}
+
+.info_para2 {
+    font-family: "Atkinson Hyperlegible";
+    font-size: 22px;
+    padding-top: 50px;
+}
+
+.foot {
+    text-align: center;
+    font-family: "Atkinson Hyperlegible";
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+    .head_section {
+        font-size: 120px;
+        padding-top: 40px;
+    }
+
+    .redirect_section {
+        font-size: 18px;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    .info {
+        padding: 40px;
+    }
+
+    .heading {
+        font-size: 40px;
+        padding-right: 20px;
+    }
+
+    .info_para {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .heading2 {
+        font-size: 30px;
+        padding-left: 20px;
+        max-width: 100%;
+    }
+
+    .info_para2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .foot {
+        padding: 10px;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+    .head_section {
+        font-size: 80px;
+        padding-top: 20px;
+    }
+
+    .redirect_section {
+        font-size: 16px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 30px;
+        padding-right: 10px;
+    }
+
+    .info_para {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .heading2 {
+        font-size: 24px;
+        padding-left: 10px;
+        max-width: 100%;
+    }
+
+    .info_para2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .foot {
+        padding: 10px;
+    }
+}

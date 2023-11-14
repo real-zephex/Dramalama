@@ -1,0 +1,88 @@
+body {
+	/* background-color: #282423; */
+	background-color: black;
+	font-family: "Silkscreen";
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #ebcb8b;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.container {
+	max-width: 1200px;
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+.watch-button {
+	margin-top: 15px;
+	font-size: 16px;
+	background-color: #d08770;
+	padding: 10px 10px; 
+	border: none;
+	border-radius: 5px;
+	margin-left: 10px; 
+	cursor: pointer; 
+	display: inline-block;
+}
+
+.watch-button:hover {
+	background-color: #A3BE8C;
+}
+
+.video_player {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	border: none;
+}
+
+@media (min-width: 768px) {
+	/* Styles for screens wider than 768px (desktops and tablets) */
+	h1 {
+		font-size: 36px;
+	}
+
+	.container {
+		padding: 10px;
+	}
+
+	.watch-button {
+		font-family: "Atkinson Hyperlegible";
+		font-size: 16px; 
+		padding: 10px 10px;
+		margin-left: 15px; 
+	}
+
+}
+
+/* Media query for smaller screens (phones) */
+@media (max-width: 767px) {
+	h1 {
+		font-size: 24px;
+	}
+
+	.container {
+		padding: 15px;
+	}
+
+	.watch-button {
+		font-family: "Google Sans";
+		font-size: 14px; 
+		padding: 8px 8px;
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+
+	.temp1 {
+		overflow: auto;
+	}
+}
