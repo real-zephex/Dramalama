@@ -1,0 +1,224 @@
+
+.navbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+}
+
+.navbar p {
+	font-family: "Kanit";
+	font-size: 36px;
+	color: var(--soft-purple);
+}
+
+.navbar input {
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	width: 200px;
+	margin-top: 5px;
+	box-shadow: 0 4px 	8px #0003, 0 6px 20px #00000030;
+	background-color: #9eacc4;
+	color: #fff;
+	font-family: "Atkinson Hyperlegible";
+}
+
+.intro {
+	display: flex;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	width: 100%;
+	margin: 0px auto;
+	flex-direction: column;
+}
+
+.introText {
+	font-size: 22px;
+	font-family: "Quicksand";
+	color: var(--softer-purple)
+}
+
+.introText2 {
+	font-family: "Quicksand";
+	color: black;
+}
+
+.popup {
+	z-index: 1;
+	display: none;
+	position: fixed;
+	top: 0;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+	background-color: #141414e8;
+}
+
+.popupEntries::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+.popupEntries {
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	height: 60%;
+	overflow-y: auto;
+}
+
+.popupEntry {
+	background: #272727b4;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-style: groove;
+	align-items: center;
+	border-radius: 10px;
+	width: 800px;
+	margin: 5px auto;
+	padding: 3px;
+	border-color: var(--soft-purple);
+}
+
+.popupEntry img {
+	width: 120px;
+	padding: 5px;
+	border-radius: 10px;
+
+}
+
+.popupEntry p {
+	color: var(--neon-green);
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.closeButton {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 10px
+}
+
+.closeButton button {
+	padding: 12px;
+	background-color: var(--pastel-red);
+	font-family: "Quicksand";
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+}
+
+.videoContainer {
+	display: none;
+	max-width: 50%;
+	margin: 10px auto;
+	justify-content: center;
+	border-style: dotted;
+	border-color: rgba(97, 97, 97, 0.575);
+	border-radius: 20px;
+	border-width: 4px;
+	padding: 10px;
+	text-align: center
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 900px;
+	align-items: center;
+	margin: 0px auto;
+}
+
+.dramaTitle {
+	color: var(--neon-green);
+	font-family: "Kanit";
+	font-size: 30px;
+}
+
+.dramaImage {
+	width: 160px;
+	border-radius: 10px;
+}
+
+.dramaDescription {
+	color: var(--softer-purple);
+	font-family: "Atkinson Hyperlegible";
+}
+
+.episodesButtonsContainer {
+	max-width: 70%;
+	margin: 0px auto;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.episodeButton {
+	background-color: var(--light-green);
+	border: none;
+	border-radius: 5px;
+	padding: 8px;
+	margin: 5px;
+	width: 50px;
+	font-family: "Atkinson Hyperlegible";
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.episodeButton:hover {
+	background-color: var(--soft-purple);
+}
+
+.videoPlayer {
+	display: flex;
+	justify-content: center;
+}
+
+.videoPlayer video {
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 1440px) {
+	.videoContainer {
+		max-width: 70%;
+	}
+	
+}
+
+@media screen and (max-width: 1024px) {
+	.videoContainer {
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.videoContainer {
+		max-width: 95%;
+	}
+
+	.titleContainer {
+		width: 100%;
+	}
+
+	.popupEntry {
+		width: 90%;
+	}
+} 
+
+@media (prefers-color-scheme: dark) {
+	.navbar input {
+		background-color: #2f333ab7;
+	}
+
+	.introText2 {
+		color: white
+	}
+}
