@@ -10,6 +10,10 @@ const nextConfig = {
         {
           protocol: "https",
           hostname: "www.pngall.com"
+        },
+        {
+          protocol: "https",
+          hostname: "gogocdn.net"
         }
       ],
     },

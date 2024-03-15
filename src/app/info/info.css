@@ -1,0 +1,67 @@
+.dramaInfoContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.dramaInfo {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	margin: 0px auto;
+}
+
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.titleContainer p {
+	color: var(--neon-green	);
+	width: 60%;
+	font-family: "Kanit";
+	font-size: 24px;
+}
+
+.titleContainer img {
+	border-radius: 10px;
+}
+
+.dramaDescription {
+	color: #ffffff81;
+	font-family: "Lato";
+	font-size: 16px;
+	max-height: 120px;
+	margin: 20px auto;
+	text-align: center;
+	overflow-y: auto;
+}
+
+.buttonContainer {
+	margin: 5px auto;
+	text-align: center;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.dramaButton {
+	padding: 8px;
+	font-family: "Atkinson Hyperlegible";
+	font-size: 18px;
+	margin: 5px;
+	width: 50px;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--light-green);
+	cursor: pointer;
+}
+
+.dramaButton:hover {
+	background-color: var(--soft-purple);
+}
+
+@media (prefers-color-scheme: light) {
+	.dramaDescription {
+		color: black;
+	}
+}
