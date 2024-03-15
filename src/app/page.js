@@ -9,6 +9,7 @@ export default function Home() {
 					src="/logo.png"
 					width={300}
 					height={300}
+					alt="Logo"
 				>
 				</Image>
 				<p>

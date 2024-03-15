@@ -14,8 +14,8 @@ export default async function Releases() {
 
 			<div className="trending">
 				{data && data.results.map((item, index) => (
-					<Link href={`/info/${item.id}`} style={{textDecoration: "none"}}>
-						<div key={index} className="trendingEntries">
+					<Link key={index} href={`/info/${item.id}`} style={{textDecoration: "none"}}>
+						<div className="trendingEntries">
 							<Image
 								src={item.image}
 								className="{trendingImage}"
