@@ -56,8 +56,8 @@ export default function Input() {
 
 			<div className='animeEntry'>
 				{search1 && search1.results.map((item, index) => (
-					<Link href={`/info/${item.id}`} style={{textDecoration: "none"}}>
-						<div key={index} className='anime'>
+					<Link key={index} href={`/info/${item.id}`} style={{textDecoration: "none"}}>
+						<div className='anime'>
 							<p>{item.title}</p>
 							<Image 
 								src={item.image}
