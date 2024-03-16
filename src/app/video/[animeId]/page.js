@@ -37,11 +37,12 @@ export default function Video({ params }) {
 				<div className='video2'>
 					<p>{epi[0]} - {epi[1]}</p>
 					<ReactPlayer 
+                        className='react-player'
 						url={videoLink}
 						controls
 						autoplay
-						width={400}
-						height={"auto"}
+						width="95%"
+                        height="95%"
 					/>
 				</div>
 			)}
