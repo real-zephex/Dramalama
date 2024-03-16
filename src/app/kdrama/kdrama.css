@@ -89,6 +89,7 @@
 
 .popupEntry img {
 	width: 120px;
+	height: "auto";
 	padding: 5px;
 	border-radius: 10px;
 

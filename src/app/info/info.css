@@ -60,8 +60,24 @@
 	background-color: var(--soft-purple);
 }
 
+.infoPageContainer {
+	display: flex;
+	height: 100dvh;
+	justify-content: center;
+	align-items: center;
+}
+
+.infoPageContainer p {
+	color: white;
+}
+
 @media (prefers-color-scheme: light) {
 	.dramaDescription {
 		color: black;
 	}
+
+	.infoPageContainer p {
+		color: black;
+	}
+	
 }

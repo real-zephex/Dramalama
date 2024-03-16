@@ -61,9 +61,9 @@ export default function Kdrama() {
 				<p className="introText">
 					Start by searching for some dramas
 				</p>
-				<h7 className="introText2">
+				<p className="introText2">
 					Look for the search box above.
-				</h7>
+				</p>
 			</div>
 
 			<div className="videoContainer" id="videoContainer">

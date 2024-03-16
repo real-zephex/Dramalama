@@ -27,11 +27,11 @@ export default async function AnimeInfo({params}) {
 					</div>
 				)}
 
-			<div className="buttonContainer">
-				{info && info.episodes.map((item, index) => (
-					<CreateButton key={index} a={item} />
-				))}
-			</div>
+				<div className="buttonContainer">
+					{info && info.episodes.map((item, index) => (
+						<CreateButton key={index} a={item} />
+					))}
+				</div>
 
 			</div>
 		</div>

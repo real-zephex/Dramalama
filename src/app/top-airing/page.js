@@ -22,6 +22,7 @@ export default async function Trending() {
 								width={160}
 								height={220}
 								alt="Drama"
+								priority
 							/>
 							<p>
 								{item.title}

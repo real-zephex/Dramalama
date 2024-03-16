@@ -1,0 +1,79 @@
+.inputContainer {
+	display: flex;
+	margin: 30px auto;
+}
+
+.searchContainer input {
+	border: none;
+	border-radius: 5px;
+	color: white;
+	outline: none;
+	background: none;
+	width: 100%;
+	font-family: "Lato";
+	font-size: 16px;
+}
+
+.searchContainer {
+	display: flex;
+	align-items: center;
+	margin: 0px auto;
+	background-color: #2c2c2c;
+	padding: 8px;
+	border-radius: 5px;
+	width: 20%;
+}
+
+.searchIcon {
+	color: white;
+	margin-right: 5px;
+}
+
+.animeEntry {
+	display: flex;
+	overflow-x: auto;
+}
+
+.animeEntry::-webkit-scrollbar {
+	height: 7px;
+}
+
+.animeEntry::-webkit-scrollbar-track {
+	background-color: #636363;
+	border-radius: 5px;
+}
+
+.animeEntry::-webkit-scrollbar-thumb {
+	background-color: rgba(196, 196, 196, 0.692);
+	border-radius: 5px;
+
+}
+
+.anime {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border-style: dotted;
+	border-color: #636363;
+	margin: 10px;
+	border-radius: 10px;
+	border-width: 4px;
+}
+
+.anime p {
+	color: white;
+	width: 25vh;
+	font-family: "Lato";
+	font-size: 18px;
+}
+
+.animeImage {
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.searchContainer {
+		width: 70%;
+	}
+}
