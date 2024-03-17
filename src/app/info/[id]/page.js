@@ -1,6 +1,6 @@
 import "../info.css";
 import Image from "next/image";
-import CreateButton from "../buttons";
+import Link from "next/link";
 
 export default async function AnimeInfo({ params }) {
 	let animeID = params.id;
@@ -28,7 +28,11 @@ export default async function AnimeInfo({ params }) {
 				<div className="buttonContainer">
 					{info &&
 						info.episodes.map((item, index) => (
-							<CreateButton key={index} a={item} />
+							<Link href={`/video/${item.id}`}>
+								<button className="dramaButton">
+									{item.number}
+								</button>
+							</Link>
 						))}
 				</div>
 			</div>

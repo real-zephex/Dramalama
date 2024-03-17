@@ -1,61 +1,49 @@
-"use client";
-
+import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import "@vidstack/react/player/styles/base.css";
+import "@vidstack/react/player/styles/plyr/theme.css";
+import {
+	PlyrLayout,
+	plyrLayoutIcons,
+} from "@vidstack/react/player/layouts/plyr";
 import "../video.css";
-import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
 
-export default function Video({ params }) {
+export default async function Video({ params }) {
 	const id = params.animeId;
-	const [videoLink, setVideoLink] = useState(null);
-	const [loading, setLoading] = useState(true);
-	const [epi, setEpi] = useState("");
-
-	useEffect(() => {
-		fetch("https://anime-sensei-api.vercel.app/anime/gogoanime/watch/" + id)
-			.then((res) => res.json())
-			.then((data) => {
-				const words = id.split("-");
-				const last_two = words.slice(-2).join(" ");
-				const remainingWords = words.slice(0, -2).join(" ");
-				setEpi([last_two, remainingWords]);
-				setVideoLink(data.sources[3].url);
-				setLoading(false);
-			})
-			.catch((error) => {
-				console.log("Some error occured", error);
-				setLoading(false);
-			});
-	}, [id]);
+	const words = id.split("-");
+	const last_two = words.slice(-2).join(" ");
+	const remainingWords = words.slice(0, -2).join(" ");
+	const data = await getVideoLink(id);
+	const link = data.sources[3].url;
 
 	return (
 		<div>
-			{loading && (
-				<p
-					style={{
-						color: "white",
-						fontFamily: "Lato",
-						fontSize: "20px",
-						textAlign: "center",
-					}}
-				>
-					Loading...
+			<div className="video2">
+				<p>
+					{last_two} - {remainingWords}
 				</p>
-			)}
-			{videoLink && (
-				<div className="video2">
-					<p>
-						{epi[0]} - {epi[1]}
-					</p>
-					<ReactPlayer
-						className="react-player"
-						url={videoLink}
-						controls
-						autoplay
-						width="95%"
-						height="95%"
+				<MediaPlayer
+					title="Test Player"
+					src={link}
+					className="testPlayer"
+					playsInline
+					aspectRatio="16/9"
+					load="eager"
+				>
+					<MediaProvider />
+					<PlyrLayout
+						thumbnails="https://image.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/storyboard.vtt"
+						icons={plyrLayoutIcons}
 					/>
-				</div>
-			)}
+				</MediaPlayer>
+			</div>
 		</div>
 	);
+}
+
+async function getVideoLink(id) {
+	const res = await fetch(
+		"https://anime-sensei-api.vercel.app/anime/gogoanime/watch/" + id
+	);
+	const data = res.json();
+	return data;
 }
