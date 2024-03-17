@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "@vidstack/react": "^1.10.9",
     "hls.js": "^1.5.7",
     "media-icons": "^1.1.2",
