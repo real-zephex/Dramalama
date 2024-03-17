@@ -28,7 +28,7 @@ export default async function AnimeInfo({ params }) {
 				<div className="buttonContainer">
 					{info &&
 						info.episodes.map((item, index) => (
-							<Link href={`/video/${item.id}`}>
+							<Link href={`/video/${item.id}`} key={index}>
 								<button className="dramaButton">
 									{item.number}
 								</button>
