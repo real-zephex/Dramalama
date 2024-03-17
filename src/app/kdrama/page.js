@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import "./kdrama.css"
+import "./kdrama.css";
 
 import { useState } from "react";
 import ReactPlayer from "react-player";
-import Image from 'next/image';
-import { FaSearch } from 'react-icons/fa'; // Import the search icon from react-icons library
+import Image from "next/image";
+import { FaSearch } from "react-icons/fa"; // Import the search icon from react-icons library
 
 import {
 	fetchAnimeInfo,
@@ -14,7 +14,6 @@ import {
 } from "./api/fetchAnime.js";
 
 export default function Kdrama() {
-
 	const [searchTitle, setSearchTitle] = useState("");
 	const [searchedDrama, setSearchedDrama] = useState(null);
 	async function handleKeyPresses(event) {
@@ -50,7 +49,7 @@ export default function Kdrama() {
 	return (
 		<main className="main">
 			<div className="sC">
-				<FaSearch className='searchIcon' />
+				<FaSearch className="searchIcon" />
 				<input
 					placeholder="Enter drama title"
 					onChange={(event) => setSearchTitle(event.target.value)}
@@ -59,17 +58,12 @@ export default function Kdrama() {
 			</div>
 
 			<div className="intro" id="intro">
-				<p className="introText">
-					Start by searching for some dramas
-				</p>
-				<p className="introText2">
-					Look for the search box above.
-				</p>
+				<p className="introText">Start by searching for some dramas</p>
+				<p className="introText2">Look for the search box above.</p>
 			</div>
 
 			<div className="videoContainer" id="videoContainer">
 				<div className="dramaInfoContainer">
-
 					{videoLink && (
 						<div className="videoPlayer">
 							<ReactPlayer
@@ -98,9 +92,7 @@ export default function Kdrama() {
 					{details && (
 						<div className="dramaInfo">
 							<div className="titleContainer">
-								<p className="dramaTitle">
-									{details.title}
-								</p>
+								<p className="dramaTitle">{details.title}</p>
 								<Image
 									className="dramaImage"
 									src={details.image}
@@ -165,6 +157,5 @@ export default function Kdrama() {
 				</div>
 			</div>
 		</main>
-
-	)
+	);
 }

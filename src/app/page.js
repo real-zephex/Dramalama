@@ -10,11 +10,11 @@ export default function Home() {
 					width={300}
 					height={300}
 					alt="Logo"
-				>
-				</Image>
+				></Image>
 				<p>
-					Welcome to dramalama. An online service where you can watch kdramas and anime for free.
-				</p>	
+					Welcome to dramalama. An online service where you can watch
+					kdramas and anime for free.
+				</p>
 			</div>
 		</main>
 	);
