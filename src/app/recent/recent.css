@@ -5,11 +5,10 @@
 }
 
 .trendingText {
-	color: white;
+	color: #FEFFAC;
 	font-family: "Open Sans";
-	font-size: 30px;
+	font-size: 26px;
 	margin: 10px;
-	/* margin-bottom: 10px; */
 }
 
 .trending {
@@ -38,8 +37,8 @@
 
 .trendingEntries img {
 	border-radius: 10px;
-	width: 160px;
-	height: 220px;
+	width: 150px;
+	height: 210px;
 }
 
 .trendingEntries p {
@@ -49,7 +48,7 @@
 	overflow-y: auto;
 	font-family: "Lato";
 	margin: 10px auto;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .trendingEntries p::-webkit-scrollbar{

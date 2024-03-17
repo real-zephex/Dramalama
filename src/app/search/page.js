@@ -9,6 +9,7 @@ import Link from 'next/link';
 export default function Input() {
 
 	const [searchedAnime, setSearchedAnime] = useState(null)
+	const [loading, setLoading] = useState(null)
 
 	const handleKeyPress = (event) => {
 		if (
@@ -31,11 +32,12 @@ export default function Input() {
 	const [search1, setSearch] = useState(null);
 	const fetch_animes = (title) => {
 		fetch("https://dramalama-api.vercel.app/anime/gogoanime/" + title)
+			.then(setLoading(true))
 			.then(res => res.json())
 			.then(
 				data => {
 					setSearch(data)
-					console.log(search1)
+					setLoading(false)
 				}
 			)
 	}
@@ -54,21 +56,37 @@ export default function Input() {
 				</div>
 			</div>
 
+
+			{loading && (
+				<p style={{color: "white", textAlign: "center"}}>
+					Please wait while we crunch all the data for you. 
+				</p>
+			)}
 			<div className='animeEntry'>
-				{search1 && search1.results.map((item, index) => (
-					<Link key={index} href={`/info/${item.id}`} style={{textDecoration: "none"}}>
-						<div className='anime'>
-							<p>{item.title}</p>
-							<Image 
-								src={item.image}
-								className='animeImage'
-								width={120}
-								height={160}
-							/>
+				{search1 ? (
+					search1.results && search1.results.length > 0 ? (
+						search1.results.map((item, index) => (
+							<Link key={index} href={`/info/${item.id}`} style={{textDecoration: "none"}}>
+								<div className='anime'>
+									<p>{item.title}</p>
+									<Image 
+										src={item.image}
+										className='animeImage'
+										width={120}
+										height={160}
+										alt='Drama Poster'
+									/>
+								</div>
+							</Link>
+						))
+					) : (
+						<div style={{margin: "0px auto"}}>
+							<p style={{color: "white"}}>No results found</p>
 						</div>
-					</Link>
-				))}
+					)
+				) : null}
 			</div>
+
 		</div>
 
 	)

@@ -5,6 +5,7 @@ import "./kdrama.css"
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import Image from 'next/image';
+import { FaSearch } from 'react-icons/fa'; // Import the search icon from react-icons library
 
 import {
 	fetchAnimeInfo,
@@ -48,8 +49,8 @@ export default function Kdrama() {
 
 	return (
 		<main className="main">
-			<div className="navbar">
-				<p>Dramaverse</p>
+			<div className="sC">
+				<FaSearch className='searchIcon' />
 				<input
 					placeholder="Enter drama title"
 					onChange={(event) => setSearchTitle(event.target.value)}
@@ -68,6 +69,32 @@ export default function Kdrama() {
 
 			<div className="videoContainer" id="videoContainer">
 				<div className="dramaInfoContainer">
+
+					{videoLink && (
+						<div className="videoPlayer">
+							<ReactPlayer
+								url={videoLink}
+								controls
+								playsinline
+								width={"100%"}
+								height={"auto"}
+								id="thing"
+							/>
+						</div>
+					)}
+					{episodeNo && (
+						<p
+							style={{
+								color: "white",
+								fontFamily: "Atkinson Hyperlegible",
+								color: "#FF6868",
+								textAlign: "center",
+							}}
+						>
+							Episode {episodeNo}
+						</p>
+					)}
+
 					{details && (
 						<div className="dramaInfo">
 							<div className="titleContainer">
@@ -102,27 +129,6 @@ export default function Kdrama() {
 									</button>
 								))}
 							</div>
-							<p
-								style={{
-									color: "white",
-									fontFamily: "Atkinson Hyperlegible",
-									color: "#FF6868",
-								}}
-							>
-								Playing episode {episodeNo}
-							</p>
-							{videoLink && (
-								<div className="videoPlayer">
-									<ReactPlayer
-										url={videoLink}
-										autoPlay
-										controls
-										width={"90%"}
-										height={"auto"}
-										id="thing"
-									/>
-								</div>
-							)}
 						</div>
 					)}
 				</div>
