@@ -4,7 +4,7 @@ A rewrite version of the rewrite version (dramalama-react) of Dramalama. This or
 
 # Features
 
-I have tried to improve the overall layout and functionalities of the website by incorporating features provided by Next.js such as page routing, image serving and much more. 
+I have tried to improve the overall layout, functionalities and performance of the website by incorporating features provided by Next.js such as page routing, image serving, server side rendering and much more. 
 
 # Contributions
 
