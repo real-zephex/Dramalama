@@ -30,10 +30,7 @@ export default async function Video({ params }) {
 					load="eager"
 				>
 					<MediaProvider />
-					<PlyrLayout
-						thumbnails="https://image.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/storyboard.vtt"
-						icons={plyrLayoutIcons}
-					/>
+					<PlyrLayout icons={plyrLayoutIcons} />
 				</MediaPlayer>
 			</div>
 		</div>
