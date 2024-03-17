@@ -22,7 +22,7 @@ export default async function Video({ params }) {
 					{last_two} - {remainingWords}
 				</p>
 				<MediaPlayer
-					title="Test Player"
+					title={words}
 					src={link}
 					className="testPlayer"
 					playsInline

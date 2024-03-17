@@ -131,7 +131,6 @@
 	border-radius: 20px;
 	border-width: 4px;
 	padding: 10px;
-	/* text-align: center */
 }
 
 .titleContainer {
@@ -140,6 +139,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 0px auto;
+	width: 950px;
 }
 
 .dramaTitle {
