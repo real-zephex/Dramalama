@@ -6,13 +6,22 @@ import {
 	plyrLayoutIcons,
 } from "@vidstack/react/player/layouts/plyr";
 import "../video.css";
+import { redirect } from "next/navigation";
 
 export default async function Video({ params }) {
 	const id = params.animeId;
+
+	// Getting the episode number and the anime name. Kindly ignore!
 	const words = id.split("-");
 	const last_two = words.slice(-2).join(" ");
 	const remainingWords = words.slice(0, -2).join(" ");
+
 	const data = await getVideoLink(id);
+
+	if (data.message) {
+		redirect("/404");
+	}
+
 	const link = data.sources[3].url;
 
 	return (
