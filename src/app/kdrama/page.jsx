@@ -93,7 +93,7 @@ export default function Kdrama() {
 
 					{details && (
 						<div className="dramaInfo">
-							<div className="titleContainer">
+							<div className="titleContainer2">
 								<p className="dramaTitle">{details.title}</p>
 								<Image
 									className="dramaImage"
