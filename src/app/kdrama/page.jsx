@@ -48,6 +48,17 @@ export default function Kdrama() {
 
 	return (
 		<main className="main">
+			<p
+				style={{
+					color: "white",
+					fontFamily: "Kanit",
+					textAlign: "center",
+					fontSize: 18,
+				}}
+			>
+				The backend is facing some issues right now. Please try again
+				after some time.
+			</p>
 			<div className="sC">
 				<FaSearch className="searchIcon" />
 				<input
