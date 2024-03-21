@@ -15,7 +15,16 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "gogocdn.net",
 			},
+			{
+				protocol: "https",
+				hostname: "asianimg.pro",
+			},
 		],
+	},
+	logging: {
+		fetches: {
+			fullUrl: true,
+		},
 	},
 };
 

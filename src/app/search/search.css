@@ -63,13 +63,14 @@
 
 .anime p {
 	color: white;
-	width: 25vh;
+	width: 25dvh;
 	font-family: "Lato";
 	font-size: 18px;
 }
 
 .animeImage {
 	border-radius: 10px;
+	margin-left: 20px;
 }
 
 @media screen and (max-width: 768px) {

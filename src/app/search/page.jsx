@@ -5,19 +5,24 @@ import { FaSearch } from "react-icons/fa"; // Import the search icon from react-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import testFunction from "./api/fetchInfo";
 
 export default function Input() {
 	const [searchedAnime, setSearchedAnime] = useState(null);
 	const [loading, setLoading] = useState(null);
+	const [search1, setSearch] = useState(null);
 
-	const handleKeyPress = (event) => {
+	const handleKeyPress = async (event) => {
 		if (
 			(event.code === "Enter" ||
 				event.key === "Enter" ||
 				event.code === 13) &&
 			searchedAnime != ""
 		) {
-			fetch_animes(searchedAnime);
+			setLoading(true);
+			let x = await testFunction(searchedAnime);
+			setSearch(x);
+			setLoading(false);
 		} else if (
 			(event.code === "Enter" ||
 				event.key === "Enter" ||
@@ -26,17 +31,6 @@ export default function Input() {
 		) {
 			alert("Input cannot be empty");
 		}
-	};
-
-	const [search1, setSearch] = useState(null);
-	const fetch_animes = (title) => {
-		fetch("https://dramalama-api.vercel.app/anime/gogoanime/" + title)
-			.then(setLoading(true))
-			.then((res) => res.json())
-			.then((data) => {
-				setSearch(data);
-				setLoading(false);
-			});
 	};
 
 	return (
