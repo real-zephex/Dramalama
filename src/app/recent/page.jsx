@@ -37,7 +37,7 @@ export default async function Releases() {
 
 async function test() {
 	const res = await fetch(
-		"https://dramalama-api.vercel.app/anime/gogoanime/recent-episodes",
+		"https://consumet-api-di2e.onrender.com/anime/gogoanime/recent-episodes",
 		{ cache: "force-cache" }
 	);
 	const data = res.json();

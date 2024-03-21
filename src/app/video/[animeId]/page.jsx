@@ -48,7 +48,7 @@ export default async function Video({ params }) {
 
 async function getVideoLink(id) {
 	const res = await fetch(
-		"https://dramalama-api.vercel.app/anime/gogoanime/watch/" + id
+		"https://consumet-api-di2e.onrender.com/anime/gogoanime/watch/" + id
 	);
 	const data = res.json();
 	return data;

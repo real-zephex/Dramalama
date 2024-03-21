@@ -31,6 +31,8 @@ export default function Kdrama() {
 
 	const [details, setDetails] = useState(null);
 	async function handleDramaSearch(input) {
+		setVideoLink(null);
+		setEpisodeNo("");
 		const drama_info = await fetchDramaInfo(input);
 		setDetails(drama_info);
 		document.getElementById("intro").style.display = "none";
@@ -48,17 +50,6 @@ export default function Kdrama() {
 
 	return (
 		<main className="main">
-			<p
-				style={{
-					color: "white",
-					fontFamily: "Kanit",
-					textAlign: "center",
-					fontSize: 18,
-				}}
-			>
-				The backend is facing some issues right now. Please try again
-				after some time.
-			</p>
 			<div className="sC">
 				<FaSearch className="searchIcon" />
 				<input
@@ -107,7 +98,7 @@ export default function Kdrama() {
 								<Image
 									className="dramaImage"
 									src={details.image}
-									width={"160"}
+									width={"120"}
 									height={"240"}
 									alt="Drama"
 								/>
@@ -150,8 +141,8 @@ export default function Kdrama() {
 								<Image
 									src={item.image}
 									alt={item.title}
-									width={"200"}
-									height={"180"}
+									width={"120"}
+									height={"190"}
 								/>
 							</div>
 						))}

@@ -37,7 +37,7 @@ export default async function Trending() {
 
 async function test() {
 	const res = await fetch(
-		"https://dramalama-api.vercel.app/anime/gogoanime/top-airing",
+		"https://consumet-api-di2e.onrender.com/anime/gogoanime/top-airing",
 		{ cache: "force-cache" }
 	);
 	const data = res.json();
