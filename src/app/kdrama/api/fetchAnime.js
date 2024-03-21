@@ -1,3 +1,5 @@
+"use server";
+
 export async function fetchAnimeInfo(title) {
 	const res = await fetch(
 		"https://dramalama-api.vercel.app/movies/dramacool/" + title

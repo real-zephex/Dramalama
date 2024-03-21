@@ -42,7 +42,7 @@ export default async function AnimeInfo({ params }) {
 
 async function getAnimeInfo(anime_id) {
 	const res = await fetch(
-		"https://anime-sensei-api.vercel.app/anime/gogoanime/info/" + anime_id
+		"https://dramalama-api.vercel.app/anime/gogoanime/info/" + anime_id
 	);
 	const data = res.json();
 	return data;
