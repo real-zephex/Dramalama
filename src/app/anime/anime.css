@@ -6,3 +6,11 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.maintainenceContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 80dvh;
+}
