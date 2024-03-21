@@ -21,7 +21,7 @@ export default async function AnimeInfo({ params }) {
 								alt="Drama"
 							/>
 						</div>
-						<p className="dramaDescription">{info.description}</p>
+						<p className="animeDescription">{info.description}</p>
 					</div>
 				)}
 
