@@ -139,6 +139,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 0px auto;
+	width: 100%;
 }
 
 .dramaTitle {
@@ -157,6 +158,7 @@
 	color: var(--softer-purple);
 	font-family: "Atkinson Hyperlegible";
 	text-align: center;
+	max-width: 95%;
 }
 
 .episodesButtonsContainer {

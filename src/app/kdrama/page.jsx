@@ -92,7 +92,7 @@ export default function Kdrama() {
 					)}
 
 					{details && (
-						<div className="dramaInfo">
+						<div className="dramaInfo2">
 							<div className="titleContainer2">
 								<p className="dramaTitle">{details.title}</p>
 								<Image
@@ -103,9 +103,9 @@ export default function Kdrama() {
 									alt="Drama"
 								/>
 							</div>
-							<p className="dramaDescription">
-								{details.description}
-							</p>
+							<div className="dramaDescription">
+								<p>{details.description}</p>
+							</div>
 							<div className="episodesButtonsContainer">
 								{details.episodes.map((eps, index) => (
 									<button

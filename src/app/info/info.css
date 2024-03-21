@@ -17,7 +17,7 @@
 }
 
 .titleContainer p {
-	color: var(--neon-green	);
+	color: var(--neon-yellow);
 	width: 60%;
 	font-family: "Kanit";
 	font-size: 24px;
@@ -79,5 +79,5 @@
 	.infoPageContainer p {
 		color: black;
 	}
-	
+
 }
