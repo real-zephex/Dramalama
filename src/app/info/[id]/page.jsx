@@ -2,6 +2,8 @@ import "../info.css";
 import Image from "next/image";
 import Link from "next/link";
 
+export const runtime = "edge";
+
 export default async function AnimeInfo({ params }) {
 	let animeID = params.id;
 
