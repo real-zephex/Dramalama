@@ -17,7 +17,7 @@
 }
 
 .titleContainer p {
-	color: var(--neon-yellow);
+	color: var(--neon-green);
 	width: 60%;
 	font-family: "Kanit";
 	font-size: 24px;
@@ -72,7 +72,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-	.dramaDescription {
+	.animeDescription {
 		color: black;
 	}
 
