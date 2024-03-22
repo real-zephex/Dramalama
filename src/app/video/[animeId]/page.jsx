@@ -22,7 +22,7 @@ export default async function Video({ params }) {
 		redirect("/404");
 	}
 
-	const link = data.sources[3].url;
+	const link = data.sources[4].url;
 
 	return (
 		<div>
