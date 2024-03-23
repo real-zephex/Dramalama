@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Footer from "./footer/page";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 					kdramas and anime for free.
 				</p>
 			</div>
+			<Footer />
 		</main>
 	);
 }
