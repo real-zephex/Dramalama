@@ -1,5 +1,6 @@
 import styles from "./read.module.css";
 import Image from "next/image";
+import DownloadManga from "./download";
 
 export default async function Read({ params }) {
 	const chapterId = params.read;
@@ -23,6 +24,7 @@ export default async function Read({ params }) {
 	return (
 		<div className={styles.Main}>
 			<div className={styles.ImageContainer}>
+				<DownloadManga chapterId={chapterId} />
 				{images &&
 					images.map((item, index) => (
 						<div className={styles.Image} key={index}>

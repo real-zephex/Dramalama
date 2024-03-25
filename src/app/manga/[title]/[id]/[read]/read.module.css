@@ -31,6 +31,25 @@
 	font-size: 20px;
 }
 
+.DownloadMain {
+	text-align: center;
+}
+
+.DownloadMain button {
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding: 5px;
+	font-family: "Lato";
+	font-size: 16px;
+	background-color: var(--light-green);
+	cursor: pointer;
+}
+
+.DownloadMain button:hover {
+	background-color: var(--pastel-red);
+}
+
 @media screen and (max-width: 768px) {
 	.ImageContainer img {
 		width: 90%;
