@@ -34,6 +34,7 @@ body::-webkit-scrollbar {
 .rightNav {
 	display: flex;
 	cursor: pointer;
+	overflow-x: auto;
 }
 
 .rightNav a {

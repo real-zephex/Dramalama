@@ -8,16 +8,19 @@ export default function Header() {
 					href="/"
 					style={{ color: "black", textDecoration: "none" }}
 				>
-					<p style={{ fontSize: "30px", color: "var(--pastel-red)" }}>
+					<p style={{ fontSize: "26px", color: "var(--pastel-red)" }}>
 						Dramalama
 					</p>
 				</Link>
 				<div className="rightNav">
-					<Link href="/kdrama">
-						<p>Kdrama</p>
-					</Link>
 					<Link href="/anime">
 						<p>Anime</p>
+					</Link>
+					<Link href="/manga">
+						<p>Manga</p>
+					</Link>
+					<Link href="/kdrama">
+						<p>Kdrama</p>
 					</Link>
 				</div>
 			</div>

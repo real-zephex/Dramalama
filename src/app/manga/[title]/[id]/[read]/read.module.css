@@ -1,0 +1,43 @@
+.ImageContainer img {
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+	margin-top: 10px;
+
+}
+
+.Image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #1b1b1b;
+	border-radius: 10px;
+	width: auto;
+	margin-top: 10px;
+}
+
+.ImageContainer p {
+	text-align: center;
+	color: white;
+	font-family: "Kanit";
+	font-size: 16px;
+	margin: 5px;
+}
+
+.NotFound {
+	text-align: center;
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.ImageContainer img {
+		width: 90%;
+		align-items: center;
+	}
+
+	.Image {
+		width: 100%;
+	}
+}

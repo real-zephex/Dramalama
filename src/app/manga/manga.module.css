@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Inter&display=swap');
+
+.Main {
+	max-width: 90%;
+	margin: 10px auto;
+}
+
+.Hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ImageContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.ImageContainer img {
+	margin: 0px 4px 4px 4px;
+	border-radius: 8px;
+	animation: zoomer 1s alternate-reverse infinite ease;
+}
+
+@keyframes zoomer {
+	to {
+		transform: scale(1.01);
+	}
+}
+
+.WelcomeContainer button {
+	font-family: "Inter";
+	font-size: 16px;
+	margin-top: 8px;
+	padding: 6px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	background-color: var(--neon-green);
+	cursor: pointer;
+}
+
+.WelcomeText {
+	font-family: "Kanit";
+	color: white;
+	font-size: 50px;
+	text-shadow: #FC0 2px 2px 50px;
+	margin-right: 10px;
+}
+
+
+.SelfPromoContainer {
+	display: flex;
+	justify-content: space-around;
+	font-family: "Lato";
+	color: white;
+	/* margin-top: 20px; */
+}
+
+.SelfPromoContainer p {
+	font-family: "Quicksand";
+	color: white;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.HorizontalImageContainer img {
+		width: auto;
+		height: auto;
+	}
+
+	.VerticalImageContainer img {
+		width: 265px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.HorizontalImageContainer img {
+		width: 95%;
+		height: auto;
+	}
+
+	.VerticalImageContainer img {
+		width: 46.5%;
+		height: 300px;
+	}
+}
+
+.SearchBar {
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	background: #1f1f1f;
+	margin-top: 5px;
+	width: 55%;
+}
+
+.SearchBar input {
+	background: none;
+	outline: none;
+	border: none;
+	margin-left: 5px;
+	padding: 4px;
+	width: 100%;
+	color: white;
+	font-family: "Kanit";
+	font-size: 16px;
+}
+
+@media screen and (max-width: 425px) {
+
+	.Hero {
+		flex-direction: column;
+	}
+
+	.WelcomeContainer {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+
+	.WelcomeText {
+		font-size: 32px;
+	}
+
+	.HorizontalImageContainer img {
+		margin-top: 20px;
+		width: 100%;
+		height: auto;
+	}
+
+	.VerticalImageContainer img {
+		display: none;
+	}
+
+	.SearchBar {
+		width: 80%;
+	}
+}
+
+/* Search Bar from searchBar.jsx */

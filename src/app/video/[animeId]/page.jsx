@@ -48,7 +48,8 @@ export default async function Video({ params }) {
 
 async function getVideoLink(id) {
 	const res = await fetch(
-		"https://consumet-api-di2e.onrender.com/anime/gogoanime/watch/" + id
+		"https://consumet-api-di2e.onrender.com/anime/gogoanime/watch/" + id,
+		{ next: { revalidate: 3600 } } // Video links are revalidated after an hour
 	);
 	const data = res.json();
 	return data;

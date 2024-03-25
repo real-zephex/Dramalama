@@ -1,0 +1,135 @@
+.MangaInfoContainer {
+	max-width: 90%;
+	margin: 0px auto;
+}
+
+.MangaHero {
+	display: flex;
+	flex-direction: column;
+}
+
+.HeroImage {
+	width: 100%;
+	height: auto;
+	max-height: 550px;
+	border-radius: 10px;
+}
+
+.TitleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.TitleContainer p {
+	font-family: "Lato";
+	font-size: 32px;
+}
+
+.TitleContainer img {
+	border-radius: 10px;
+}
+
+.MangaDescription {
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	text-align: center;
+}
+
+.MangaDescription span {
+	margin: 10px;
+	color: var(--soft-purple);
+}
+
+.MangaRatings {
+	color: var(--light-green);
+}
+
+.MangaGenre {
+	background-color: #5f5f5f5d;
+	padding: 2px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.Character {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+}
+
+.Character::-webkit-scrollbar {
+	height: 5px;
+}
+
+.Character::-webkit-scrollbar-thumb {
+	background-color: #949494;
+	border-radius: 5px;
+}
+
+.Character::-webkit-scrollbar-track {
+	background-color: rgb(87, 87, 87);
+	border-radius: 5px;
+}
+
+.CharacterEntry {
+	margin: 5px;
+}
+
+.CharacterEntry p {
+	text-align: center;
+	color: white;
+}
+
+.CharacterEntry img {
+	border-radius: 10px;
+}
+
+/* Chapters Buttons */
+.ChapterContainer {
+	width: 95%;
+	margin: 20px auto;
+	text-align: center;
+	height: 400px;
+	overflow-y: auto;
+}
+
+.ChapterContainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+.ChapterContainer::-webkit-scrollbar-thumb {
+	background-color: #949494;
+	border-radius: 5px;
+}
+
+.ChapterContainer::-webkit-scrollbar-track {
+	background-color: rgb(66, 66, 66);
+	border-radius: 5px;
+}
+
+.ChapterContainer button {
+	width: 100px;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	font-family: "Lato";
+	background-color: #41C9E2;
+	cursor: pointer;
+	transition: transform 0.2s linear;
+
+}
+
+.ChapterContainer button:hover {
+	background-color: var(--neon-green);
+}
+
+.ChapterContainer button:focus {
+	opacity: 0.6;
+	transition: transform 0.2s linear;
+	transform: scale(0.9);
+}

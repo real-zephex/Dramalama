@@ -1,0 +1,61 @@
+.Main {
+	max-width: 90%;
+	margin: 0px auto;
+}
+
+.MangaContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.SearchedFor {
+	color: white;
+	text-align: center;
+	font-family: "Kanit";
+	font-size: 26px;
+}
+
+.MangaEntries {
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+	padding: 10px;
+	border-style: dotted;
+	border-color: #363636 #474747;
+	border-radius: 10px;
+	border-width: 4px;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.2s linear;
+}
+
+.MangaEntries:hover {
+	transition: transform 0.2s linear;
+	transform: scale(1.01);
+	border-color: #535353 #686868;
+
+}
+
+.MangaInfo {
+	color: white;
+	margin-left: 20px;
+}
+
+.MangaTitle {
+	font-family: "Lato";
+	margin: 0px;
+	font-size: 22px;
+	color: var(--neon-green);
+}
+
+.MangaStatus {
+	color: var(--soft-purple);
+}
+
+.MangaVolume {
+	color: #FFACAC;
+}
+
+.MangaChapters {
+	color: #FFEBB4
+}
