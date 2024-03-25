@@ -20,7 +20,14 @@ export default async function MangaInfo({ params }) {
 							priority
 						/>
 						<div className={styles.TitleContainer}>
-							<p style={{ color: data.color }}>
+							<p
+								style={{
+									color: data.color,
+									backgroundColor: "#3a3a3ac2",
+									borderRadius: 10,
+									padding: 5,
+								}}
+							>
 								{data.title["romaji"]}
 							</p>
 							<Image
