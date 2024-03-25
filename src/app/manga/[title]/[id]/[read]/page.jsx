@@ -25,7 +25,7 @@ export default async function Read({ params }) {
 			<div className={styles.ImageContainer}>
 				{images &&
 					images.map((item, index) => (
-						<div className={styles.Image}>
+						<div className={styles.Image} key={index}>
 							<Image
 								src={`https://image-proxy-manga.vercel.app/image-proxy?url=${item}`}
 								key={index}

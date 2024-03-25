@@ -9,6 +9,7 @@ export default async function Buttons({ content: data }) {
 					if (item.pages !== 0) {
 						return (
 							<Link
+								key={index}
 								href={{
 									pathname: `/manga/info/read/${item.id}`,
 									query: {
