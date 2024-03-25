@@ -35,6 +35,7 @@ export default async function Read({ params }) {
 								width={800}
 								height={1000}
 								priority
+								unoptimized
 							/>
 							<p>{index + 1}</p>
 						</div>
