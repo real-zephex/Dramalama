@@ -19,6 +19,7 @@ export default async function Manga() {
 							width={480}
 							height={260}
 							alt="Haikyu"
+							unoptimized
 						/>
 					</div>
 					<div className={styles.VerticalImageContainer}>
