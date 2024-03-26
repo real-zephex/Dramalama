@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Dramalama v2.0",
-	description: "Rewrite of dramalama in next",
+	description:
+		"Online service to watch kdramas and anime for free. You can also read and download mangas for free.",
 };
 
 export default function RootLayout({ children }) {
