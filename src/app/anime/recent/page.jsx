@@ -1,20 +1,20 @@
-import "./trending.css";
+import "./recent.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Trending() {
+export default async function Releases() {
 	const data = await test();
 
 	return (
 		<div className="trendingContainer">
-			<p className="trendingText">Trending</p>
+			<p className="trendingText">Recent Releases</p>
 
 			<div className="trending">
 				{data &&
 					data.results.map((item, index) => (
 						<Link
 							key={index}
-							href={`/info/${item.id}`}
+							href={`/anime/${item.id}`}
 							style={{ textDecoration: "none" }}
 						>
 							<div className="trendingEntries">
@@ -37,7 +37,7 @@ export default async function Trending() {
 
 async function test() {
 	const res = await fetch(
-		"https://consumet-api-di2e.onrender.com/anime/gogoanime/top-airing",
+		"https://consumet-api-di2e.onrender.com/anime/gogoanime/recent-episodes",
 		{ cache: "force-cache" }
 	);
 	const data = res.json();

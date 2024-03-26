@@ -10,7 +10,7 @@ export default async function fetchedInfo(data) {
 					data.results.map((item, index) => (
 						<Link
 							key={index}
-							href={`/info/${item.id}`}
+							href={`/anime/${item.id}`}
 							style={{ textDecoration: "none" }}
 						>
 							<div className="anime">

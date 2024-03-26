@@ -5,7 +5,7 @@ import {
 	PlyrLayout,
 	plyrLayoutIcons,
 } from "@vidstack/react/player/layouts/plyr";
-import "../video.css";
+import "./video.css";
 import { redirect } from "next/navigation";
 
 export default async function Video({ params }) {

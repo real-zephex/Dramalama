@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Footer from "./footer/page";
+import Footer from "./components/footer/page";
 
 export default function Home() {
 	return (
