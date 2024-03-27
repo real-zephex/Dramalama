@@ -1,10 +1,15 @@
 import styles from "./info.module.css";
 import Image from "next/image";
 import Buttons from "./buttons";
+import { redirect } from "next/navigation";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;
 	const data = await getMangaInfo(id);
+
+	if (data.message) {
+		redirect("/404");
+	}
 
 	return (
 		<div className={styles.MangaInfoContainer}>
@@ -63,7 +68,10 @@ export default async function MangaInfo({ params }) {
 									<span
 										key={index}
 										className={styles.MangaGenre}
-										style={{ color: data.color, margin: 5 }}
+										style={{
+											color: data.color,
+											margin: 5,
+										}}
 									>
 										{item}
 									</span>

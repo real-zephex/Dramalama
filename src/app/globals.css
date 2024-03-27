@@ -48,6 +48,25 @@ body::-webkit-scrollbar {
 	margin-left: 10px;
 }
 
+.ErrorContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 90dvh;
+	color: white;
+	font-family: "Kanit";
+	font-size: 20px;
+}
+
+.ErrorContainer button {
+	border-radius: 5px;
+	padding: 3px;
+	font-family: "Lato";
+	border: 0;
+	outline: 0;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: black;

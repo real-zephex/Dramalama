@@ -76,18 +76,6 @@
 	}
 }
 
-@media screen and (max-width: 768px) {
-
-	.HorizontalImageContainer img {
-		width: 95%;
-		height: auto;
-	}
-
-	.VerticalImageContainer img {
-		width: 46.5%;
-		height: 300px;
-	}
-}
 
 .SearchBar {
 	display: flex;
@@ -109,6 +97,30 @@
 	font-family: "Kanit";
 	font-size: 16px;
 }
+
+.LoadingContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90dvh;
+	color: white;
+	font-family: "Kanit";
+	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.HorizontalImageContainer img {
+		width: 95%;
+		height: auto;
+	}
+
+	.VerticalImageContainer img {
+		width: 46.5%;
+		height: 300px;
+	}
+}
+
 
 @media screen and (max-width: 425px) {
 

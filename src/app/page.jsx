@@ -11,6 +11,7 @@ export default function Home() {
 					width={300}
 					height={300}
 					alt="Logo"
+					priority
 				></Image>
 				<p>
 					Welcome to dramalama. An online service where you can watch

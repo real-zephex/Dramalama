@@ -27,14 +27,6 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "uploads.mangadex.org",
 			},
-			{
-				protocol: "https",
-				hostname: "cros.shashstorm.in",
-			},
-			{
-				protocol: "https",
-				hostname: "image-proxy-manga.vercel.app",
-			},
 		],
 	},
 	logging: {

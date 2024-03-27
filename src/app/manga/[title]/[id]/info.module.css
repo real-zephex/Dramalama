@@ -20,7 +20,6 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 10px;
-	/* background-color: #3a3a3ac2; */
 }
 
 .TitleContainer p {
@@ -30,6 +29,7 @@
 
 .TitleContainer img {
 	border-radius: 10px;
+	margin-left: 5px;
 }
 
 .MangaDescription {
@@ -89,7 +89,7 @@
 
 /* Chapters Buttons */
 .ChapterContainer {
-	width: 95%;
+	width: 100%;
 	margin: 20px auto;
 	text-align: center;
 	height: 400px;
@@ -119,10 +119,9 @@
 	border: none;
 	outline: none;
 	font-family: "Lato";
-	background-color: #41C9E2;
+	background-color: #777777e3;
 	cursor: pointer;
 	transition: transform 0.2s linear;
-
 }
 
 .ChapterContainer button:hover {
@@ -132,5 +131,17 @@
 .ChapterContainer button:focus {
 	opacity: 0.6;
 	transition: transform 0.2s linear;
+	background-color: var(--pastel-red);
 	transform: scale(0.9);
+}
+
+@media screen and (max-width: 768px) {
+	.MangaInfoContainer {
+		max-width: 100%;
+	}
+
+	.TitleContainer p {
+		font-size: 28px;
+	}
+
 }
