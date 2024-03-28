@@ -18,7 +18,10 @@ export default async function Buttons({ content: data }) {
 								}}
 							>
 								<button key={index}>
-									{item.volumeNumber} - {item.chapterNumber}
+									<div>
+										<p>Chapter: {item.chapterNumber}</p>
+										<p>Volume: {item.volumeNumber}</p>
+									</div>
 								</button>
 							</Link>
 						);

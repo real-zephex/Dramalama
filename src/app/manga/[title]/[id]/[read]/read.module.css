@@ -1,19 +1,17 @@
-.ImageContainer img {
-	width: auto;
-	max-width: 1000px;
-	height: auto;
-	border-radius: 5px;
-	margin-top: 10px;
-
-}
-
 .Image {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: #1b1b1b;
 	border-radius: 10px;
-	width: auto;
+	width: 50%;
+	margin: 10px auto;
+}
+
+.ImageContainer img {
+	max-width: auto;
+	height: auto;
+	border-radius: 5px;
 	margin-top: 10px;
 }
 
@@ -53,7 +51,7 @@
 
 @media screen and (max-width: 768px) {
 	.ImageContainer img {
-		width: 90%;
+		width: 95%;
 		align-items: center;
 	}
 

@@ -2,6 +2,7 @@ import styles from "./info.module.css";
 import Image from "next/image";
 import Buttons from "./buttons";
 import { redirect } from "next/navigation";
+import { FaStar } from "react-icons/fa";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;
@@ -15,20 +16,20 @@ export default async function MangaInfo({ params }) {
 		<div className={styles.MangaInfoContainer}>
 			{data && (
 				<div className={styles.MangaInfo}>
-					<div className={styles.MangaHero}>
-						<Image
-							src={data.cover}
-							width={1730}
-							height={400}
-							alt="Cover Poster"
-							className={styles.HeroImage}
-							priority
-						/>
+					<div
+						className={styles.MangaHero}
+						style={{
+							backgroundImage: `url(${data.cover})`,
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							borderRadius: 10,
+						}}
+					>
 						<div className={styles.TitleContainer}>
 							<p
 								style={{
 									color: data.color,
-									backgroundColor: "#3a3a3ac2",
+									// backgroundColor: "#3a3a3ac2",
 									borderRadius: 10,
 									padding: 5,
 								}}
@@ -58,9 +59,6 @@ export default async function MangaInfo({ params }) {
 							Ended on: {data.endDate["day"]}-
 							{data.endDate["month"]}-{data.endDate["year"]}
 						</span>
-						<p className={styles.MangaRatings}>
-							Ratings: {data.rating / 10}
-						</p>
 						<p style={{ color: "#7ED7C1" }}>
 							Genres:
 							{data.genres &&
@@ -77,6 +75,12 @@ export default async function MangaInfo({ params }) {
 									</span>
 								))}
 						</p>
+						<div className={styles.MangaRatings}>
+							<span>Ratings: {data.rating / 10}</span>
+							<span>
+								<FaStar />
+							</span>
+						</div>
 					</div>
 
 					<div className={styles.CharactersContainer}>
