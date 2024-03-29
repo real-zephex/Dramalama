@@ -16,8 +16,8 @@ export default async function AnimeInfo({ params }) {
 							<p>{info.title}</p>
 							<Image
 								src={info.image}
-								width={140}
-								height={190}
+								width={150}
+								height={200}
 								alt="Drama"
 							/>
 						</div>
@@ -25,11 +25,31 @@ export default async function AnimeInfo({ params }) {
 					</div>
 				)}
 
+				<div className="animeDetails">
+					<span>Genres: </span>
+					{info.genres &&
+						info.genres.map((item, index) => (
+							<span className="genreEntries" key={index}>
+								{item}
+							</span>
+						))}
+					<p className="animeType">
+						Type: <span>{info.type}</span>
+					</p>
+					<p className="animeRelease">
+						Release year:{" "}
+						<span>
+							{info.releaseDate}, {info.status}
+						</span>
+					</p>
+				</div>
+
 				<div className="buttonContainer">
 					{info &&
 						info.episodes.map((item, index) => (
 							<Link href={`/anime/watch/${item.id}`} key={index}>
 								<button className="dramaButton">
+									<span>Episode </span>
 									{item.number}
 								</button>
 							</Link>

@@ -49,6 +49,13 @@
 	background-color: var(--pastel-red);
 }
 
+.CurrentReadingContainer {
+	text-align: center;
+	color: white;
+	font-family: "Quicksand";
+	font-size: 18px;
+}
+
 @media screen and (max-width: 768px) {
 	.ImageContainer img {
 		width: 95%;

@@ -1,7 +1,9 @@
+"use client";
+
 import styles from "./info.module.css";
 import Link from "next/link";
 
-export default async function Buttons({ content: data }) {
+export default function Buttons({ content: data }) {
 	return (
 		<div className={styles.ChapterContainer}>
 			{data.chapters &&
@@ -12,10 +14,10 @@ export default async function Buttons({ content: data }) {
 								key={index}
 								href={{
 									pathname: `/manga/info/read/${item.id}`,
-									query: {
-										name: item.title,
-									},
 								}}
+								onClick={() =>
+									test(item.chapterNumber, item.volumeNumber)
+								}
 							>
 								<button key={index}>
 									<div>
@@ -29,4 +31,9 @@ export default async function Buttons({ content: data }) {
 				})}
 		</div>
 	);
+}
+
+function test(chapter, volume) {
+	localStorage.setItem("chapter", chapter);
+	localStorage.setItem("volume", volume);
 }

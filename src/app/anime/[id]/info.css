@@ -19,7 +19,8 @@
 .titleContainer p {
 	color: var(--neon-green);
 	width: 60%;
-	font-family: "Kanit";
+	font-family: "Quicksand";
+	font-weight: 900;
 	font-size: 24px;
 }
 
@@ -29,7 +30,7 @@
 
 .animeDescription {
 	color: #ffffff81;
-	font-family: "Lato";
+	font-family: "Atkinson Hyperlegible";
 	font-size: 16px;
 	max-height: 120px;
 	margin: 20px auto;
@@ -44,20 +45,36 @@
 	overflow-y: auto;
 }
 
+.buttonContainer button:focus {
+	opacity: 0.7;
+	transition: transform 0.2s linear;
+	background-color: var(--pastel-red);
+	transform: scale(0.9);
+}
+
+.buttonContainer::-webkit-scrollbar {
+	width: 5px;
+}
+
+.buttonContainer::-webkit-scrollbar-thumb {
+	background-color: var(--soft-purple);
+	border-radius: 5px;
+}
+
 .dramaButton {
 	padding: 8px;
-	font-family: "Atkinson Hyperlegible";
-	font-size: 18px;
+	font-family: "Quicksand";
+	font-size: 16px;
 	margin: 5px;
-	width: 50px;
+	width: 130px;
 	border-radius: 5px;
 	border: none;
-	background-color: var(--light-green);
+	background-color: #f8f6e3dc;
 	cursor: pointer;
 }
 
 .dramaButton:hover {
-	background-color: var(--soft-purple);
+	background-color: #97E7E1;
 }
 
 .infoPageContainer {
@@ -71,6 +88,29 @@
 	color: white;
 }
 
+.animeDetails {
+	text-align: center;
+	color: white;
+	font-family: "Quicksand";
+}
+
+.genreEntries {
+	margin: 3px;
+	padding: 4px;
+	border-radius: 5px;
+	color: var(--neon-green);
+	background-color: #303030;
+	cursor: pointer;
+}
+
+.animeType span {
+	color: var(--light-green);
+}
+
+.animeRelease span {
+	color: var(--soft-purple)
+}
+
 @media (prefers-color-scheme: light) {
 	.animeDescription {
 		color: black;
@@ -80,4 +120,15 @@
 		color: black;
 	}
 
+}
+
+@media screen and (max-width: 768px) {
+	.dramaButton {
+		font-size: 14px;
+		width: 100px;
+	}
+
+	.animeDetails {
+		font-size: 14px;
+	}
 }
