@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import styles from "./globals.module.css";
 import "./globals.css";
 import Header from "./components/header/header";
 import { SpeedInsights } from "@vercel/speed-insights/next";

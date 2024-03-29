@@ -1,13 +1,19 @@
-import "./trending.css";
+import styles from "./trending.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { HiTrendingUp } from "react-icons/hi";
 
 export default async function Trending() {
 	const data = await test();
 
 	return (
 		<div className="trendingContainer">
-			<p className="trendingText">Trending</p>
+			<div className={styles.TrendingText}>
+				<p>Trending</p>
+				<span>
+					<HiTrendingUp size={26} color="aqua" />
+				</span>
+			</div>
 
 			<div className="trending">
 				{data &&

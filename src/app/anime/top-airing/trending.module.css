@@ -1,0 +1,15 @@
+.TrendingText {
+	color: #FFB996;
+	display: flex;
+	align-items: center;
+}
+
+.TrendingText p {
+	font-size: 26px;
+	margin: 5px;
+	font-family: "Quicksand";
+}
+
+.TrendingText span {
+	margin-top: 6px;
+}

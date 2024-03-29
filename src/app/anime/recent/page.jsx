@@ -1,13 +1,20 @@
 import "./recent.css";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./recent.module.css";
+import { MdRecentActors } from "react-icons/md";
 
 export default async function Releases() {
 	const data = await test();
 
 	return (
 		<div className="trendingContainer">
-			<p className="trendingText">Recent Releases</p>
+			<div className={styles.RecentText}>
+				<p>Recent Releases</p>
+				<span>
+					<MdRecentActors size={26} color="aqua" />
+				</span>
+			</div>
 
 			<div className="trending">
 				{data &&

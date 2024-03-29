@@ -14,8 +14,8 @@ export default function Home() {
 					priority
 				></Image>
 				<p>
-					Welcome to dramalama. An online service where you can watch
-					kdramas and anime for free.
+					Hey there, welcome to Dramalama. We are excited to have you
+					on board.
 				</p>
 			</div>
 			<Footer />

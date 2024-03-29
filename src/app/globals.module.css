@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital@0;1&family=Quicksand&display=swap');
+
+.ErrorContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 90dvh;
+	color: white;
+	font-family: "Kanit";
+	font-size: 20px;
+}
+
+.ErrorContainer button {
+	border-radius: 5px;
+	padding: 3px;
+	font-family: "Lato";
+	border: 0;
+	outline: 0;
+}

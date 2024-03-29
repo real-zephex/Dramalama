@@ -1,7 +1,7 @@
 "use client"; // Error components must be Client Components
 
 import { useEffect } from "react";
-import "./globals.css";
+import styles from "./globals.module.css";
 
 export default function Error({ error, reset }) {
 	useEffect(() => {
@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
 	}, [error]);
 
 	return (
-		<div className="ErrorContainer">
+		<div className={styles.ErrorContainer}>
 			<p>Something went wrong!</p>
 			<button
 				onClick={

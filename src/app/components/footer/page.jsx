@@ -17,25 +17,22 @@ export default async function Footer() {
 					Github
 				</a>
 				<a
-					style={{ color: "#A3BE8C" }}
-					href="https://dramalama-zephex.koyeb.app"
-					target="_new"
-				>
-					Koyeb
-				</a>
-				<a
 					style={{ color: "#EBCB8B" }}
 					href="https://dramalama.vercel.app"
-					target="_new"
 				>
 					Vercel
 				</a>
 				<a
 					style={{ color: "#BF616A" }}
 					href="https://dramalama.netlify.app"
-					target="_new"
 				>
 					Netlify
+				</a>
+				<a
+					style={{ color: "	#A3BE8C" }}
+					href="https://dramalama-1phg.onrender.com"
+				>
+					Render
 				</a>
 			</p>
 		</div>

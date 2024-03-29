@@ -1,0 +1,26 @@
+.headNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 95%;
+	margin: -10px auto;
+	font-family: "Quicksand";
+}
+
+.rightNav {
+	display: flex;
+	cursor: pointer;
+	overflow-x: auto;
+}
+
+.rightNav a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+
+.rightNav p {
+	margin-right: 10px;
+	margin-left: 10px;
+}

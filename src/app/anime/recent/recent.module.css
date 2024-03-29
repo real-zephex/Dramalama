@@ -1,0 +1,15 @@
+.RecentText {
+	color: #FFB996;
+	display: flex;
+	align-items: center;
+}
+
+.RecentText p {
+	font-size: 26px;
+	margin: 5px;
+	font-family: "Quicksand";
+}
+
+.RecentText span {
+	margin-top: 6px;
+}
