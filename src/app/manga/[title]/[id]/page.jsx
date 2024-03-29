@@ -3,7 +3,6 @@ import Image from "next/image";
 import Buttons from "./buttons";
 import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
-import CurrentReading from "./[read]/currentReading";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;

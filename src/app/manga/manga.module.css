@@ -154,4 +154,8 @@
 	}
 }
 
-/* Search Bar from searchBar.jsx */
+@media (prefers-color-scheme: light) {
+	.WelcomeText {
+		color: black;
+	}
+}

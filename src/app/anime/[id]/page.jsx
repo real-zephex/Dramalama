@@ -26,7 +26,7 @@ export default async function AnimeInfo({ params }) {
 				)}
 
 				<div className="animeDetails">
-					<span>Genres: </span>
+					<span className="genre">Genres: </span>
 					{info.genres &&
 						info.genres.map((item, index) => (
 							<span className="genreEntries" key={index}>

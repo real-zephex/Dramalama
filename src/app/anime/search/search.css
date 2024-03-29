@@ -3,6 +3,13 @@
 	margin: 30px auto;
 }
 
+.waitWhileLoading {
+	font-size: 18px;
+	font-family: "Kanit";
+	text-align: center;
+	color: white;
+}
+
 .searchContainer input {
 	border: none;
 	border-radius: 5px;
@@ -76,5 +83,15 @@
 @media screen and (max-width: 768px) {
 	.searchContainer {
 		width: 70%;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.waitWhileLoading {
+		color: black;
+	}
+
+	.anime p {
+		color: black;
 	}
 }

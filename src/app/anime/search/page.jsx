@@ -49,13 +49,8 @@ export default function Input() {
 			</div>
 
 			{loading && (
-				<p
-					style={{
-						textAlign: "center",
-						fontFamily: "Kanit",
-						fontSize: 18,
-						color: "white",
-					}}
+				<p className="waitWhileLoading"
+
 				>
 					Please wait while we crunch all the data for you
 				</p>
