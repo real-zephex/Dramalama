@@ -12,6 +12,7 @@
 .welcomeContainer p {
 	font-family: "Quicksand";
 	font-size: 20px;
+	color: white;
 }
 
 .auth button {
@@ -23,10 +24,4 @@
 	outline: none;
 	border-radius: 5px;
 	background-color: var(--neon-green);
-}
-
-@media (prefers-color-scheme: dark) {
-	.welcomeContainer p {
-		color: white;
-	}
 }
