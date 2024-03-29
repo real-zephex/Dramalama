@@ -17,12 +17,6 @@
 	text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-	.video2 p {
-		color: black;
-	}
-}
-
 @media screen and (max-width: 768px) {
 	.video2 {
 		width: 100%;

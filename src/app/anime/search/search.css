@@ -85,13 +85,3 @@
 		width: 70%;
 	}
 }
-
-@media (prefers-color-scheme: light) {
-	.waitWhileLoading {
-		color: black;
-	}
-
-	.anime p {
-		color: black;
-	}
-}

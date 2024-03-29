@@ -102,12 +102,6 @@
 	border-radius: 5px;
 }
 
-/* .ChapterContainer::-webkit-scrollbar-track {
-	background-color: rgb(66, 66, 66);
-	border-radius: 5px;
-} */
-
-
 .ChapterContainer button {
 	width: 130px;
 	height: auto;
@@ -155,17 +149,6 @@
 
 	.ChapterContainer button p {
 		font-size: 14px;
-	}
-
-}
-
-@media (prefers-color-scheme: light) {
-	.MangaDescription {
-		color: black;
-	}
-
-	.Character p {
-		color: black;
 	}
 
 }

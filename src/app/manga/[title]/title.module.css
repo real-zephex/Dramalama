@@ -65,13 +65,3 @@
 		max-width: 100%;
 	}
 }
-
-@media (prefers-color-scheme: light) {
-	.SearchedFor {
-		color: black;
-	}
-
-	.MangaDescription {
-		color: black;
-	}
-}

@@ -11,18 +11,9 @@
 body {
 	margin: 0px;
 	padding: 0px;
+	background-color: black;
 }
 
 body::-webkit-scrollbar {
 	width: 0px;
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: black;
-	}
-
-	.rightNav a {
-		color: white;
-	}
 }

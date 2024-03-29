@@ -45,7 +45,7 @@
 
 .introText2 {
 	font-family: "Quicksand";
-	color: black;
+	color: white;
 }
 
 .popup {
@@ -228,15 +228,5 @@
 
 	.sC {
 		width: 70%;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	.navbar input {
-		background-color: #2f333ab7;
-	}
-
-	.introText2 {
-		color: white
 	}
 }

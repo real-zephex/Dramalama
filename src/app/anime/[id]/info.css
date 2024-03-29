@@ -111,21 +111,6 @@
 	color: var(--soft-purple)
 }
 
-@media (prefers-color-scheme: light) {
-	.animeDescription {
-		color: black;
-	}
-
-	.infoPageContainer p {
-		color: black;
-	}
-
-	.animeDetails {
-		color: black;
-	}
-
-}
-
 @media screen and (max-width: 768px) {
 	.dramaButton {
 		font-size: 14px;
