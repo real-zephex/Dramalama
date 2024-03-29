@@ -1,6 +1,6 @@
 ## Dramalama
 
-Dramalama is an online service where you can watch kdramas and anime for free.
+Dramalama is an online service where you can watch kdramas and anime and read mangas for free.
 
 <p align="center">
   <img width="300" height="300" src="https://github.com/real-zephex/Dramalama/assets/143923795/add2af15-7d1a-4185-8c48-c31be488d559">
@@ -25,13 +25,10 @@ This web application is written using Next.JS framework and fetches it data via 
 - Due to server side rendering, the requests are cached meaning if you visit a specific episode of some anime and then try to revisit it again then it will constantly load. It can benefit other users who are trying to watch the same anime.
 - [Vidstack](https://www.vidstack.io/) has been used as video player.
 
-## Deployment
-
-You can pretty easily deploy it on vercel or on your local machine.
-1. Make sure you have npm installed.
-2. Clone this repository: `git clone https://github.com/real-zephex/Dramalama`
-3. `cd` into the directory.
-4. Execute `npx next` and it will start your web server.
+#### Manga
+- Users can search for mangas/manhwa by their title
+- A good looking info page
+- Ability to download mangas in `.pdf` format
 
 Alternatively, you can link your repository to vercel and have your very own streaming website.
 
@@ -39,6 +36,14 @@ Alternatively, you can link your repository to vercel and have your very own str
 
 Dramalama doesn't stores any data. It fetches it data through Consumet API which in turns scrapes other websites to get that stream. If you have any problem, then try contacting the owner of those websites.
 
+## Deployments
+
+- Vercel: https://dramalama.vercel.app
+- Netlify: https://dramalama.netlify.app
+- Koyeb: https://dramalama-zephex.koyeb.app
+
 ## Contributing
 
 Contributors are welcome!!
+
+
