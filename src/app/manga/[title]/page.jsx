@@ -29,8 +29,8 @@ export default async function MangaInfo({ params }) {
 								<div className={styles.MangaEntries}>
 									<Image
 										src={item.image}
-										width={140}
-										height={240}
+										width={160}
+										height={250}
 										alt="Manga Poster"
 										style={{ borderRadius: 10 }}
 									/>

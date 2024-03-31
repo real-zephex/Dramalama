@@ -21,9 +21,9 @@ export default function Header() {
 					<Link href="/manga">
 						<p>Manga</p>
 					</Link>
-					<Link href="/kdrama">
+					{/* <Link href="/kdrama">
 						<p>Kdrama</p>
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 			<hr style={{ marginTop: "-3px" }} />

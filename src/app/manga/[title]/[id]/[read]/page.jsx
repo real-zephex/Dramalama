@@ -27,6 +27,7 @@ export default async function Read({ params }) {
 			<CurrentReading />
 			<div className={styles.ImageContainer}>
 				<DownloadManga chapterId={chapterId} />
+				<p>Total pages: {images.length}</p>
 				{images &&
 					images.map((item, index) => (
 						<div className={styles.Image} key={index}>
@@ -43,6 +44,7 @@ export default async function Read({ params }) {
 						</div>
 					))}
 			</div>
+			<CurrentReading />
 		</div>
 	);
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Buttons from "./buttons";
 import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
+import CurrentReading from "./[read]/currentReading";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;
@@ -104,8 +105,13 @@ export default async function MangaInfo({ params }) {
 								))}
 						</div>
 					</div>
-
-					<Buttons content={data} />
+					<CurrentReading />
+					<div className={styles.Chapters}>
+						<p className={styles.ChapterTitle}>
+							Chapters & Volumes
+						</p>
+						<Buttons content={data} />
+					</div>
 				</div>
 			)}
 		</div>

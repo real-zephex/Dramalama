@@ -19,7 +19,7 @@ function CR(chapter, volume) {
 		<div className={styles.CurrentReadingContainer}>
 			{chapter && volume && (
 				<p>
-					Vol {volume} Chapter {chapter}
+					Reading: Vol {volume} Chapter {chapter}
 				</p>
 			)}
 		</div>

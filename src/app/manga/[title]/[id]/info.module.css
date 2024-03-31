@@ -16,7 +16,7 @@
 .TitleContainer p {
 	font-family: "Quicksand";
 	font-size: 40px;
-	font-weight: 900;
+	font-weight: 1000;
 }
 
 .TitleContainer img {
@@ -65,7 +65,7 @@
 }
 
 .Character::-webkit-scrollbar-thumb {
-	background-color: #B799FF;
+	background-color: #31363F;
 	border-radius: 5px;
 }
 
@@ -84,11 +84,25 @@
 }
 
 /* Chapters Buttons */
-.ChapterContainer {
-	width: 100%;
+
+.Chapters {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 90%;
 	margin: 20px auto;
+}
+
+.ChapterTitle {
+	color: white;
+	font-family: "Kanit";
+	font-size: 32px;
+}
+
+.ChapterContainer {
+	width: 50%;
 	text-align: center;
-	height: 400px;
+	height: 300px;
 	overflow-y: auto;
 }
 
@@ -97,8 +111,7 @@
 }
 
 .ChapterContainer::-webkit-scrollbar-thumb {
-	/* background-color: #949494; */
-	background-color: #B799FF;
+	background-color: #31363F;
 	border-radius: 5px;
 }
 
@@ -111,10 +124,10 @@
 	font-size: 16px;
 	border: none;
 	outline: none;
-	font-family: "Lato";
-	background-color: #f8f6e3dc;
+	color: white;
+	background-color: #3d3d3d;
 	cursor: pointer;
-	transition: transform 0.2s linear;
+	transition: background-color 0.2s linear;
 }
 
 .ChapterContainer button p {
@@ -123,7 +136,8 @@
 }
 
 .ChapterContainer button:hover {
-	background-color: #97E7E1;
+	background-color: #1f1f1f;
+	transition: background-color 0.2s linear
 }
 
 .ChapterContainer button:focus {

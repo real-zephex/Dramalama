@@ -4,12 +4,22 @@
 	bottom: 0;
 	width: 100%;
 	background-color: #1a1a1a;
-	color: white;
-	text-align: center;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.footer p a {
-	padding: 10px;
-	text-decoration: none;
+.FooterLeftContainer a {
 	color: #696880;
+	margin: 10px;
+}
+
+.FooterRightContainer {
+	margin-right: 10px;
+}
+
+.FooterRightContainer a {
+	margin: 10px;
+	text-decoration: none;
 }

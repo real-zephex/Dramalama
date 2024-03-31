@@ -13,3 +13,42 @@
 .RecentText span {
 	margin-top: 6px;
 }
+
+.Recent {
+	display: flex;
+	overflow-x: auto;
+}
+
+.Recent::-webkit-scrollbar {
+	height: 5px;
+}
+
+.Recent::-webkit-scrollbar-thumb {
+	background-color: #444444;
+	border-radius: 5px;
+}
+
+.RecentEntries {
+	margin: 7px;
+}
+
+.RecentEntries p {
+	text-align: center;
+	margin: 5px auto;
+	max-height: 70px;
+	overflow-y: auto;
+}
+
+.RecentEntries p::-webkit-scrollbar {
+	width: 5px;
+}
+
+.Recent p::-webkit-scrollbar-thumb {
+	background-color: #444444;
+	border-radius: 5px;
+}
+
+.RecentImage {
+	border-radius: 5px;
+	aspect-ratio: auto;
+}

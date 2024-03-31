@@ -15,20 +15,20 @@ export default async function Trending() {
 				</span>
 			</div>
 
-			<div className="trending">
+			<div className={styles.trending}>
 				{data &&
 					data.results.map((item, index) => (
 						<Link
 							key={index}
 							href={`/anime/${item.id}`}
-							style={{ textDecoration: "none" }}
+							style={{ textDecoration: "none", color: "white" }}
 						>
-							<div className="trendingEntries">
+							<div className={styles.trendingEntries}>
 								<Image
 									src={item.image}
-									className="{trendingImage}"
-									width={160}
-									height={220}
+									className={styles.trendingImage}
+									width={180}
+									height={260}
 									alt="Drama"
 									priority
 								/>
@@ -44,7 +44,7 @@ export default async function Trending() {
 async function test() {
 	const res = await fetch(
 		"https://consumet-api-di2e.onrender.com/anime/gogoanime/top-airing",
-		{ cache: "force-cache" }
+		{ next: { revalidate: 86400 } }
 	);
 	const data = res.json();
 	return data;

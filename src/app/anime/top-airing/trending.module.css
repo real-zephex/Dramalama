@@ -13,3 +13,42 @@
 .TrendingText span {
 	margin-top: 6px;
 }
+
+.trending {
+	display: flex;
+	overflow-x: auto;
+}
+
+.trending::-webkit-scrollbar {
+	height: 5px;
+}
+
+.trending::-webkit-scrollbar-thumb {
+	background-color: #444444;
+	border-radius: 5px;
+}
+
+.trendingEntries {
+	margin: 7px;
+}
+
+.trendingEntries p {
+	text-align: center;
+	margin: 5px auto;
+	max-height: 70px;
+	overflow-y: auto;
+}
+
+.trendingEntries p::-webkit-scrollbar {
+	width: 5px;
+}
+
+.trendingEntries p::-webkit-scrollbar-thumb {
+	background-color: #444444;
+	border-radius: 5px;
+}
+
+.trendingImage {
+	border-radius: 5px;
+	aspect-ratio: auto;
+}

@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 export default async function Footer() {
 	return (
 		<div className={styles.footer}>
-			<p style={{ margin: 10 }}>
+			<div className={styles.FooterLeftContainer}>
 				<a
 					href="https://stats.uptimerobot.com/Fxp7SE5Ll3"
 					target="_new"
@@ -16,6 +16,9 @@ export default async function Footer() {
 				>
 					Github
 				</a>
+			</div>
+
+			<div className={styles.FooterRightContainer}>
 				<a
 					style={{ color: "#EBCB8B" }}
 					href="https://dramalama.vercel.app"
@@ -23,18 +26,12 @@ export default async function Footer() {
 					Vercel
 				</a>
 				<a
-					style={{ color: "#BF616A" }}
-					href="https://dramalama.netlify.app"
-				>
-					Netlify
-				</a>
-				<a
 					style={{ color: "	#A3BE8C" }}
 					href="https://dramalama-1phg.onrender.com"
 				>
 					Render
 				</a>
-			</p>
+			</div>
 		</div>
 	);
 }
