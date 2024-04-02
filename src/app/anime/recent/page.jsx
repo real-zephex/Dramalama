@@ -27,8 +27,8 @@ export default async function Releases() {
 								<Image
 									src={item.image}
 									className={styles.RecentImage}
-									width={180}
-									height={260}
+									width={150}
+									height={230}
 									alt="Drama"
 									priority
 								/>

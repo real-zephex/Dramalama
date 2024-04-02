@@ -1,4 +1,4 @@
-import "./info.css";
+import styles from "./info.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,48 +8,56 @@ export default async function AnimeInfo({ params }) {
 	const info = await getAnimeInfo(animeID);
 
 	return (
-		<div className="dramaInfoContainer">
-			<div className="dramaInfo">
+		<div className={styles.dramaInfoContainer}>
+			<div className={styles.dramaInfo}>
 				{info && (
 					<div>
-						<div className="titleContainer">
+						<div className={styles.titleContainer}>
 							<p>{info.title}</p>
 							<Image
 								src={info.image}
-								width={150}
-								height={200}
+								width={175}
+								height={256}
 								alt="Drama"
 							/>
 						</div>
-						<p className="animeDescription">{info.description}</p>
+						<div className={styles.animeDescription}>
+							<h2>Description</h2>
+							<p>{info.description}</p>
+						</div>
 					</div>
 				)}
 
-				<div className="animeDetails">
-					<span className="genre">Genres: </span>
-					{info.genres &&
+				<div className={styles.animeDetails}>
+					<span className={styles.genre}>Genres: </span>
+					{info &&
+						info.genres &&
 						info.genres.map((item, index) => (
-							<span className="genreEntries" key={index}>
+							<span className={styles.genreEntries} key={index}>
 								{item}
 							</span>
 						))}
-					<p className="animeType">
-						Type: <span>{info.type}</span>
+					<p className={styles.animeType}>
+						Type: <span>{info && info.type}</span>
 					</p>
-					<p className="animeRelease">
+					<p className={styles.animeRelease}>
 						Release year:{" "}
 						<span>
-							{info.releaseDate}, {info.status}
+							{info && info.releaseDate}, {info && info.status}
 						</span>
 					</p>
 				</div>
 
-				<div className="buttonContainer">
+				<h2 className={styles.buttonHeader}>Episodes: </h2>
+				<div className={styles.buttonContainer}>
 					{info &&
+						info.episodes &&
 						info.episodes.map((item, index) => (
-							<Link href={`/anime/watch/${item.id}`} key={index}>
-								<button className="dramaButton">
-									<span>Episode </span>
+							<Link
+								href={`/anime/watch/${item.id}/${animeID}`}
+								key={index}
+							>
+								<button className={styles.dramaButton}>
 									{item.number}
 								</button>
 							</Link>
@@ -65,6 +73,6 @@ async function getAnimeInfo(anime_id) {
 		"https://anime-sensei-api.vercel.app/anime/gogoanime/info/" + anime_id,
 		{ next: { revalidate: 7200 } }
 	);
-	const data = res.json();
+	const data = await res.json();
 	return data;
 }

@@ -30,13 +30,18 @@
 
 .trendingEntries {
 	margin: 7px;
+	transition: transform 0.2s linear;
+}
+
+.trendingEntries:hover {
+	transition: transform 0.2s linear;
+	transform: scale(0.97);
 }
 
 .trendingEntries p {
 	text-align: center;
 	margin: 5px auto;
-	max-height: 70px;
-	overflow-y: auto;
+	width: 140px;
 }
 
 .trendingEntries p::-webkit-scrollbar {

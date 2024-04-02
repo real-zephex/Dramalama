@@ -9,7 +9,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	backdrop-filter: blur(5px);
+	background-color: #35353565;
+	backdrop-filter: blur(7px);
 
 }
 
@@ -71,11 +72,17 @@
 
 
 .CharacterEntry {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: auto;
 	margin: 5px;
 }
 
 .CharacterEntry p {
+	margin: 10px auto;
 	text-align: center;
+	width: 110px;
 	color: white;
 }
 

@@ -6,7 +6,7 @@
 .dramaInfo {
 	display: flex;
 	flex-direction: column;
-	width: 95%;
+	width: 98%;
 	margin: 0px auto;
 }
 
@@ -20,29 +20,36 @@
 	color: var(--neon-green);
 	width: 60%;
 	font-family: "Quicksand";
-	font-weight: 900;
-	font-size: 24px;
+	font-weight: 1000;
+	font-size: 28px;
 }
 
 .titleContainer img {
+	width: auto;
+	height: auto;
 	border-radius: 10px;
 }
 
-.animeDescription {
+.animeDescription h2 {
 	color: #ffffff81;
+	margin: 20px 0px -10px 0px;
+}
+
+.animeDescription p {
 	font-family: "Atkinson Hyperlegible";
-	font-size: 16px;
-	max-height: 120px;
-	margin: 20px auto;
-	text-align: center;
-	overflow-y: auto;
+	color: rgba(255, 255, 255, 0.637);
 }
 
 .buttonContainer {
-	margin: 5px auto;
-	text-align: center;
-	max-height: 200px;
+	margin: 0px;
+	height: 200px;
 	overflow-y: auto;
+	border-radius: 10px;
+}
+
+.buttonHeader {
+	margin: 0px 10px 10px 0px;
+	color: #ffffff81
 }
 
 .buttonContainer button:focus {
@@ -52,36 +59,30 @@
 	transform: scale(0.9);
 }
 
-.buttonContainer::-webkit-scrollbar {
-	width: 5px;
-}
-
 .buttonContainer::-webkit-scrollbar-thumb {
 	background-color: var(--soft-purple);
 	border-radius: 5px;
 }
 
 .dramaButton {
-	padding: 8px;
+	padding: 10px;
 	font-family: "Quicksand";
-	font-size: 16px;
+	font-size: 14px;
 	margin: 5px;
-	width: 130px;
+	width: 55px;
 	border-radius: 5px;
+	text-align: center;
 	border: none;
-	background-color: #f8f6e3dc;
+	outline: none;
+	color: white;
+	background-color: #3d3d3d;
+	transition: background-color 0.2s linear;
 	cursor: pointer;
 }
 
 .dramaButton:hover {
-	background-color: #97E7E1;
-}
-
-.infoPageContainer {
-	display: flex;
-	height: 100dvh;
-	justify-content: center;
-	align-items: center;
+	background-color: #1f1f1f;
+	transition: background-color 0.2s linear
 }
 
 .infoPageContainer p {
@@ -89,9 +90,7 @@
 }
 
 .animeDetails {
-	text-align: center;
 	color: white;
-	font-family: "Quicksand";
 }
 
 .genreEntries {
@@ -101,6 +100,7 @@
 	color: var(--neon-green);
 	background-color: #303030;
 	cursor: pointer;
+	font-family: "Atkinson Hyperlegible";
 }
 
 .animeType span {
@@ -112,10 +112,6 @@
 }
 
 @media screen and (max-width: 768px) {
-	.dramaButton {
-		font-size: 14px;
-		width: 100px;
-	}
 
 	.animeDetails {
 		font-size: 14px;

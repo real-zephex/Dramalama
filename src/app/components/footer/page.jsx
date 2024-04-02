@@ -27,9 +27,9 @@ export default async function Footer() {
 				</a>
 				<a
 					style={{ color: "	#A3BE8C" }}
-					href="https://dramalama-1phg.onrender.com"
+					href="https://dramalama.netlify.app"
 				>
-					Render
+					Netlify
 				</a>
 			</div>
 		</div>

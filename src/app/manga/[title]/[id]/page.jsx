@@ -30,7 +30,6 @@ export default async function MangaInfo({ params }) {
 							<p
 								style={{
 									color: data.color,
-									// backgroundColor: "#3a3a3ac2",
 									borderRadius: 10,
 									padding: 5,
 								}}

@@ -27,8 +27,8 @@ export default async function Trending() {
 								<Image
 									src={item.image}
 									className={styles.trendingImage}
-									width={180}
-									height={260}
+									width={150}
+									height={230}
 									alt="Drama"
 									priority
 								/>

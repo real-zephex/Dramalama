@@ -1,0 +1,75 @@
+.VideoMain {
+	max-width: 98%;
+	margin: 0px auto;
+}
+
+.Video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.VideoPlayer {
+	border-radius: 10px;
+	width: 75%;
+	height: auto;
+}
+
+.EpisodesButtons {
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+	height: 500px;
+	overflow-y: auto;
+	width: 100px;
+	scrollbar-width: thin;
+}
+
+.EpisodesButtons button {
+	width: 70px;
+	margin: 5px;
+	outline: none;
+	border: none;
+	padding: 5px;
+	font-family: "Quicksand";
+	font-size: 14px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: white;
+	background-color: #3d3d3d;
+	transition: background-color 0.2s linear;
+}
+
+.EpisodesButtons button:hover {
+	background-color: #1f1f1f;
+	transition: background-color 0.2s linear
+}
+
+@media screen and (max-width: 768px) {
+
+	.VideoMain {
+		max-width: 99%;
+	}
+
+	.Video {
+		display: block;
+	}
+
+	.VideoPlayer {
+		width: 100%;
+	}
+
+	.EpisodesButtons {
+		display: flex;
+		flex-direction: row;
+		height: auto;
+		width: auto;
+		margin-top: 10px;
+		margin-left: 0px;
+		overflow-y: auto;
+	}
+
+	.EpisodesButtons button {
+		width: 50px;
+	}
+}
