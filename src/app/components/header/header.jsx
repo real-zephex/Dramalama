@@ -16,14 +16,14 @@ export default function Header() {
 				</Link>
 				<div className={styles.rightNav}>
 					<Link href="/anime">
-						<p>Anime</p>
+						<p>anime</p>
 					</Link>
 					<Link href="/manga">
-						<p>Manga</p>
+						<p>manga</p>
 					</Link>
-					{/* <Link href="/kdrama">
-						<p>Kdrama</p>
-					</Link> */}
+					<Link href="/kdrama">
+						<p>kdrama</p>
+					</Link>
 				</div>
 			</div>
 			<hr style={{ marginTop: "-3px" }} />

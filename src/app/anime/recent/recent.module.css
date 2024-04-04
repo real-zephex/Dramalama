@@ -1,5 +1,4 @@
 .RecentText {
-	color: #FFB996;
 	display: flex;
 	align-items: center;
 }
@@ -7,7 +6,8 @@
 .RecentText p {
 	font-size: 26px;
 	margin: 5px;
-	font-family: "Quicksand";
+	color: var(--soft-purple);
+	font-family: "Poppins";
 }
 
 .RecentText span {
@@ -42,6 +42,7 @@
 	text-align: center;
 	margin: 5px auto;
 	width: 140px;
+	font-family: "Atkinson Hyperlegible";
 }
 
 .RecentEntries p::-webkit-scrollbar {

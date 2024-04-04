@@ -1,0 +1,55 @@
+.Main {
+	max-width: 95%;
+	margin: 0px auto;
+}
+
+.TitleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.TitleContainer p {
+	color: white;
+	font-family: "Poppins";
+	font-size: 32px;
+}
+
+.TitleContainer img {
+	height: auto;
+	width: auto;
+	border-radius: 10px;
+}
+
+.DramaDescription h2 {
+	color: gray;
+	font-family: "Poppins";
+}
+
+.DramaDescription p {
+	font-family: "Atkinson Hyperlegible";
+	color: white;
+	margin-top: -10px;
+}
+
+.DramaGenre {
+	display: flex;
+	align-items: center;
+	overflow-x: auto;
+}
+
+.genreMain {
+	font-family: "Poppins";
+	color: var(--neon-green);
+	font-size: 18px;
+}
+
+.genreEntry {
+	background-color: #31313141;
+	color: white;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 5px;
+	font-family: "Atkinson Hyperlegible";
+	cursor: crosshair;
+}

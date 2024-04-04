@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Inter&display=swap');
-
 .Main {
-	max-width: 90%;
+	max-width: 95%;
 	margin: 10px auto;
 }
 
@@ -14,18 +12,12 @@
 .ImageContainer {
 	display: flex;
 	flex-direction: column;
+	max-width: auto;
 }
 
 .ImageContainer img {
 	margin: 0px 4px 4px 4px;
 	border-radius: 8px;
-	animation: zoomer 1s alternate-reverse infinite ease;
-}
-
-@keyframes zoomer {
-	to {
-		transform: scale(1.01);
-	}
 }
 
 .WelcomeContainer button {
@@ -41,41 +33,25 @@
 }
 
 .WelcomeText {
-	font-family: "Kanit";
+	font-family: "Poppins";
 	color: white;
-	font-size: 50px;
-	text-shadow: #FC0 2px 2px 50px;
+	font-size: 48px;
+	text-shadow: rgb(0, 183, 255) 2px 2px 50px;
 	margin-right: 10px;
 }
 
-
 .SelfPromoContainer {
 	display: flex;
-	justify-content: space-around;
-	font-family: "Lato";
+	justify-content: center;
+	flex-direction: column;
 	color: white;
-	/* margin-top: 20px; */
 }
 
 .SelfPromoContainer p {
-	font-family: "Quicksand";
+	font-family: "Atkinson Hyperlegible";
 	color: white;
 	text-align: center;
 }
-
-
-@media screen and (max-width: 1024px) {
-
-	.HorizontalImageContainer img {
-		width: auto;
-		height: auto;
-	}
-
-	.VerticalImageContainer img {
-		width: 265px;
-	}
-}
-
 
 .SearchBar {
 	display: flex;
@@ -110,20 +86,6 @@
 
 @media screen and (max-width: 768px) {
 
-	.HorizontalImageContainer img {
-		width: 95%;
-		height: auto;
-	}
-
-	.VerticalImageContainer img {
-		width: 46.5%;
-		height: 300px;
-	}
-}
-
-
-@media screen and (max-width: 425px) {
-
 	.Hero {
 		flex-direction: column;
 	}
@@ -132,17 +94,19 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		justify-content: center;
 		margin-bottom: 10px;
 	}
 
 	.WelcomeText {
-		font-size: 32px;
+		font-size: 30px;
 	}
 
 	.HorizontalImageContainer img {
-		margin-top: 20px;
 		width: 100%;
+		border-radius: 5px;
 		height: auto;
+		margin: 10px auto;
 	}
 
 	.VerticalImageContainer img {
@@ -151,5 +115,6 @@
 
 	.SearchBar {
 		width: 80%;
+		margin: 0px auto;
 	}
 }

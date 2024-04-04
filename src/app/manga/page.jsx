@@ -16,20 +16,20 @@ export default async function Manga() {
 					<div className={styles.HorizontalImageContainer}>
 						<Image
 							src="/image.png"
-							width={480}
+							width={487}
 							height={260}
 							alt="Haikyu"
 						/>
 					</div>
 					<div className={styles.VerticalImageContainer}>
 						<Image
-							src="/haikyu1.jpg"
+							src="/image.webp"
 							width={240}
 							height={360}
 							alt="Haikyu"
 						/>
 						<Image
-							src="/solo_levelling.png"
+							src="/solo_poster.png"
 							width={240}
 							height={360}
 							alt="Haikyu"
@@ -39,23 +39,22 @@ export default async function Manga() {
 			</div>
 
 			<div className={styles.SelfPromoContainer}>
-				<div className={styles.Welcome1}>
-					<p
-						style={{
-							textAlign: "center",
-							fontSize: 32,
-							color: "var(--soft-purple)",
-						}}
-					>
-						Welcome to Dramalama Manga
-					</p>
-					<p>
-						Dive into a world where action jumps off the page and
-						pictures paint a thousand words. Dramalama Manga is a
-						site that will immerse you in stunning illustrations and
-						compel you to lose yourself in thrilling narratives.
-					</p>
-				</div>
+				<p
+					style={{
+						textAlign: "center",
+						fontSize: 32,
+						color: "var(--soft-purple)",
+						fontFamily: "Poppins",
+					}}
+				>
+					Welcome to Dramalama Manga
+				</p>
+				<p style={{ marginTop: -10 }}>
+					Dive into a world where action jumps off the page and
+					pictures paint a thousand words. Dramalama Manga is a site
+					that will immerse you in stunning illustrations and compel
+					you to lose yourself in thrilling narratives.
+				</p>
 			</div>
 		</div>
 	);
