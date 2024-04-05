@@ -32,12 +32,12 @@
 	align-items: center;
 	margin: 7px;
 	transition: transform 0.2s linear;
+	cursor: grab;
 }
 
 .AnimeEntry:hover {
 	transition: transform 0.2s linear;
 	transform: scale(0.97);
-	cursor: pointer;
 }
 
 .AnimeEntry img {

@@ -53,3 +53,60 @@
 	font-family: "Atkinson Hyperlegible";
 	cursor: crosshair;
 }
+
+.EpisodesContainer {
+	margin-top: -10px;
+}
+
+.EpisodesContainer h2 {
+	color: gray;
+	font-family: "Poppins";
+}
+
+.EpisodeButtons {
+	margin: -10px 5px;
+}
+
+.EpisodeButtons button {
+	margin: 3px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	font-family: "Atkinson Hyperlegible";
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #3d3d3d;
+	transition: background-color 0.2s linear;
+	color: white;
+	cursor: pointer;
+}
+
+.EpisodeButtons button:hover {
+	background-color: #1f1f1f;
+	transition: background-color 0.2s linear
+}
+
+.VideoContainer {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.VideoContainer p {
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	color: var(--neon-green);
+}
+
+.VideoPlayer {
+	width: 70%;
+	height: auto;
+	margin: 0px auto;
+}
+
+@media screen and (max-width: 768px) {
+	.VideoPlayer {
+		width: 100%;
+	}
+}

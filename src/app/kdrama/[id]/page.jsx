@@ -1,8 +1,13 @@
 import styles from "../styles/info.module.css";
 import Image from "next/image";
+import EpisodesButtons from "./buttons";
+import VideoLinkCacher from "../components/cacher";
+
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const info = await getDramaInfo(id);
+
+	await VideoLinkCacher(info.episodes, id);
 
 	return (
 		<div className={styles.Main}>
@@ -19,6 +24,7 @@ export default async function DramaInfo({ params }) {
 						/>
 					</div>
 
+					{/* Drama description */}
 					<div className={styles.DramaDescription}>
 						<h2>Description</h2>
 						<p>{info.description}</p>
@@ -45,6 +51,9 @@ export default async function DramaInfo({ params }) {
 								</span>
 							))}
 					</div>
+
+					{/* Episodes Buttons */}
+					<EpisodesButtons data={info.episodes} id={id} />
 				</div>
 			)}
 		</div>
@@ -53,7 +62,8 @@ export default async function DramaInfo({ params }) {
 
 async function getDramaInfo(id) {
 	const res = await fetch(
-		`https://consumet-api-di2e.onrender.com/movies/dramacool/info?id=${id}`
+		`https://consumet-api-di2e.onrender.com/movies/dramacool/info?id=${id}`,
+		{ next: { revalidate: 86400 } }
 	);
 	const data = await res.json();
 	return data;

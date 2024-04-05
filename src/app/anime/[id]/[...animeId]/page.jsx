@@ -32,8 +32,8 @@ export default async function Video({ params }) {
 		try {
 			link = data.sources[3].url;
 		} catch (error) {
-			redirect("/404");
 			console.log("Episode not found.");
+			redirect("/404");
 		}
 	}
 
@@ -47,7 +47,6 @@ export default async function Video({ params }) {
 					<MediaPlayer
 						title={words}
 						src={link}
-						playsInline
 						aspectRatio="16/9"
 						load="eager"
 						className={styles.VideoPlayer}
