@@ -1,13 +1,13 @@
 import styles from "../styles/info.module.css";
 import Image from "next/image";
 import EpisodesButtons from "./buttons";
-import VideoLinkCacher from "../components/cacher";
+import PreFetchVideoLinks from "../components/cacher";
 
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const info = await getDramaInfo(id);
 
-	await VideoLinkCacher(info.episodes, id);
+	PreFetchVideoLinks(info.episodes, id);
 
 	return (
 		<div className={styles.Main}>

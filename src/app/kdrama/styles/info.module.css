@@ -79,6 +79,7 @@
 	transition: background-color 0.2s linear;
 	color: white;
 	cursor: pointer;
+	width: 100px;
 }
 
 .EpisodeButtons button:hover {
