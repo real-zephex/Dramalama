@@ -10,6 +10,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 
 export default async function Video({ params }) {
+	let link;
 	const id = params.animeId[0];
 	const series = params.animeId[1];
 
@@ -25,7 +26,16 @@ export default async function Video({ params }) {
 		redirect("/404");
 	}
 
-	const link = data.sources[4].url;
+	try {
+		link = data.sources[4].url;
+	} catch (error) {
+		try {
+			link = data.sources[3].url;
+		} catch (error) {
+			console.log("Episode not found.");
+			redirect("/404");
+		}
+	}
 
 	return (
 		<div className={styles.VideoMain}>
@@ -37,7 +47,6 @@ export default async function Video({ params }) {
 					<MediaPlayer
 						title={words}
 						src={link}
-						playsInline
 						aspectRatio="16/9"
 						load="eager"
 						className={styles.VideoPlayer}

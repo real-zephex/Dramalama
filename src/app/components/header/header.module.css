@@ -5,7 +5,7 @@
 	align-items: center;
 	max-width: 95%;
 	margin: -10px auto;
-	font-family: "Quicksand";
+	font-family: "Poppins";
 }
 
 .rightNav {
@@ -16,6 +16,7 @@
 
 .rightNav a {
 	text-decoration: underline;
+	font-family: "Atkinson Hyperlegible";
 	color: var(--light-green);
 	font-size: 18px;
 }

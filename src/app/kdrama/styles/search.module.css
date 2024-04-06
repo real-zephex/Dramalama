@@ -1,0 +1,77 @@
+.SearchContainer {
+	margin: 20px 0px -20px 0px;
+}
+
+.Search {
+	padding: 5px;
+	background-color: #121212;
+	display: flex;
+	align-items: center;
+	max-width: 30%;
+	border-radius: 10px;
+}
+
+.SearchContainer input {
+	margin-left: 5px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	background-color: #121212;
+	font-size: 16px;
+	font-family: "Atkinson Hyperlegible";
+	color: white;
+	width: 100%;
+}
+
+.SearchResults {
+	display: flex;
+	margin-top: 10px;
+	overflow-x: auto;
+}
+
+.SearchResults::-webkit-scrollbar {
+	height: 5px;
+}
+
+.SearchResults::-webkit-scrollbar-track {
+	background-color: #3333339d;
+	border-radius: 5px;
+}
+
+.SearchResults::-webkit-scrollbar-thumb {
+	background-color: rgb(68, 68, 68);
+	border-radius: 5px;
+}
+
+.SearchEntry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px;
+	padding: 6px;
+	background-color: #2e2e2eab;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.2s linear;
+}
+
+.SearchEntry:hover {
+	transition: transform 0.2s linear;
+	transform: scale(1.01);
+}
+
+.SearchEntry p {
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	width: 40vh;
+}
+
+.SearchEntry img {
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.Search {
+		max-width: 100%;
+	}
+}

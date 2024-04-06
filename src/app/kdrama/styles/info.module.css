@@ -1,0 +1,113 @@
+.Main {
+	max-width: 95%;
+	margin: 0px auto;
+}
+
+.TitleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.TitleContainer p {
+	color: white;
+	font-family: "Poppins";
+	font-size: 32px;
+}
+
+.TitleContainer img {
+	height: auto;
+	width: auto;
+	border-radius: 10px;
+}
+
+.DramaDescription h2 {
+	color: gray;
+	font-family: "Poppins";
+}
+
+.DramaDescription p {
+	font-family: "Atkinson Hyperlegible";
+	color: white;
+	margin-top: -10px;
+}
+
+.DramaGenre {
+	display: flex;
+	align-items: center;
+	overflow-x: auto;
+}
+
+.genreMain {
+	font-family: "Poppins";
+	color: var(--neon-green);
+	font-size: 18px;
+}
+
+.genreEntry {
+	background-color: #31313141;
+	color: white;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 5px;
+	font-family: "Atkinson Hyperlegible";
+	cursor: crosshair;
+}
+
+.EpisodesContainer {
+	margin-top: -10px;
+}
+
+.EpisodesContainer h2 {
+	color: gray;
+	font-family: "Poppins";
+}
+
+.EpisodeButtons {
+	margin: -10px 5px;
+}
+
+.EpisodeButtons button {
+	margin: 3px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	font-family: "Atkinson Hyperlegible";
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #3d3d3d;
+	transition: background-color 0.2s linear;
+	color: white;
+	cursor: pointer;
+	width: 100px;
+}
+
+.EpisodeButtons button:hover {
+	background-color: #1f1f1f;
+	transition: background-color 0.2s linear
+}
+
+.VideoContainer {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.VideoContainer p {
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	color: var(--neon-green);
+}
+
+.VideoPlayer {
+	width: 70%;
+	height: auto;
+	margin: 0px auto;
+}
+
+@media screen and (max-width: 768px) {
+	.VideoPlayer {
+		width: 100%;
+	}
+}

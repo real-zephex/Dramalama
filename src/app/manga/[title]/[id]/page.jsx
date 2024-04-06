@@ -119,7 +119,8 @@ export default async function MangaInfo({ params }) {
 
 async function getMangaInfo(id) {
 	const res = await fetch(
-		`https://consumet-api-di2e.onrender.com/meta/anilist-manga/info/${id}?provider=mangadex`
+		`https://consumet-api-di2e.onrender.com/meta/anilist-manga/info/${id}?provider=mangadex`,
+		{ next: { revalidate: 86400 } }
 	);
 	const data = await res.json();
 	return data;

@@ -1,0 +1,52 @@
+.popDramasText {
+	color: var(--soft-purple);
+	font-family: "Poppins";
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.AnimeContainer {
+	display: flex;
+	overflow-x: auto;
+}
+
+.AnimeContainer::-webkit-scrollbar {
+	height: 5px;
+}
+
+.AnimeContainer::-webkit-scrollbar-track {
+	background-color: #3333339d;
+	border-radius: 5px;
+}
+
+.AnimeContainer::-webkit-scrollbar-thumb {
+	background-color: rgb(68, 68, 68);
+	border-radius: 5px;
+}
+
+/* Format the scrollbar later */
+
+.AnimeEntry {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 7px;
+	transition: transform 0.2s linear;
+	cursor: grab;
+}
+
+.AnimeEntry:hover {
+	transition: transform 0.2s linear;
+	transform: scale(0.97);
+}
+
+.AnimeEntry img {
+	border-radius: 5px;
+}
+
+
+.AnimeEntry p {
+	text-align: center;
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+}
