@@ -1,7 +1,7 @@
 "use client";
 import styles from "../styles/info.module.css";
 import getVideoLink from "../components/videoLink";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
 import "@vidstack/react/player/styles/base.css";
 import "@vidstack/react/player/styles/plyr/theme.css";
@@ -19,6 +19,23 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 		setVideoLink(link);
 		setEpisode(episodeText);
 	}
+
+	// Auto loads the first episode
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				let firstVideoLink = episodeData[0].id;
+				let firstLink = await getVideoLink(firstVideoLink, dramaId);
+				setVideoLink(firstLink);
+				setEpisode("Episode 1");
+			} catch (error) {
+				console.log("Some error occured", error);
+				return;
+			}
+		};
+
+		fetchData();
+	}, []);
 
 	return (
 		<div>
@@ -38,22 +55,25 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 						))}
 				</div>
 			</div>
-			{videoLink && (
-				<div className={styles.VideoContainer}>
-					<MediaPlayer
-						title="dramaPlayer"
-						src={videoLink}
-						aspectRatio="16/9"
-						load="eager"
-						className={styles.VideoPlayer}
-						playsInline
-					>
-						<MediaProvider />
-						<PlyrLayout icons={plyrLayoutIcons} />
-					</MediaPlayer>
-					<p>{episode.toUpperCase()}</p>
-				</div>
-			)}
+
+			<div className={styles.VideoContainer}>
+				{videoLink && (
+					<div className={styles.Video}>
+						<MediaPlayer
+							title="dramaPlayer"
+							src={videoLink}
+							aspectRatio="16/9"
+							load="eager"
+							className={styles.VideoPlayer}
+							playsInline
+						>
+							<MediaProvider />
+							<PlyrLayout icons={plyrLayoutIcons} />
+						</MediaPlayer>
+						<p>{episode}</p>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }

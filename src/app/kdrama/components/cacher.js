@@ -1,4 +1,5 @@
 // This function pre-fetches all the video links for a drama in the background
+"use server";
 
 export default async function PreFetchVideoLinks(data, dramaId) {
 	try {
