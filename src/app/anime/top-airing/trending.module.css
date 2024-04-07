@@ -17,6 +17,7 @@
 .trending {
 	display: flex;
 	overflow-x: auto;
+	margin: 5px;
 }
 
 .trending::-webkit-scrollbar {
