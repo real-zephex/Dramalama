@@ -34,7 +34,7 @@ export default async function Read({ params }) {
 					images.map((item, index) => (
 						<div className={styles.Image} key={index}>
 							<Image
-								src={`https://image-proxy-4xuu.onrender.com/image-proxy?url=${item}`}
+								src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item}`}
 								key={index}
 								alt="Pages"
 								width={800}
