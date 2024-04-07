@@ -89,15 +89,18 @@
 
 .VideoContainer {
 	margin-top: 20px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
 }
 
-.VideoContainer p {
+.Video {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Video p {
 	color: white;
 	font-family: "Atkinson Hyperlegible";
-	color: var(--neon-green);
+	color: var(--pastel-red);
 }
 
 .VideoPlayer {
