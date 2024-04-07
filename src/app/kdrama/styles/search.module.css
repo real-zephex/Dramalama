@@ -2,6 +2,12 @@
 	margin: 20px 0px -20px 0px;
 }
 
+.LoadingText {
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+	text-align: center;
+}
+
 .Search {
 	padding: 5px;
 	background-color: #121212;

@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
 import CurrentReading from "./[read]/currentReading";
 
+export const runtime = 'edge';
+
 export default async function MangaInfo({ params }) {
 	const id = params.id;
 	const data = await getMangaInfo(id);
