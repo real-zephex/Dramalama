@@ -32,7 +32,7 @@ export default function DramaSearch() {
 						}
 					}}
 				></input>
-			</div>
+			</div>	
 
 			{loadingText && (
 				<p className={styles.LoadingText}>Wait a moment...</p>

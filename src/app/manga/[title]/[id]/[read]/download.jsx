@@ -8,7 +8,7 @@ export default function DownloadManga({ chapterId: id }) {
 				href={`https://manga-downloader-7nca.onrender.com/download?id=${id}`}
 				style={{ textDecoration: "none" }}
 			>
-				<button title="This functionality currently exhibits stability with lower-quality PDFs; however, users may encounter challenges when attempting to download higher-quality PDFs.">
+				<button disabled title="Not available right now.">
 					Download - Beta
 				</button>
 			</a>

@@ -2,7 +2,7 @@ import styles from "./title.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export default async function MangaInfo({ params }) {
 	const title = params.title;
@@ -30,7 +30,7 @@ export default async function MangaInfo({ params }) {
 							>
 								<div className={styles.MangaEntries}>
 									<Image
-										src={item.image}
+										src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 										width={160}
 										height={250}
 										alt="Manga Poster"

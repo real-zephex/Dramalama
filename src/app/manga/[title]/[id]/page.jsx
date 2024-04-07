@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
 import CurrentReading from "./[read]/currentReading";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;
@@ -39,7 +39,7 @@ export default async function MangaInfo({ params }) {
 								{data.title["romaji"]}
 							</p>
 							<Image
-								src={data.image}
+								src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${data.image}`}
 								width={200}
 								height={310}
 								alt="Manga Poster"
@@ -94,7 +94,7 @@ export default async function MangaInfo({ params }) {
 										className={styles.CharacterEntry}
 									>
 										<Image
-											src={item.image}
+											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 											width={140}
 											height={200}
 											alt="Character Poster"

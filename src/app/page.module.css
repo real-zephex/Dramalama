@@ -1,16 +1,51 @@
-.welcomeContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 85dvh;
-	max-width: 500px;
+.main {
+	max-width: 90%;
 	margin: 0px auto;
-	text-align: center;
+	display: flex;
+	height: 100dvh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.welcomeContainer p {
-	font-family: "Quicksand";
-	font-size: 20px;
+.redirects {
+	display: flex;
+	align-items: center;
+	margin-top: -10px;
+}
+
+.HomeSVG {
+	transition: transform 0.2s linear;
+}
+
+.HomeSVG:hover {
+	transition: transform 0.2s linear;
+	transform: translate(2px, -8px);
+}
+
+.redirects a {
 	color: white;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: var(--light-green);
+}
+
+@media screen and (max-width: 768px) {
+	.HomeSVG {
+		width: 400px;
+		margin-bottom: -20px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.HomeSVG {
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.HomeSVG {
+		width: 300px;
+	}
 }

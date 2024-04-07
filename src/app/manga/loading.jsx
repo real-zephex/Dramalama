@@ -1,9 +1,9 @@
-import styles from "./manga.module.css";
+import styles from "./loading.module.css";
 
 export default function Loading() {
 	return (
-		<div className={styles.LoadingContainer}>
-			<p>Please wait while we are loading your content....</p>
+		<div className={styles.Main}>
+			<div className={styles.LoadingContainer}></div>
 		</div>
 	);
 }

@@ -7,8 +7,10 @@ export const runtime = "edge";
 
 export default async function Read({ params }) {
 	const chapterId = params.read;
-	const data = await getPages(chapterId);
-	if (data.length === 0) {
+	const results = await getPages(chapterId);
+	const image_base_url = results.baseUrl + "/data/" + results.chapter.hash;
+
+	if (results.length === 0) {
 		return (
 			<div className={styles.NotFound}>
 				<p>
@@ -19,8 +21,8 @@ export default async function Read({ params }) {
 	}
 
 	let images = [];
-	for (var i = 0; i < data.length; i++) {
-		var imgUrl = data[i].img;
+	for (var i = 0; i < results.chapter.data.length; i++) {
+		var imgUrl = image_base_url + "/" + results.chapter.data[i];
 		images.push(imgUrl);
 	}
 
@@ -52,9 +54,7 @@ export default async function Read({ params }) {
 }
 
 async function getPages(id) {
-	const res = await fetch(
-		`https://consumet-api-di2e.onrender.com/meta/anilist-manga/read?chapterId=${id}&provider=mangadex`
-	);
+	const res = await fetch(`https://api.mangadex.org/at-home/server/${id}`);
 	const data = await res.json();
 	return data;
 }
