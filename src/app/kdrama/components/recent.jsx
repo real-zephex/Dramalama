@@ -19,7 +19,7 @@ export default async function RecentDramas() {
 						>
 							<div className={styles.AnimeEntry}>
 								<Image
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={160}
 									height={240}
 									alt="Drama Poster"

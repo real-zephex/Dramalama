@@ -10,11 +10,14 @@ import Link from "next/link";
 export default function DramaSearch() {
 	const [title, setTitle] = useState("");
 	const [infoTitle, setInfoTitle] = useState(null);
+	const [loadingText, setLoadingText] = useState(null);
 
-	async function getSearchResults(title) {
+	const handleSearch = async (title) => {
+		setLoadingText(true);
 		const data = await FetchSearchTitle(title);
+		setLoadingText(false);
 		setInfoTitle(data);
-	}
+	};
 
 	return (
 		<div className={styles.SearchContainer}>
@@ -25,11 +28,15 @@ export default function DramaSearch() {
 					onChange={(event) => setTitle(event.target.value)}
 					onKeyDown={async (e) => {
 						if ((e.key === "Enter" || e.code === 13) && title) {
-							await getSearchResults(e.target.value);
+							await handleSearch(e.target.value);
 						}
 					}}
 				></input>
 			</div>
+
+			{loadingText && (
+				<p className={styles.LoadingText}>Wait a moment...</p>
+			)}
 
 			<div className={styles.SearchResults}>
 				{infoTitle &&
@@ -42,7 +49,7 @@ export default function DramaSearch() {
 							<div className={styles.SearchEntry}>
 								<p>{item.title}</p>
 								<Image
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={110}
 									height={180}
 									alt="Drama Poster"

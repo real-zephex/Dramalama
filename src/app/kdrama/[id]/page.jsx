@@ -3,7 +3,7 @@ import Image from "next/image";
 import EpisodesButtons from "./buttons";
 import PreFetchVideoLinks from "../components/cacher";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
@@ -18,7 +18,7 @@ export default async function DramaInfo({ params }) {
 					<div className={styles.TitleContainer}>
 						<p>{info.title}</p>
 						<Image
-							src={info.image}
+							src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${info.image}`}
 							width={160}
 							height={240}
 							alt="Drama Poster"

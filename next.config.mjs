@@ -27,6 +27,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "uploads.mangadex.org",
 			},
+			{
+				protocol: "https",
+				hostname: "sup-proxy.zephex0-f6c.workers.dev",
+			},
 		],
 	},
 	logging: {

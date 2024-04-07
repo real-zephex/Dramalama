@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./styles/kdrama.module.css";
 import PopularDramas from "./components/popular";
 import RecentDramas from "./components/recent";
