@@ -3,6 +3,8 @@ import Image from "next/image";
 import DownloadManga from "./download";
 import CurrentReading from "./currentReading";
 
+export const runtime = "edge";
+
 export default async function Read({ params }) {
 	const chapterId = params.read;
 	const data = await getPages(chapterId);

@@ -9,6 +9,8 @@ import styles from "./video.module.css";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
+export const runtime = 'edge';
+
 export default async function Video({ params }) {
 	let link;
 	const id = params.animeId[0];
