@@ -1,3 +1,7 @@
+.Main {
+	margin: 80px auto;
+}
+
 .Image {
 	display: flex;
 	flex-direction: column;

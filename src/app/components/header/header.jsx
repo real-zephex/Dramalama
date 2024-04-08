@@ -26,7 +26,6 @@ export default function Header() {
 					</Link>
 				</div>
 			</div>
-			<hr style={{ marginTop: "-3px" }} />
 		</div>
 	);
 }

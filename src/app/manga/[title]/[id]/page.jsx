@@ -4,6 +4,7 @@ import Buttons from "./buttons";
 import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
 import CurrentReading from "./[read]/currentReading";
+import PreFetchChaterLinks from "../../cacher";
 
 export const runtime = "edge";
 
@@ -14,6 +15,8 @@ export default async function MangaInfo({ params }) {
 	if (data.message) {
 		redirect("/404");
 	}
+
+	PreFetchChaterLinks(data.chapters);
 
 	return (
 		<div className={styles.MangaInfoContainer}>
@@ -49,34 +52,41 @@ export default async function MangaInfo({ params }) {
 					</div>
 
 					<div className={styles.MangaDescription}>
-						<p>{data.description.split("<br")[0]}</p>
-						<span className={styles.MangaReleaseYear}>
-							Released in: {data.releaseDate}
-						</span>
-						<span>
-							Started on: {data.startDate["day"]}-
-							{data.startDate["month"]}-{data.startDate["year"]}
-						</span>
-						<span>
-							Ended on: {data.endDate["day"]}-
-							{data.endDate["month"]}-{data.endDate["year"]}
-						</span>
-						<p style={{ color: "#7ED7C1" }}>
-							Genres:
-							{data.genres &&
-								data.genres.map((item, index) => (
-									<span
-										key={index}
-										className={styles.MangaGenre}
-										style={{
-											color: data.color,
-											margin: 5,
-										}}
-									>
-										{item}
-									</span>
-								))}
-						</p>
+						<div className={styles.Description}>
+							<h2>Description</h2>
+							<p>{data.description.split("<br")[0]}</p>
+						</div>
+
+						<div className={styles.MangaReleaseYear}>
+							<span style={{ color: "#A3FFD6" }}>
+								Started on: {data.startDate["day"]}-
+								{data.startDate["month"]}-
+								{data.startDate["year"]}
+							</span>
+							<span style={{ color: "white", margin: 10 }}>
+								|
+							</span>
+							<span style={{ color: "var(--pastel-red)" }}>
+								Ended on: {data.endDate["day"]}-
+								{data.endDate["month"]}-{data.endDate["year"]}
+							</span>
+						</div>
+
+						<div className={styles.GenreContainer}>
+							<span className={styles.GenreText}>Genres: </span>
+							<div className={styles.genres}>
+								{data.genres &&
+									data.genres.map((item, index) => (
+										<span
+											key={index}
+											className={styles.MangaGenre}
+										>
+											{item}
+										</span>
+									))}
+							</div>
+						</div>
+
 						<div className={styles.MangaRatings}>
 							<span>Ratings: {data.rating / 10}</span>
 							<span>

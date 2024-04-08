@@ -1,51 +1,15 @@
-.main {
-	max-width: 90%;
-	margin: 0px auto;
+.welcomeContainer {
 	display: flex;
-	height: 100dvh;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-}
-
-.redirects {
-	display: flex;
 	align-items: center;
-	margin-top: -10px;
+	height: 100dvh;
+	margin: 0px auto;
+	text-align: center;
 }
 
-.HomeSVG {
-	transition: transform 0.2s linear;
-}
-
-.HomeSVG:hover {
-	transition: transform 0.2s linear;
-	transform: translate(2px, -8px);
-}
-
-.redirects a {
+.welcomeContainer p {
+	font-family: "Poppins";
+	font-size: 20px;
 	color: white;
-	text-decoration: none;
-	margin-right: 10px;
-	margin-left: 10px;
-	color: var(--light-green);
-}
-
-@media screen and (max-width: 768px) {
-	.HomeSVG {
-		width: 400px;
-		margin-bottom: -20px;
-	}
-}
-
-@media screen and (max-width: 425px) {
-	.HomeSVG {
-		width: 350px;
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.HomeSVG {
-		width: 300px;
-	}
 }

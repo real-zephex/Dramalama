@@ -8,7 +8,6 @@ export default async function Anime() {
 		<div className={styles.Main}>
 			<Input />
 			<Trending />
-			<br />
 			<Releases />
 		</div>
 	);

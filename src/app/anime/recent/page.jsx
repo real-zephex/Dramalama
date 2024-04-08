@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./recent.module.css";
-import { MdRecentActors } from "react-icons/md";
 
 export default async function Releases() {
 	const data = await fetchRecentEpisodes();
@@ -10,9 +9,6 @@ export default async function Releases() {
 		<div className="trendingContainer">
 			<div className={styles.RecentText}>
 				<p>Recent Releases</p>
-				<span>
-					<MdRecentActors size={26} color="aqua" />
-				</span>
 			</div>
 
 			<div className={styles.Recent}>
