@@ -8,29 +8,30 @@ Dramalama is an online service where you can watch kdramas and anime and read ma
 
 ## Description
 
-This web application is written using Next.JS framework and fetches it data via [Consumet API](https://github.com/consumet/api.consumet.org). The anime section is mostly server rendered so you can expect some good performance out of it. However, kdrama is section is not server rendered as it was originally written in React and I just copy pasted the code from there to here.
+This web application, built with the Next.js framework, relies on data fetched from the Consumet API. The anime section benefits from server-side rendering, ensuring efficient performance. To maintain uniformity, both the kdrama and manga sections have been updated to utilize server-side rendering (SSR), aligning them with the architecture of the anime section.
 
-*However, I am planning to rewrite the kdrama section and make it server rendered*
+_However, I am planning to rewrite the kdrama section and make it server rendered_
 
 ## Features
 
 #### Kdrama
-- User can search for dramas by their title
-- Have tried to adapt to all screen sizes
-- HLS streams, meaning the quality will adapt to your network conditions automatically.
+
+-   Users can search for dramas by their title.
+-   The platform is designed to be responsive, ensuring compatibility with all screen sizes.
+-   HLS streams, meaning the quality will adapt to your network conditions automatically.
 
 #### Anime
-- Top airing animes and recent episode releases are shown on the homepage.
-- User can search for animes by their title.
-- Due to server side rendering, the requests are cached meaning if you visit a specific episode of some anime and then try to revisit it again then it will constantly load. It can benefit other users who are trying to watch the same anime.
-- [Vidstack](https://www.vidstack.io/) has been used as video player.
+
+-   The homepage displays top airing anime and recent episode releases.
+-   Users have the option to search for anime titles.
+-   Due to server-side rendering, requests are cached. This means that if a user visits a specific episode of an anime and then tries to revisit it, the page will load instantly. This caching benefits other users who are attempting to watch the same anime.
+-   Vidstack serves as the video player.
 
 #### Manga
-- Users can search for mangas/manhwa by their title
-- A good looking info page
-- Ability to download mangas in `.pdf` format
 
-Alternatively, you can link your repository to vercel and have your very own streaming website.
+-   Users can search for mangas/manhwa by their title
+-   A good looking info page
+-   Ability to download mangas in `.pdf` format
 
 ## Content Guidelines
 
@@ -38,12 +39,10 @@ Dramalama doesn't stores any data. It fetches it data through Consumet API which
 
 ## Deployments
 
-- Vercel: https://dramalama.vercel.app
-- Netlify: https://dramalama.netlify.app
-- Koyeb: https://dramalama-zephex.koyeb.app
+-   Vercel: https://dramalama.vercel.app
+-   Netlify: https://dramalama.netlify.app
+-   Koyeb: https://dramalama-zephex.koyeb.app
 
 ## Contributing
 
 Contributors are welcome!!
-
-
