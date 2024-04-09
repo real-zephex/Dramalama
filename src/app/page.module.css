@@ -1,15 +1,99 @@
-.welcomeContainer {
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	height: 100dvh;
-	margin: 0px auto;
-	text-align: center;
+	justify-content: space-between;
+	background-color: #121212;
+	font-family: "Poppins", serif;
+	z-index: 2;
 }
 
-.welcomeContainer p {
-	font-family: "Poppins";
-	font-size: 20px;
+.left {
 	color: white;
+	font-size: 24px;
+}
+
+.left p {
+	margin: 0;
+	padding: 1rem;
+}
+
+.right a {
+	text-decoration: none;
+	color: white;
+	margin: 0 0.4rem 0 0.5rem;
+	transition: opacity 400ms ease;
+	font-size: 16px;
+}
+
+.header:hover>.right a {
+	opacity: 0.5;
+}
+
+.header:hover>.right a:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.footer {
+	bottom: 0;
+	width: 100%;
+	position: fixed;
+	background-color: #121212;
+	color: white;
+	font-family: "Poppins", serif;
+	z-index: 2;
+}
+
+.footer p {
+	text-align: center;
+	font-size: 14px;
+	margin: 0;
+	padding: 0.6rem;
+}
+
+.content {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contentContainer {
+	display: block;
+}
+
+.contentContainer a {
+	text-decoration: none;
+	color: white;
+}
+
+.manga,
+.anime,
+.kdrama {
+	background-color: #121212e0;
+	color: white;
+	margin-top: 5px;
+	border-radius: 5px;
+	transition: opacity 400ms ease;
+	padding: 0.4rem 2rem;
+	font-family: "Poppins", serif;
+}
+
+.content:hover>.contentContainer div {
+	opacity: 0.5;
+}
+
+.content:hover>.contentContainer div:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.dotted-background {
+	height: 100vh;
+	width: 100vw;
+	z-index: -1;
+	position: absolute;
 }

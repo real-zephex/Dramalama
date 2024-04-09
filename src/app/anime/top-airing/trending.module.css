@@ -8,6 +8,7 @@
 	margin: 5px;
 	color: var(--soft-purple);
 	font-family: "Poppins";
+	font-weight: 500;
 }
 
 .TrendingText span {
@@ -17,11 +18,20 @@
 .trending {
 	display: flex;
 	overflow-x: auto;
-	margin: 5px;
+}
+
+.TrendingContainer:hover .trendingEntries {
+	opacity: 0.5;
+}
+
+.TrendingContainer:hover .trendingEntries:hover {
+	opacity: 1;
+	transform: scale(1.02);
 }
 
 .trending::-webkit-scrollbar {
 	height: 5px;
+	width: 0px;
 }
 
 .trending::-webkit-scrollbar-thumb {
@@ -30,13 +40,12 @@
 }
 
 .trendingEntries {
-	margin: 7px;
-	transition: transform 0.2s linear;
-}
-
-.trendingEntries:hover {
-	transition: transform 0.2s linear;
-	transform: scale(0.97);
+	margin: 4px;
+	transition: transform 400ms ease;
+	background-color: #353535a6;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .trendingEntries p {
@@ -44,10 +53,12 @@
 	margin: 5px auto;
 	width: 140px;
 	font-family: "Atkinson Hyperlegible";
+	height: 80px;
+	overflow-y: auto;
 }
 
 .trendingEntries p::-webkit-scrollbar {
-	width: 5px;
+	width: 2px;
 }
 
 .trendingEntries p::-webkit-scrollbar-thumb {
@@ -56,6 +67,6 @@
 }
 
 .trendingImage {
-	border-radius: 5px;
+	border-radius: 1rem;
 	aspect-ratio: auto;
 }

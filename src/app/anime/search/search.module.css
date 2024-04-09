@@ -36,6 +36,14 @@
 	overflow-x: auto;
 }
 
+.animeEntry:hover .anime {
+	opacity: 0.5;
+}
+
+.animeEntry:hover .anime:hover {
+	opacity: 1;
+}
+
 .animeEntry::-webkit-scrollbar {
 	height: 5px;
 }
@@ -61,12 +69,15 @@
 	margin: 10px 10px 0px 0px;
 	border-radius: 10px;
 	border-width: 4px;
+	transition: opacity 400ms ease-in;
+	background-color: #353535a6;
+
 }
 
 .anime p {
 	color: white;
-	width: 25dvh;
-	font-family: "Lato";
+	width: 20dvw;
+	font-family: "Atkinson";
 	font-size: 18px;
 }
 

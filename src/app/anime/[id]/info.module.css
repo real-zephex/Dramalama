@@ -52,10 +52,15 @@
 	color: #ffffff81
 }
 
+.buttonContainer button {
+	transition: transform 200ms ease-in-out;
+
+}
+
 .buttonContainer button:focus {
 	opacity: 0.7;
-	transition: transform 0.2s linear;
-	background-color: var(--pastel-red);
+	transition: transform 200ms ease-in;
+	background-color: var(--soft-purple);
 	transform: scale(0.9);
 }
 
@@ -68,7 +73,7 @@
 	padding: 10px;
 	font-family: "Quicksand";
 	font-size: 14px;
-	margin: 5px;
+	margin: 5px 5px 5px 5px;
 	width: 55px;
 	border-radius: 5px;
 	text-align: center;
@@ -76,13 +81,13 @@
 	outline: none;
 	color: white;
 	background-color: #3d3d3d;
-	transition: background-color 0.2s linear;
+	transition: background-color 200ms ease-in-out;
 	cursor: pointer;
 }
 
 .dramaButton:hover {
 	background-color: #1f1f1f;
-	transition: background-color 0.2s linear
+	transition: background-color 200ms ease-in
 }
 
 .infoPageContainer p {
@@ -111,9 +116,57 @@
 	color: var(--soft-purple)
 }
 
+.videoPopUp {
+	height: 100dvh;
+	width: 100dvw;
+	background-color: #1f1f1fd3;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	overflow-y: auto;
+}
+
+.video {
+	display: flex;
+	flex-direction: column;
+}
+
+.closeButton {
+	font-family: "Poppins", serif;
+	font-size: 16px;
+	background-color: var(--pastel-red);
+	padding: 4px 10px;
+	border: 0;
+	outline: 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	margin: 5px;
+	width: auto;
+}
+
+.VideoPlayer {
+	width: 60dvw;
+	
+}
+
+
 @media screen and (max-width: 768px) {
+
+	.titleContainer p {
+		font-size: 28px;
+	}
 
 	.animeDetails {
 		font-size: 14px;
+	}
+
+	.VideoPlayer {
+		width: 100%;
 	}
 }

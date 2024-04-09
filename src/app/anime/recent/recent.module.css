@@ -8,6 +8,7 @@
 	margin: 5px;
 	color: var(--soft-purple);
 	font-family: "Poppins";
+	font-weight: 500;
 }
 
 .RecentText span {
@@ -17,11 +18,20 @@
 .Recent {
 	display: flex;
 	overflow-x: auto;
-	margin: 5px;
+}
+
+.RecentContainer:hover .RecentEntries {
+	opacity: 0.5;
+}
+
+.RecentContainer:hover:hover .RecentEntries:hover {
+	opacity: 1;
+	transform: scale(1.02);
 }
 
 .Recent::-webkit-scrollbar {
 	height: 5px;
+	width: 0px;
 }
 
 .Recent::-webkit-scrollbar-thumb {
@@ -30,13 +40,12 @@
 }
 
 .RecentEntries {
-	margin: 7px;
-	transition: transform 0.1s linear;
-}
+	margin: 4px;
+	background-color: #353535a6;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	transition: opacity 400ms ease, transform 400ms ease;
 
-.RecentEntries:hover {
-	transition: transform 0.1s linear;
-	transform: scale(0.97);
 }
 
 .RecentEntries p {
@@ -44,10 +53,13 @@
 	margin: 5px auto;
 	width: 140px;
 	font-family: "Atkinson Hyperlegible";
+	height: 80px;
+	overflow-y: auto;
+	transition: font-size 400ms ease;
 }
 
 .RecentEntries p::-webkit-scrollbar {
-	width: 5px;
+	width: 2px;
 }
 
 .Recent p::-webkit-scrollbar-thumb {
@@ -56,6 +68,6 @@
 }
 
 .RecentImage {
-	border-radius: 5px;
+	border-radius: 1rem;
 	aspect-ratio: auto;
 }

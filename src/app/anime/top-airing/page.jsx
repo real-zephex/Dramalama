@@ -6,7 +6,7 @@ export default async function Trending() {
 	const data = await test();
 
 	return (
-		<div className="trendingContainer">
+		<div className={styles.TrendingContainer}>
 			<div className={styles.TrendingText}>
 				<p>Trending</p>
 			</div>

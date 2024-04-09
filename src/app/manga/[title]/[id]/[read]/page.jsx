@@ -42,6 +42,7 @@ export default async function Read({ params }) {
 								width={800}
 								height={1000}
 								priority
+								quality={100}
 								unoptimized
 							/>
 							<p>{index + 1}</p>

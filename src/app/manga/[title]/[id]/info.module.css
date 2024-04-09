@@ -1,5 +1,5 @@
 .MangaInfoContainer {
-	margin: 70px auto;
+	margin: 68px auto;
 }
 
 .MangaHero {
@@ -45,6 +45,10 @@
 	margin-top: -10px;
 }
 
+.MangaReleaseYear {
+	margin-top: 10px;
+}
+
 .GenreContainer {
 	margin-top: 5px;
 	display: flex;
@@ -53,6 +57,10 @@
 
 .GenreText {
 	color: var(--neon-green);
+}
+
+.GenreContainer {
+	margin-top: 10px;
 }
 
 .genres {
@@ -71,7 +79,7 @@
 
 .MangaRatings {
 	display: flex;
-	margin: 5px 0px 10px 0px;
+	margin-top: 10px;
 	/* justify-content: center; */
 }
 
@@ -81,10 +89,21 @@
 	color: var(--light-green);
 }
 
+.CharactersContainer {
+	max-width: 98%;
+	margin: 20px auto;
+}
+
+.CharactersContainer h2 {
+	color: gray;
+	font-family: "Poppins", serif;
+}
+
 .Character {
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
+	margin-top: -10px;
 }
 
 .Character::-webkit-scrollbar {
@@ -132,7 +151,7 @@
 }
 
 .ChapterContainer {
-	width: 50%;
+	width: 50dvw;
 	text-align: center;
 	height: 300px;
 	overflow-y: auto;
@@ -140,6 +159,7 @@
 
 .ChapterContainer::-webkit-scrollbar {
 	width: 5px;
+	height: 0px;
 }
 
 .ChapterContainer::-webkit-scrollbar-thumb {
@@ -148,7 +168,7 @@
 }
 
 .ChapterContainer button {
-	width: 130px;
+	width: 8dvw;
 	height: auto;
 	padding: 10px;
 	margin: 5px;
@@ -159,7 +179,7 @@
 	color: white;
 	background-color: #3d3d3d;
 	cursor: pointer;
-	transition: background-color 0.2s linear;
+	transition: background-color 100ms ease-in-out;
 }
 
 .ChapterContainer button p {
@@ -169,7 +189,7 @@
 
 .ChapterContainer button:hover {
 	background-color: #1f1f1f;
-	transition: background-color 0.2s linear
+	transition: background-color 50ms ease-in
 }
 
 .ChapterContainer button:focus {

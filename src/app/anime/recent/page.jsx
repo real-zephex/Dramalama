@@ -6,7 +6,7 @@ export default async function Releases() {
 	const data = await fetchRecentEpisodes();
 
 	return (
-		<div className="trendingContainer">
+		<div className={styles.RecentContainer}>
 			<div className={styles.RecentText}>
 				<p>Recent Releases</p>
 			</div>

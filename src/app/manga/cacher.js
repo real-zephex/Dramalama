@@ -4,7 +4,7 @@
 export default async function PreFetchChaterLinks(data) {
 	try {
 		const fetchPromises = data.map(async (element) => {
-			const link = `https://consumet-api-di2e.onrender.com/meta/anilist-manga/read?chapterId=${element.id}&provider=mangadex`;
+			const link = `https://consumet-jade.vercel.app/meta/anilist-manga/read?chapterId=${element.id}&provider=mangadex`;
 			await fetch(link, { cache: "force-cache" });
 		});
 

@@ -38,9 +38,8 @@ export default async function MangaInfo({ params }) {
 									/>
 									<div className={styles.MangaInfo}>
 										<p className={styles.MangaTitle}>
-											{item.title["romaji"]},{" "}
-											{item.title["english"]},{" "}
-											{item.title["native"]}
+											{item.title["english"] ||
+												item.title["romaji"]}
 										</p>
 										<p className={styles.MangaDescription}>
 											{desc.includes &&

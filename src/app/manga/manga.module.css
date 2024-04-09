@@ -4,14 +4,19 @@
 	align-items: center;
 	justify-content: center;
 	height: 100dvh;
+	width: 100dvw;
+}
+
+.MangaSVG {
+	height: auto;
+	width: auto;
 }
 
 .SearchBar {
 	display: flex;
 	align-items: center;
-	border-radius: 10px;
 	background: #1f1f1f;
-	margin-top: -10px;
+	margin-top: 10px;
 	border-style: dotted;
 	border-color: rgb(63, 63, 63);
 	border-width: 2px;
@@ -27,4 +32,10 @@
 	color: white;
 	font-family: "Kanit";
 	font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.MangaSVG {
+		width: 100%;
+	}
 }

@@ -5,7 +5,7 @@ import Input from "./search/page";
 
 export default async function Anime() {
 	return (
-		<div className={styles.Main}>
+		<div className={styles.main}>
 			<Input />
 			<Trending />
 			<Releases />

@@ -1,13 +1,14 @@
 import styles from "./info.module.css";
 import Image from "next/image";
-import Link from "next/link";
-
-export const runtime = 'edge';
+import Button from "./buttons";
+import { preFetchAnimeLinks } from "../videoLinkfetcher";
 
 export default async function AnimeInfo({ params }) {
 	let animeID = params.id;
 
 	const info = await getAnimeInfo(animeID);
+
+	preFetchAnimeLinks(info);
 
 	return (
 		<div className={styles.dramaInfoContainer}>
@@ -50,21 +51,7 @@ export default async function AnimeInfo({ params }) {
 					</p>
 				</div>
 
-				<h2 className={styles.buttonHeader}>Episodes: </h2>
-				<div className={styles.buttonContainer}>
-					{info &&
-						info.episodes &&
-						info.episodes.map((item, index) => (
-							<Link
-								href={`/anime/watch/${item.id}/${animeID}`}
-								key={index}
-							>
-								<button className={styles.dramaButton}>
-									{item.number}
-								</button>
-							</Link>
-						))}
-				</div>
+				<Button data2={info} />
 			</div>
 		</div>
 	);

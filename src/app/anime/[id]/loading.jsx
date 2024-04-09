@@ -1,9 +1,9 @@
 import styles from "./loading.module.css";
 
-export default function Loading() {
+export default async function Loading() {
 	return (
-		<div className={styles.loadingContainer}>
-			<p className={styles.loadingText}>Hold tight...Arriving!!</p>
+		<div className={styles.Main}>
+			<div className={styles.LoadingContainer}></div>
 		</div>
 	);
 }

@@ -96,6 +96,7 @@ export default async function MangaInfo({ params }) {
 					</div>
 
 					<div className={styles.CharactersContainer}>
+						<h2>Characters</h2>
 						<div className={styles.Character}>
 							{data.characters &&
 								data.characters.map((item, index) => (
