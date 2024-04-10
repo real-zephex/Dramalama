@@ -40,8 +40,7 @@ Dramalama doesn't stores any data. It fetches it data through Consumet API which
 ## Deployments
 
 -   Vercel: https://dramalama.vercel.app
--   Netlify: https://dramalama.netlify.app
--   Koyeb: https://dramalama-zephex.koyeb.app
+-   Netlify: https://dramalama.netlify.app  
 
 ## Contributing
 

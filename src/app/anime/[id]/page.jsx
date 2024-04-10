@@ -22,6 +22,7 @@ export default async function AnimeInfo({ params }) {
 								width={175}
 								height={256}
 								alt="Drama"
+								priority
 							/>
 						</div>
 						<div className={styles.animeDescription}>
@@ -33,8 +34,7 @@ export default async function AnimeInfo({ params }) {
 
 				<div className={styles.animeDetails}>
 					<span className={styles.genre}>Genres: </span>
-					{info &&
-						info.genres &&
+					{info.genres &&
 						info.genres.map((item, index) => (
 							<span className={styles.genreEntries} key={index}>
 								{item}

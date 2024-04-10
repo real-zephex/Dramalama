@@ -1,5 +1,6 @@
 .Main {
 	height: 100dvh;
+	width: 100dvw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
