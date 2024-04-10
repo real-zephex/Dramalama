@@ -55,30 +55,32 @@ export default function Button({ data2: info }) {
 						}
 					}}
 				>
-					<MediaPlayer
-						title="dramaPlayer"
-						src={videoLink}
-						aspectRatio="16/9"
-						load="eager"
-						className={styles.VideoPlayer}
-						playsInline
-						id="videoPlayer"
-						volume={0.2}
-						onQualityChange={(event) =>
-							console.log("changed qualities", event)
-						}
-					>
-						<MediaProvider />
-						<PlyrLayout icons={plyrLayoutIcons} />
-					</MediaPlayer>
-					<button
-						className={styles.closeButton}
-						onClick={() => {
-							setVideoLink("");
-						}}
-					>
-						Close
-					</button>
+					<div className={styles.video}>
+						<MediaPlayer
+							title="dramaPlayer"
+							src={videoLink}
+							aspectRatio="16/9"
+							load="eager"
+							className={styles.VideoPlayer}
+							playsInline
+							id="videoPlayer"
+							volume={0.2}
+							onQualityChange={(event) =>
+								console.log("changed qualities", event)
+							}
+						>
+							<MediaProvider />
+							<PlyrLayout icons={plyrLayoutIcons} />
+						</MediaPlayer>
+						<button
+							className={styles.closeButton}
+							onClick={() => {
+								setVideoLink("");
+							}}
+						>
+							Close
+						</button>
+					</div>
 				</div>
 			)}
 		</main>

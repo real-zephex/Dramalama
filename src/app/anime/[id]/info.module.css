@@ -137,7 +137,7 @@
 	font-family: "Poppins", serif;
 	font-size: 16px;
 	background-color: var(--pastel-red);
-	padding: 4px 10px;
+	padding: 0.5rem 1.5rem;
 	border: 0;
 	outline: 0;
 	border-radius: 0.5rem;
@@ -145,11 +145,13 @@
 	margin: 5px;
 }
 
-.VideoPlayer {
-	width: 60dvw;
-	height: auto;
+.video {
+	width: 60vw;
 }
 
+.VideoPlayer {
+	width: 100%;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -161,7 +163,7 @@
 		font-size: 14px;
 	}
 
-	.VideoPlayer {
+	.video {
 		width: 100%;
 	}
 }
