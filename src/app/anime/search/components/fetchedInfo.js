@@ -1,8 +1,10 @@
 import styles from "../search.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { preFetchAnimeInfo } from "../../videoLinkfetcher";
 
 export default async function fetchedInfo(data) {
+	preFetchAnimeInfo(data);
 	return (
 		<div className={styles.animeEntry}>
 			{data ? (
@@ -16,10 +18,10 @@ export default async function fetchedInfo(data) {
 							<div className={styles.anime}>
 								<p>{item.title}</p>
 								<Image
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.animeImage}
 									width={120}
-									height={160}
+									height={180}
 									alt="Drama Poster"
 								/>
 							</div>

@@ -30,3 +30,17 @@ export async function preFetchAnimeLinks(data, n = 40) {
 		console.error("Error occurred while pre-fetching video links:", error);
 	}
 }
+
+export async function preFetchAnimeInfo(data) {
+	try {
+		const fetchPromises = data.results.map(async (element) => {
+			const link = `https://anime-sensei-api.vercel.app/anime/gogoanime/info/${element.id}`;
+			await fetch(link, { next: { revalidate: 86400 } });
+		});
+
+		await Promise.all(fetchPromises);
+		console.log("Anime info pre-fetched successfully!");
+	} catch (error) {
+		console.error("Error occurred while pre-fetching anime info: ", error);
+	}
+}

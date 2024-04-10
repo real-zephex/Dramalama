@@ -37,7 +37,7 @@
 }
 
 .animeEntry:hover .anime {
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 .animeEntry:hover .anime:hover {
@@ -63,13 +63,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
+	padding: 5px;
 	border-style: dotted;
 	border-color: #636363;
 	margin: 10px 10px 0px 0px;
 	border-radius: 10px;
 	border-width: 4px;
-	transition: opacity 400ms ease-in;
+	transition: opacity 200ms ease-in;
 	background-color: #353535a6;
 
 }
@@ -89,5 +89,9 @@
 @media screen and (max-width: 768px) {
 	.searchContainer {
 		width: 70%;
+	}
+
+	.anime p {
+		width: 50dvw;
 	}
 }

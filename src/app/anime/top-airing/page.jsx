@@ -1,10 +1,11 @@
 import styles from "./trending.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { preFetchAnimeInfo } from "../videoLinkfetcher";
 
 export default async function Trending() {
 	const data = await test();
-
+	preFetchAnimeInfo(data);
 	return (
 		<div className={styles.TrendingContainer}>
 			<div className={styles.TrendingText}>
@@ -21,7 +22,7 @@ export default async function Trending() {
 						>
 							<div className={styles.trendingEntries}>
 								<Image
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.trendingImage}
 									width={150}
 									height={230}

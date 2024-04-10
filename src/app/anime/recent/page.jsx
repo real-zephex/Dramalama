@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./recent.module.css";
+import { preFetchAnimeInfo } from "../videoLinkfetcher";
 
 export default async function Releases() {
 	const data = await fetchRecentEpisodes();
+	preFetchAnimeInfo(data);
 
 	return (
 		<div className={styles.RecentContainer}>
@@ -21,7 +23,7 @@ export default async function Releases() {
 						>
 							<div className={styles.RecentEntries}>
 								<Image
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.RecentImage}
 									width={150}
 									height={230}
