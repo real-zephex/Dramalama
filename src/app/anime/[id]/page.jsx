@@ -44,7 +44,7 @@ export default async function AnimeInfo({ params }) {
 						Type: <span>{info && info.type}</span>
 					</p>
 					<p className={styles.animeRelease}>
-						Release year:{" "}
+						Release year:
 						<span>
 							{info && info.releaseDate}, {info && info.status}
 						</span>

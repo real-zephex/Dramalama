@@ -132,10 +132,6 @@
 	overflow-y: auto;
 }
 
-.video {
-	display: flex;
-	flex-direction: column;
-}
 
 .closeButton {
 	font-family: "Poppins", serif;
@@ -147,7 +143,6 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	margin: 5px;
-	width: auto;
 }
 
 .VideoPlayer {
