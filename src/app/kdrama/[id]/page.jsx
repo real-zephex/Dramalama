@@ -3,8 +3,6 @@ import Image from "next/image";
 import EpisodesButtons from "./buttons";
 import PreFetchVideoLinks from "../components/cacher";
 
-export const runtime = "edge";
-
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const info = await getDramaInfo(id);
