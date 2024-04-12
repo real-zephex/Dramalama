@@ -1,6 +1,6 @@
 .Main {
-	max-width: 95%;
-	margin: 100px auto;
+	max-width: 98%;
+	margin: 80px auto;
 }
 
 .TitleContainer {
@@ -16,8 +16,8 @@
 }
 
 .TitleContainer img {
-	height: auto;
 	width: auto;
+	/* height: auto; */
 	border-radius: 10px;
 }
 
@@ -95,6 +95,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 70dvw;
+	margin: 0px auto;
 }
 
 .Video p {
@@ -104,14 +106,18 @@
 }
 
 .VideoPlayer {
-	width: 70%;
 	height: auto;
 	margin: 0px auto;
 }
 
 @media screen and (max-width: 768px) {
-	.VideoPlayer {
+	.Video {
 		width: 100%;
-		height: auto;
 	}
+
+	.EpisodeButtons button {
+		font-size: 14px;
+		width: 80px;
+	}
+
 }

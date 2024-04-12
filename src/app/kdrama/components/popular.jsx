@@ -20,8 +20,8 @@ export default async function PopularDramas() {
 							<div className={styles.AnimeEntry}>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={160}
-									height={240}
+									width={150}
+									height={230}
 									alt="Drama Poster"
 								/>
 								<p>{item.title}</p>

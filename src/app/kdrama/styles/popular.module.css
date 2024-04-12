@@ -3,11 +3,13 @@
 	font-family: "Poppins";
 	font-size: 28px;
 	margin-bottom: 10px;
+	font-weight: 500;
 }
 
 .AnimeContainer {
 	display: flex;
 	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 .AnimeContainer::-webkit-scrollbar {
@@ -24,29 +26,38 @@
 	border-radius: 5px;
 }
 
+.AnimeContainer:hover .AnimeEntry {
+	opacity: 0.4;
+}
+
+.AnimeContainer:hover .AnimeEntry:hover {
+	opacity: 1;
+	transform: scale(1.02);
+}
+
 /* Format the scrollbar later */
 
 .AnimeEntry {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 7px;
-	transition: transform 0.2s linear;
+	margin: 4px;
+	background-color: #353535a6;
+	padding: 0.5rem;
+	transition: opacity 400ms ease, transform 400ms ease;
 	cursor: grab;
-}
-
-.AnimeEntry:hover {
-	transition: transform 0.2s linear;
-	transform: scale(0.97);
+	border-radius: 1rem;
 }
 
 .AnimeEntry img {
-	border-radius: 5px;
+	border-radius: 1rem;
 }
-
 
 .AnimeEntry p {
 	text-align: center;
 	color: white;
 	font-family: "Atkinson Hyperlegible";
+	width: 140px;
+	height: 60px;
+	overflow-y: auto;
 }
