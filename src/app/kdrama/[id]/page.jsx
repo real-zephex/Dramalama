@@ -1,7 +1,7 @@
 import styles from "../styles/info.module.css";
 import Image from "next/image";
 import EpisodesButtons from "./buttons";
-import PreFetchVideoLinks from "../components/cacher";
+import { PreFetchVideoLinks } from "../components/cacher";
 
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
@@ -62,7 +62,7 @@ export default async function DramaInfo({ params }) {
 
 async function getDramaInfo(id) {
 	const res = await fetch(
-		`https://consumet-api-di2e.onrender.com/movies/dramacool/info?id=${id}`,
+		`https://consumet-jade.vercel.app/movies/dramacool/info?id=${id}`,
 		{ next: { revalidate: 86400 } }
 	);
 	const data = await res.json();

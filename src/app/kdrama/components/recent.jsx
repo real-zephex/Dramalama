@@ -1,10 +1,11 @@
 import styles from "../styles/popular.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { PreFetchAnimeInfo } from "./cacher";
 
 export default async function RecentDramas() {
 	const popular = await getPopular();
-
+	PreFetchAnimeInfo(popular);
 	return (
 		<div className={styles.Main}>
 			<p className={styles.popDramasText}>Recently Released</p>

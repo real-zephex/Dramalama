@@ -46,9 +46,11 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 						episodeData.map((item, index) => (
 							<button
 								key={index}
-								onClick={() =>
-									test(item.id, dramaId, item.title)
-								}
+								onClick={(event) => {
+									test(item.id, dramaId, item.title);
+									event.target.style.backgroundColor =
+										"var(--soft-purple)";
+								}}
 							>
 								{item.title}
 							</button>

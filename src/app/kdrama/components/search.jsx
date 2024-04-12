@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import FetchSearchTitle from "./searchQuery";
 import Image from "next/image";
 import Link from "next/link";
+import { PreFetchAnimeInfo } from "./cacher";
 
 export default function DramaSearch() {
 	const [title, setTitle] = useState("");
@@ -15,6 +16,7 @@ export default function DramaSearch() {
 	const handleSearch = async (title) => {
 		setLoadingText(true);
 		const data = await FetchSearchTitle(title);
+		PreFetchAnimeInfo(data);
 		setLoadingText(false);
 		setInfoTitle(data);
 	};
@@ -32,7 +34,7 @@ export default function DramaSearch() {
 						}
 					}}
 				></input>
-			</div>	
+			</div>
 
 			{loadingText && (
 				<p className={styles.LoadingText}>Wait a moment...</p>
