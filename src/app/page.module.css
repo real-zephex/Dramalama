@@ -1,3 +1,8 @@
+.newbg {
+	background: rgb(37, 37, 37);
+	background: radial-gradient(circle, rgb(41, 41, 41) 2%, rgb(12, 12, 12) 30%);
+}
+
 .header {
 	position: fixed;
 	top: 0;
@@ -87,7 +92,7 @@
 }
 
 .content:hover>.contentContainer div:hover {
-	opacity: 0.9;
+	opacity: 1;
 	cursor: pointer;
 }
 

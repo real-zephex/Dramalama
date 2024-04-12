@@ -6,6 +6,8 @@ import { FaStar } from "react-icons/fa";
 import CurrentReading from "./[read]/currentReading";
 import PreFetchChaterLinks from "../../cacher";
 
+// This page displays the information regarding the manga or manhwa which the user selected on the previous page.
+
 export default async function MangaInfo({ params }) {
 	const id = params.id;
 	const data = await getMangaInfo(id);

@@ -2,6 +2,8 @@ import styles from "./title.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+// This page displays all the available mangas or manhwas when the user searches for one/ 
+
 export default async function MangaInfo({ params }) {
 	const title = params.title;
 	const data = await GetSearchedAnime(title);

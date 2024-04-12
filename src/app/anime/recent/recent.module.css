@@ -21,7 +21,7 @@
 }
 
 .RecentContainer:hover .RecentEntries {
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 .RecentContainer:hover:hover .RecentEntries:hover {
@@ -41,7 +41,7 @@
 
 .RecentEntries {
 	margin: 4px;
-	background-color: #353535a6;
+	background-color: #1f1f1fbb;
 	padding: 0.5rem;
 	border-radius: 1rem;
 	transition: opacity 400ms ease, transform 400ms ease;

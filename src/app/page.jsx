@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
+		<main className={styles.newbg}>
 			<div className={styles.content}>
 				<div className={styles.contentContainer}>
 					<div className={styles.manga}>

@@ -5,6 +5,8 @@ import styles from "./manga.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+// This is the search bar for the mangapage. Nothing extraordinary but just an input box and a search icon. Gets the work done.
+
 export default function SearchBar() {
 	const router = useRouter();
 

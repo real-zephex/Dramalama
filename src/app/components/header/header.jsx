@@ -15,9 +15,7 @@ export default function Header() {
 				</div>
 				<div className={styles.right}>
 					<Link href="/anime">Anime</Link>
-					<Link href="/kdrama" style={{ pointerEvents: "none" }}>
-						Kdrama
-					</Link>
+					<Link href="/kdrama">Kdrama</Link>
 					<Link href="/manga">Manga</Link>
 				</div>
 			</div>
