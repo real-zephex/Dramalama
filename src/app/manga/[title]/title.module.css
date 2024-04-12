@@ -1,5 +1,5 @@
 .Main {
-	max-width: 90%;
+	max-width: 95%;
 	margin: 60px auto;
 }
 
@@ -26,14 +26,17 @@
 	border-width: 4px;
 	align-items: center;
 	cursor: pointer;
-	transition: transform 0.2s linear;
+	transition: opacity 200ms linear, transform 200ms linear;
 }
 
-.MangaEntries:hover {
-	transition: transform 0.2s linear;
-	transform: scale(1.01);
-	border-color: #535353 #686868;
+/* THIS WORKS*/
+.MangaContainer:hover .MangaEntries {
+	opacity: 0.5;
+}
 
+.MangaContainer:hover .MangaEntries:hover {
+	opacity: 1;
+	transform: scale(1.01);
 }
 
 .MangaInfo {

@@ -31,9 +31,12 @@ export default function Home() {
 				</div>
 			</div>
 			<div className={styles.netlifyLogo}>
-				<Link href={"https://dramalama.netlify.app"} target="_blank">
+				<Link
+					href={"https://github.com/real-zephex/Dramalama"}
+					target="_blank"
+				>
 					<Image
-						src={"/netlify.svg"}
+						src={"/github.svg"}
 						width={300}
 						height={130}
 						alt="Netlify Logo"

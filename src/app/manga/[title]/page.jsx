@@ -66,7 +66,7 @@ export default async function MangaInfo({ params }) {
 
 async function GetSearchedAnime(title) {
 	const res = await fetch(
-		"https://consumet-api-di2e.onrender.com/meta/anilist-manga/" + title
+		"https://consumet-jade.vercel.app/meta/anilist-manga/" + title
 	);
 	const data = await res.json();
 	return data;

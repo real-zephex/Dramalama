@@ -37,7 +37,7 @@ export default async function MangaInfo({ params }) {
 									padding: 5,
 								}}
 							>
-								{data.title["romaji"]}
+								{data.title["english"] || data.title["romaji"]}
 							</p>
 							<Image
 								src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${data.image}`}

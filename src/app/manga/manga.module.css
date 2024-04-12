@@ -20,6 +20,7 @@
 	border-style: dotted;
 	border-color: rgb(63, 63, 63);
 	border-width: 2px;
+	width: 20dvw
 }
 
 .SearchBar input {
@@ -37,5 +38,9 @@
 @media screen and (max-width: 768px) {
 	.MangaSVG {
 		width: 100%;
+	}
+
+	.SearchBar {
+		width: 50dvw;
 	}
 }
