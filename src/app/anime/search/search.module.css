@@ -5,6 +5,27 @@
 	color: white;
 }
 
+.inputContainer {
+	display: flex;
+	align-items: center;
+}
+
+.inputContainer button {
+	margin: 5px;
+	background-color: #121212;
+	padding: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	color: white;
+	font-family: "Atkinson Hyperlegible";
+}
+
+.inputContainer button a {
+	text-decoration: none;
+	color: white;
+}
+
 .searchContainer input {
 	border: none;
 	border-radius: 5px;
@@ -77,7 +98,7 @@
 .anime p {
 	color: white;
 	width: 20dvw;
-	font-family: "Atkinson";
+	font-family: "Atkinson Hyperlegible";
 	font-size: 18px;
 }
 

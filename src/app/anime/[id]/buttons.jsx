@@ -10,8 +10,10 @@ import {
 	PlyrLayout,
 	plyrLayoutIcons,
 } from "@vidstack/react/player/layouts/plyr";
+import { storeLocal } from "../history/storeData";
 
 export default function Button({ data2: info }) {
+	const currentDate = new Date();
 	const [videoLink, setVideoLink] = useState(null);
 
 	async function video(id) {
@@ -20,8 +22,24 @@ export default function Button({ data2: info }) {
 			alert("Sorry, but not links were found");
 		} else {
 			setVideoLink(link);
-			console.log(videoLink);
 		}
+	}
+
+	function store_to_local(name, image, episode, id) {
+		let newData = {
+			name: name,
+			image: image,
+			episode: episode,
+			id: id,
+			type: "anime",
+			date: `${currentDate.getDate()}-${String(
+				currentDate.getMonth() + 1
+			).padStart(2, "0")}`,
+			time: `${currentDate.getHours()}:${String(
+				currentDate.getMinutes()
+			).padStart(2, "0")}`,
+		};
+		storeLocal(newData);
 	}
 
 	return (
@@ -38,6 +56,12 @@ export default function Button({ data2: info }) {
 								event.target.style.backgroundColor =
 									"var(--soft-purple)";
 								video(item.id);
+								store_to_local(
+									info.title,
+									info.image,
+									item.number,
+									info.id
+								);
 							}}
 						>
 							{item.number}

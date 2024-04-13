@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa"; // Import the search icon from react-
 import { useState } from "react";
 import Results from "./components/fetchInfo";
 import fetchedInfo from "./components/fetchedInfo";
+import Link from "next/link";
 
 export default function Input() {
 	const [searchedAnime, setSearchedAnime] = useState(null);
@@ -47,6 +48,11 @@ export default function Input() {
 						className={styles.SearchInput}
 					></input>
 				</div>
+				<button>
+					<Link href={"/anime/history/continueWatching"}>
+						Watch History
+					</Link>
+				</button>
 			</div>
 
 			{loading && (

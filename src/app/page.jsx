@@ -27,6 +27,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+
 			<div className={styles.netlifyLogo}>
 				<Link
 					href={"https://github.com/real-zephex/Dramalama"}
