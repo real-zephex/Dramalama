@@ -96,16 +96,13 @@
 	cursor: pointer;
 }
 
-.dotted-background {
-	height: 100vh;
-	width: 100vw;
-	z-index: -1;
-	position: absolute;
-}
-
 .netlifyLogo {
 	position: fixed;
 	bottom: 0;
 	margin: 0rem 0.4rem 1rem 0.4rem;
 	height: 8.2rem;
+}
+
+.netlifyLogo img {
+	aspect-ratio: 16 / 9;
 }
