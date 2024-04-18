@@ -22,7 +22,7 @@
 .ImageContainer p {
 	text-align: center;
 	color: white;
-	font-family: "Kanit";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 16px;
 	margin: 5px;
 }
@@ -30,7 +30,7 @@
 .NotFound {
 	text-align: center;
 	color: white;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 20px;
 }
 
@@ -43,7 +43,7 @@
 	outline: none;
 	border-radius: 5px;
 	padding: 5px;
-	font-family: "Lato";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 16px;
 	background-color: var(--light-green);
 	cursor: pointer;
@@ -51,13 +51,6 @@
 
 .DownloadMain button:hover {
 	background-color: var(--pastel-red);
-}
-
-.CurrentReadingContainer {
-	text-align: center;
-	color: white;
-	font-family: "Quicksand";
-	font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {

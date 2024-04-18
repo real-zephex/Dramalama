@@ -1,5 +1,6 @@
+"use client";
+
 import styles from "./read.module.css";
-// import Link from "next/link";
 
 export default function DownloadManga({ chapterId: id }) {
 	return (
@@ -7,10 +8,13 @@ export default function DownloadManga({ chapterId: id }) {
 			<a
 				href={`https://manga-downloader-7nca.onrender.com/download?id=${id}`}
 				style={{ textDecoration: "none" }}
+				onClick={() =>
+					alert(
+						"Downloads are not instant. It might take some time to prepare your file. Thank you for your patience"
+					)
+				}
 			>
-				<button disabled title="Not available right now.">
-					Download - Beta
-				</button>
+				<button title="should work just fine">Download - Beta</button>
 			</a>
 		</div>
 	);

@@ -11,7 +11,7 @@
 .SearchedFor {
 	color: white;
 	text-align: center;
-	font-family: "Poppins";
+	font-family: "Lexend Deca", serif;
 	font-size: 26px;
 }
 
@@ -42,10 +42,11 @@
 .MangaInfo {
 	color: white;
 	margin-left: 20px;
+	font-family: "Atkinson Hyperlegible";
 }
 
 .MangaTitle {
-	font-family: "Lato";
+	font-family: "Lexend Deca", serif;
 	margin: 0px;
 	font-size: 22px;
 	color: var(--neon-green);
@@ -53,14 +54,18 @@
 
 .MangaStatus {
 	color: var(--soft-purple);
+	font-family: "Poppins", serif;
+
 }
 
 .MangaVolume {
 	color: #FFACAC;
+	font-family: "Poppins", serif;
 }
 
 .MangaChapters {
-	color: #FFEBB4
+	color: #FFEBB4;
+	font-family: "Poppins", serif;
 }
 
 @media screen and (max-width: 768px) {

@@ -12,6 +12,22 @@
 	width: auto;
 }
 
+.searchMain {
+	display: flex;
+	align-items: center;
+}
+
+.searchMain button {
+	margin: 10px 5px 0px 5px;
+	padding: 4px;
+	border-radius: 0.3rem;
+	border: none;
+	outline: none;
+	font-family: "Atkinson Hyperlegible", serif;
+	background: #1f1f1f;
+	color: white;
+}
+
 .SearchBar {
 	display: flex;
 	align-items: center;
@@ -20,7 +36,8 @@
 	border-style: dotted;
 	border-color: rgb(63, 63, 63);
 	border-width: 2px;
-	width: 20dvw
+	width: 20dvw;
+	border-radius: 1rem;
 }
 
 .SearchBar input {
@@ -31,7 +48,7 @@
 	padding: 4px;
 	width: 100%;
 	color: white;
-	font-family: "Kanit";
+	font-family: "Lexend Deca", serif;
 	font-size: 16px;
 }
 

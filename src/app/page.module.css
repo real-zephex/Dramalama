@@ -11,7 +11,7 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: #121212;
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 	z-index: 2;
 }
 
@@ -57,6 +57,7 @@
 	font-size: 14px;
 	margin: 0;
 	padding: 0.6rem;
+	font-family: "Poppins", serif;
 }
 
 .content {
@@ -84,7 +85,7 @@
 	border-radius: 5px;
 	transition: opacity 400ms ease;
 	padding: 0.4rem 2rem;
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 }
 
 .content:hover>.contentContainer div {

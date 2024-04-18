@@ -1,7 +1,6 @@
 import styles from "./read.module.css";
 import Image from "next/image";
 import DownloadManga from "./download";
-import CurrentReading from "./currentReading";
 
 export default async function Read({ params }) {
 	const chapterId = params.read;
@@ -26,7 +25,6 @@ export default async function Read({ params }) {
 
 	return (
 		<div className={styles.Main}>
-			<CurrentReading />
 			<div className={styles.ImageContainer}>
 				<DownloadManga chapterId={chapterId} />
 				<p>Total pages: {images.length}</p>
@@ -47,7 +45,6 @@ export default async function Read({ params }) {
 						</div>
 					))}
 			</div>
-			<CurrentReading />
 		</div>
 	);
 }

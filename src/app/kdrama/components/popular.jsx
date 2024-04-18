@@ -37,7 +37,7 @@ export default async function PopularDramas() {
 
 async function getPopular() {
 	const res = await fetch("https://dramacool-scraper.vercel.app/popular", {
-		next: { revalidate: 86400 },
+		next: { revalidate: 33200 },
 	});
 	const data = await res.json();
 	return data;

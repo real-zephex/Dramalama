@@ -2,8 +2,21 @@
 
 import styles from "./info.module.css";
 import Link from "next/link";
+import { storeLocal } from "../../history/storeData";
 
 export default function Buttons({ content: data }) {
+	function store_to_local(title, chapter, volume, image, id, id2) {
+		let data = {
+			title: title,
+			chapter: chapter,
+			volume: volume,
+			image: image,
+			id: id,
+			mangaId: id2,
+		};
+		storeLocal(data);
+	}
+
 	return (
 		<div className={styles.ChapterContainer}>
 			{data.chapters &&
@@ -15,9 +28,16 @@ export default function Buttons({ content: data }) {
 								href={{
 									pathname: `/manga/info/read/${item.id}`,
 								}}
-								onClick={() =>
-									test(item.chapterNumber, item.volumeNumber)
-								}
+								onClick={() => {
+									store_to_local(
+										data.title.english || data.title.romaji,
+										parseInt(item.chapterNumber),
+										parseInt(item.volumeNumber),
+										data.image,
+										item.id,
+										data.id
+									);
+								}}
 							>
 								<button key={index}>
 									<div>
@@ -31,9 +51,4 @@ export default function Buttons({ content: data }) {
 				})}
 		</div>
 	);
-}
-
-function test(chapter, volume) {
-	localStorage.setItem("chapter", chapter);
-	localStorage.setItem("volume", volume);
 }

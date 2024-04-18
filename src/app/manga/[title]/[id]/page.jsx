@@ -3,10 +3,7 @@ import Image from "next/image";
 import Buttons from "./buttons";
 import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
-import CurrentReading from "./[read]/currentReading";
-import PreFetchChaterLinks from "../../cacher";
-
-// This page displays the information regarding the manga or manhwa which the user selected on the previous page.
+import { PreFetchChaterLinks } from "../../cacher";
 
 export default async function MangaInfo({ params }) {
 	const id = params.id;
@@ -117,7 +114,6 @@ export default async function MangaInfo({ params }) {
 								))}
 						</div>
 					</div>
-					<CurrentReading />
 					<div className={styles.Chapters}>
 						<p className={styles.ChapterTitle}>
 							Chapters & Volumes

@@ -1,27 +1,34 @@
 "use client";
-import { useState, useEffect } from "react";
-import styles from "./read.module.css";
 
-export default function CurrentReading() {
-	const [chapter, setChapter] = useState(null);
-	const [volume, setVolume] = useState(null);
+import styles from "./read.module.css";
+import { useEffect } from "react";
+
+function get_current_info(title) {
+	let req = {};
 
 	useEffect(() => {
-		setChapter(localStorage.getItem("chapter") || "");
-		setVolume(localStorage.getItem("volume") || "");
-	});
+		const data = JSON.parse(localStorage.getItem("mangaData"));
+		data.watchHis.forEach((element) => {
+			if (element.title === title) {
+				req.chapter = element.chapter;
+				req.volume = element.volume;
+			}
+		});
+	}, []);
 
-	return CR(chapter, volume);
+	return req || false;
 }
 
-function CR(chapter, volume) {
+export default function Current({ name: title }) {
+	let data = get_current_info(title);
+	if (!data) {
+		return;
+	}
+
 	return (
-		<div className={styles.CurrentReadingContainer}>
-			{chapter && volume && (
-				<p>
-					Reading: Vol {volume} Chapter {chapter}
-				</p>
-			)}
-		</div>
+		<section className={styles.CurrentMain}>
+			<p className={styles.CurrentChapter}>{data.chapter}</p>
+			<p className={styles.CurrentVolume}>{data.volume}</p>
+		</section>
 	);
 }
