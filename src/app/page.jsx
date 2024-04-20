@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
 	return (
@@ -26,20 +25,6 @@ export default function Home() {
 						</Link>
 					</div>
 				</div>
-			</div>
-
-			<div className={styles.netlifyLogo}>
-				<Link
-					href={"https://github.com/real-zephex/Dramalama"}
-					target="_blank"
-				>
-					<Image
-						src={"/github.svg"}
-						width={300}
-						height={130}
-						alt="Netlify Logo"
-					/>
-				</Link>
 			</div>
 		</main>
 	);

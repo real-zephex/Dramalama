@@ -19,13 +19,14 @@
 
 .searchMain button {
 	margin: 10px 5px 0px 5px;
-	padding: 4px;
+	padding: 8px;
 	border-radius: 0.3rem;
 	border: none;
 	outline: none;
 	font-family: "Atkinson Hyperlegible", serif;
 	background: #1f1f1f;
 	color: white;
+	cursor: pointer;
 }
 
 .SearchBar {

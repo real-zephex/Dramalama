@@ -25,7 +25,7 @@ const ContinueWatching = () => {
 
 	return (
 		<main className={styles.main}>
-			<p className={styles.mainText}>Continue Watching</p>
+			<p className={styles.mainText}>Continue Reading</p>
 			{localItems && (
 				<div className={styles.animeContainer}>
 					{localItems.watchHis &&
