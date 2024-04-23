@@ -53,8 +53,9 @@
 	margin: 5px auto;
 	width: 140px;
 	font-family: "Atkinson Hyperlegible";
-	height: 80px;
-	overflow-y: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	transition: font-size 400ms ease;
 }
 

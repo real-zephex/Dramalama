@@ -58,6 +58,7 @@
 	color: white;
 	font-family: "Atkinson Hyperlegible";
 	width: 140px;
-	height: 60px;
-	overflow-y: auto;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
