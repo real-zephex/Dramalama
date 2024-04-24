@@ -19,7 +19,7 @@
 .titleContainer p {
 	color: var(--neon-green);
 	width: 60%;
-	font-family: "Poppins";
+	font-family: "Poppins", serif;
 	font-weight: 500;
 	font-size: 34px;
 }
@@ -36,7 +36,7 @@
 }
 
 .animeDescription p {
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	color: rgba(255, 255, 255, 0.637);
 }
 
@@ -71,7 +71,7 @@
 
 .dramaButton {
 	padding: 10px;
-	font-family: "Quicksand";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 14px;
 	margin: 5px 5px 5px 5px;
 	width: 55px;
@@ -105,7 +105,7 @@
 	color: var(--neon-green);
 	background-color: #303030;
 	cursor: pointer;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 }
 
 .animeType span {

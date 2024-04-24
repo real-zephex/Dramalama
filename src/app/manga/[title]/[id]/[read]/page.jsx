@@ -20,6 +20,7 @@ export default async function Read({ params }) {
 	let images = [];
 	for (var i = 0; i < results.chapter.data.length; i++) {
 		var imgUrl = image_base_url + "/" + results.chapter.data[i];
+		// console.log(imgUrl);
 		images.push(imgUrl);
 	}
 
@@ -32,7 +33,7 @@ export default async function Read({ params }) {
 					images.map((item, index) => (
 						<div className={styles.Image} key={index}>
 							<Image
-								src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item}`}
+								src={`https://cros.shashstorm.in/cors?url=${item}`}
 								key={index}
 								alt="Pages"
 								width={800}

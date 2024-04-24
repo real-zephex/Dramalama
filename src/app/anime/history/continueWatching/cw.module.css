@@ -26,9 +26,8 @@
 }
 
 .animeEntry img {
-	width: auto;
+	width: 10%;
 	height: auto;
-	max-height: 40dvh;
 	border-radius: 0.8rem;
 }
 
@@ -54,6 +53,9 @@
 @media screen and (max-width: 768px) {
 	.animeContainer {
 		font-size: 14px;
+	}
 
+	.animeEntry img {
+		width: 35%;
 	}
 }

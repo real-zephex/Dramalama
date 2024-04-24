@@ -50,7 +50,7 @@ export default function Input() {
 				</div>
 				<button>
 					<Link href={"/anime/history/continueWatching"}>
-						Watch History
+						History
 					</Link>
 				</button>
 			</div>
