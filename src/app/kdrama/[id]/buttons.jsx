@@ -48,11 +48,11 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 								key={index}
 								onClick={(event) => {
 									test(item.id, dramaId, item.title);
-									event.target.style.backgroundColor =
+									event.currentTarget.style.backgroundColor =
 										"var(--soft-purple)";
 								}}
 							>
-								{item.title}
+								<p>{item.title}</p>
 							</button>
 						))}
 				</div>

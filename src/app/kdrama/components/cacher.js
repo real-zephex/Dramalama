@@ -19,7 +19,7 @@ export async function PreFetchAnimeInfo(data) {
 	try {
 		const fetchPromises = data.results.map(async (element) => {
 			const link = `https://consumet-jade.vercel.app/movies/dramacool/info?id=${element.id}`;
-			await fetch(link, { next: { revalidate: 86400 } });
+			await fetch(link, { next: { revalidate: 21600 } });
 		});
 
 		await Promise.all(fetchPromises);

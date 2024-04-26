@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { PreFetchAnimeInfo } from "./cacher";
 
+export const runtime = 'edge';
+
 export default async function RecentDramas() {
 	const popular = await getPopular();
 	PreFetchAnimeInfo(popular);
@@ -36,7 +38,7 @@ export default async function RecentDramas() {
 
 async function getPopular() {
 	const res = await fetch("https://dramacool-scraper.vercel.app/recent", {
-		next: { revalidate: 86400 },
+		next: { revalidate: 21600 },
 	});
 	const data = await res.json();
 	return data;

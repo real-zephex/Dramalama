@@ -33,7 +33,7 @@
 	outline: none;
 	background: none;
 	width: 100%;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 16px;
 }
 
@@ -57,12 +57,13 @@
 	overflow-x: auto;
 }
 
-.animeEntry:hover .anime {
-	opacity: 0.4;
+.animeEntry .anime {
+	opacity: 0.5;
 }
 
 .animeEntry:hover .anime:hover {
 	opacity: 1;
+	background-color: #292929;
 }
 
 .animeEntry::-webkit-scrollbar {
@@ -85,26 +86,22 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	border-style: dotted;
-	border-color: #636363;
 	margin: 10px 10px 0px 0px;
-	border-radius: 10px;
-	border-width: 4px;
-	transition: opacity 200ms ease-in;
-	background-color: #353535a6;
+	border-radius: 0.5rem;
+	transition: opacity 200ms ease-in, background-color 200ms linear;
+	background-color: #242424d0;
 
 }
 
 .anime p {
 	color: white;
 	width: 20dvw;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	font-size: 18px;
 }
 
 .animeImage {
-	border-radius: 10px;
-	margin-left: 20px;
+	border-radius: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {

@@ -41,7 +41,7 @@ export default async function Trending() {
 async function test() {
 	const res = await fetch(
 		"https://consumet-jade.vercel.app/anime/gogoanime/top-airing",
-		{ next: { revalidate: 86400 } }
+		{ next: { revalidate: 21600 } }
 	);
 	const data = res.json();
 	return data;

@@ -61,4 +61,5 @@
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	margin: 0.5rem 0rem 0rem 0rem;
 }

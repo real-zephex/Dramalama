@@ -3,6 +3,8 @@ import Image from "next/image";
 import EpisodesButtons from "./buttons";
 import { PreFetchVideoLinks } from "../components/cacher";
 
+export const runtime = "edge";
+
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const info = await getDramaInfo(id);
@@ -17,8 +19,8 @@ export default async function DramaInfo({ params }) {
 						<p>{info.title}</p>
 						<Image
 							src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${info.image}`}
-							width={160}
-							height={240}
+							width={175}
+							height={256}
 							alt="Drama Poster"
 							priority
 						/>
@@ -63,7 +65,7 @@ export default async function DramaInfo({ params }) {
 async function getDramaInfo(id) {
 	const res = await fetch(
 		`https://consumet-jade.vercel.app/movies/dramacool/info?id=${id}`,
-		{ next: { revalidate: 86400 } }
+		{ next: { revalidate: 21600 } }
 	);
 	const data = await res.json();
 	return data;
