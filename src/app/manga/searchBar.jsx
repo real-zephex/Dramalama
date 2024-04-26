@@ -6,8 +6,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-// This is the search bar for the mangapage. Nothing extraordinary but just an input box and a search icon. Gets the work done.
-
 export default function SearchBar() {
 	const router = useRouter();
 
@@ -16,11 +14,11 @@ export default function SearchBar() {
 	return (
 		<main className={styles.searchMain}>
 			<div className={styles.SearchBar}>
-				<FaSearch color="white" style={{ marginLeft: 5 }} />
+				<FaSearch color="white" style={{ marginLeft: 5 }} size={18} />
 				<input
 					type="text"
 					name="manga"
-					placeholder="Enter manga title"
+					placeholder="Enter manga title and press enter"
 					autoComplete="off"
 					onChange={(e) => setMangaTitle(e.target.value)}
 					onKeyDown={(event) => {
@@ -35,7 +33,7 @@ export default function SearchBar() {
 					}}
 				></input>
 			</div>
-			<div>
+			<div className={styles.histButton}>
 				<Link href={"/manga/history/continueWatching/"}>
 					<button>History</button>
 				</Link>

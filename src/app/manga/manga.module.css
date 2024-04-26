@@ -3,13 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100dvh;
-	width: 100dvw;
-}
-
-.MangaSVG {
-	height: auto;
-	width: auto;
+	height: 100vh;
 }
 
 .searchMain {
@@ -17,10 +11,20 @@
 	align-items: center;
 }
 
-.searchMain button {
-	margin: 10px 5px 0px 5px;
-	padding: 8px;
-	border-radius: 0.3rem;
+.SearchBar {
+	display: flex;
+	align-items: center;
+	background: #121212;
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	width: 20dvw;
+	margin-top: 0.3rem;
+}
+
+.histButton button {
+	margin: 0px 5px 0px 5px;
+	border-radius: 0.2rem;
+	padding: 0.4rem;
 	border: none;
 	outline: none;
 	font-family: "Atkinson Hyperlegible", serif;
@@ -29,17 +33,6 @@
 	cursor: pointer;
 }
 
-.SearchBar {
-	display: flex;
-	align-items: center;
-	background: #1f1f1f;
-	margin-top: 10px;
-	border-style: dotted;
-	border-color: rgb(63, 63, 63);
-	border-width: 2px;
-	width: 20dvw;
-	border-radius: 1rem;
-}
 
 .SearchBar input {
 	background: none;
@@ -53,12 +46,23 @@
 	font-size: 16px;
 }
 
+.SearchBar input::placeholder {
+	color: rgb(71, 71, 71);
+}
+
 @media screen and (max-width: 768px) {
-	.MangaSVG {
+	.SearchBar {
+		width: 40vw;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.MangaImage {
 		width: 100%;
+		height: auto;
 	}
 
 	.SearchBar {
-		width: 50dvw;
+		width: 60dvw;
 	}
 }
