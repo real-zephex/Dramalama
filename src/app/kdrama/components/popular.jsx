@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { PreFetchAnimeInfo } from "./cacher";
 
-export const runtime = "edge";
-
 export default async function PopularDramas() {
 	const popular = await getPopular();
 	PreFetchAnimeInfo(popular);
