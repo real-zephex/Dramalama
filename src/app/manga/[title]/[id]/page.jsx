@@ -5,8 +5,6 @@ import { redirect } from "next/navigation";
 import { FaStar } from "react-icons/fa";
 import { PreFetchChaterLinks } from "../../cacher";
 
-export const runtime = 'edge';
-
 export default async function MangaInfo({ params }) {
 	const id = params.id;
 	const data = await getMangaInfo(id);

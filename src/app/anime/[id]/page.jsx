@@ -3,8 +3,6 @@ import Image from "next/image";
 import Button from "./buttons";
 import { preFetchAnimeLinks } from "../videoLinkfetcher";
 
-export const runtime = "edge";
-
 export default async function AnimeInfo({ params }) {
 	let animeID = params.id;
 

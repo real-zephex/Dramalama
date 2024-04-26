@@ -3,8 +3,6 @@ import Link from "next/link";
 import styles from "./recent.module.css";
 import { preFetchAnimeInfo } from "../videoLinkfetcher";
 
-export const runtime = "edge";
-
 export default async function Releases() {
 	const data = await fetchRecentEpisodes();
 	preFetchAnimeInfo(data);
