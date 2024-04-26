@@ -33,7 +33,7 @@ export default async function Read({ params }) {
 					images.map((item, index) => (
 						<div className={styles.Image} key={index}>
 							<Image
-								src={`https://cros.shashstorm.in/cors?url=${item}`}
+								src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item}&headers=https://mangadex.org`}
 								key={index}
 								alt="Pages"
 								width={800}
