@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { preFetchAnimeInfo } from "../videoLinkfetcher";
 
+export const runtime = "edge";
+
 export default async function Trending() {
 	const data = await test();
 	preFetchAnimeInfo(data);

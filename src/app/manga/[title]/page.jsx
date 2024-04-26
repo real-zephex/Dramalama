@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PreFetchMangaInfo } from "../cacher";
 
-// This page displays all the available mangas or manhwas when the user searches for one/
+export const runtime = 'edge';
 
 export default async function MangaInfo({ params }) {
 	const title = params.title;
