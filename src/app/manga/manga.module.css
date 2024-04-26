@@ -11,6 +11,11 @@
 	align-items: center;
 }
 
+.MangaImage {
+	width: auto;
+	height: auto;
+}
+
 .SearchBar {
 	display: flex;
 	align-items: center;
