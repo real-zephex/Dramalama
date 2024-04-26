@@ -42,7 +42,7 @@ export default async function Read({ params }) {
 								quality={100}
 								unoptimized
 							/>
-							<p>{index + 1}</p>
+							<p>Page: {index + 1}</p>
 						</div>
 					))}
 			</div>
