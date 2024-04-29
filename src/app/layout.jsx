@@ -15,13 +15,13 @@ export const metadata = {
 	creator: "Zephex",
 	keywords: ["Kdrama", "Anime", "Manga", "Watch Online"],
 	robots: {
-		index: false,
+		index: true,
 		follow: true,
-		nocache: true,
+		nocache: false,
 		googleBot: {
 			index: true,
-			follow: false,
-			noimageindex: true,
+			follow: true,
+			noimageindex: false,
 			"max-video-preview": -1,
 			"max-image-preview": "large",
 			"max-snippet": -1,
