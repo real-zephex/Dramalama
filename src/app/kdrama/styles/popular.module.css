@@ -1,6 +1,6 @@
 .popDramasText {
 	color: var(--soft-purple);
-	font-family: "Poppins";
+	font-family: "Lexend Deca", serif;
 	font-size: 28px;
 	margin-bottom: 10px;
 	font-weight: 500;
@@ -10,6 +10,7 @@
 	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
+	margin-top: -8px;
 }
 
 .AnimeContainer::-webkit-scrollbar {
@@ -33,9 +34,8 @@
 .AnimeContainer:hover .AnimeEntry:hover {
 	opacity: 1;
 	transform: scale(1.02);
+	background-color: #202020;
 }
-
-/* Format the scrollbar later */
 
 .AnimeEntry {
 	display: flex;
@@ -44,7 +44,7 @@
 	margin: 4px;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	transition: opacity 400ms ease, transform 400ms ease;
+	transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease;
 	cursor: grab;
 	border-radius: 1rem;
 }
@@ -56,7 +56,7 @@
 .AnimeEntry p {
 	text-align: center;
 	color: white;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Lexend Deca", serif;
 	width: 140px;
 	overflow: hidden;
 	white-space: nowrap;

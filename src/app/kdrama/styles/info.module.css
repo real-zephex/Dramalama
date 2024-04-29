@@ -11,23 +11,21 @@
 
 .TitleContainer p {
 	color: white;
-	font-family: "Poppins";
-	font-size: 32px;
+	font-family: "Lexend Deca", serif;
+	font-size: 30px;
 }
 
 .TitleContainer img {
-	width: auto;
-	height: auto;
-	border-radius: 10px;
+	border-radius: 0.5rem;
 }
 
 .DramaDescription h2 {
 	color: gray;
-	font-family: "Poppins";
+	font-family: "Lexend Deca", serif;
 }
 
 .DramaDescription p {
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	color: white;
 	margin-top: -10px;
 }
@@ -38,8 +36,17 @@
 	overflow-x: auto;
 }
 
+.DramaGenre::-webkit-scrollbar {
+	height: 5px;
+}
+
+.DramaGenre::-webkit-scrollbar-thumb {
+	background-color: var(--soft-purple);
+	border-radius: 1rem;
+}
+
 .genreMain {
-	font-family: "Poppins";
+	font-family: "Lexend Deca", serif;
 	color: var(--neon-green);
 	font-size: 18px;
 }
@@ -50,7 +57,7 @@
 	padding: 5px;
 	margin: 3px;
 	border-radius: 5px;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Lexend Deca", serif;
 	cursor: crosshair;
 }
 
@@ -60,7 +67,7 @@
 
 .EpisodesContainer h2 {
 	color: gray;
-	font-family: "Poppins";
+	font-family: "Lexend Deca", serif;
 }
 
 .EpisodeButtons {
@@ -82,7 +89,7 @@
 
 .EpisodeButtons button p {
 	text-align: center;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Poppins", serif;
 	margin: 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -108,7 +115,7 @@
 
 .Video p {
 	color: white;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Atkinson Hyperlegible", serif;
 	color: var(--pastel-red);
 }
 
@@ -116,6 +123,7 @@
 	margin: 0px auto;
 	width: auto;
 	height: auto;
+	font-family: "Lexend Deca", serif;
 }
 
 @media screen and (max-width: 768px) {
