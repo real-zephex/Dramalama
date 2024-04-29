@@ -33,7 +33,7 @@ export default function Input() {
 	};
 
 	return (
-		<div>
+		<div style={{marginBottom: -15}}>
 			<div className={styles.inputContainer}>
 				<div className={styles.searchContainer}>
 					<FaSearch className={styles.searchIcon} />

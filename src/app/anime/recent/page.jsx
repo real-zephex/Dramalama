@@ -26,7 +26,7 @@ export default async function Releases() {
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.RecentImage}
 									width={150}
-									height={230}
+									height={280}
 									alt="Drama"
 									priority
 								/>

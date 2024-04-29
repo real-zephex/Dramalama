@@ -20,6 +20,12 @@
 	overflow-x: auto;
 }
 
+.trending img {
+	width: auto;
+	height: auto;
+	max-height: 280px;
+}
+
 .TrendingContainer:hover .trendingEntries {
 	opacity: 0.5;
 }

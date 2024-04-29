@@ -50,6 +50,9 @@
 }
 
 .AnimeEntry img {
+	width: auto;
+	height: auto;
+	max-height: 280px;
 	border-radius: 1rem;
 }
 
