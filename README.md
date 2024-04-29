@@ -31,7 +31,7 @@ _However, I am planning to rewrite the kdrama section and make it server rendere
 
 -   Users can search for mangas/manhwa by their title
 -   A good looking info page
--   Ability to download mangas in `.pdf` format
+-   ~~Ability to download mangas in `.pdf` format~~
 
 ## Content Guidelines
 
