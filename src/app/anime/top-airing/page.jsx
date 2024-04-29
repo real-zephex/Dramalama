@@ -24,8 +24,8 @@ export default async function Trending() {
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.trendingImage}
-									width={150}
-									height={280}
+									width={190}
+									height={270}
 									alt="Drama"
 									priority
 								/>

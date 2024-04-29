@@ -110,7 +110,6 @@
 	border-radius: 5px;
 	color: var(--neon-green);
 	background-color: #303030;
-	cursor: pointer;
 	font-family: "Atkinson Hyperlegible", serif;
 }
 
@@ -153,6 +152,7 @@
 
 .video {
 	width: 60vw;
+	font-family: "Lexend Deca", serif;
 }
 
 .VideoPlayer {

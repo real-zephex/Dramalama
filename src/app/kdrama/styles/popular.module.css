@@ -50,8 +50,6 @@
 }
 
 .AnimeEntry img {
-	width: auto;
-	height: 280px;
 	border-radius: 1rem;
 }
 
@@ -59,7 +57,8 @@
 	text-align: center;
 	color: white;
 	font-family: "Lexend Deca", serif;
-	width: 140px;
+	width: auto;
+	max-width: 190px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
