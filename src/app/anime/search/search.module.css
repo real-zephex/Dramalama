@@ -55,6 +55,7 @@
 .animeEntry {
 	display: flex;
 	overflow-x: auto;
+	margin-bottom: 1rem;
 }
 
 .animeEntry .anime {
@@ -86,7 +87,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	margin: 0px 10px 1rem 0px;
+	margin: 0 10px 0 0;
 	border-radius: 0.5rem;
 	transition: opacity 200ms ease-in, background-color 200ms linear;
 	background-color: #242424d0;

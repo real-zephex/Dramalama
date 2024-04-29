@@ -21,7 +21,10 @@ export default async function Releases() {
 							href={`/anime/${item.id}`}
 							style={{ textDecoration: "none", color: "white" }}
 						>
-							<div className={styles.RecentEntries}>
+							<div
+								className={styles.RecentEntries}
+								title={item.title}
+							>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.RecentImage}

@@ -20,7 +20,7 @@ export default async function Trending() {
 							href={`/anime/${item.id}`}
 							style={{ textDecoration: "none", color: "white" }}
 						>
-							<div className={styles.trendingEntries}>
+							<div className={styles.trendingEntries} title={item.title}>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.trendingImage}

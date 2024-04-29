@@ -5,10 +5,9 @@
 
 .RecentText p {
 	font-size: 28px;
-	margin: 5px;
+	margin: 0;
 	color: var(--soft-purple);
-	font-family: "Poppins";
-	font-weight: 500;
+	font-family: "Lexend Deca", serif;
 }
 
 .RecentText span {
