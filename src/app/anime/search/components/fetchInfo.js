@@ -7,7 +7,7 @@ export default async function Results(id) {
 async function testFunction(title) {
 	const res = await fetch(
 		"https://consumet-jade.vercel.app/anime/gogoanime/" + title,
-		{ cache: "force-cache" }
+		{ next: { revalidate: 21600 } }
 	);
 	const data = await res.json();
 	return data;

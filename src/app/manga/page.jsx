@@ -10,7 +10,7 @@ export default async function Manga() {
 				width={480}
 				height={200}
 				className={styles.MangaImage}
-				alt="Manga SVG"
+				alt="Manga Intro Image"
 				priority
 			/>
 			<SearchBar />

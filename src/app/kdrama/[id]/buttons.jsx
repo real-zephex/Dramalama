@@ -68,7 +68,7 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 							load="eager"
 							className={styles.VideoPlayer}
 							playsInline
-							volume={0.5}
+							volume={0.8}
 						>
 							<MediaProvider />
 							<PlyrLayout icons={plyrLayoutIcons} />

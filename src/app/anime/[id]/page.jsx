@@ -19,8 +19,8 @@ export default async function AnimeInfo({ params }) {
 							<p>{info.title}</p>
 							<Image
 								src={info.image}
-								width={175}
-								height={256}
+								width={180}
+								height={260}
 								alt="Drama"
 								priority
 							/>
@@ -46,7 +46,7 @@ export default async function AnimeInfo({ params }) {
 					<p className={styles.animeRelease}>
 						Release year:
 						<span>
-							{info && info.releaseDate}, {info && info.status}
+							{" "}{info && info.releaseDate}, {info && info.status}
 						</span>
 					</p>
 				</div>

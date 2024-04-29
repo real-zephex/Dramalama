@@ -20,6 +20,11 @@
 	overflow-x: auto;
 }
 
+.Recent img {
+	width: auto;
+	height: 280px;
+}
+
 .RecentContainer:hover .RecentEntries {
 	opacity: 0.4;
 }

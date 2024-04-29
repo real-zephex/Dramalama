@@ -19,20 +19,20 @@
 .titleContainer p {
 	color: var(--neon-green);
 	width: 60%;
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 	font-weight: 500;
 	font-size: 34px;
 }
 
 .titleContainer img {
-	width: auto;
-	height: auto;
+	aspect-ratio: 16 / 9;
 	border-radius: 10px;
 }
 
 .animeDescription h2 {
 	color: #ffffff81;
 	margin: 20px 0px -10px 0px;
+	font-family: "Lexend Deca", serif;
 }
 
 .animeDescription p {
@@ -49,7 +49,8 @@
 
 .buttonHeader {
 	margin: 0px 10px 10px 0px;
-	color: #ffffff81
+	color: #ffffff81;
+	font-family: "Lexend Deca", serif;
 }
 
 .buttonContainer button {
@@ -64,9 +65,13 @@
 	transform: scale(0.9);
 }
 
-.buttonContainer::-webkit-scrollbar-thumb {
+.buttonContainer::-webkit-scrollbar{
+	width: 5px;
+}
+
+.buttonContainer::-webkit-scrollbar-thumb{
 	background-color: var(--soft-purple);
-	border-radius: 5px;
+	border-radius: 1rem;
 }
 
 .dramaButton {
@@ -96,6 +101,7 @@
 
 .animeDetails {
 	color: white;
+	font-family: "Lexend Deca", serif;
 }
 
 .genreEntries {

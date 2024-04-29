@@ -83,7 +83,7 @@
 	color: white;
 	margin-top: 5px;
 	border-radius: 5px;
-	transition: opacity 400ms ease;
+	transition: opacity 400ms ease, transform 200ms ease;
 	padding: 0.4rem 2rem;
 	font-family: "Lexend Deca", serif;
 }
@@ -95,15 +95,5 @@
 .content:hover>.contentContainer div:hover {
 	opacity: 1;
 	cursor: pointer;
-}
-
-.netlifyLogo {
-	position: fixed;
-	bottom: 0;
-	margin: 0rem 0.4rem 1.6rem 0.4rem;
-}
-
-.netlifyLogo img {
-	aspect-ratio: 16 / 9;
-	height: 100px
+	transform: scale(0.96)
 }

@@ -57,7 +57,7 @@
 	margin: 5px;
 	padding: 6px;
 	background-color: #2e2e2eab;
-	border-radius: 10px;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: opacity 200ms linear, background-color 200ms linear;
 }
@@ -73,14 +73,14 @@
 
 .SearchEntry p {
 	color: white;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 	font-size: 18px;
 	width: 35vh;
 }
 
 .SearchEntry img {
 	width: auto;
-	/* height: auto; */
+	height: auto;
 	border-radius: 0.5rem;
 }
 
