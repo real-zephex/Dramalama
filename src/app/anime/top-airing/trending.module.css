@@ -22,8 +22,7 @@
 
 .trending img {
 	width: auto;
-	height: auto;
-	max-height: 280px;
+	height: 280px;
 }
 
 .TrendingContainer:hover .trendingEntries {
