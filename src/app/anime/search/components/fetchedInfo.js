@@ -32,7 +32,6 @@ export default async function fetchedInfo(data) {
 						<p
 							style={{
 								color: "white",
-								fontFamily: "Kanit",
 								fontSize: 18,
 							}}
 						>

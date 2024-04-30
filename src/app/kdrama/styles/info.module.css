@@ -98,7 +98,7 @@
 
 .EpisodeButtons button:hover {
 	background-color: #1f1f1f;
-	transition: background-color 0.2s linear
+	transition: background-color 0.2s linear;
 }
 
 .VideoContainer {
@@ -135,5 +135,4 @@
 		font-size: 14px;
 		width: 80px;
 	}
-
 }

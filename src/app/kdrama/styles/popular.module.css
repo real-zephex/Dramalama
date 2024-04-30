@@ -44,14 +44,13 @@
 	margin: 4px;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease;
+	transition: opacity 200ms ease, transform 200ms ease,
+		background-color 200ms ease;
 	cursor: grab;
 	border-radius: 1rem;
 }
 
 .AnimeEntry img {
-	width: auto;
-	height: 280px;
 	border-radius: 1rem;
 }
 
@@ -59,7 +58,8 @@
 	text-align: center;
 	color: white;
 	font-family: "Lexend Deca", serif;
-	width: 140px;
+	width: auto;
+	max-width: 190px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;

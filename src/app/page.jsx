@@ -6,24 +6,33 @@ export default function Home() {
 		<main className={styles.newbg}>
 			<div className={styles.content}>
 				<div className={styles.contentContainer}>
-					<div className={styles.manga}>
-						<Link href={"/manga"}>
-							<h2>Manga</h2>
-							<p>Your one stop for all your manga needs</p>
-						</Link>
-					</div>
-					<div className={styles.anime}>
-						<Link href={"/anime"}>
+					<Link
+						href={"/anime"}
+						title="Click here to get redirected to the anime webpage"
+					>
+						<div className={styles.anime}>
 							<h2>Anime</h2>
 							<p>Your one stop for all your anime needs</p>
-						</Link>
-					</div>
-					<div className={styles.kdrama}>
-						<Link href={"/kdrama"}>
+						</div>
+					</Link>
+					<Link
+						href={"/manga"}
+						title="Click here to get redirected to the manga webpage"
+					>
+						<div className={styles.manga}>
+							<h2>Manga</h2>
+							<p>Your one stop for all your manga needs</p>
+						</div>
+					</Link>
+					<Link
+						href={"/kdrama"}
+						title="Click here to get redirected to the kdrama webpage"
+					>
+						<div className={styles.kdrama}>
 							<h2>Kdrama</h2>
 							<p>Your one stop for all your kdrama needs</p>
-						</Link>
-					</div>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</main>

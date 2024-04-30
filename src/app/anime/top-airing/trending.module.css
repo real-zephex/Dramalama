@@ -5,10 +5,9 @@
 
 .TrendingText p {
 	font-size: 28px;
-	margin: 5px;
+	margin: 0px;
 	color: var(--soft-purple);
-	font-family: "Poppins";
-	font-weight: 500;
+	font-family: "Lexend Deca", serif;
 }
 
 .TrendingText span {
@@ -18,11 +17,6 @@
 .trending {
 	display: flex;
 	overflow-x: auto;
-}
-
-.trending img {
-	width: auto;
-	height: 280px;
 }
 
 .TrendingContainer:hover .trendingEntries {
@@ -49,15 +43,16 @@
 	transition: transform 400ms ease;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .trendingEntries p {
 	text-align: center;
 	margin: 5px auto;
-	width: 140px;
-	font-family: "Atkinson Hyperlegible";
+	width: auto;
+	max-width: 180px;
+	font-family: "Lexend Deca", serif;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -73,6 +68,5 @@
 }
 
 .trendingImage {
-	border-radius: 1rem;
-	aspect-ratio: auto;
+	border-radius: 0.5rem;
 }

@@ -52,8 +52,8 @@ export default function DramaSearch() {
 								<p>{item.title}</p>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={120}
-									height={190}
+									width={140}
+									height={210}
 									alt="Drama Poster"
 								/>
 							</div>

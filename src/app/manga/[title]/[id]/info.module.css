@@ -1,5 +1,5 @@
 .MangaInfoContainer {
-	margin: 68px auto;
+	margin: 60px auto;
 }
 
 .MangaHero {
@@ -15,7 +15,6 @@
 	padding: 5px;
 	background-color: #2c2c2c9c;
 	backdrop-filter: blur(5px);
-
 }
 
 .TitleContainer p {
@@ -114,7 +113,7 @@
 }
 
 .Character::-webkit-scrollbar-thumb {
-	background-color: #31363F;
+	background-color: #31363f;
 	border-radius: 5px;
 }
 
@@ -167,7 +166,7 @@
 }
 
 .ChapterContainer::-webkit-scrollbar-thumb {
-	background-color: #31363F;
+	background-color: #31363f;
 	border-radius: 5px;
 }
 
@@ -193,7 +192,7 @@
 
 .ChapterContainer button:hover {
 	background-color: #1f1f1f;
-	transition: background-color 50ms ease-in
+	transition: background-color 50ms ease-in;
 }
 
 .ChapterContainer button:focus {
@@ -201,6 +200,16 @@
 	transition: transform 0.2s linear;
 	background-color: var(--pastel-red);
 	transform: scale(0.9);
+}
+
+.linksNotFound {
+	font-family: "Atkinson Hyperlegible", serif;
+	color: white;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85%;
 }
 
 @media screen and (max-width: 768px) {
@@ -214,11 +223,9 @@
 
 	.ChapterContainer button {
 		width: 120px;
-
 	}
 
 	.ChapterContainer button p {
 		font-size: 14px;
 	}
-
 }

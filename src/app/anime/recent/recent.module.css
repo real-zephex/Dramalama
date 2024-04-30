@@ -5,10 +5,9 @@
 
 .RecentText p {
 	font-size: 28px;
-	margin: 5px;
+	margin: 0;
 	color: var(--soft-purple);
-	font-family: "Poppins";
-	font-weight: 500;
+	font-family: "Lexend Deca", serif;
 }
 
 .RecentText span {
@@ -18,11 +17,6 @@
 .Recent {
 	display: flex;
 	overflow-x: auto;
-}
-
-.Recent img {
-	width: auto;
-	height: 280px;
 }
 
 .RecentContainer:hover .RecentEntries {
@@ -48,16 +42,16 @@
 	margin: 4px;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	transition: opacity 400ms ease, transform 400ms ease;
-
 }
 
 .RecentEntries p {
 	text-align: center;
 	margin: 5px auto;
-	width: 140px;
-	font-family: "Atkinson Hyperlegible";
+	width: auto;
+	max-width: 180px;
+	font-family: "Lexend Deca", serif;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -74,6 +68,5 @@
 }
 
 .RecentImage {
-	border-radius: 1rem;
-	aspect-ratio: auto;
+	border-radius: 0.5rem;
 }

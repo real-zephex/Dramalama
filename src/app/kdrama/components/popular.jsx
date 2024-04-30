@@ -19,11 +19,11 @@ export default async function PopularDramas() {
 							key={index}
 							style={{ textDecoration: "none" }}
 						>
-							<div className={styles.AnimeEntry}>
+							<div className={styles.AnimeEntry} title={item.title}>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={150}
-									height={230}
+									width={190}
+									height={270}
 									alt="Drama Poster"
 								/>
 								<p>{item.title}</p>

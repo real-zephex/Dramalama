@@ -1,6 +1,6 @@
 .waitWhileLoading {
 	font-size: 18px;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Lexend Deca", serif;
 	text-align: center;
 	color: white;
 }
@@ -18,7 +18,7 @@
 	outline: none;
 	border: none;
 	color: white;
-	font-family: "Atkinson Hyperlegible";
+	font-family: "Lexend Deca", serif;
 }
 
 .inputContainer button a {
@@ -33,7 +33,7 @@
 	outline: none;
 	background: none;
 	width: 100%;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 	font-size: 16px;
 }
 
@@ -55,6 +55,7 @@
 .animeEntry {
 	display: flex;
 	overflow-x: auto;
+	margin-bottom: 1rem;
 }
 
 .animeEntry .anime {
@@ -78,7 +79,6 @@
 .animeEntry::-webkit-scrollbar-thumb {
 	background-color: rgba(196, 196, 196, 0.692);
 	border-radius: 5px;
-
 }
 
 .anime {
@@ -86,17 +86,16 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	margin: 10px 10px 0px 0px;
+	margin: 0 10px 0 0;
 	border-radius: 0.5rem;
 	transition: opacity 200ms ease-in, background-color 200ms linear;
 	background-color: #242424d0;
-
 }
 
 .anime p {
 	color: white;
 	width: 20dvw;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 	font-size: 18px;
 }
 

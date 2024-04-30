@@ -43,7 +43,7 @@ const ContinueWatching = () => {
 										</p>
 										<p className={styles.date}>
 											Last watched on: {item.date} at{" "}
-											{item.time}
+											{item.time} hours
 										</p>
 									</div>
 									<Image
