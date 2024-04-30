@@ -20,23 +20,6 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 		setEpisode(episodeText);
 	}
 
-	// Auto loads the first episode
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				let firstVideoLink = episodeData[0].id;
-				let firstLink = await getVideoLink(firstVideoLink, dramaId);
-				setVideoLink(firstLink);
-				setEpisode("Episode 1");
-			} catch (error) {
-				console.log("Some error occured", error);
-				return;
-			}
-		};
-
-		fetchData();
-	}, []);
-
 	return (
 		<div>
 			<div className={styles.EpisodesContainer}>
@@ -58,9 +41,17 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 				</div>
 			</div>
 
-			<div className={styles.VideoContainer}>
-				{videoLink && (
-					<div className={styles.Video}>
+			{videoLink && (
+				<div
+					className={styles.videoPopUp}
+					id="popup"
+					onKeyDown={(event) => {
+						if (event.code === "Escape") {
+							setVideoLink("");
+						}
+					}}
+				>
+					<div className={styles.video}>
 						<MediaPlayer
 							title="dramaPlayer"
 							src={videoLink}
@@ -68,15 +59,23 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 							load="eager"
 							className={styles.VideoPlayer}
 							playsInline
+							id="videoPlayer"
 							volume={0.8}
 						>
 							<MediaProvider />
 							<PlyrLayout icons={plyrLayoutIcons} />
 						</MediaPlayer>
-						<p>{episode}</p>
+						<button
+							className={styles.closeButton}
+							onClick={() => {
+								setVideoLink("");
+							}}
+						>
+							Close
+						</button>
 					</div>
-				)}
-			</div>
+				</div>
+			)}
 		</div>
 	);
 }

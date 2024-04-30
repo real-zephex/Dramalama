@@ -89,9 +89,6 @@ export default function Button({ data2: info }) {
 							playsInline
 							id="videoPlayer"
 							volume={0.8}
-							// onQualityChange={(event) =>
-							// 	console.log("changed qualities", event)
-							// }
 						>
 							<MediaProvider />
 							<PlyrLayout icons={plyrLayoutIcons} />
