@@ -5,6 +5,7 @@ import Link from "next/link";
 import { storeLocal } from "../../history/storeData";
 
 export default function Buttons({ content: data }) {
+	let hasValidLinks = false;
 	function store_to_local(title, chapter, volume, image, id, id2) {
 		let data = {
 			title: title,
@@ -22,6 +23,7 @@ export default function Buttons({ content: data }) {
 			{data.chapters &&
 				data.chapters.map((item, index) => {
 					if (item.pages !== 0) {
+						hasValidLinks = true;
 						return (
 							<Link
 								key={index}
@@ -49,6 +51,9 @@ export default function Buttons({ content: data }) {
 						);
 					}
 				})}
+			{!hasValidLinks && (
+				<p className={styles.linksNotFound}>Links not found</p>
+			)}
 		</div>
 	);
 }

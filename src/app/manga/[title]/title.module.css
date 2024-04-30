@@ -55,16 +55,15 @@
 .MangaStatus {
 	color: var(--soft-purple);
 	font-family: "Poppins", serif;
-
 }
 
 .MangaVolume {
-	color: #FFACAC;
+	color: #ffacac;
 	font-family: "Poppins", serif;
 }
 
 .MangaChapters {
-	color: #FFEBB4;
+	color: #ffebb4;
 	font-family: "Poppins", serif;
 }
 

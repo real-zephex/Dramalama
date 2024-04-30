@@ -44,7 +44,8 @@
 	margin: 4px;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	transition: opacity 200ms ease, transform 200ms ease, background-color 200ms ease;
+	transition: opacity 200ms ease, transform 200ms ease,
+		background-color 200ms ease;
 	cursor: grab;
 	border-radius: 1rem;
 }

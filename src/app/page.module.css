@@ -1,6 +1,10 @@
 .newbg {
 	background: rgb(37, 37, 37);
-	background: radial-gradient(circle, rgb(41, 41, 41) 2%, rgb(12, 12, 12) 30%);
+	background: radial-gradient(
+		circle,
+		rgb(41, 41, 41) 2%,
+		rgb(12, 12, 12) 30%
+	);
 }
 
 .header {
@@ -33,11 +37,11 @@
 	font-size: 16px;
 }
 
-.header:hover>.right a {
+.header:hover > .right a {
 	opacity: 0.5;
 }
 
-.header:hover>.right a:hover {
+.header:hover > .right a:hover {
 	opacity: 1;
 	cursor: pointer;
 }
@@ -68,7 +72,9 @@
 }
 
 .contentContainer {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .contentContainer a {
@@ -81,19 +87,28 @@
 .kdrama {
 	background-color: #121212e0;
 	color: white;
-	margin-top: 5px;
-	border-radius: 5px;
-	transition: opacity 400ms ease, transform 200ms ease;
+	border-radius: 0.5rem;
+	transition: opacity 200ms ease, transform 200ms ease;
 	padding: 0.4rem 2rem;
 	font-family: "Lexend Deca", serif;
+	margin: 0.2rem 0.2rem 0 0.2rem;
+	border-color: rgb(80, 80, 80);
+	border-style: groove;
+	border-width: 0.1rem;
 }
 
-.content:hover>.contentContainer div {
+.content:hover > .contentContainer div {
 	opacity: 0.5;
 }
 
-.content:hover>.contentContainer div:hover {
+.content:hover > .contentContainer div:hover {
 	opacity: 1;
 	cursor: pointer;
-	transform: scale(0.96)
+	transform: scale(0.96) rotateX(15deg) rotateY(8deg);
+}
+
+@media screen and (max-width: 1024px) {
+	.contentContainer {
+		display: block;
+	}
 }

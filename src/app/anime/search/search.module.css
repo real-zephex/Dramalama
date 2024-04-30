@@ -79,7 +79,6 @@
 .animeEntry::-webkit-scrollbar-thumb {
 	background-color: rgba(196, 196, 196, 0.692);
 	border-radius: 5px;
-
 }
 
 .anime {
@@ -91,7 +90,6 @@
 	border-radius: 0.5rem;
 	transition: opacity 200ms ease-in, background-color 200ms linear;
 	background-color: #242424d0;
-
 }
 
 .anime p {

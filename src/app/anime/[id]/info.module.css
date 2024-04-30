@@ -55,7 +55,6 @@
 
 .buttonContainer button {
 	transition: transform 200ms ease-in-out;
-
 }
 
 .buttonContainer button:focus {
@@ -65,11 +64,11 @@
 	transform: scale(0.9);
 }
 
-.buttonContainer::-webkit-scrollbar{
+.buttonContainer::-webkit-scrollbar {
 	width: 5px;
 }
 
-.buttonContainer::-webkit-scrollbar-thumb{
+.buttonContainer::-webkit-scrollbar-thumb {
 	background-color: var(--soft-purple);
 	border-radius: 1rem;
 }
@@ -92,7 +91,7 @@
 
 .dramaButton:hover {
 	background-color: #1f1f1f;
-	transition: background-color 200ms ease-in
+	transition: background-color 200ms ease-in;
 }
 
 .infoPageContainer p {
@@ -118,7 +117,7 @@
 }
 
 .animeRelease span {
-	color: var(--soft-purple)
+	color: var(--soft-purple);
 }
 
 .videoPopUp {
@@ -136,7 +135,6 @@
 	z-index: 1;
 	overflow-y: auto;
 }
-
 
 .closeButton {
 	font-family: "Poppins", serif;
@@ -160,7 +158,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
 	.titleContainer p {
 		font-size: 28px;
 	}
