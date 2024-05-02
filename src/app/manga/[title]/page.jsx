@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { PreFetchMangaInfo } from "../cacher";
 
+export const runtime = "edge";
+
 export default async function MangaInfo({ params }) {
 	const title = params.title;
 	const data = await GetSearchedAnime(title);

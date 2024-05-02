@@ -3,6 +3,8 @@ import Image from "next/image";
 import Button from "./buttons";
 import { preFetchAnimeLinks } from "../videoLinkfetcher";
 
+export const runtime = "edge";
+
 export default async function AnimeInfo({ params }) {
 	let animeID = params.id;
 
@@ -46,7 +48,8 @@ export default async function AnimeInfo({ params }) {
 					<p className={styles.animeRelease}>
 						Release year:
 						<span>
-							{" "}{info && info.releaseDate}, {info && info.status}
+							{" "}
+							{info && info.releaseDate}, {info && info.status}
 						</span>
 					</p>
 				</div>
