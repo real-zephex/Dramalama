@@ -15,6 +15,14 @@ export default async function MangaInfo({ params }) {
 		redirect("/404");
 	}
 
+	let description;
+	if (!data.description) {
+		description =
+			"Sorry but description for this particular manga was not found.";
+	} else {
+		description = data.description.split("<br>")[0];
+	}
+
 	PreFetchChaterLinks(data.chapters);
 
 	return (
@@ -53,7 +61,7 @@ export default async function MangaInfo({ params }) {
 					<div className={styles.MangaDescription}>
 						<div className={styles.Description}>
 							<h2>Description</h2>
-							<p>{data.description.split("<br")[0]}</p>
+							<p>{description}</p>
 						</div>
 
 						<div className={styles.MangaReleaseYear}>

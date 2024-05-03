@@ -4,12 +4,12 @@ import styles from "./info.module.css";
 import { useState } from "react";
 import { fetch_video_link } from "../videoLinkfetcher";
 import { MediaPlayer, MediaProvider } from "@vidstack/react";
-import "@vidstack/react/player/styles/base.css";
-import "@vidstack/react/player/styles/plyr/theme.css";
+import "@vidstack/react/player/styles/default/theme.css";
+import "@vidstack/react/player/styles/default/layouts/video.css";
 import {
-	PlyrLayout,
-	plyrLayoutIcons,
-} from "@vidstack/react/player/layouts/plyr";
+	defaultLayoutIcons,
+	DefaultVideoLayout,
+} from "@vidstack/react/player/layouts/default";
 import { storeLocal } from "../history/storeData";
 
 export default function Button({ data2: info }) {
@@ -91,7 +91,7 @@ export default function Button({ data2: info }) {
 							volume={0.8}
 						>
 							<MediaProvider />
-							<PlyrLayout icons={plyrLayoutIcons} />
+							<DefaultVideoLayout icons={defaultLayoutIcons} />
 						</MediaPlayer>
 						<button
 							className={styles.closeButton}

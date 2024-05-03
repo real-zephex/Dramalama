@@ -34,10 +34,9 @@ export default async function MangaInfo({ params }) {
 								<div className={styles.MangaEntries}>
 									<Image
 										src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-										width={160}
-										height={250}
+										width={180}
+										height={270}
 										alt="Manga Poster"
-										style={{ borderRadius: 10 }}
 									/>
 									<div className={styles.MangaInfo}>
 										<p className={styles.MangaTitle}>
@@ -51,13 +50,15 @@ export default async function MangaInfo({ params }) {
 												: desc}
 										</p>
 										<p className={styles.MangaStatus}>
-											{item.status}
+											Status: {item.status || "not sure"}
 										</p>
 										<p className={styles.MangaChapters}>
-											Chapters: {item.totalChapters}
+											Chapters:{" "}
+											{item.totalChapters || "not sure"}
 										</p>
 										<p className={styles.MangaVolume}>
-											Volumes: {item.volumes}
+											Volumes:{" "}
+											{item.volumes || "not sure"}
 										</p>
 									</div>
 								</div>
