@@ -1,6 +1,5 @@
 .popDramasText {
 	color: var(--soft-purple);
-	font-family: "Lexend Deca", serif;
 	font-size: 28px;
 	margin-bottom: 10px;
 	font-weight: 500;
@@ -28,13 +27,13 @@
 }
 
 .AnimeContainer:hover .AnimeEntry {
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 .AnimeContainer:hover .AnimeEntry:hover {
 	opacity: 1;
 	transform: scale(1.02);
-	background-color: #202020;
+	background-color: #272727;
 }
 
 .AnimeEntry {
@@ -57,7 +56,6 @@
 .AnimeEntry p {
 	text-align: center;
 	color: white;
-	font-family: "Lexend Deca", serif;
 	width: auto;
 	max-width: 190px;
 	overflow: hidden;

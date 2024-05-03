@@ -19,7 +19,6 @@
 .titleContainer p {
 	color: var(--neon-green);
 	width: 60%;
-	font-family: "Lexend Deca", serif;
 	font-weight: 500;
 	font-size: 34px;
 }
@@ -32,11 +31,9 @@
 .animeDescription h2 {
 	color: #ffffff81;
 	margin: 20px 0px -10px 0px;
-	font-family: "Lexend Deca", serif;
 }
 
 .animeDescription p {
-	font-family: "Atkinson Hyperlegible", serif;
 	color: rgba(255, 255, 255, 0.637);
 }
 
@@ -50,7 +47,6 @@
 .buttonHeader {
 	margin: 0px 10px 10px 0px;
 	color: #ffffff81;
-	font-family: "Lexend Deca", serif;
 }
 
 .buttonContainer button {
@@ -75,8 +71,7 @@
 
 .dramaButton {
 	padding: 10px;
-	font-family: "Atkinson Hyperlegible", serif;
-	font-size: 14px;
+	font-family: "Lexend Deca", serif;
 	margin: 5px 5px 5px 5px;
 	width: 55px;
 	border-radius: 5px;
@@ -100,16 +95,14 @@
 
 .animeDetails {
 	color: white;
-	font-family: "Lexend Deca", serif;
 }
 
 .genreEntries {
 	margin: 3px;
 	padding: 4px;
 	border-radius: 5px;
-	color: var(--neon-green);
+	color: var(--neon-yellow);
 	background-color: #303030;
-	font-family: "Atkinson Hyperlegible", serif;
 }
 
 .animeType span {
@@ -123,7 +116,7 @@
 .videoPopUp {
 	height: 100dvh;
 	width: 100dvw;
-	background-color: #1f1f1fd3;
+	background-color: #141414ee;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -137,7 +130,7 @@
 }
 
 .closeButton {
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 	font-size: 16px;
 	background-color: var(--pastel-red);
 	padding: 0.5rem 1.5rem;
@@ -150,7 +143,6 @@
 
 .video {
 	width: 60vw;
-	font-family: "Lexend Deca", serif;
 }
 
 .VideoPlayer {

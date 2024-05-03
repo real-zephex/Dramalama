@@ -1,9 +1,11 @@
-import { Inter } from "next/font/google";
+import { Lexend_Deca } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/page";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+
+const lexend = Lexend_Deca({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Dramalama",
@@ -39,7 +41,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={lexend.className}>
 			<body>
 				<SpeedInsights />
 				<Analytics />

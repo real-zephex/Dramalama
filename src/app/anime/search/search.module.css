@@ -1,6 +1,5 @@
 .waitWhileLoading {
 	font-size: 18px;
-	font-family: "Lexend Deca", serif;
 	text-align: center;
 	color: white;
 }
@@ -95,7 +94,6 @@
 .anime p {
 	color: white;
 	width: 20dvw;
-	font-family: "Lexend Deca", serif;
 	font-size: 18px;
 }
 

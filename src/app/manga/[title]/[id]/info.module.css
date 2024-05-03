@@ -18,9 +18,8 @@
 }
 
 .TitleContainer p {
-	font-family: "Lexend Deca", serif;
 	font-size: 40px;
-	font-weight: 1000;
+	font-weight: 700;
 }
 
 .TitleContainer img {
@@ -30,13 +29,11 @@
 
 .MangaDescription {
 	color: white;
-	font-family: "Atkinson Hyperlegible", serif;
 	max-width: 98%;
 	margin: -10px auto;
 }
 
 .Description h2 {
-	font-family: "Lexend Deca", serif;
 	color: gray;
 }
 
@@ -46,14 +43,12 @@
 
 .MangaReleaseYear {
 	margin-top: 10px;
-	font-family: "Poppins", serif;
 }
 
 .GenreContainer {
 	margin-top: 5px;
 	display: flex;
 	align-items: center;
-	font-family: "Poppins", serif;
 }
 
 .GenreText {
@@ -81,8 +76,6 @@
 .MangaRatings {
 	display: flex;
 	margin-top: 10px;
-	font-family: "Poppins", serif;
-	/* justify-content: center; */
 }
 
 .MangaRatings span {
@@ -98,7 +91,6 @@
 
 .CharactersContainer h2 {
 	color: gray;
-	font-family: "Lexend Deca", serif;
 }
 
 .Character {
@@ -130,7 +122,6 @@
 	text-align: center;
 	width: 110px;
 	color: white;
-	font-family: "Atkinson Hyperlegible", serif;
 }
 
 .CharacterEntry img {
@@ -149,7 +140,6 @@
 
 .ChapterTitle {
 	color: white;
-	font-family: "Lexend Deca", serif;
 	font-size: 32px;
 }
 
@@ -183,10 +173,10 @@
 	background-color: #3d3d3d;
 	cursor: pointer;
 	transition: background-color 100ms ease-in-out;
+	font-family: "Lexend Deca";
 }
 
 .ChapterContainer button p {
-	font-family: "Atkinson Hyperlegible", serif;
 	margin: 2px;
 }
 
@@ -203,7 +193,6 @@
 }
 
 .linksNotFound {
-	font-family: "Atkinson Hyperlegible", serif;
 	color: white;
 	font-size: 18px;
 	display: flex;

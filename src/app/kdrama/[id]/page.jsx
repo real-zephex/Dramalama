@@ -3,6 +3,8 @@ import Image from "next/image";
 import EpisodesButtons from "./buttons";
 import { PreFetchVideoLinks } from "../components/cacher";
 
+export const runtime = "edge";
+
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const info = await getDramaInfo(id);
@@ -35,9 +37,7 @@ export default async function DramaInfo({ params }) {
 						<span className={styles.genreMain}>Genres: </span>
 						{info.genres &&
 							info.genres.map((item, index) => (
-								<span key={index} className={styles.genreEntry}>
-									{item}
-								</span>
+								<p key={index}>{item}</p>
 							))}
 					</div>
 
@@ -46,9 +46,7 @@ export default async function DramaInfo({ params }) {
 						<span className={styles.genreMain}>AKA: </span>
 						{info.otherNames &&
 							info.otherNames.map((item, index) => (
-								<span key={index} className={styles.genreEntry}>
-									{item}
-								</span>
+								<p key={index}>{item}</p>
 							))}
 					</div>
 

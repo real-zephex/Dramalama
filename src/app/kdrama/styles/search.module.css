@@ -4,7 +4,6 @@
 
 .LoadingText {
 	color: white;
-	font-family: "Atkinson Hyperlegible", serif;
 	text-align: center;
 	font-size: 18px;
 }
@@ -25,9 +24,9 @@
 	outline: none;
 	background-color: #121212;
 	font-size: 16px;
-	font-family: "Atkinson Hyperlegible", serif;
 	color: white;
 	width: 100%;
+	font-family: "Lexend Deca";
 }
 
 .SearchResults {
@@ -73,9 +72,8 @@
 
 .SearchEntry p {
 	color: white;
-	font-family: "Lexend Deca", serif;
 	font-size: 18px;
-	width: 35vh;
+	width: 45vh;
 }
 
 .SearchEntry img {

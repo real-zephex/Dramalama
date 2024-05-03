@@ -5,12 +5,10 @@
 
 .mainText {
 	color: var(--light-green);
-	font-family: "Poppins", serif;
 	font-size: 24px;
 }
 
 .animeContainer {
-	font-family: "Poppins", serif;
 	font-size: 18px;
 	margin: 0px;
 }
@@ -60,7 +58,7 @@
 	margin-right: 0.4rem;
 	border-radius: 0.2rem;
 	padding: 0.2rem;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 	background-color: #303030;
 	color: white;
 	cursor: pointer;

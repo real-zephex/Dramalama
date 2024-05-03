@@ -11,8 +11,9 @@
 
 .TitleContainer p {
 	color: white;
-	font-family: "Lexend Deca", serif;
-	font-size: 30px;
+	font-size: 34px;
+	font-weight: 500;
+	color: var(--neon-green);
 }
 
 .TitleContainer img {
@@ -21,19 +22,26 @@
 
 .DramaDescription h2 {
 	color: gray;
-	font-family: "Lexend Deca", serif;
 }
 
 .DramaDescription p {
-	font-family: "Atkinson Hyperlegible", serif;
 	color: white;
 	margin-top: -10px;
+	color: rgba(255, 255, 255, 0.637);
 }
 
 .DramaGenre {
 	display: flex;
 	align-items: center;
 	overflow-x: auto;
+	color: white;
+	margin-top: 1rem;
+}
+.DramaGenre p {
+	background-color: #1f1f1f;
+	margin: 0rem 0rem 0rem 0.4rem;
+	padding: 0.4rem;
+	border-radius: 0.2rem;
 }
 
 .DramaGenre::-webkit-scrollbar {
@@ -46,19 +54,8 @@
 }
 
 .genreMain {
-	font-family: "Lexend Deca", serif;
 	color: var(--neon-green);
 	font-size: 18px;
-}
-
-.genreEntry {
-	background-color: #31313141;
-	color: white;
-	padding: 5px;
-	margin: 3px;
-	border-radius: 5px;
-	font-family: "Lexend Deca", serif;
-	cursor: crosshair;
 }
 
 .EpisodesContainer {
@@ -67,7 +64,6 @@
 
 .EpisodesContainer h2 {
 	color: gray;
-	font-family: "Lexend Deca", serif;
 }
 
 .EpisodeButtons {
@@ -89,7 +85,7 @@
 
 .EpisodeButtons button p {
 	text-align: center;
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 	margin: 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -104,7 +100,7 @@
 .videoPopUp {
 	height: 100dvh;
 	width: 100dvw;
-	background-color: #1f1f1fd3;
+	background-color: #141414ea;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -118,7 +114,7 @@
 }
 
 .closeButton {
-	font-family: "Poppins", serif;
+	font-family: "Lexend Deca", serif;
 	font-size: 16px;
 	background-color: var(--pastel-red);
 	padding: 0.5rem 1.5rem;
@@ -131,11 +127,11 @@
 
 .video {
 	width: 60vw;
-	font-family: "Lexend Deca", serif;
 }
 
 .VideoPlayer {
 	width: 100%;
+	height: auto;
 }
 
 @media screen and (max-width: 768px) {

@@ -7,7 +7,6 @@
 	font-size: 28px;
 	margin: 0;
 	color: var(--soft-purple);
-	font-family: "Lexend Deca", serif;
 }
 
 .RecentText span {
@@ -51,7 +50,6 @@
 	margin: 5px auto;
 	width: auto;
 	max-width: 180px;
-	font-family: "Lexend Deca", serif;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
