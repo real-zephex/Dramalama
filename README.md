@@ -10,8 +10,6 @@ Dramalama is an online service where you can watch kdramas and anime and read ma
 
 This web application, built with the Next.js framework, relies on data fetched from the Consumet API. The anime section benefits from server-side rendering, ensuring efficient performance. To maintain uniformity, both the kdrama and manga sections have been updated to utilize server-side rendering (SSR), aligning them with the architecture of the anime section.
 
-_However, I am planning to rewrite the kdrama section and make it server rendered_
-
 ## Features
 
 #### Kdrama
