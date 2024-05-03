@@ -34,6 +34,14 @@
 	display: flex;
 	align-items: center;
 	overflow-x: auto;
+	color: white;
+	margin-top: 1rem;
+}
+.DramaGenre p {
+	background-color: #1f1f1f;
+	margin: 0rem 0rem 0rem 0.4rem;
+	padding: 0.4rem;
+	border-radius: 0.2rem;
 }
 
 .DramaGenre::-webkit-scrollbar {
@@ -48,14 +56,6 @@
 .genreMain {
 	color: var(--neon-green);
 	font-size: 18px;
-}
-
-.genreEntry {
-	background-color: #31313141;
-	color: white;
-	padding: 5px;
-	margin: 3px;
-	border-radius: 5px;
 }
 
 .EpisodesContainer {

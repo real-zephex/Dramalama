@@ -37,9 +37,7 @@ export default async function DramaInfo({ params }) {
 						<span className={styles.genreMain}>Genres: </span>
 						{info.genres &&
 							info.genres.map((item, index) => (
-								<span key={index} className={styles.genreEntry}>
-									{item}
-								</span>
+								<p key={index}>{item}</p>
 							))}
 					</div>
 
@@ -48,9 +46,7 @@ export default async function DramaInfo({ params }) {
 						<span className={styles.genreMain}>AKA: </span>
 						{info.otherNames &&
 							info.otherNames.map((item, index) => (
-								<span key={index} className={styles.genreEntry}>
-									{item}
-								</span>
+								<p key={index}>{item}</p>
 							))}
 					</div>
 
