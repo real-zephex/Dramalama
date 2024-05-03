@@ -69,6 +69,17 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	color: white;
+}
+
+.content a {
+	text-decoration: underline;
+	color: var(--neon-yellow);
+}
+
+.content p {
+	margin-top: 0.2rem;
 }
 
 .contentContainer {
