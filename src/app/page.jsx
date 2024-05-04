@@ -1,45 +1,42 @@
-"use client";
-
 import styles from "./page.module.css";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-	const router = useRouter();
-	router.push("https://dramalama.netlify.app");
-	return; // <main className={styles.newbg}>
-	// 	<div className={styles.content}>
-	// 		<div className={styles.contentContainer}>
-	// 			<Link
-	// 				href={"/anime"}
-	// 				title="Click here to get redirected to the anime webpage"
-	// 			>
-	// 				<div className={styles.anime}>
-	// 					<h2>Anime</h2>
-	// 					<p>Your one stop for all your anime needs</p>
-	// 				</div>
-	// 			</Link>
-	// 			<Link
-	// 				href={"/manga"}
-	// 				title="Click here to get redirected to the manga webpage"
-	// 			>
-	// 				<div className={styles.manga}>
-	// 					<h2>Manga</h2>
-	// 					<p>Your one stop for all your manga needs</p>
-	// 				</div>
-	// 			</Link>
-	// 			<Link
-	// 				href={"/kdrama"}
-	// 				title="Click here to get redirected to the kdrama webpage"
-	// 			>
-	// 				<div className={styles.kdrama}>
-	// 					<h2>Kdrama</h2>
-	// 					<p>Your one stop for all your kdrama needs</p>
-	// 				</div>
-	// 			</Link>
-	// 		</div>
-	// 	</div>
-	// </main>
+	return (
+		<main className={styles.newbg}>
+			<div className={styles.content}>
+				<div className={styles.contentContainer}>
+					<Link
+						href={"/anime"}
+						title="Click here to get redirected to the anime webpage"
+					>
+						<div className={styles.anime}>
+							<h2>Anime</h2>
+							<p>Your one stop for all your anime needs</p>
+						</div>
+					</Link>
+					<Link
+						href={"/manga"}
+						title="Click here to get redirected to the manga webpage"
+					>
+						<div className={styles.manga}>
+							<h2>Manga</h2>
+							<p>Your one stop for all your manga needs</p>
+						</div>
+					</Link>
+					<Link
+						href={"/kdrama"}
+						title="Click here to get redirected to the kdrama webpage"
+					>
+						<div className={styles.kdrama}>
+							<h2>Kdrama</h2>
+							<p>Your one stop for all your kdrama needs</p>
+						</div>
+					</Link>
+				</div>
+			</div>
+		</main>
+	);
 }
 
 // Test push
