@@ -1,29 +1,20 @@
 .popDramasText {
 	color: var(--soft-purple);
-	font-size: 28px;
+	font-size: 36px;
 	margin-bottom: 10px;
-	font-weight: 500;
+	font-weight: 400;
+	text-align: center;
 }
 
 .AnimeContainer {
-	display: flex;
-	overflow-x: auto;
-	overflow-y: hidden;
-	margin-top: -8px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	grid-gap: 0.5rem;
+	align-items: center;
 }
 
 .AnimeContainer::-webkit-scrollbar {
-	height: 5px;
-}
-
-.AnimeContainer::-webkit-scrollbar-track {
-	background-color: #3333339d;
-	border-radius: 5px;
-}
-
-.AnimeContainer::-webkit-scrollbar-thumb {
-	background-color: rgb(68, 68, 68);
-	border-radius: 5px;
+	height: 0px;
 }
 
 .AnimeContainer:hover .AnimeEntry {
@@ -32,7 +23,7 @@
 
 .AnimeContainer:hover .AnimeEntry:hover {
 	opacity: 1;
-	transform: scale(1.02);
+	transform: scale(1.018);
 	background-color: #272727;
 }
 
@@ -40,26 +31,44 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 4px;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
 	transition: opacity 200ms ease, transform 200ms ease,
 		background-color 200ms ease;
 	cursor: grab;
-	border-radius: 1rem;
+	border-radius: 0.4rem;
 }
 
 .AnimeEntry img {
-	border-radius: 1rem;
+	border-radius: 0.4rem;
 }
 
 .AnimeEntry p {
 	text-align: center;
 	color: white;
 	width: auto;
-	max-width: 190px;
+	max-width: 180px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	margin: 0.5rem 0rem 0rem 0rem;
+}
+
+@media screen and (max-width: 768px) {
+	.popDramasText {
+		text-align: start;
+		font-size: 26px;
+		margin-bottom: 1rem;
+	}
+
+	.AnimeContainer {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+		margin-top: -8px;
+	}
+
+	.AnimeEntry img {
+		width: auto;
+	}
 }

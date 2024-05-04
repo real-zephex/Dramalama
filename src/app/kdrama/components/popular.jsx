@@ -13,17 +13,20 @@ export default async function PopularDramas() {
 
 			<div className={styles.AnimeContainer}>
 				{popular &&
-					popular.results.map((item, index) => (
+					popular.results.slice(0, 16).map((item, index) => (
 						<Link
 							href={`/kdrama/${encodeURIComponent(item.id)}`}
 							key={index}
 							style={{ textDecoration: "none" }}
 						>
-							<div className={styles.AnimeEntry} title={item.title}>
+							<div
+								className={styles.AnimeEntry}
+								title={item.title}
+							>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={190}
-									height={270}
+									width={200}
+									height={310}
 									alt="Drama Poster"
 								/>
 								<p>{item.title}</p>

@@ -1,21 +1,17 @@
-.TrendingText {
-	display: flex;
-	align-items: center;
-}
-
 .TrendingText p {
-	font-size: 28px;
-	margin: 0px;
+	font-size: 36px;
+	margin: 0px 0px 0.5rem 0.5rem;
+	font-weight: 400;
 	color: var(--soft-purple);
-}
-
-.TrendingText span {
-	margin-top: 6px;
+	text-align: center;
 }
 
 .trending {
-	display: flex;
-	overflow-x: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	grid-gap: 0.5rem;
+	align-items: center;
+	margin-left: 0.5rem;
 }
 
 .TrendingContainer:hover .trendingEntries {
@@ -28,43 +24,50 @@
 }
 
 .trending::-webkit-scrollbar {
-	height: 5px;
-	width: 0px;
-}
-
-.trending::-webkit-scrollbar-thumb {
-	background-color: #444444;
-	border-radius: 5px;
+	height: 0px;
 }
 
 .trendingEntries {
-	margin: 4px;
 	transition: transform 400ms ease;
 	background-color: #1f1f1fbb;
 	padding: 0.5rem;
-	border-radius: 0.5rem;
+	border-radius: 0.4rem;
 	transition: opacity 400ms ease, transform 400ms ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .trendingEntries p {
 	text-align: center;
-	margin: 5px auto;
 	width: auto;
 	max-width: 180px;
+	margin: 0.5rem 0 0 0;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
-.trendingEntries p::-webkit-scrollbar {
-	width: 2px;
+.trendingEntries img {
+	border-radius: 0.4rem;
 }
 
-.trendingEntries p::-webkit-scrollbar-thumb {
-	background-color: #444444;
-	border-radius: 5px;
-}
+@media screen and (max-width: 768px) {
+	.TrendingText p {
+		text-align: start;
+		font-size: 26px;
+		margin-bottom: 1rem;
+	}
 
-.trendingImage {
-	border-radius: 0.5rem;
+	.trending {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+		margin-top: -8px;
+	}
+
+	.trendingEntries img {
+		width: auto;
+	}
 }
