@@ -1,8 +1,6 @@
 import styles from "./read.module.css";
 import Image from "next/image";
 
-export const runtime = "edge";
-
 export default async function Read({ params }) {
 	const chapterId = params.read;
 	const results = await getPages(chapterId);
