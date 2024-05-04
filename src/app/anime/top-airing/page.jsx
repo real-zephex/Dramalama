@@ -6,6 +6,7 @@ import { preFetchAnimeInfo } from "../videoLinkfetcher";
 export default async function Trending() {
 	const data = await test();
 	preFetchAnimeInfo(data);
+	
 	return (
 		<div className={styles.TrendingContainer}>
 			<div className={styles.TrendingText}>
@@ -20,7 +21,10 @@ export default async function Trending() {
 							href={`/anime/${item.id}`}
 							style={{ textDecoration: "none", color: "white" }}
 						>
-							<div className={styles.trendingEntries} title={item.title}>
+							<div
+								className={styles.trendingEntries}
+								title={item.title}
+							>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.trendingImage}

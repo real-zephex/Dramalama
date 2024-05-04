@@ -15,18 +15,39 @@
 	align-items: center;
 	justify-content: space-between;
 	background-color: #121212;
-	font-family: "Lexend Deca", serif;
-	z-index: 2;
+	z-index: 999;
 }
 
 .left {
 	color: white;
-	font-size: 24px;
 }
 
 .left p {
 	margin: 0;
+	font-size: 1.5rem;
 	padding: 1rem;
+	color: transparent;
+	background: linear-gradient(
+		90deg,
+		rgba(0, 151, 255, 0.9976365546218487) 3%,
+		rgba(115, 154, 242, 1) 21%,
+		rgba(255, 159, 224, 1) 40%,
+		rgba(255, 194, 133, 1) 60%,
+		rgba(245, 243, 81, 1) 80%,
+		rgba(255, 179, 0, 1) 100%
+	);
+	background-size: 150% 50%;
+	background-clip: text;
+	animation: colorChange 3s linear infinite alternate-reverse;
+}
+
+@keyframes colorChange {
+	0% {
+		background-position: 0 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
 }
 
 .right a {
@@ -34,7 +55,7 @@
 	color: white;
 	margin: 0 0.4rem 0 0.5rem;
 	transition: opacity 400ms ease;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .header:hover > .right a {
@@ -53,7 +74,7 @@
 	background-color: #121212;
 	color: white;
 	font-family: "Poppins", serif;
-	z-index: 2;
+	z-index: 999;
 }
 
 .footer p {
@@ -90,7 +111,6 @@
 	border-radius: 0.5rem;
 	transition: opacity 200ms ease, transform 200ms ease;
 	padding: 0.4rem 2rem;
-	font-family: "Lexend Deca", serif;
 	margin: 0.2rem 0.2rem 0 0.2rem;
 	border-color: rgb(80, 80, 80);
 	border-style: groove;
@@ -104,7 +124,7 @@
 .content:hover > .contentContainer div:hover {
 	opacity: 1;
 	cursor: pointer;
-	transform: scale(0.96) rotateX(15deg) rotateY(8deg);
+	transform: scale(0.96) rotateX(15deg) rotateY(-8deg);
 }
 
 @media screen and (max-width: 1024px) {
