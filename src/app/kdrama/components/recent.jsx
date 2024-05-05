@@ -12,7 +12,7 @@ export default async function RecentDramas() {
 
 			<div className={styles.AnimeContainer}>
 				{popular &&
-					popular.results.slice(0, 16).map((item, index) => (
+					popular.results.slice(0, 24).map((item, index) => (
 						<Link
 							href={`/kdrama/${encodeURIComponent(item.id)}`}
 							key={index}

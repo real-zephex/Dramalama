@@ -1,5 +1,5 @@
 .SearchContainer {
-	margin: 20px 0px -20px 0px;
+	margin: -1rem 0 -2rem 0;
 }
 
 .LoadingText {
@@ -14,7 +14,8 @@
 	display: flex;
 	align-items: center;
 	max-width: 30%;
-	border-radius: 10px;
+	border-radius: 0.8rem;
+	margin: 0 0.2rem 0 0.2rem;
 }
 
 .SearchContainer input {
