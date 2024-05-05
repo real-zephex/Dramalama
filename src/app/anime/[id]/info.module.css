@@ -37,6 +37,25 @@
 	color: rgba(255, 255, 255, 0.637);
 }
 
+.SelectClass {
+	background-color: #272727;
+	color: white;
+	font-family: "Lexend Deca", serif;
+	border: none;
+	outline: none;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+}
+
+.SelectClass::-webkit-scrollbar {
+	width: 0;
+}
+
+.SelectClass option:checked {
+	background-color: rgb(0, 160, 223);
+}
+
 .buttonContainer {
 	margin: 0px;
 	height: 200px;
@@ -72,7 +91,7 @@
 .dramaButton {
 	padding: 10px;
 	font-family: "Lexend Deca", serif;
-	margin: 5px 5px 5px 5px;
+	margin: 0.5rem 0.5rem 0px 0px;
 	width: 55px;
 	border-radius: 5px;
 	text-align: center;
@@ -160,5 +179,9 @@
 
 	.video {
 		width: 100%;
+	}
+
+	.buttonContainer {
+		text-align: center;
 	}
 }

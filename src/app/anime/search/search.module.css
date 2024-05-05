@@ -56,9 +56,10 @@
 	display: flex;
 	overflow-x: auto;
 	margin-bottom: 1rem;
+	margin-left: 0.5rem;
 }
 
-.animeEntry .anime {
+.animeEntry:hover .anime {
 	opacity: 0.5;
 }
 
