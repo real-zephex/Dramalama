@@ -1,0 +1,82 @@
+.Main {
+	color: white;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+}
+
+.Main h1 {
+	margin: 0 0 0.5rem 0;
+	text-align: center;
+	color: transparent;
+	background: linear-gradient(
+		90deg,
+		var(--neon-green) 40%,
+		var(--light-green) 60%,
+		var(--neon-yellow) 80%,
+		var(--soft-purple) 100%
+	);
+	background-size: 60% 50%;
+	background-clip: text;
+}
+
+.MovieContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	grid-gap: 0.5rem;
+	align-items: center;
+}
+
+.MovieContainer::-webkit-scrollbar {
+	height: 0;
+}
+
+.MovieContainer:hover .MovieEntryPrev {
+	opacity: 0.5;
+}
+
+.MovieContainer:hover .MovieEntryPrev:hover {
+	opacity: 1;
+	scale: 1.02;
+}
+
+.MovieEntryPrev {
+	transition: opacity 200ms ease, scale 200ms ease;
+}
+
+.MovieEntry {
+	background-color: #1f1f1fc2;
+	padding: 0.5rem;
+	/* border-radius: 0.5rem; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	backdrop-filter: blur(5px);
+}
+
+.MovieEntry img {
+	border-radius: 0.5rem;
+}
+
+.MovieEntry p {
+	width: 190px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	margin: 0.3rem 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+	.Main h1 {
+		font-size: 24px;
+		text-align: start;
+	}
+
+	.MovieContainer {
+		display: flex;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}

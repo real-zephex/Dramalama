@@ -31,6 +31,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "sup-proxy.zephex0-f6c.workers.dev",
 			},
+			{
+				protocol: "https",
+				hostname: "image.tmdb.org",
+			},
 		],
 	},
 	logging: {
@@ -40,9 +44,9 @@ const nextConfig = {
 	},
 	experimental: {
 		serverActions: {
-			allowedOrigins: ["localhost:3000"]
-		}
-	}
+			allowedOrigins: ["localhost:3000"],
+		},
+	},
 };
 
 export default nextConfig;

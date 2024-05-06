@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<main className={styles.newbg}>
 			<div className={styles.content}>
@@ -30,6 +30,15 @@ export default function Home() {
 					>
 						<div className={styles.kdrama}>
 							<h2>Kdrama</h2>
+							<p>Your one stop for all your kdrama needs</p>
+						</div>
+					</Link>
+					<Link
+						href={"/movies"}
+						title="Click here to get redirected to the kdrama webpage"
+					>
+						<div className={styles.movies}>
+							<h2>Movies</h2>
 							<p>Your one stop for all your kdrama needs</p>
 						</div>
 					</Link>
