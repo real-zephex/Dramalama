@@ -1,0 +1,119 @@
+.Main {
+	margin-top: 60px;
+	color: white;
+}
+
+.MovieInfoSection {
+	background-color: #1f1f1fcc;
+	backdrop-filter: blur(10px);
+}
+
+.MovieInfo {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.HeroSection {
+	display: flex;
+	align-items: center;
+}
+
+.HeroSection img {
+	border-radius: 0.5rem;
+}
+
+.HeroTitle {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	padding: 0.5rem;
+}
+
+.HeroTitle h2 {
+	font-size: 28px;
+	margin: 0;
+}
+
+.tagline {
+	margin: 0.2rem 0 0 0;
+	font-size: 12px;
+}
+
+.tagline span {
+	background-color: #12121286;
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+}
+
+.MovieDescription {
+	font-size: 18px;
+	margin: 0.2rem 0 0 0;
+}
+
+.OtherInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem 0 0 0;
+	background-color: #12121286;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.Ratings {
+	display: flex;
+}
+
+.divider {
+	margin: 0 0.5rem 0 0.5rem;
+}
+
+.Ratings span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Ratings p {
+	margin: 0 0 0 0.4rem;
+}
+
+.Money {
+	margin: 0.5rem 0 0 0;
+	display: flex;
+}
+
+.Money p {
+	margin: 0 0 0 0.4rem;
+}
+
+.Money span {
+	display: flex;
+	align-items: center;
+}
+
+.Genre {
+	display: flex;
+}
+
+.Genre p {
+	background-color: #12121257;
+	margin: 0.5rem 0.2rem 0 0.2rem;
+	padding: 0.3rem;
+	border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.MovieInfo {
+		max-width: 100%;
+	}
+
+	.VideoPlayer {
+		width: 98%;
+		margin: 1rem auto;
+	}
+
+	.VideoPlayer iframe {
+		height: 250px;
+	}
+}
