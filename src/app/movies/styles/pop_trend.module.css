@@ -27,11 +27,24 @@
 }
 
 .MovieContainer::-webkit-scrollbar {
-    height: 0;
+	height: 0;
+}
+
+.MovieContainer:hover .MovieEntryPrev {
+	opacity: 0.5;
+}
+
+.MovieContainer:hover .MovieEntryPrev:hover {
+	opacity: 1;
+	scale: 1.02;
+}
+
+.MovieEntryPrev {
+	transition: opacity 200ms ease, scale 200ms ease;
 }
 
 .MovieEntry {
-	background-color: #1f1f1fb2;
+	background-color: #1f1f1fc2;
 	padding: 0.5rem;
 	/* border-radius: 0.5rem; */
 	display: flex;

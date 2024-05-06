@@ -1,12 +1,14 @@
 "use server";
 
 import { SEARCH } from "../../../../utils/movie_urls";
+import PreFetchMovieInfo from "./cacher";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/search.module.css";
 
 const SearchResults = async (title) => {
 	const data = await get_search_results(title);
+	PreFetchMovieInfo(data);
 	return (
 		<div className={styles.MovieSearchResultsContainer}>
 			{data &&
@@ -26,6 +28,7 @@ const SearchResults = async (title) => {
 									borderRadius: "0.5rem",
 									overflow: "hidden",
 								}}
+								className={styles.MovieResultsPrev}
 							>
 								<section className={styles.MovieEntry}>
 									<p>{item.title || item.original_title}</p>

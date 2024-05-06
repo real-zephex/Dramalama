@@ -37,6 +37,19 @@
 	margin: 0.2rem 0.2rem 0 0.2rem;
 }
 
+.MovieSearchResultsContainer:hover .MovieResultsPrev {
+	opacity: 0.5;
+}
+
+.MovieSearchResultsContainer:hover .MovieResultsPrev:hover {
+	opacity: 1;
+	scale: 1.02;
+}
+
+.MovieResultsPrev {
+	transition: opacity 200ms ease, scale 200ms ease;
+}
+
 .MovieEntry {
 	display: flex;
 	align-items: center;

@@ -1,10 +1,12 @@
 import { POPULAR } from "../../../../utils/movie_urls";
+import PreFetchMovieInfo from "./cacher";
 import styles from "../styles/pop_trend.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function POPULAR_MOVIES() {
 	const data = await get_popular();
+	PreFetchMovieInfo(data);
 
 	return (
 		<main className={styles.Main}>
@@ -29,6 +31,7 @@ export default async function POPULAR_MOVIES() {
 									backgroundRepeat: "no-repeat",
 									backgroundSize: "cover",
 								}}
+								className={styles.MovieEntryPrev}
 							>
 								<div className={styles.MovieEntry}>
 									<Image
