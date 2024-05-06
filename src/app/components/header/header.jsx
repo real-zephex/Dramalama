@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../page.module.css";
 
-export default function Header() {
+export default async function Header() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.header}>
@@ -17,6 +17,7 @@ export default function Header() {
 					<Link href="/anime">Anime</Link>
 					<Link href="/kdrama">Kdrama</Link>
 					<Link href="/manga">Manga</Link>
+					<Link href="/movies">Movies</Link>
 				</div>
 			</div>
 		</main>

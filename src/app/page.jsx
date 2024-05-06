@@ -33,6 +33,15 @@ export default async function Home() {
 							<p>Your one stop for all your kdrama needs</p>
 						</div>
 					</Link>
+					<Link
+						href={"/movies"}
+						title="Click here to get redirected to the kdrama webpage"
+					>
+						<div className={styles.movies}>
+							<h2>Movies</h2>
+							<p>Your one stop for all your kdrama needs</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</main>

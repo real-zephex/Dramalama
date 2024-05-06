@@ -105,7 +105,8 @@
 
 .manga,
 .anime,
-.kdrama {
+.kdrama,
+.movies {
 	background-color: #121212e0;
 	color: white;
 	border-radius: 0.5rem;
