@@ -68,3 +68,9 @@
 	margin: 0 0.2rem 0 0;
 	font-size: 18px;
 }
+
+@media screen and (max-width: 768px) {
+	.InputContainer {
+		width: 100%;
+	}
+}
