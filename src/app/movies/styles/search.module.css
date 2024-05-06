@@ -1,12 +1,12 @@
 .Main {
-	margin: 0 0.2rem 0 0.2rem;
+	margin: 0 0.4rem 0 0.4rem;
 }
 
 .InputContainer {
 	display: flex;
 	align-items: center;
 	background-color: #121212;
-	padding: 0.2rem;
+	/* padding: 0.2rem; */
 	width: 40vw;
 	border-radius: 0.5rem;
 }
@@ -71,6 +71,6 @@
 
 @media screen and (max-width: 768px) {
 	.InputContainer {
-		width: 100%;
+		width: 99%;
 	}
 }
