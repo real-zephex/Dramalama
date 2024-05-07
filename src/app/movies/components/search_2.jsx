@@ -20,7 +20,7 @@ const SearchResults = async (title) => {
 								href={`/movies/${item.id}`}
 								key={index}
 								style={{
-									backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
+									backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.backdrop_path})`,
 									backgroundRepeat: "no-repeat",
 									backgroundSize: "cover",
 									textDecoration: "none",

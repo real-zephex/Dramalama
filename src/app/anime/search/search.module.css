@@ -40,7 +40,7 @@
 .searchContainer {
 	display: flex;
 	align-items: center;
-	margin: 20px 0px 20px 0px;
+	margin: 20px 0px 10px 0px;
 	background-color: #121212;
 	padding: 10px;
 	border-radius: 10px;
@@ -55,8 +55,7 @@
 .animeEntry {
 	display: flex;
 	overflow-x: auto;
-	margin-bottom: 1rem;
-	margin-left: 0.5rem;
+	margin: 0 0 1rem 0.5rem;
 }
 
 .animeEntry:hover .anime {
