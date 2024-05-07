@@ -12,28 +12,28 @@ export default function Input() {
 	const [loading, setLoading] = useState(null);
 	const [info, setInfo] = useState(null);
 
-	// const handleKeyPress = async (event) => {
-	// 	if (
-	// 		(event.code === "Enter" ||
-	// 			event.key === "Enter" ||
-	// 			event.code === 13) &&
-	// 		searchedAnime !== ""
-	// 	) {
-	// 		setLoading(true);
-	// 		setInfo(await fetchedInfo(await Results(searchedAnime)));
-	// 		setLoading(false);
-	// 	} else if (
-	// 		(event.code === "Enter" ||
-	// 			event.key === "Enter" ||
-	// 			event.code === 13) &&
-	// 		searchedAnime === ""
-	// 	) {
-	// 		alert("Input cannot be empty");
-	// 	}
-	// };
+	const handleKeyPress = async (event) => {
+		if (
+			(event.code === "Enter" ||
+				event.key === "Enter" ||
+				event.code === 13) &&
+			searchedAnime !== ""
+		) {
+			setLoading(true);
+			setInfo(await fetchedInfo(await Results(searchedAnime)));
+			setLoading(false);
+		} else if (
+			(event.code === "Enter" ||
+				event.key === "Enter" ||
+				event.code === 13) &&
+			searchedAnime === ""
+		) {
+			alert("Input cannot be empty");
+		}
+	};
 
 	return (
-		<div style={{ marginBottom: -15 }}>
+		<div style={{marginBottom: -15}}>
 			<div className={styles.inputContainer}>
 				<div className={styles.searchContainer}>
 					<FaSearch className={styles.searchIcon} />
@@ -43,15 +43,7 @@ export default function Input() {
 								setSearchedAnime(event.target.value);
 							}
 						}}
-						onKeyDown={async (event) => {
-							if (event.code !== 8) {
-								setInfo(
-									await fetchedInfo(
-										await Results(searchedAnime)
-									)
-								);
-							}
-						}}
+						onKeyDown={(event) => handleKeyPress(event)}
 						placeholder="Enter anime title"
 						className={styles.SearchInput}
 					></input>

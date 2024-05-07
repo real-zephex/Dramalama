@@ -24,9 +24,9 @@ export default function SEARCH_COMPONENT() {
 				<input
 					placeholder="Enter movie title here"
 					onChange={(event) => setTitle(event.target.value)}
-					onKeyDown={async (event) => {
-						if (event.code !== 8) {
-							await fetch_results(title);
+					onKeyDown={async (e) => {
+						if ((e.key === "Enter" || e.code === 13) && title) {
+							await fetch_results(e.target.value);
 						}
 					}}
 				></input>

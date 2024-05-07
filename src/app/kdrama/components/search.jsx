@@ -21,20 +21,13 @@ export default function DramaSearch() {
 		setInfoTitle(data);
 	};
 
-	const fetch_every_title = async (title) => {
-		FetchSearchTitle(title);
-	};
-
 	return (
 		<div className={styles.SearchContainer}>
 			<div className={styles.Search}>
 				<FaSearch color="white" size={16} />
 				<input
 					placeholder="Search for drama"
-					onChange={(event) => {
-						setTitle(event.target.value);
-						fetch_every_title(title);
-					}}
+					onChange={(event) => setTitle(event.target.value)}
 					onKeyDown={async (e) => {
 						if ((e.key === "Enter" || e.code === 13) && title) {
 							await handleSearch(e.target.value);
