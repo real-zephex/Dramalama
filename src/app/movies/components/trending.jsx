@@ -27,7 +27,7 @@ export default async function TREDNING_MOVIES() {
 								style={{
 									borderRadius: "0.5rem",
 									overflow: "hidden",
-									backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
+									backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.backdrop_path})`,
 									backgroundRepeat: "no-repeat",
 									backgroundSize: "cover",
 								}}
@@ -35,9 +35,9 @@ export default async function TREDNING_MOVIES() {
 							>
 								<div className={styles.MovieEntry}>
 									<Image
-										src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-										width={200}
-										height={300}
+										src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
+										width={167}
+										height={247}
 										alt="Movie Poster"
 									></Image>
 									<p>{item.title}</p>

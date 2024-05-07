@@ -15,7 +15,7 @@ export default async function MOVIE_INFO({ params }) {
 	return (
 		<main
 			style={{
-				backgroundImage: `url(https://image.tmdb.org/t/p/original${data.backdrop_path})`,
+				backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path})`,
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
 			}}
@@ -25,7 +25,7 @@ export default async function MOVIE_INFO({ params }) {
 				<section className={styles.MovieInfo}>
 					<div className={styles.HeroSection}>
 						<Image
-							src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
+							src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.poster_path}`}
 							width={200}
 							height={300}
 							alt="Movie Poster"
@@ -78,7 +78,10 @@ export default async function MOVIE_INFO({ params }) {
 						</section>
 						<section className={styles.Money}>
 							<span title="Released on">
-								<p>Release Date: {data.release_date}</p>
+								<p>
+									Release Date:{" "}
+									{data.release_date || "Not found"}
+								</p>
 							</span>
 						</section>
 						<section className={styles.Genre}>
@@ -93,13 +96,11 @@ export default async function MOVIE_INFO({ params }) {
 							style={{
 								textAlign: "center",
 								margin: 0,
-								fontSize: 14,
+								fontSize: 12,
 							}}
 						>
-							NOTE: Please wait for some time for the video to
-							load. If it buffers for a long time, then try
-							chanding the server. If the issue persists, please
-							check your internet connection.
+							IMPORTANT: Please use adblockers like uBlock Orgin
+							or Ghostery for an ad free experience.
 						</p>
 					</section>
 					<br />

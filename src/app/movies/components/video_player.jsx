@@ -16,7 +16,6 @@ export default function VIDEO_PLAYER({ id: id }) {
 				src={url}
 				referrerPolicy="origin"
 				allowFullScreen
-				height={500}
 				className={styles.VideoPlayer}
 			></iframe>
 		);

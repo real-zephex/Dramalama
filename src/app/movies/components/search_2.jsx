@@ -33,8 +33,8 @@ const SearchResults = async (title) => {
 								<section className={styles.MovieEntry}>
 									<p>{item.title || item.original_title}</p>
 									<Image
-										src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-										width={130}
+										src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
+										width={150}
 										height={230}
 										alt="Movie Poster"
 										priority

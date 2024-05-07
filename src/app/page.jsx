@@ -39,7 +39,7 @@ export default async function Home() {
 					>
 						<div className={styles.movies}>
 							<h2>Movies</h2>
-							<p>Your one stop for all your kdrama needs</p>
+							<p>Your one stop for all your movie needs</p>
 						</div>
 					</Link>
 				</div>
