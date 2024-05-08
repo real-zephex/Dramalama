@@ -1,14 +1,19 @@
-.TrendingText p {
-	font-size: 36px;
+.TrendingText h1 {
 	margin: 0px 0px 0.5rem 0.5rem;
-	font-weight: 400;
-	color: var(--soft-purple);
 	text-align: center;
+	color: transparent;
+	background: linear-gradient(90deg,
+			var(--neon-green) 40%,
+			var(--light-green) 60%,
+			var(--neon-yellow) 80%,
+			var(--soft-purple) 100%);
+	background-size: 60% 50%;
+	background-clip: text;
 }
 
 .trending {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 0.5rem;
 	align-items: center;
 	margin-left: 0.5rem;
@@ -42,7 +47,7 @@
 .trendingEntries p {
 	text-align: center;
 	width: auto;
-	max-width: 190px;
+	max-width: 160px;
 	margin: 0.5rem 0 0 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -51,6 +56,7 @@
 
 .trendingEntries img {
 	border-radius: 0.4rem;
+	box-shadow: 0 0 10px 5px rgba(18, 18, 18, 0.863);
 }
 
 @media screen and (max-width: 768px) {

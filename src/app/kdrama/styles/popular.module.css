@@ -1,15 +1,21 @@
 .popDramasText {
 	color: var(--soft-purple);
-	font-size: 36px;
 	margin-bottom: 10px;
-	font-weight: 400;
 	text-align: center;
+	color: transparent;
+	background: linear-gradient(90deg,
+			var(--neon-green) 40%,
+			var(--light-green) 60%,
+			var(--neon-yellow) 80%,
+			var(--soft-purple) 100%);
+	background-size: 60% 50%;
+	background-clip: text;
 }
 
 .AnimeContainer {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-	grid-gap: 0.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 0.7rem;
 	align-items: center;
 }
 
@@ -41,13 +47,14 @@
 
 .AnimeEntry img {
 	border-radius: 0.4rem;
+	box-shadow: 0 0 10px 5px rgba(18, 18, 18, 0.863);
 }
 
 .AnimeEntry p {
 	text-align: center;
 	color: white;
 	width: auto;
-	max-width: 180px;
+	max-width: 160px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;

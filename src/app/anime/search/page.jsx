@@ -33,7 +33,7 @@ export default function Input() {
 	};
 
 	return (
-		<div style={{marginBottom: -15}}>
+		<div style={{ marginBottom: -15 }}>
 			<div className={styles.inputContainer}>
 				<div className={styles.searchContainer}>
 					<FaSearch className={styles.searchIcon} />
@@ -48,11 +48,13 @@ export default function Input() {
 						className={styles.SearchInput}
 					></input>
 				</div>
-				<button>
-					<Link href={"/anime/history/continueWatching"}>
-						History
-					</Link>
-				</button>
+				<div>
+					<button>
+						<Link href={"/anime/history/continueWatching"}>
+							History
+						</Link>
+					</button>
+				</div>
 			</div>
 
 			{loading && (
