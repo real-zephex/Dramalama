@@ -48,8 +48,8 @@ const ContinueWatching = () => {
 									</div>
 									<Image
 										src={item.image}
-										width={140}
-										height={210}
+										width={167}
+										height={267}
 										alt="Continue anime poster"
 										priority
 									/>

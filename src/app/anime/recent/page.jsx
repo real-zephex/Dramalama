@@ -10,7 +10,7 @@ export default async function Recent() {
 	return (
 		<div className={styles.TrendingContainer}>
 			<div className={styles.TrendingText}>
-				<p>Recent Releases</p>
+				<h1>Recent Releases</h1>
 			</div>
 
 			<div className={styles.trending}>
@@ -28,8 +28,8 @@ export default async function Recent() {
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									className={styles.trendingImage}
-									width={210}
-									height={310}
+									width={167}
+									height={267}
 									alt="Drama"
 									priority
 								/>

@@ -9,6 +9,7 @@
 .searchMain {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .MangaImage {
@@ -32,7 +33,7 @@
 	padding: 0.4rem;
 	border: none;
 	outline: none;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 	background: #1f1f1f;
 	color: white;
 	cursor: pointer;

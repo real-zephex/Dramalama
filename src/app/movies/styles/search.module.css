@@ -69,6 +69,11 @@
 	font-size: 18px;
 }
 
+.NoResults {
+	color: white;
+	text-align: center;
+}
+
 @media screen and (max-width: 768px) {
 	.InputContainer {
 		width: 100%;

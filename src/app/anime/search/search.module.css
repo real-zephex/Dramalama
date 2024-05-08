@@ -40,6 +40,7 @@
 .searchContainer {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	margin: 20px 0px 20px 0px;
 	background-color: #121212;
 	padding: 10px;

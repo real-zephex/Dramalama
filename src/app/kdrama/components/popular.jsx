@@ -9,7 +9,7 @@ export default async function PopularDramas() {
 
 	return (
 		<div className={styles.Main}>
-			<p className={styles.popDramasText}>Trending Dramas</p>
+			<h1 className={styles.popDramasText}>Trending Dramas</h1>
 
 			<div className={styles.AnimeContainer}>
 				{popular &&
@@ -25,8 +25,8 @@ export default async function PopularDramas() {
 							>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={200}
-									height={310}
+									width={167}
+									height={267}
 									alt="Drama Poster"
 								/>
 								<p>{item.title}</p>

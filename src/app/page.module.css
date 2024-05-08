@@ -1,10 +1,8 @@
 .newbg {
 	background: rgb(37, 37, 37);
-	background: radial-gradient(
-		circle,
-		rgb(41, 41, 41) 2%,
-		rgb(12, 12, 12) 30%
-	);
+	background: radial-gradient(circle,
+			rgb(41, 41, 41) 2%,
+			rgb(12, 12, 12) 30%);
 }
 
 .header {
@@ -27,15 +25,13 @@
 	font-size: 1.5rem;
 	padding: 1rem;
 	color: transparent;
-	background: linear-gradient(
-		90deg,
-		rgba(0, 151, 255, 0.9976365546218487) 3%,
-		rgba(115, 154, 242, 1) 21%,
-		rgba(255, 159, 224, 1) 40%,
-		rgba(255, 194, 133, 1) 60%,
-		rgba(245, 242, 81, 0.884) 80%,
-		rgba(255, 179, 0, 0.842) 100%
-	);
+	background: linear-gradient(90deg,
+			rgba(0, 151, 255, 0.9976365546218487) 3%,
+			rgba(115, 154, 242, 1) 21%,
+			rgba(255, 159, 224, 1) 40%,
+			rgba(255, 194, 133, 1) 60%,
+			rgba(245, 242, 81, 0.884) 80%,
+			rgba(255, 179, 0, 0.842) 100%);
 	background-size: 150% 50%;
 	background-clip: text;
 	animation: colorChange 3s linear infinite alternate-reverse;
@@ -45,9 +41,18 @@
 	0% {
 		background-position: 0 50%;
 	}
+
 	100% {
 		background-position: 100% 100%;
 	}
+}
+
+.right {
+	overflow: auto;
+}
+
+.right::-webkit-scrollbar {
+	height: 0;
 }
 
 .right a {
@@ -58,11 +63,11 @@
 	font-size: 1rem;
 }
 
-.header:hover > .right a {
+.header:hover>.right a {
 	opacity: 0.5;
 }
 
-.header:hover > .right a:hover {
+.header:hover>.right a:hover {
 	opacity: 1;
 	cursor: pointer;
 }
@@ -118,11 +123,11 @@
 	border-width: 0.1rem;
 }
 
-.content:hover > .contentContainer div {
+.content:hover>.contentContainer div {
 	opacity: 0.5;
 }
 
-.content:hover > .contentContainer div:hover {
+.content:hover>.contentContainer div:hover {
 	opacity: 1;
 	cursor: pointer;
 	transform: scale(0.95) rotateX(12deg) rotateY(-8deg);
@@ -133,11 +138,11 @@
 		display: block;
 	}
 
-	.content:hover > .contentContainer div {
+	.content:hover>.contentContainer div {
 		opacity: 0.5;
 	}
 
-	.content:hover > .contentContainer div:hover {
+	.content:hover>.contentContainer div:hover {
 		opacity: 1;
 		cursor: pointer;
 		transform: scale(0.95);

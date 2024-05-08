@@ -8,7 +8,7 @@ export default async function RecentDramas() {
 	PreFetchAnimeInfo(popular);
 	return (
 		<div className={styles.Main}>
-			<p className={styles.popDramasText}>Recent Releases</p>
+			<h1 className={styles.popDramasText}>Recent Releases</h1>
 
 			<div className={styles.AnimeContainer}>
 				{popular &&
@@ -24,8 +24,8 @@ export default async function RecentDramas() {
 							>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
-									width={190}
-									height={270}
+									width={167}
+									height={267}
 									alt="Drama Poster"
 								/>
 								<p>{item.title}</p>

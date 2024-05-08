@@ -53,6 +53,15 @@ export default function VIDEO_PLAYER({ id: id }) {
 				>
 					Vidsrc.icu
 				</button>
+				<button
+					onClick={() =>
+						make_player(
+							`https://player.autoembed.cc/embed/movie/${id}`
+						)
+					}
+				>
+					Autoembded.cc
+				</button>
 			</div>
 			{frame}
 		</section>
