@@ -56,8 +56,7 @@
 .animeEntry {
 	display: flex;
 	overflow-x: auto;
-	margin-bottom: 1rem;
-	margin-left: 0.5rem;
+	margin: 0 0 1rem 0.5rem;
 }
 
 .animeEntry:hover .anime {

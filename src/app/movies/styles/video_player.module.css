@@ -1,5 +1,5 @@
 .VideoContainer {
-    margin: 0.5rem 0 0 0;
+	margin: 0.5rem 0 0 0;
 }
 
 .VideoContainer button {
@@ -17,9 +17,14 @@
 
 .VideoPlayer {
 	width: 100%;
+	height: 500px;
 	aspect-ratio: "16/9";
 	border: none;
 	outline: none;
 	border-radius: 0.5rem;
 	margin: 0.5rem 0 0 0;
+}
+
+.VideoPlayer::-webkit-scrollbar {
+	width: 0px;
 }
