@@ -1,13 +1,15 @@
 .popDramasText {
 	color: var(--soft-purple);
-	margin-bottom: 10px;
+	margin: 10px 0 10px 0;
 	text-align: center;
 	color: transparent;
-	background: linear-gradient(90deg,
-			var(--neon-green) 40%,
-			var(--light-green) 60%,
-			var(--neon-yellow) 80%,
-			var(--soft-purple) 100%);
+	background: linear-gradient(
+		90deg,
+		var(--neon-green) 40%,
+		var(--light-green) 60%,
+		var(--neon-yellow) 80%,
+		var(--soft-purple) 100%
+	);
 	background-size: 60% 50%;
 	background-clip: text;
 }
@@ -65,7 +67,7 @@
 	.popDramasText {
 		text-align: start;
 		font-size: 26px;
-		margin-bottom: 1rem;
+		margin: 1rem 0 1rem 0;
 	}
 
 	.AnimeContainer {
