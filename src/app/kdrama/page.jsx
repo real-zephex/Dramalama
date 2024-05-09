@@ -7,6 +7,7 @@ export default async function Kdrama() {
 	return (
 		<div className={styles.Main}>
 			<DramaSearch />
+			<br />
 			<PopularDramas />
 			<RecentDramas />
 		</div>
