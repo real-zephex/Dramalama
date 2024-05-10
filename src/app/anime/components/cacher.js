@@ -17,7 +17,7 @@ export async function preFetchAnimeInfo(data) {
 
 export async function preFetchVideoLinks(data) {
 	try {
-		const fetchPromises = data.episodes.map(async (element) => {
+		const fetchPromises = data.map(async (element) => {
 			await fetch(watch_url(element.id), { next: { revalidate: 21600 } });
 		});
 

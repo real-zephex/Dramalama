@@ -10,6 +10,7 @@ import {
 
 import styles from "../styles/buttons.module.css";
 import { video_url } from "../data-fetch/request";
+import { preFetchVideoLinks } from "./cacher";
 
 const EpisodesButtons = ({ data: data }) => {
 	const [videoLink, setVideoLink] = useState(null);
@@ -62,6 +63,12 @@ const EpisodesButtons = ({ data: data }) => {
 		if (selectedGroup) {
 			setButtonGroups(
 				createButtonGroups(
+					selectedGroup[0].number - 1,
+					selectedGroup[selectedGroup.length - 1].number
+				)
+			);
+			preFetchVideoLinks(
+				data.episodes.slice(
 					selectedGroup[0].number - 1,
 					selectedGroup[selectedGroup.length - 1].number
 				)
