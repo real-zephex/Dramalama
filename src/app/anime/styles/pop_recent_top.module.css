@@ -39,11 +39,7 @@
 	padding-top: 0.2rem;
 }
 .AnimeContainer::-webkit-scrollbar {
-	height: 0.2rem;
-}
-
-.AnimeContainer::-webkit-scrollbar-track {
-	background-color: var(--soft-purple);
+	height: 0.3rem;
 }
 
 .AnimeContainer::-webkit-scrollbar-thumb {

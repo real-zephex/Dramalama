@@ -10,7 +10,8 @@ const AnimeInfoHomepage = async ({ params }) => {
 	const id = params.id;
 	const data = await anime_info(id);
 
-	preFetchVideoLinks(data.episodes.slice(0, 49));
+	const sliceLength = Math.min(data.episodes.length, 49);
+	preFetchVideoLinks(data.episodes.slice(0, sliceLength));
 
 	return (
 		<main className={styles.main}>
