@@ -32,8 +32,11 @@ const EpisodesButtons = ({ data: data }) => {
 
 	function createButtonGroups(start, end) {
 		try {
-			document.getElementById("episode-button").style.backgroundColor =
-				"#1f1f1fd2";
+			// Reset background color of all buttons with the class "episode-button"
+			const buttons = document.getElementsByClassName("episode-button");
+			for (let i = 0; i < buttons.length; i++) {
+				buttons[i].style.backgroundColor = "#1f1f1fd2";
+			}
 		} catch (error) {
 			console.error(
 				"ERROR: This error is expected. This is done in order to reset the background color of the buttons. I can't think of a better way than this....so yeah.",
@@ -46,9 +49,8 @@ const EpisodesButtons = ({ data: data }) => {
 				{data.episodes &&
 					data.episodes.slice(start, end).map((item, index) => (
 						<button
-							className={styles.dramaButton}
+							className={styles.dramaButton + " episode-button"} // Add the class "episode-button"
 							key={index}
-							id="episode-button"
 							onClick={(event) => {
 								event.target.style.backgroundColor =
 									"var(--soft-purple)";
