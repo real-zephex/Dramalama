@@ -1,18 +1,19 @@
-import styles from "./anime.module.css";
-import Trending from "./top-airing/page";
-import Releases from "./recent/page";
-import Popular from "./popular/page";
-import Input from "./search/page";
-
-export default async function Anime() {
+import styles from "./styles/anime.module.css";
+import PopularAnimes from "./components/popularAnimes";
+import RecentAnimes from "./components/recentEpisodes";
+import TopAiringAnimes from "./components/topAiring";
+import SearcBar from "./components/search";
+const AnimeHomepage = async () => {
 	return (
-		<div className={styles.main}>
-			<Input />
-			<Trending />
-			<br />
-			<Releases />
-			<br />
-			<Popular />
-		</div>
+		<main className={styles.Main}>
+			<SearcBar />
+			<TopAiringAnimes />
+			<hr style={{ marginTop: 15, borderColor: "gray" }} />
+			<RecentAnimes />
+			<hr style={{ marginTop: 15, borderColor: "gray" }} />
+			<PopularAnimes />
+		</main>
 	);
-}
+};
+
+export default AnimeHomepage;
