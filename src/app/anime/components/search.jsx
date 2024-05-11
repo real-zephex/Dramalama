@@ -2,6 +2,7 @@
 
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
 
 import styles from "../styles/search.module.css";
 import SearchResults from "./search_results";
@@ -40,6 +41,11 @@ const SearcBar = () => {
 						}}
 					></input>
 				</div>
+				<Link shallow href={"/"}>
+					<button className={styles.animeHistoryButton}>
+						History
+					</button>
+				</Link>
 			</section>
 			{searchResults}
 		</main>

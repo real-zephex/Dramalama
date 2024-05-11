@@ -24,6 +24,7 @@ const AnimeInfoHomepage = async ({ params }) => {
 								width={200}
 								height={300}
 								alt="Anime Poster"
+								priority
 							/>
 							<div>
 								<p className={styles.animeTitle}>

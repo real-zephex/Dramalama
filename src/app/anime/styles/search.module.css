@@ -1,6 +1,7 @@
 .SearchBarContainer {
 	padding: 1rem 0 0.8rem 0;
-	width: 40%;
+	display: flex;
+	align-items: center;
 }
 
 .SearchInputContainer {
@@ -9,6 +10,18 @@
 	background-color: #121212;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
+	width: 40%;
+}
+
+.animeHistoryButton {
+	font-family: "Lexend Deca", serif;
+	outline: none;
+	border: none;
+	background-color: #121212;
+	color: white;
+	margin: 0 0 0 0.4rem;
+	padding: 0.5rem;
+	cursor: pointer;
 }
 
 .SearchInputContainer input {

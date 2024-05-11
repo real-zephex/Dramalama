@@ -11,6 +11,7 @@ import {
 import styles from "../styles/buttons.module.css";
 import { video_url } from "../data-fetch/request";
 import { preFetchVideoLinks } from "./cacher";
+import { storeLocal } from "./storeHistory";
 
 const EpisodesButtons = ({ data: data }) => {
 	const [videoLink, setVideoLink] = useState(null);
@@ -23,6 +24,11 @@ const EpisodesButtons = ({ data: data }) => {
 
 	const groups = createGroups(data.episodes, 50);
 
+	/**
+	 * Retrieves the video URL for a given episode ID.
+	 * This function handles the initializing, changing URL, and hiding the video player.
+	 * @param {string} epID - The episode ID.
+	 */
 	async function getVideoURL(epID) {
 		setVideoLoading(true);
 		const data = await video_url(epID);
@@ -30,9 +36,14 @@ const EpisodesButtons = ({ data: data }) => {
 		setVideoLoading(false);
 	}
 
+	/**
+	 * Creates button groups for a range of episodes.
+	 * @param {number} start - The starting index of episodes.
+	 * @param {number} end - The ending index of episodes.
+	 * @returns {JSX.Element} - Button groups JSX element.
+	 */
 	function createButtonGroups(start, end) {
 		try {
-			// Reset background color of all buttons with the class "episode-button"
 			const buttons = document.getElementsByClassName("episode-button");
 			for (let i = 0; i < buttons.length; i++) {
 				buttons[i].style.backgroundColor = "#1f1f1fd2";
@@ -49,18 +60,18 @@ const EpisodesButtons = ({ data: data }) => {
 				{data.episodes &&
 					data.episodes.slice(start, end).map((item, index) => (
 						<button
-							className={styles.dramaButton + " episode-button"} // Add the class "episode-button"
+							className={styles.dramaButton + " episode-button"}
 							key={index}
 							onClick={(event) => {
 								event.target.style.backgroundColor =
 									"var(--soft-purple)";
 								getVideoURL(item.id);
-								// store_to_local(
-								// 	info.title,
-								// 	info.image,
-								// 	item.number,
-								// 	info.id
-								// );
+								store_to_local(
+									data.title,
+									data.image,
+									item.number,
+									data.id
+								);
 							}}
 						>
 							{item.number}
@@ -70,6 +81,10 @@ const EpisodesButtons = ({ data: data }) => {
 		);
 	}
 
+	/**
+	 * Handles the change event of the select element.
+	 * @param {Event} event - The change event object.
+	 */
 	function handleSelectChange(event) {
 		const selectedIndex = event.target.selectedIndex;
 		const selectedGroup = groups[selectedIndex];
@@ -140,12 +155,51 @@ const EpisodesButtons = ({ data: data }) => {
 	);
 };
 
+/**
+ * Divides an array into groups of a specified size.
+ * @param {Array} array - The array to be divided.
+ * @param {number} size - The size of each group.
+ * @returns {Array} - An array containing groups of elements.
+ */
 function createGroups(array, size) {
 	const groups = [];
 	for (let i = 0; i < array.length; i += size) {
 		groups.push(array.slice(i, i + size));
 	}
 	return groups;
+}
+
+/**
+ * Stores watch history to local storage.
+ * @param {string} name - The name of the episode.
+ * @param {string} image - The image URL of the episode.
+ * @param {number} episode - The episode number.
+ * @param {string} id - The ID of the episode.
+ */
+function store_to_local(name, image, episode, id) {
+	const currentDate = new Date();
+
+	try {
+		let newData = {
+			name: name,
+			image: image,
+			episode: episode,
+			id: id,
+			type: "anime",
+			date: `${currentDate.getDate()}-${String(
+				currentDate.getMonth() + 1
+			).padStart(2, "0")}`,
+			time: `${currentDate.getHours()}:${String(
+				currentDate.getMinutes()
+			).padStart(2, "0")}`,
+		};
+		storeLocal(newData);
+	} catch (error) {
+		console.error(
+			"Some error occurred during the process of saving your watch history to local storage. Please try again or contact us on GitHub if this issue persists.",
+			error.message
+		);
+	}
 }
 
 export default EpisodesButtons;

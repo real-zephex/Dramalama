@@ -9,21 +9,29 @@
 	align-items: center;
 }
 
+.AnimeHeroSection strong {
+	color: var(--neon-yellow);
+}
+
 .AnimeHeroSection img {
-	padding: 0.5rem 0.7rem 0rem 0;
+	width: auto;
+	height: auto;
+	padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+	border-radius: 1rem;
 }
 
 .animeDescription {
 	max-height: 100px;
 	overflow: auto;
+	color: var(--light-sky);
 }
 
 .animeDescription::-webkit-scrollbar {
-	width: 4px;
+	width: 3px;
 }
 
 .animeDescription::-webkit-scrollbar-thumb {
-	background-color: gray;
+	background-color: var(--nord-yellow);
 	border-radius: 1rem;
 }
 
@@ -50,6 +58,18 @@
 	}
 
 	.AnimeHeroSection img {
-		padding: 0.4rem 0.4rem 0 0;
+		padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.AnimeHeroSection {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.animeTitle {
+		text-align: center;
 	}
 }
