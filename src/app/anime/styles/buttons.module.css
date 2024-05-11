@@ -1,0 +1,98 @@
+.animeButtonContainer {
+	margin-top: 1rem;
+}
+
+.dramaButton {
+	background-color: #1f1f1fd2;
+	outline: none;
+	border: none;
+	color: white;
+	font-family: "Atkinson Hyperlegible", serif;
+	width: 50px;
+	padding: 0.5rem;
+	margin: 0 0.2rem 0.2rem 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 200ms ease, scale 200ms ease;
+}
+
+.dramaButton:hover {
+	background-color: #121212;
+	scale: 0.95;
+}
+
+.dramaButton:focus {
+	background-color: var(--soft-purple);
+	scale: 0.95;
+}
+
+.Main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.SelectClass {
+	text-align: center;
+	outline: none;
+	border: none;
+	padding: 0.4rem;
+	font-family: "Lexend Deca", serif;
+	background-color: #1f1f1fd2;
+	color: white;
+	border-radius: 0.5rem;
+}
+
+.SelectClass::-webkit-scrollbar {
+	width: 0;
+}
+
+/* Video Player */
+
+.videoPopUp {
+	height: 100dvh;
+	width: 100dvw;
+	background-color: #141414ee;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	overflow-y: auto;
+}
+
+.closeButton {
+	font-family: "Lexend Deca", serif;
+	font-size: 16px;
+	background-color: var(--pastel-red);
+	padding: 0.5rem 1.5rem;
+	border: 0;
+	outline: 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.video {
+	width: 60vw;
+}
+
+.VideoPlayer {
+	width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+
+	.dramaButton {
+		font-size: 14px;
+	}
+
+	.video {
+		width: 100%;
+	}
+}

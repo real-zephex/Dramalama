@@ -1,0 +1,56 @@
+.AnimeHeaderText {
+	color: white;
+	margin: 0.4rem 0 0 0;
+}
+
+.AnimeContainer {
+	margin: 0.2rem 0 0 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 0.7rem;
+}
+
+.AnimeEntry {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	padding: 0.8rem;
+	border-radius: 0.5rem;
+	background-color: #1f1f1f;
+}
+
+.AnimeEntry img {
+	border-radius: 0.5rem;
+}
+
+.AnimeEntry p {
+	margin: 0.2rem 0 -0.4rem 0;
+	max-width: 160px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.EpisodeText {
+	color: var(--neon-yellow);
+	font-size: small;
+	padding-top: 0.2rem;
+}
+.AnimeContainer::-webkit-scrollbar {
+	height: 0.3rem;
+}
+
+.AnimeContainer::-webkit-scrollbar-thumb {
+	background-color: var(--neon-yellow);
+	border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.AnimeContainer {
+		display: flex;
+		overflow: auto;
+		align-items: center;
+	}
+}
