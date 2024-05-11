@@ -41,7 +41,7 @@ const SearcBar = () => {
 						}}
 					></input>
 				</div>
-				<Link shallow href={"/"}>
+				<Link shallow href={"/anime/continueWatching"}>
 					<button className={styles.animeHistoryButton}>
 						History
 					</button>
