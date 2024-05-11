@@ -1,0 +1,59 @@
+.main {
+	width: 99%;
+	margin: 60px auto;
+}
+
+.mainText {
+	color: white;
+	font-size: 24px;
+	margin: 0.2rem 0 0.2rem 0;
+}
+
+.animeContainer {
+	font-size: 18px;
+	margin: 0px;
+}
+
+.animeEntry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	margin-bottom: 0.5rem;
+	border-radius: 0.4rem;
+	background-color: #1f1f1f;
+}
+
+.animeEntry img {
+	border-radius: 0.4rem;
+	margin-left: 0.2rem;
+}
+
+.titleContainer {
+	color: white;
+	margin-left: 0.2rem;
+}
+
+.titleContainer h3 {
+	margin: 0px;
+}
+
+.EpisodeCount {
+	color: var(--soft-purple);
+	margin: 0px;
+}
+
+.date {
+	color: var(--neon-yellow);
+	margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+	.animeContainer {
+		font-size: 14px;
+	}
+
+	.animeEntry img {
+		width: 35%;
+	}
+}
