@@ -8,7 +8,7 @@ export default async function RecentDramas() {
 	PreFetchAnimeInfo(popular);
 	return (
 		<div className={styles.Main}>
-			<h1 className={styles.popDramasText}>Recent Releases</h1>
+			<h2 className={styles.popDramasText}>Recent Releases</h2>
 
 			<div className={styles.AnimeContainer}>
 				{popular &&

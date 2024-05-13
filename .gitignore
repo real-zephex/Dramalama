@@ -34,6 +34,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-desktop.fell-major.ts.net.crt
-desktop.fell-major.ts.net.key

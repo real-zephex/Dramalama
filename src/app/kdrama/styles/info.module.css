@@ -1,6 +1,6 @@
 .Main {
 	max-width: 98%;
-	margin: 80px auto;
+	margin: 60px auto;
 }
 
 .TitleContainer {
@@ -14,10 +14,11 @@
 	font-size: 34px;
 	font-weight: 500;
 	color: var(--neon-green);
+	margin: 0;
 }
 
 .TitleContainer img {
-	border-radius: 0.5rem;
+	border-radius: 0.4rem;
 }
 
 .DramaDescription h2 {
@@ -45,11 +46,11 @@
 }
 
 .DramaGenre::-webkit-scrollbar {
-	height: 5px;
+	height: 2px;
 }
 
 .DramaGenre::-webkit-scrollbar-thumb {
-	background-color: var(--soft-purple);
+	background-color: var(--light-green);
 	border-radius: 1rem;
 }
 
@@ -142,5 +143,31 @@
 	.EpisodeButtons button {
 		font-size: 14px;
 		width: 80px;
+	}
+
+	.TitleContainer {
+		flex-direction: column;
+	}
+
+	.TitleContainer img {
+		width: auto;
+		height: auto;
+		border-radius: 0.2rem;
+		background-color: #121212;
+		padding: 0.2rem;
+	}
+	
+	.TitleContainer p {
+		font-size: 30px;
+		font-weight: 400;
+		margin: 0 0 0.25rem 0
+	}
+
+	.EpisodesContainer {
+		text-align: center;
+	}
+
+	.EpisodeButtons button {
+		width: 90px;
 	}
 }

@@ -7,8 +7,8 @@ export default async function Kdrama() {
 	return (
 		<div className={styles.Main}>
 			<DramaSearch />
-			<br />
 			<PopularDramas />
+			<hr style={{ marginTop: 15, borderColor: "gray" }} />
 			<RecentDramas />
 		</div>
 	);

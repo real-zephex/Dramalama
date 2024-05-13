@@ -26,6 +26,7 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 					{episodeData &&
 						episodeData.map((item, index) => (
 							<button
+								title={item.title}
 								key={index}
 								onClick={(event) => {
 									test(item.id, dramaId, item.title);

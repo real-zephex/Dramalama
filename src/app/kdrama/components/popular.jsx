@@ -9,7 +9,7 @@ export default async function PopularDramas() {
 
 	return (
 		<div className={styles.Main}>
-			<h1 className={styles.popDramasText}>Trending Dramas</h1>
+			<h2 className={styles.popDramasText}>Trending Dramas</h2>
 
 			<div className={styles.AnimeContainer}>
 				{popular &&
