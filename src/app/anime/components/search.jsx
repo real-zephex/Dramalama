@@ -10,9 +10,13 @@ import SearchResults from "./search_results";
 const SearcBar = () => {
 	const [title, setTitle] = useState("");
 	const [searchResults, setSearchResults] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	const handleSearchInput = async (title) => {
+		setSearchResults(null);
+		setLoading(true);
 		setSearchResults(await SearchResults(title));
+		setLoading(false);
 	};
 
 	return (
@@ -47,6 +51,11 @@ const SearcBar = () => {
 					</button>
 				</Link>
 			</section>
+			{loading && (
+				<p className={styles.SearchLoading}>
+					Please wait while we crunch up all the data.....
+				</p>
+			)}
 			{searchResults}
 		</main>
 	);

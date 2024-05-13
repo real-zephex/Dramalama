@@ -28,11 +28,15 @@ const AnimeInfoHomepage = async ({ params }) => {
 							/>
 							<div>
 								<p className={styles.animeTitle}>
-									{data.title}
+									<strong
+										style={{ color: "var(--neon-green)" }}
+									>
+										{data.title || "Not Found"}
+									</strong>
 								</p>
 								<p className={styles.animeDescription}>
 									<strong>Description: </strong>
-									{data.description}
+									{data.description || "Not Found"}
 								</p>
 								<hr style={{ borderColor: "gray" }} />
 								<span>
@@ -51,17 +55,19 @@ const AnimeInfoHomepage = async ({ params }) => {
 								</span>
 								<p>
 									<strong>Episodes:</strong>{" "}
-									{data.totalEpisodes}
+									{data.totalEpisodes || "Not Found"}
 								</p>
 								<p>
 									<strong>Release year:</strong>{" "}
-									{data.releaseDate}
+									{data.releaseDate || "Not Found"}
 								</p>
 								<p>
-									<strong>Status:</strong> {data.status}
+									<strong>Status:</strong>{" "}
+									{data.status || "Not Found"}
 								</p>
 								<p>
-									<strong>Type:</strong> {data.type}
+									<strong>Type:</strong>{" "}
+									{data.type || "Not Found"}
 								</p>
 							</div>
 						</div>

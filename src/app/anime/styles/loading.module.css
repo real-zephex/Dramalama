@@ -1,0 +1,12 @@
+.LoadingContainer {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.LoadingContainer strong {
+	color: white;
+	font-size: 20px;
+}
