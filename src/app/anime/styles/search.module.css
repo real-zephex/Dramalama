@@ -37,6 +37,11 @@
 	width: 100%;
 }
 
+.SearchLoading {
+	color: white;
+	text-align: center;
+}
+
 /* Search Results */
 
 .SearchResultsContainer {
@@ -60,6 +65,7 @@
 
 .AnimeEntry img {
 	border-radius: 0.5rem;
+	margin-left: 0.2rem;
 }
 
 .SearchResultsContainer::-webkit-scrollbar {

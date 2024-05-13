@@ -53,6 +53,15 @@
 	overflow: auto;
 }
 
+.MovieDescription::-webkit-scrollbar {
+	width: 5px;
+}
+
+.MovieDescription::-webkit-scrollbar-thumb {
+	background-color: var(--nord-yellow);
+	border-radius: 1rem;
+}
+
 .OtherInfo {
 	display: flex;
 	flex-direction: column;
