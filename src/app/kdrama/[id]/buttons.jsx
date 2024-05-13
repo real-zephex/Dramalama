@@ -13,7 +13,7 @@ import {
 export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 	const [videoLink, setVideoLink] = useState(null);
 
-	async function test(a, b, episodeText) {
+	async function test(a, b) {
 		let link = await getVideoLink(a, b);
 		setVideoLink(link);
 	}
@@ -23,7 +23,7 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 			<div className={styles.EpisodesContainer}>
 				<h2>Episodes</h2>
 				<div className={styles.EpisodeButtons}>
-					{episodeData &&
+					{episodeData && episodeData.length > 0 ? (
 						episodeData.map((item, index) => (
 							<button
 								title={item.title}
@@ -31,12 +31,19 @@ export default function EpisodesButtons({ data: episodeData, id: dramaId }) {
 								onClick={(event) => {
 									test(item.id, dramaId, item.title);
 									event.currentTarget.style.backgroundColor =
-										"#D08770";
+										"var(--soft-purple)";
 								}}
 							>
 								<p>{item.title}</p>
 							</button>
-						))}
+						))
+					) : (
+						<p style={{ color: "white" }}>
+							No episodes are available at the moment but they
+							will be made available soon. Thank you for your
+							patience.
+						</p>
+					)}
 				</div>
 			</div>
 

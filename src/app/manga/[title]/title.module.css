@@ -77,8 +77,29 @@
 		max-width: 100%;
 	}
 
+	.MangaEntries {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.MangaEntries img {
+		width: auto;
+		height: auto;
+		border-radius: 0.3rem;
+		background-color: #121212;
+		padding: 0.2rem;
+	}
+
+	.MangaTitle {
+		font-weight: 600;
+	}
+
 	.MangaDescription {
-		max-height: 10rem;
+		max-height: 7.5rem;
 		overflow: auto;
 	}
+
 }
