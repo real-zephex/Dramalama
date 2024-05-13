@@ -1,68 +1,82 @@
-import styles from "./info.module.css";
 import Image from "next/image";
-import Button from "./buttons";
-import { preFetchAnimeLinks } from "../videoLinkfetcher";
 
-export default async function AnimeInfo({ params }) {
-	let animeID = params.id;
+import { anime_info } from "../data-fetch/request";
+import styles from "../styles/info.module.css";
+import EpisodesButtons from "../components/episode_buttons";
 
-	const info = await getAnimeInfo(animeID);
+import { preFetchVideoLinks } from "../components/cacher";
 
-	preFetchAnimeLinks(info);
+const AnimeInfoHomepage = async ({ params }) => {
+	const id = params.id;
+	const data = await anime_info(id);
+
+	const sliceLength = Math.min(data.episodes.length, 49);
+	preFetchVideoLinks(data.episodes.slice(0, sliceLength));
 
 	return (
-		<div className={styles.dramaInfoContainer}>
-			<div className={styles.dramaInfo}>
-				{info && (
-					<div>
-						<div className={styles.titleContainer}>
-							<p>{info.title}</p>
+		<main className={styles.main}>
+			<div>
+				{data && (
+					<section className={styles.AnimeInfo}>
+						<div className={styles.AnimeHeroSection}>
 							<Image
-								src={info.image}
-								width={180}
-								height={260}
-								alt="Drama"
+								src={data.image}
+								width={200}
+								height={300}
+								alt="Anime Poster"
 								priority
 							/>
+							<div>
+								<p className={styles.animeTitle}>
+									<strong
+										style={{ color: "var(--neon-green)" }}
+									>
+										{data.title || "Not Found"}
+									</strong>
+								</p>
+								<p className={styles.animeDescription}>
+									<strong>Description: </strong>
+									{data.description || "Not Found"}
+								</p>
+								<hr style={{ borderColor: "gray" }} />
+								<span>
+									<strong style={{ marginRight: 5 }}>
+										Genres:
+									</strong>
+									{data.genres &&
+										data.genres.map((item, index) => (
+											<span key={index}>
+												{item}
+												{index !==
+													data.genres.length - 1 &&
+													", "}
+											</span>
+										))}
+								</span>
+								<p>
+									<strong>Episodes:</strong>{" "}
+									{data.totalEpisodes || "Not Found"}
+								</p>
+								<p>
+									<strong>Release year:</strong>{" "}
+									{data.releaseDate || "Not Found"}
+								</p>
+								<p>
+									<strong>Status:</strong>{" "}
+									{data.status || "Not Found"}
+								</p>
+								<p>
+									<strong>Type:</strong>{" "}
+									{data.type || "Not Found"}
+								</p>
+							</div>
 						</div>
-						<div className={styles.animeDescription}>
-							<h2>Description</h2>
-							<p>{info.description}</p>
-						</div>
-					</div>
+					</section>
 				)}
-
-				<div className={styles.animeDetails}>
-					<span className={styles.genre}>Genres: </span>
-					{info.genres &&
-						info.genres.map((item, index) => (
-							<span className={styles.genreEntries} key={index}>
-								{item}
-							</span>
-						))}
-					<p className={styles.animeType}>
-						Type: <span>{info && info.type}</span>
-					</p>
-					<p className={styles.animeRelease}>
-						Release year:
-						<span>
-							{" "}
-							{info && info.releaseDate}, {info && info.status}
-						</span>
-					</p>
-				</div>
-
-				<Button data2={info} />
 			</div>
-		</div>
+			<EpisodesButtons data={data} />
+		</main>
 	);
-}
+};
 
-async function getAnimeInfo(anime_id) {
-	const res = await fetch(
-		"https://consumet-jade.vercel.app/anime/gogoanime/info/" + anime_id,
-		{ next: { revalidate: 7200 } }
-	);
-	const data = await res.json();
-	return data;
-}
+export default AnimeInfoHomepage;

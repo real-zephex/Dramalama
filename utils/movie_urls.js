@@ -1,5 +1,5 @@
 const API_KEY = "171fe27dbfecc58e2a18fbced644cda9";
-const PROXY = "https://sup-proxy.zephex0-f6c.workers.dev/api-json?url=";
+export const PROXY = "https://sup-proxy.zephex0-f6c.workers.dev/api-json?url=";
 
 // MOVIES
 export const TRENDING = `${PROXY}https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;

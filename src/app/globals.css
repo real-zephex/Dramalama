@@ -7,6 +7,20 @@
 	--pastel-red: #ff6868;
 	--soft-purple: #beadfa;
 	--softer-purple: #d0bfff;
+
+
+	--nord-red: #BF616A;
+	--nord-green: #A3BE8C;
+	--nord-yellow: #EBCB8B;
+	--nord-orange: #D08770;
+	--nord-pink: #B48EAD;
+
+	--nord-bg-darkest: #2E3440;
+	--nord-bg-darker: #3B4252;
+	--nord-bg-dark: #434C5E;
+	--nord-bg-darklight: #4C566A;
+
+	--light-sky: #CAF4FF;
 }
 
 body {

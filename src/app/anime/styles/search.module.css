@@ -1,0 +1,98 @@
+.SearchBarContainer {
+	padding: 1rem 0 0.8rem 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.SearchInputContainer {
+	display: flex;
+	align-items: center;
+	background-color: #121212;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	width: 40%;
+}
+
+.animeHistoryButton {
+	font-family: "Lexend Deca", serif;
+	outline: none;
+	border: none;
+	background-color: #121212;
+	color: white;
+	margin: 0 0.1rem 0 0.2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+.SearchInputContainer input {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	margin-left: 0.5rem;
+	font-size: 18px;
+	font-family: "Atkinson Hyperlegible", serif;
+	width: 100%;
+}
+
+.SearchLoading {
+	color: white;
+	text-align: center;
+}
+
+/* Search Results */
+
+.SearchResultsContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 0.7rem;
+}
+
+.AnimeEntry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #252525be;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.AnimeEntry p {
+	font-size: 18px;
+}
+
+.AnimeEntry img {
+	border-radius: 0.5rem;
+	margin-left: 0.2rem;
+}
+
+.SearchResultsContainer::-webkit-scrollbar {
+	height: 0.2rem;
+}
+
+.SearchResultsContainer::-webkit-scrollbar-track {
+	background-color: var(--softer-purple);
+}
+
+.SearchResultsContainer::-webkit-scrollbar-thumb {
+	background-color: var(--light-green);
+	border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.SearchInputContainer {
+		width: 100%;
+	}
+
+	.SearchResultsContainer {
+		display: flex;
+		align-items: center;
+		overflow: auto;
+	}
+
+	.AnimeEntry p {
+		width: 50vw;
+	}
+}
