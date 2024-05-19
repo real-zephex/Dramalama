@@ -1,0 +1,171 @@
+.Main {
+	min-height: 100vh;
+	margin-top: 60px;
+	
+}
+
+.Main::-webkit-scrollbar {
+	width: 0;
+}
+
+.AnimeInfo {
+	backdrop-filter: blur(10px);
+	background-color: #1f1f1fcb;
+
+}
+
+.AnimeInfoContainer {
+	width: 50%;
+	height: 100vh;
+	margin: 0px auto;
+}
+
+.TitleContainer {
+	display: flex;
+	align-items: center;
+}
+
+.TitleContainer img {
+	border-radius: 0.8rem;
+	padding: 0.5rem;
+}
+
+.SideTitleContainer {
+	margin: 0.4rem;
+	color: white;
+}
+
+.title {
+	margin: 0;
+}
+
+.secondTitle {
+	margin: 0;
+	font-size: small;
+}
+
+.tagline {
+	margin: 0;
+}
+
+.tagline span {
+	background-color: #121212b7;
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	font-size: 12px;
+}
+
+.description {
+	margin: 0.2rem 0 0 0;
+	height: auto;
+	max-height: 100px;
+	overflow: auto;
+}
+
+.description::-webkit-scrollbar {
+	width: 3px;
+}
+
+.description::-webkit-scrollbar-thumb {
+	background-color: var(--neon-yellow);
+	border-radius: 1rem;
+}
+
+
+.genres {
+	margin: 0;
+	color: var(--nord-yellow);
+}
+
+.genres span {
+	color: white;
+}
+
+.epiInfo {
+	margin: 0;
+	color: var(--nord-yellow);
+}
+
+.epiInfo span {
+	color: white;
+}
+
+.votes {
+	display: flex;
+}
+
+.votes p {
+	margin: 0 0 0 0;
+}
+
+.vote {
+	display: flex;
+	align-items: center;
+	margin: 0 0.2rem 0 0;
+}
+
+.CrewContainer {
+	color: white;
+	margin-top: -1rem;
+}
+
+.CrewEntry {
+	display: flex;
+	align-items: center;
+	overflow: auto;
+}
+
+.CrewEntry h2 {
+	margin: 0;
+	color: white;
+}
+
+.CastEntry {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 0 0 0.4rem;
+}
+
+.CastEntry img {
+	border-radius: 0.5rem;
+}
+
+.CastEntry p {
+	margin: 0;
+	width: 140px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+}
+
+.CrewEntry::-webkit-scrollbar {
+	height: 3px;
+}
+
+.CrewEntry::-webkit-scrollbar-thumb {
+	background-color: var(--neon-yellow);
+	border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.AnimeInfoContainer {
+		width: 100%;
+	}
+
+	.title {
+		font-size: 20px;
+	}
+
+	.description {
+		font-size: 14px;
+		max-height: 100px;
+		overflow: auto;
+	}
+
+	.SideTitleContainer {
+		font-size: 14px;
+	}
+}

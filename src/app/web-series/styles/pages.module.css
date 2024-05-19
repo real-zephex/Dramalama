@@ -1,0 +1,46 @@
+.main h2 {
+	color: white;
+}
+
+.SeriesContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	grid-gap: 0.5rem;
+	align-items: center;
+	margin: -1rem 0 0 0;
+}
+
+.SeriesEntry {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #1f1f1fce;
+	border-radius: 0.5rem;
+	padding: 0.4rem;
+	color: white;
+	cursor: pointer;
+}
+
+.SeriesEntry p {
+	width: 160px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	margin: 0.3rem 0 0 0;
+	font-family: "Atkinson Hyperlegible", serif;
+}
+
+.SeriesEntry img {
+	border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.SeriesContainer {
+		display: flex;
+		align-items: center;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}

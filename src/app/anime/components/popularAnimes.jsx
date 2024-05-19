@@ -4,7 +4,7 @@ import { Atkinson_Hyperlegible } from "next/font/google";
 
 import styles from "../styles/pop_recent_top.module.css";
 import { popular, anime_info } from "../data-fetch/request";
-import { preFetchAnimeInfo, preFetchVideoLinks } from "./cacher";
+import { preFetchAnimeInfo } from "./cacher";
 
 const atkinson = Atkinson_Hyperlegible({ subsets: ["latin"], weight: "400" });
 
