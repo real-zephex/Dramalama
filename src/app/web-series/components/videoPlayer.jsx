@@ -59,13 +59,8 @@ const SeriesPlayer = ({ id: id }) => {
 };
 
 const iframeGenerator = async (id, seasonNumber, episodeNumber) => {
-	return (
-		<iframe
-			src={`https://vidsrc.pro/embed/tv/${id}/${seasonNumber}/${episodeNumber}`}
-			allowFullScreen
-			referrerPolicy="origin"
-		></iframe>
-	);
+	const url = `https://vidsrc.pro/embed/tv/${id}/${seasonNumber}/${episodeNumber}`;
+	return <iframe src={url} allowFullScreen referrerPolicy="origin"></iframe>;
 };
 
 export default SeriesPlayer;
