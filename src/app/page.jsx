@@ -52,7 +52,6 @@ export default async function Home() {
 					>
 						<div className={styles.movies}>
 							<h2>Web Series</h2>
-							<p>Your one stop for all your web-series needs</p>
 						</div>
 					</Link>
 				</div>
