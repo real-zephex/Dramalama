@@ -1,0 +1,78 @@
+.InputContainer {
+	display: flex;
+	align-items: center;
+	background-color: #121212;
+	width: 40vw;
+	border-radius: 0.5rem;
+}
+
+.SearchIcon {
+	margin-left: 0.4rem;
+}
+
+.InputContainer input {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 0.4rem;
+	font-family: "Lexend Deca", serif;
+	margin-left: 0.2rem;
+	font-size: large;
+	color: white;
+	width: 100%;
+}
+
+.SearchedSeriesContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	grid-gap: 0.7rem;
+	align-items: center;
+	margin-top: 0.8rem;
+}
+
+.SearchedSeriesEntry {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: #1f1f1f;
+	border-radius: 0.5rem;
+	padding: 0.2rem;
+	transition: opacity 200ms ease;
+
+}
+
+.SearchedSeriesContainer:hover .SearchedSeriesEntry {
+	opacity: 0.5;
+}
+
+.SearchedSeriesContainer .SearchedSeriesEntry:hover {
+	opacity: 1;
+}
+
+.SearchedSeriesEntry p {
+	width: 150px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	margin: 0.2rem 0 0.2rem 0;
+}
+
+.SearchedSeriesEntry img {
+	border-radius: 0.5rem;
+	padding: 0.2rem 0.2rem 0 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+	.InputContainer {
+		width: 100%;
+	}
+
+	.SearchedSeriesContainer {
+		display: flex;
+		overflow: auto;
+	}
+
+
+}
