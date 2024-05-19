@@ -32,7 +32,7 @@ export default async function Home() {
 					</Link>
 					<Link
 						href={"/movies"}
-						title="Click here to get redirected to the kdrama webpage"
+						title="Click here to get redirected to the movie webpage"
 					>
 						<div className={styles.movies}>
 							<h2>Movies</h2>
@@ -40,18 +40,10 @@ export default async function Home() {
 					</Link>
 					<Link
 						href={"/web-series"}
-						title="Click here to get redirected to the kdrama webpage"
+						title="Click here to get redirected to the series webpage"
 					>
 						<div className={styles.series}>
 							<h2>Series</h2>
-						</div>
-					</Link>
-					<Link
-						href={"/web-series"}
-						title="Click here to get redirected to the kdrama webpage"
-					>
-						<div className={styles.movies}>
-							<h2>Web Series</h2>
 						</div>
 					</Link>
 				</div>
