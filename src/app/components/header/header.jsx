@@ -18,7 +18,6 @@ export default async function Header() {
 					<Link href="/kdrama">Kdrama</Link>
 					<Link href="/manga">Manga</Link>
 					<Link href="/movies">Movies</Link>
-					<Link href="/web-series">Series</Link>
 				</div>
 			</div>
 		</main>

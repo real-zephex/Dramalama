@@ -12,6 +12,7 @@ export default async function Home() {
 					>
 						<div className={styles.anime}>
 							<h2>Anime</h2>
+							<p>Your one stop for all your anime needs</p>
 						</div>
 					</Link>
 					<Link
@@ -20,6 +21,7 @@ export default async function Home() {
 					>
 						<div className={styles.manga}>
 							<h2>Manga</h2>
+							<p>Your one stop for all your manga needs</p>
 						</div>
 					</Link>
 					<Link
@@ -28,6 +30,7 @@ export default async function Home() {
 					>
 						<div className={styles.kdrama}>
 							<h2>Kdrama</h2>
+							<p>Your one stop for all your kdrama needs</p>
 						</div>
 					</Link>
 					<Link
@@ -36,14 +39,7 @@ export default async function Home() {
 					>
 						<div className={styles.movies}>
 							<h2>Movies</h2>
-						</div>
-					</Link>
-					<Link
-						href={"/web-series"}
-						title="Click here to get redirected to the kdrama webpage"
-					>
-						<div className={styles.series}>
-							<h2>Series</h2>
+							<p>Your one stop for all your movie needs</p>
 						</div>
 					</Link>
 					<Link
