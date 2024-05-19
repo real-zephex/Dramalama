@@ -111,7 +111,8 @@
 .manga,
 .anime,
 .kdrama,
-.movies {
+.movies,
+.series {
 	background-color: #121212e0;
 	color: white;
 	border-radius: 0.5rem;
@@ -121,6 +122,7 @@
 	border-color: rgb(80, 80, 80);
 	border-style: groove;
 	border-width: 0.1rem;
+	text-align: center;
 }
 
 .content:hover>.contentContainer div {
