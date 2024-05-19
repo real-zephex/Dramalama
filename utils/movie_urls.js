@@ -1,4 +1,4 @@
-const API_KEY = "171fe27dbfecc58e2a18fbced644cda9";
+export const API_KEY = "171fe27dbfecc58e2a18fbced644cda9";
 export const PROXY = "https://sup-proxy.zephex0-f6c.workers.dev/api-json?url=";
 
 // MOVIES
