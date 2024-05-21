@@ -23,7 +23,7 @@ export default function VIDEO_PLAYER({ id: id }) {
 
 	return (
 		<section className={styles.VideoContainer}>
-			<div>
+			<div className={styles.sourcesButtonContainer}>
 				<button
 					onClick={() =>
 						make_player(`https://vidsrc.pro/embed/movie/${id}`)

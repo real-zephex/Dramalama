@@ -15,16 +15,17 @@
 	cursor: pointer;
 }
 
+.sourcesButtonContainer {
+	display: flex;
+	overflow: auto;
+}
+
 .VideoPlayer {
 	width: 100%;
-	height: 500px;
+	height: 700px;
 	aspect-ratio: "16/9";
 	border: none;
 	outline: none;
 	border-radius: 0.5rem;
 	margin: 0.5rem 0 0 0;
-}
-
-.VideoPlayer::-webkit-scrollbar {
-	width: 0px;
 }
