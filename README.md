@@ -40,6 +40,8 @@ Dramalama doesn't stores any data. It fetches it data through Consumet API which
 -   Vercel: https://dramalama.vercel.app
 -   Netlify: https://dramalama.netlify.app
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fb75c8f9-8be9-4244-9651-e206b91dd34d/deploy-status)](https://app.netlify.com/sites/dramalama/deploys)
+
 ## Self Hosting
 
 You are allowed to self host this project on your local machines, vps etc. But, please change the site name before hosting it.
