@@ -41,6 +41,9 @@ const TopAiringAnimes = async () => {
 									<p className={styles.AnimeTitle}>
 										{item.title}
 									</p>
+									<p className={styles.AnimeReleasedEpisode}>
+										{item.episodeNumber}
+									</p>
 								</section>
 							</Link>
 						))}

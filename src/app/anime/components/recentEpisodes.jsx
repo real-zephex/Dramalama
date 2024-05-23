@@ -39,8 +39,9 @@ const RecentAnimes = async () => {
 										alt="Anime Poster Image"
 									/>
 									<p className={styles.AnimeTitle}>
-										Ep:{item.episodeNumber} {" "}{item.title}
+										{item.title}
 									</p>
+									<p className={styles.AnimeReleasedEpisode}>{item.episodeNumber}</p>
 								</section>
 							</Link>
 						))}

@@ -50,14 +50,6 @@
 	transform: translateY(-5px) scale(1.04);
 }
 
-/* .AnimeEntry p {
-	margin: 0.5rem 0 -0.4rem 0;
-	max-width: 170px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-transform: uppercase;
-} */
 
 .AnimeTitle {
 	position: absolute;
@@ -79,11 +71,15 @@
 	white-space: nowrap;
 }
 
-/* .EpisodeText {
-	color: var(--neon-yellow);
-	font-size: small;
-	padding-top: 0.2rem;
-} */
+.AnimeReleasedEpisode {
+	position: absolute;
+	top: 0;
+	margin: 0.2rem;
+	padding: 0.5rem;
+	background-color: #121212b2;
+	border-radius: 0.4rem;
+	backdrop-filter: blur(10px);
+}
 
 .AnimeContainer::-webkit-scrollbar {
 	height: 0rem;
