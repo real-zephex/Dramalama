@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Atkinson_Hyperlegible } from "next/font/google";
+import { Lexend_Deca } from "next/font/google";
 
 import styles from "../styles/pop_recent_top.module.css";
-import { popular, anime_info } from "../data-fetch/request";
+import { popular } from "../data-fetch/request";
 import { preFetchAnimeInfo } from "./cacher";
 
-const atkinson = Atkinson_Hyperlegible({ subsets: ["latin"], weight: "400" });
+const lexend = Lexend_Deca({ subsets: ["latin"], weight: "400" });
 
 const PopularAnimes = async () => {
 	const data = await popular();
@@ -28,17 +28,19 @@ const PopularAnimes = async () => {
 									color: "white",
 									textDecoration: "none",
 								}}
-								className={atkinson.className}
+								className={lexend.className}
 								title={item.title}
 							>
 								<section className={styles.AnimeEntry}>
 									<Image
 										src={item.image}
-										width={167}
-										height={267}
+										width={180}
+										height={300}
 										alt="Anime Poster Image"
 									/>
-									<p>{item.title}</p>
+									<p className={styles.AnimeTitle}>
+										{item.title}
+									</p>
 								</section>
 							</Link>
 						))}

@@ -8,9 +8,9 @@ const AnimeHomepage = async () => {
 		<main className={styles.Main}>
 			<SearcBar />
 			<TopAiringAnimes />
-			<hr style={{ marginTop: 15, borderColor: "gray" }} />
+			<br />
 			<RecentAnimes />
-			<hr style={{ marginTop: 15, borderColor: "gray" }} />
+			<br />
 			<PopularAnimes />
 		</main>
 	);

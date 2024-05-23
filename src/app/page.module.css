@@ -12,7 +12,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #121212;
+	background-color: #1212129d;
+	backdrop-filter: blur(10px);
 	z-index: 999;
 }
 
@@ -76,7 +77,8 @@
 	bottom: 0;
 	width: 100%;
 	position: fixed;
-	background-color: #121212;
+	background-color: #1212129a;
+	backdrop-filter: blur(10px);
 	color: white;
 	font-family: "Poppins", serif;
 	z-index: 999;
@@ -86,7 +88,7 @@
 	text-align: center;
 	font-size: 14px;
 	margin: 0;
-	padding: 0.6rem;
+	padding: 0.2rem;
 	font-family: "Poppins", serif;
 }
 

@@ -8,8 +8,8 @@
 .SearchInputContainer {
 	display: flex;
 	align-items: center;
-	background-color: #121212;
-	padding: 0.5rem;
+	background-color: #1f1f1f;
+	padding: 0.4rem;
 	border-radius: 0.5rem;
 	width: 40%;
 }
@@ -21,7 +21,7 @@
 	background-color: #121212;
 	color: white;
 	margin: 0 0.1rem 0 0.2rem;
-	padding: 0.5rem;
+	padding: 0.6rem;
 	cursor: pointer;
 	border-radius: 0.5rem;
 }
@@ -32,7 +32,7 @@
 	outline: none;
 	color: white;
 	margin-left: 0.5rem;
-	font-size: 18px;
+	font-size: 20px;
 	font-family: "Atkinson Hyperlegible", serif;
 	width: 100%;
 }
@@ -45,39 +45,65 @@
 /* Search Results */
 
 .SearchResultsContainer {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	grid-gap: 0.7rem;
+	display: flex;
+	align-items: center;
+	overflow-x: auto;
+	padding-bottom: 0.5rem;
 }
 
 .AnimeEntry {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #252525be;
-	padding: 0.5rem;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
 	border-radius: 0.5rem;
+	transition: opacity 200ms ease;
+	margin: 0.4rem;
+}
+
+.SearchResultsContainer:hover .AnimeEntry {
+	opacity: 0.5;
+}
+
+.SearchResultsContainer:hover .AnimeEntry:hover {
+	opacity: 1;
 }
 
 .AnimeEntry p {
-	font-size: 18px;
+	position: absolute;
+	bottom: 0;
+	/* Adjust the value as needed */
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	background-color: #121212ab;
+	backdrop-filter: blur(10px);
+	text-transform: uppercase;
+	width: 100%;
+	max-width: 170px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .AnimeEntry img {
-	border-radius: 0.5rem;
-	margin-left: 0.2rem;
+	display: block;
+	transition: transform 200ms ease;
 }
+
+.AnimeEntry img:hover {
+	transform: translateY(-5px) scale(1.04);
+}
+
 
 .SearchResultsContainer::-webkit-scrollbar {
-	height: 0.2rem;
-}
-
-.SearchResultsContainer::-webkit-scrollbar-track {
-	background-color: var(--softer-purple);
+	height: 0.5rem;
 }
 
 .SearchResultsContainer::-webkit-scrollbar-thumb {
-	background-color: var(--light-green);
+	background: rgb(83, 83, 83);
 	border-radius: 1rem;
 }
 
@@ -86,13 +112,5 @@
 		width: 100%;
 	}
 
-	.SearchResultsContainer {
-		display: flex;
-		align-items: center;
-		overflow: auto;
-	}
 
-	.AnimeEntry p {
-		width: 50vw;
-	}
 }

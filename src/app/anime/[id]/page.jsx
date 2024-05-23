@@ -21,18 +21,14 @@ const AnimeInfoHomepage = async ({ params }) => {
 						<div className={styles.AnimeHeroSection}>
 							<Image
 								src={data.image}
-								width={200}
-								height={300}
+								width={180}
+								height={280}
 								alt="Anime Poster"
 								priority
 							/>
 							<div>
-								<p className={styles.animeTitle}>
-									<strong
-										style={{ color: "var(--neon-green)" }}
-									>
-										{data.title || "Not Found"}
-									</strong>
+								<p className={styles.animeTitle} style={{color: "white"}}>
+									{data.title || "Not Found"}
 								</p>
 								<p className={styles.animeDescription}>
 									<strong>Description: </strong>
@@ -45,7 +41,10 @@ const AnimeInfoHomepage = async ({ params }) => {
 									</strong>
 									{data.genres &&
 										data.genres.map((item, index) => (
-											<span key={index}>
+											<span
+												key={index}
+												style={{ color: "#a3a3a3" }}
+											>
 												{item}
 												{index !==
 													data.genres.length - 1 &&

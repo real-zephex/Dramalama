@@ -23,7 +23,7 @@ const SearcBar = () => {
 		<main>
 			<section className={styles.SearchBarContainer}>
 				<div className={styles.SearchInputContainer}>
-					<FaSearch color="white" />
+					<FaSearch color="white" size={22} />
 					<input
 						placeholder="Enter anime title"
 						name="Anime Title"
@@ -44,12 +44,12 @@ const SearcBar = () => {
 							}
 						}}
 					></input>
+					<Link shallow href={"/anime/continueWatching"}>
+						<button className={styles.animeHistoryButton}>
+							History
+						</button>
+					</Link>
 				</div>
-				<Link shallow href={"/anime/continueWatching"}>
-					<button className={styles.animeHistoryButton}>
-						History
-					</button>
-				</Link>
 			</section>
 			{loading && (
 				<p className={styles.SearchLoading}>

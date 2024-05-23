@@ -1,4 +1,4 @@
-import { Atkinson_Hyperlegible } from "next/font/google";
+import { Lexend_Deca } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,7 +6,7 @@ import styles from "../styles/search.module.css";
 import { search_results } from "../data-fetch/request";
 import { preFetchAnimeInfo } from "./cacher";
 
-const atkinson = Atkinson_Hyperlegible({ subsets: ["latin"], weight: "400" });
+const lexend = Lexend_Deca({ subsets: ["latin"], weight: "400" });
 
 const SearchResults = async (title) => {
 	const data = await search_results(title);
@@ -21,17 +21,17 @@ const SearchResults = async (title) => {
 						shallow
 						href={`/anime/${item.id}`}
 						key={index}
-						className={atkinson.className}
+						className={lexend.className}
 						style={{ color: "white", textDecoration: "none" }}
 					>
 						<div className={styles.AnimeEntry}>
-							<p>{item.title}</p>
 							<Image
 								src={item.image}
-								width={140}
-								height={200}
+								width={180}
+								height={300}
 								alt="Anime Poster"
 							/>
+							<p>{item.title}</p>
 						</div>
 					</Link>
 				))}
