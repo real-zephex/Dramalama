@@ -1,80 +1,49 @@
-import Image from "next/image";
+import { Chip, Image } from "@nextui-org/react";
 
 import { anime_info } from "../data-fetch/request";
-import styles from "../styles/info.module.css";
-import EpisodesButtons from "../components/episode_buttons";
+import DescriptionTabs from "../components/infoTabs";
 
-import { preFetchVideoLinks } from "../components/cacher";
+import EpisodesContainer from "../components/vidButtonContainer";
 
 const AnimeInfoHomepage = async ({ params }) => {
 	const id = params.id;
 	const data = await anime_info(id);
 
-	const sliceLength = Math.min(data.episodes.length, 49);
-	preFetchVideoLinks(data.episodes.slice(0, sliceLength));
-
 	return (
-		<main className={styles.main}>
-			<div>
-				{data && (
-					<section className={styles.AnimeInfo}>
-						<div className={styles.AnimeHeroSection}>
-							<Image
-								src={data.image}
-								width={180}
-								height={280}
-								alt="Anime Poster"
-								priority
-							/>
-							<div>
-								<p className={styles.animeTitle} style={{color: "white"}}>
-									{data.title || "Not Found"}
-								</p>
-								<p className={styles.animeDescription}>
-									<strong>Description: </strong>
-									{data.description || "Not Found"}
-								</p>
-								<hr style={{ borderColor: "gray" }} />
-								<span>
-									<strong style={{ marginRight: 5 }}>
-										Genres:
-									</strong>
-									{data.genres &&
-										data.genres.map((item, index) => (
-											<span
-												key={index}
-												style={{ color: "#a3a3a3" }}
-											>
-												{item}
-												{index !==
-													data.genres.length - 1 &&
-													", "}
-											</span>
-										))}
-								</span>
-								<p>
-									<strong>Episodes:</strong>{" "}
-									{data.totalEpisodes || "Not Found"}
-								</p>
-								<p>
-									<strong>Release year:</strong>{" "}
-									{data.releaseDate || "Not Found"}
-								</p>
-								<p>
-									<strong>Status:</strong>{" "}
-									{data.status || "Not Found"}
-								</p>
-								<p>
-									<strong>Type:</strong>{" "}
-									{data.type || "Not Found"}
-								</p>
-							</div>
-						</div>
-					</section>
-				)}
+		<section className="pt-12  lg:w-9/12 m-auto">
+			<div className="flex items-center justify-center lg:justify-start md:justify-start">
+				<Image
+					isBlurred
+					width={190}
+					src={data.image.toString()}
+					alt="Anime Title Poster"
+					className="m-2"
+				/>
+				<div className="mx-5">
+					<h4 className={`text-2xl`}>
+						<strong>{data.title}</strong>
+					</h4>
+					<div>
+						{data.genres &&
+							data.genres.map((item, index) => (
+								<Chip
+									key={index}
+									color="warning"
+									variant="faded"
+									className="mr-1 mb-1"
+								>
+									<p className="text-xs">{item}</p>
+								</Chip>
+							))}
+					</div>
+				</div>
 			</div>
-			<EpisodesButtons data={data} />
-		</main>
+			<DescriptionTabs data={data} />
+			<EpisodesContainer data={data} />
+			<br />
+			<br />
+			<br />
+		</section>
 	);
 };
 

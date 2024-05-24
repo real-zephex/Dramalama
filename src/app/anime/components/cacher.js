@@ -1,11 +1,11 @@
 "use server";
 
-import { info_url, watch_url } from "../../../../utils/anime_urls";
+import { anime_info } from "../data-fetch/request";
 
 export async function preFetchAnimeInfo(data) {
 	try {
 		const fetchPromises = data.results.map(async (element) => {
-			await fetch(info_url(element.id), { next: { revalidate: 21600 } });
+			await anime_info(element.id);
 		});
 
 		await Promise.all(fetchPromises);

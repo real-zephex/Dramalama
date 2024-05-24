@@ -1,11 +1,11 @@
-import { Lexend_Deca } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/header";
 import Footer from "./components/footer/page";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-
-const lexend = Lexend_Deca({ subsets: ["latin"] });
+import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { lexend } from "../../config/fonts";
 
 export const metadata = {
 	title: "Dramalama",
@@ -15,7 +15,21 @@ export const metadata = {
 	applicationName: "Dramalama",
 	authors: [{ name: "zephex", url: "https://github.com/real-zephex" }],
 	creator: "Zephex",
-	keywords: ["Kdrama", "Anime", "Manga", "Watch Online"],
+	keywords: [
+		"Kdrama",
+		"Anime",
+		"Manga",
+		"Watch Online",
+		"watch kdrama free",
+		"watch anime free online",
+		"kdrama for free",
+		"watch online",
+		"read mangas for free",
+		"mangas online",
+		"movies online",
+		"free movies online",
+		"watch series for free",
+	],
 	robots: {
 		index: true,
 		follow: true,
@@ -45,9 +59,12 @@ export default function RootLayout({ children }) {
 			<body>
 				<SpeedInsights />
 				<Analytics />
-				<Header />
-				{children}
-				<Footer />
+				<NextUIProvider>
+					<NextThemesProvider attribute="class" defaultTheme="dark">
+						<Header />
+						<div>{children}</div>
+					</NextThemesProvider>
+				</NextUIProvider>
 			</body>
 		</html>
 	);

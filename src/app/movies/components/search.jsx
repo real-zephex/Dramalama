@@ -19,7 +19,7 @@ export default function SEARCH_COMPONENT() {
 				<FaSearch
 					color="white"
 					className={styles.SearchIcon}
-					size={17}
+					size={22}
 				/>
 				<input
 					placeholder="Enter movie title here"

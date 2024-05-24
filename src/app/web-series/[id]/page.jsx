@@ -13,7 +13,7 @@ const SeriesInfoPage = async ({ params }) => {
 		<main
 			style={{
 				// backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path})`,
-				background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%), 
+				background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #121212 100%), 
                 url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path}) no-repeat center center fixed`,
 				backgroundSize: "cover",
 			}}

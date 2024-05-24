@@ -1,10 +1,13 @@
 .main h2 {
 	color: white;
+	/* margin: 0.4rem 0 0 0; */
+	text-transform: uppercase;
+	font-size: 30px;
 }
 
 .SeriesContainer {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 0.5rem;
 	align-items: center;
 	margin: -1rem 0 0 0;
@@ -23,13 +26,13 @@
 }
 
 .SeriesEntry p {
-	width: 160px;
+	width: 170px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: center;
 	margin: 0.3rem 0 0 0;
-	font-family: "Atkinson Hyperlegible", serif;
+	font-family: "Lexend Deca", serif;
 }
 
 .SeriesEntry img {

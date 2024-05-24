@@ -39,8 +39,8 @@ const Pages = async ({ type: type }) => {
 							<section className={styles.SeriesEntry}>
 								<Image
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
-									width={167}
-									height={267}
+									width={180}
+									height={300}
 									alt="Series Poster"
 									priority
 								/>

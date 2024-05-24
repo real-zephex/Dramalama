@@ -5,10 +5,12 @@
 .InputContainer {
 	display: flex;
 	align-items: center;
-	background-color: #121212;
-	/* padding: 0.2rem; */
+	background-color: #1f1f1f;
+	padding: 0.4rem;
 	width: 40vw;
 	border-radius: 0.5rem;
+
+
 }
 
 .SearchIcon {
@@ -25,6 +27,7 @@
 	font-size: large;
 	color: white;
 	width: 100%;
+	font-size: 20px;
 }
 
 /* Search Results */

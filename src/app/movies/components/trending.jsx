@@ -10,7 +10,7 @@ export default async function TREDNING_MOVIES() {
 
 	return (
 		<main className={styles.Main}>
-			<h1>Trending Movies</h1>
+			<h2>Trending Movies</h2>
 			<section className={styles.MovieContainer}>
 				{data &&
 					data.results &&
@@ -23,21 +23,12 @@ export default async function TREDNING_MOVIES() {
 							}}
 							key={index}
 						>
-							<div
-								style={{
-									borderRadius: "0.5rem",
-									overflow: "hidden",
-									backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.backdrop_path})`,
-									backgroundRepeat: "no-repeat",
-									backgroundSize: "cover",
-								}}
-								className={styles.MovieEntryPrev}
-							>
+							<div className={styles.MovieEntryPrev}>
 								<div className={styles.MovieEntry}>
 									<Image
 										src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
-										width={167}
-										height={247}
+										width={180}
+										height={300}
 										alt="Movie Poster"
 									></Image>
 									<p>{item.title}</p>

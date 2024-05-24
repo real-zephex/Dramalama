@@ -4,22 +4,16 @@
 	margin-right: 0.2rem;
 }
 
-.Main h1 {
-	margin: 0 0 0.5rem 0;
-	text-align: center;
-	color: transparent;
-	background: linear-gradient(90deg,
-			var(--neon-green) 40%,
-			var(--light-green) 60%,
-			var(--neon-yellow) 80%,
-			var(--soft-purple) 100%);
-	background-size: 60% 50%;
-	background-clip: text;
+.Main h2 {
+	color: white;
+	margin: 0.4rem 0 0 0;
+	text-transform: uppercase;
+	font-size: 30px;
 }
 
 .MovieContainer {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 0.5rem;
 	align-items: center;
 }
@@ -34,11 +28,12 @@
 
 .MovieContainer:hover .MovieEntryPrev:hover {
 	opacity: 1;
-	scale: 1.015;
+	transform: translateY(-5px) scale(1.02);
+	
 }
 
 .MovieEntryPrev {
-	transition: opacity 200ms ease, scale 200ms ease;
+	transition: opacity 200ms ease, transform 200ms ease;
 }
 
 .MovieEntry {
@@ -51,12 +46,15 @@
 	flex-direction: column;
 	cursor: pointer;
 	backdrop-filter: blur(10px);
+	border-radius: 0.5rem;
+	overflow: hidden;
 }
 
 .MovieEntry img {
 	border-radius: 0.5rem;
 	box-shadow: 0px 0px 10px 8px rgb(32, 32, 32);
 }
+
 
 .MovieEntry p {
 	width: 160px;

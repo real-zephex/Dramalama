@@ -23,7 +23,7 @@ const SearchBar = () => {
 				<FaSearch
 					color="white"
 					className={styles.SearchIcon}
-					size={17}
+					size={22}
 				/>
 				<input
 					placeholder="Enter series title here"

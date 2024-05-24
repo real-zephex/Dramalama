@@ -1,7 +1,7 @@
 "use client"; // Error components must be Client Components
 
 import { useEffect } from "react";
-import styles from "./globals.module.css";
+import { Button } from "@nextui-org/react";
 
 export default function Error({ error, reset }) {
 	useEffect(() => {
@@ -9,16 +9,11 @@ export default function Error({ error, reset }) {
 	}, [error]);
 
 	return (
-		<div className={styles.ErrorContainer}>
+		<div className="w-screen h-screen flex items-center flex-col justify-center">
 			<p>Something went wrong!</p>
-			<button
-				onClick={
-					// Attempt to recover by trying to re-render the segment
-					() => reset()
-				}
-			>
+			<Button color="primary" onClick={() => reset()}>
 				Try again
-			</button>
+			</Button>
 		</div>
 	);
 }

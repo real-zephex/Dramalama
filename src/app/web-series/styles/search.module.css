@@ -1,9 +1,10 @@
 .InputContainer {
 	display: flex;
 	align-items: center;
-	background-color: #121212;
+	background-color: #1f1f1f;
 	width: 40vw;
 	border-radius: 0.5rem;
+	padding: 0.4rem;
 }
 
 .SearchIcon {
@@ -16,6 +17,7 @@
 	border: none;
 	padding: 0.4rem;
 	font-family: "Lexend Deca", serif;
+	font-size: 20px;
 	margin-left: 0.2rem;
 	font-size: large;
 	color: white;
