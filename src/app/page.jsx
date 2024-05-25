@@ -48,6 +48,11 @@ export default async function Home() {
 				"Infinity loop I'll watch just one k-drama, ok one more, ok wait...",
 				"https://ih1.redbubble.net/image.2656505524.2951/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"
 			)}
+			{homePageCards(
+				"movies",
+				"Dive into a world of thrilling adventure and heart-pounding suspense",
+				"https://images.hdqwalls.com/download/poster-avengers-endgame-ni-1920x1080.jpg"
+			)}
 		</section>
 	);
 }

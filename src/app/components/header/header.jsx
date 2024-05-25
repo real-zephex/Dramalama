@@ -31,10 +31,7 @@ export default async function Header() {
 				>
 					<p>Series</p>
 				</Link>
-				<Link
-					href={"/components/workInProgress/"}
-					className="mx-2 hover:text-sky-400"
-				>
+				<Link href={"/movies"} className="mx-2 hover:text-sky-400">
 					<p>Movies</p>
 				</Link>
 			</div>
