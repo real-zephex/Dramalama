@@ -1,10 +1,9 @@
-import { getInfoURL } from "../../../../utils/movie_urls";
+import { MovieInfoData } from "./requestsHandler";
 
 const PreFetchMovieInfo = async (data) => {
 	try {
 		const fetchPromises = data.results.map(async (element) => {
-			const link = `${getInfoURL(element.id)}`;
-			await fetch(link, { next: { revalidate: 21600 } });
+			await MovieInfoData(element.id);
 		});
 
 		await Promise.all(fetchPromises);

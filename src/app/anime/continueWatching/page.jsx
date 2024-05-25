@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import NextImage from "next/image";
-import { Card, CardFooter, Image, Button, Link } from "@nextui-org/react";
+import { CarFooter, Image, Link } from "@nextui-org/react";
 
 const ContinueWatching = () => {
 	const [localItems, setLocalItems] = useState(null);

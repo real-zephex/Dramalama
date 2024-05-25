@@ -1,38 +1,53 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../styles/search.module.css";
-import { FaSearch } from "react-icons/fa";
-import SearchResults from "./search_2";
+import { Input, Progress } from "@nextui-org/react";
 
-export default function SEARCH_COMPONENT() {
-	const [title, setTitle] = useState("");
-	const [result, setResults] = useState(null);
+import { SearchMovie } from "./requestsHandler";
+import MovieSearchFormatter from "./searchFormatter";
 
-	const fetch_results = async (title) => {
-		setResults(await SearchResults(title));
-	};
+const MovieSearchBar = () => {
+	const [movieTitle, setMovieTitle] = useState("");
+	const [loading, setLoading] = useState(<></>);
+	const [movieResults, setMovieResults] = useState(<></>);
+
+	async function handleInputChange() {
+		setLoading(
+			<Progress
+				size="sm"
+				isIndeterminate
+				aria-label="Loading..."
+				className="w-full"
+			/>
+		);
+		const data = await SearchMovie(movieTitle);
+		setLoading(<></>);
+		setMovieResults(await MovieSearchFormatter(data));
+	}
 
 	return (
-		<main className={styles.Main}>
-			<section className={styles.InputContainer}>
-				<FaSearch
-					color="white"
-					className={styles.SearchIcon}
-					size={22}
-				/>
-				<input
-					placeholder="Enter movie title here"
-					onChange={(event) => setTitle(event.target.value)}
-					onKeyDown={async (e) => {
-						if ((e.key === "Enter" || e.code === 13) && title) {
-							await fetch_results(e.target.value);
+		<section>
+			<div className="flex flex-col w-full md:flex-nowrap gap-2 lg:w-1/2">
+				<Input
+					type="text"
+					label="Search for movie"
+					placeholder="Enter movie title"
+					onChange={(event) => {
+						if (event.target.value.trim() !== "") {
+							setMovieTitle(event.target.value);
 						}
 					}}
-				></input>
-			</section>
-
-			<section className={styles.SearchResults}>{result}</section>
-		</main>
+					onKeyDown={async (event) => {
+						if (event.key === "Enter" || event.code === "Enter") {
+							await handleInputChange();
+						}
+					}}
+				/>
+				{loading}
+			</div>
+			<div className="mt-2">{movieResults}</div>
+		</section>
 	);
-}
+};
+
+export default MovieSearchBar;

@@ -28,7 +28,7 @@ const SearchBar = () => {
 	return (
 		<main>
 			<section>
-				<div className="flex w-full  md:flex-nowrap gap-2 lg:w-1/2">
+				<div className="flex w-full md:flex-nowrap gap-2 lg:w-1/2">
 					<Input
 						type="text"
 						label="Search for anime"
