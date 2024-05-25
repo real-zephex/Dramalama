@@ -6,7 +6,7 @@ import { MovieHomepageDataFetcher } from "./components/requestsHandler";
 import PreFetchMovieInfo from "./components/cacher";
 import styles from "../page.module.css";
 
-export default async function MOVIE_HOME() {
+export default async function MovieHomepage() {
 	const popular_data = await MovieHomepageDataFetcher("popular");
 	const trending_data = await MovieHomepageDataFetcher("trending");
 	const top_data = await MovieHomepageDataFetcher("top");

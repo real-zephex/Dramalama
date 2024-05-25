@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, Tab, Card, CardBody, Link } from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, Link, Button } from "@nextui-org/react";
 import { FiThumbsUp } from "react-icons/fi";
 import { TiStarFullOutline } from "react-icons/ti";
 
@@ -57,6 +57,27 @@ export default function DescriptionTabs({ data: data }) {
 								<span className="ml-2">
 									{data.vote_average || "not sure"}
 								</span>
+							</h4>
+						</CardBody>
+					</Card>
+				</Tab>
+				<Tab key="download" title="Download">
+					<Card>
+						<CardBody className={lexend.className}>
+							<h4 className="flex items-center">
+								<Link
+									href={`https://dl.vidsrc.vip/m/${data.id}`}
+									isExternal
+								>
+									<Button
+										color="warning"
+										size="sm"
+										className="ml-2"
+										title="Download is powered by 3rd party. Use it at your own risk."
+									>
+										Download
+									</Button>
+								</Link>
 							</h4>
 						</CardBody>
 					</Card>

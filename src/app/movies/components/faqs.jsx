@@ -8,7 +8,7 @@ const Questions = () => {
 			<AccordionItem
 				key="1"
 				aria-label="Accordion 1"
-				title="Why are there ads in the player?"
+				title="Why there are ads in the player?"
 			>
 				We do not host any media on our own servers. We simply aggregate
 				data from third-party providers. While these services are free
