@@ -36,9 +36,9 @@ export const dramaInfo = async (id) => {
 
 export const videoLink = async (epiId, mediaId) => {
 	const res = await fetch(videoURL(epiId, mediaId), {
-		next: { revalidate: 21600 },
+		cache: "force-cache",
 	});
 	const data = await res.json();
-	const videoLink = data.sources[0].url;
-	return videoLink;
+	const vidLink = await data.sources[0].url;
+	return vidLink;
 };

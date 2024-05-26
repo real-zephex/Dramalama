@@ -2,10 +2,13 @@ import { Chip, Image } from "@nextui-org/react";
 import DescriptionTabs from "../components/infoTabs";
 import { dramaInfo } from "../components/requests";
 import EpisodesContainer from "../components/episodesContainer";
+import { PreFetchVideoLinks } from "../components/cacher";
 
 export default async function DramaInfo({ params }) {
 	const id = decodeURIComponent(params.id);
 	const data = await dramaInfo(id);
+
+	PreFetchVideoLinks(data.episodes, data.id);
 
 	return (
 		<section className="pt-12  lg:w-9/12 m-auto">

@@ -1,5 +1,5 @@
-import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 import MovieSearchBar from "./components/search";
 import { MovieHomepageDataFetcher } from "./components/requestsHandler";
@@ -36,14 +36,11 @@ export default async function MovieHomepage() {
 								<Card className="overflow-visible " isPressable>
 									<CardBody>
 										<Image
-											as={NextImage}
-											isBlurred
-											alt="Anime Poster"
+											alt="Movie Poster"
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
 											width={270}
 											height={180}
-											className="h-64 overflow-hidden"
-											shadow="lg"
+											className="h-64 rounded-md overflow-hidden"
 											priority
 										/>
 									</CardBody>

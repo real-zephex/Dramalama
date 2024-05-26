@@ -1,5 +1,5 @@
-import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 import styles from "../../page.module.css";
 
@@ -16,18 +16,16 @@ const SearchedDataFormatter = async (data) => {
 						href={`/kdrama/${encodeURIComponent(item.id)}`}
 						aria-label="anime redirection links"
 						className="flex flex-col items-center mx-1"
+						title={item.title}
 					>
 						<Card className="overflow-hidden" isPressable>
 							<CardBody>
 								<Image
-									as={NextImage}
-									isBlurred
-									alt="Anime Poster"
+									alt="Searched Kdrama Poster"
 									src={item.image}
 									width={185}
 									height={120}
-									shadow="lg"
-									className="h-64"
+									className="rounded-md h-64"
 									priority
 								/>
 							</CardBody>

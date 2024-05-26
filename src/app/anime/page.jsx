@@ -1,5 +1,5 @@
-import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import Image from "next/image";
 import styles from "../page.module.css";
 
 import { top_airing, recent, popular } from "./data-fetch/request";
@@ -38,14 +38,11 @@ const AnimeHomepage = async () => {
 						<Card className="overflow-visible " isPressable>
 							<CardBody>
 								<Image
-									as={NextImage}
-									isBlurred
 									alt="Anime Poster"
-									src={item.image}
+									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={270}
 									height={160}
-									className="h-60 overflow-hidden"
-									shadow="lg"
+									className="h-60 rounded-md overflow-hidden"
 									priority
 								/>
 							</CardBody>

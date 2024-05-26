@@ -47,7 +47,7 @@ export const anime_info = async (id) => {
 
 export const video_url = async (episodeId) => {
 	const res = await fetch(watch_url(episodeId), {
-		next: { revalidate: 21600 },
+		cache: "force-cache",
 	});
 	const data = await res.json();
 	return data;

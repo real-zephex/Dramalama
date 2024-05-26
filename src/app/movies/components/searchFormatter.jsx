@@ -1,5 +1,5 @@
-import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 import styles from "../../page.module.css";
 
@@ -21,14 +21,11 @@ const MovieSearchFormatter = async (data) => {
 								<Card className="overflow-hidden" isPressable>
 									<CardBody>
 										<Image
-											as={NextImage}
-											isBlurred
-											alt="Anime Poster"
+											alt="Searched Movie Poster"
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
 											width={190}
 											height={120}
-											shadow="lg"
-											className="h-64"
+											className="rounded-md h-64"
 											priority
 										/>
 									</CardBody>

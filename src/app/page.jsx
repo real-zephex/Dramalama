@@ -1,11 +1,5 @@
-import {
-	Card,
-	CardHeader,
-	CardBody,
-	Divider,
-	Link,
-	Image,
-} from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Divider, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 export default async function Home() {
 	const homePageCards = (title, message, url) => {
@@ -17,8 +11,8 @@ export default async function Home() {
 							alt="nextui logo"
 							height={40}
 							width={40}
-							radius="sm"
 							src={url}
+							className="rounded-md"
 						/>
 						<div className="flex flex-col">
 							<p className="text-md">{title}</p>

@@ -35,6 +35,13 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "image.tmdb.org",
 			},
+			{
+				hostname: "i.ibb.co",
+			},
+			{
+				hostname: "ih1.redbubble.net",
+			},
+			{ hostname: "images.hdqwalls.com" },
 		],
 	},
 	logging: {

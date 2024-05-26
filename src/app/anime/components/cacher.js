@@ -1,6 +1,6 @@
 "use server";
 
-import { anime_info } from "../data-fetch/request";
+import { anime_info, video_url } from "../data-fetch/request";
 
 export async function preFetchAnimeInfo(data) {
 	try {
@@ -18,7 +18,7 @@ export async function preFetchAnimeInfo(data) {
 export async function preFetchVideoLinks(data) {
 	try {
 		const fetchPromises = data.map(async (element) => {
-			await fetch(watch_url(element.id), { next: { revalidate: 21600 } });
+			await video_url(element.id);
 		});
 
 		await Promise.all(fetchPromises);

@@ -2,12 +2,14 @@ import { Chip, Image } from "@nextui-org/react";
 
 import { anime_info } from "../data-fetch/request";
 import DescriptionTabs from "../components/infoTabs";
-
 import EpisodesContainer from "../components/vidButtonContainer";
+import { preFetchVideoLinks } from "../components/cacher";
 
 const AnimeInfoHomepage = async ({ params }) => {
 	const id = params.id;
 	const data = await anime_info(id);
+
+	preFetchVideoLinks(data.episodes);
 
 	return (
 		<section className="pt-12  lg:w-9/12 m-auto">

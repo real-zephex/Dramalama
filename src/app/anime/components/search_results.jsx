@@ -2,8 +2,8 @@ import { search_results } from "../data-fetch/request";
 import { preFetchAnimeInfo } from "./cacher";
 import styles from "../../page.module.css";
 
-import { Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import Image from "next/image";
 
 const SearchResults = async (title) => {
 	const data = await search_results(title);
@@ -25,14 +25,11 @@ const SearchResults = async (title) => {
 						<Card className="overflow-hidden" isPressable>
 							<CardBody>
 								<Image
-									as={NextImage}
-									isBlurred
-									alt="Anime Poster"
+									alt="Searched Anime Poster"
 									src={item.image}
 									width={190}
 									height={120}
-									shadow="lg"
-									className="h-64"
+									className="rounded-md h-64"
 									priority
 								/>
 							</CardBody>
