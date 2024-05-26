@@ -42,6 +42,8 @@ const nextConfig = {
 				hostname: "ih1.redbubble.net",
 			},
 			{ hostname: "images.hdqwalls.com" },
+			{ hostname: "cdn3.iconfinder.com" },
+			{ hostname: "www.iconfinder.com" },
 		],
 	},
 	logging: {
