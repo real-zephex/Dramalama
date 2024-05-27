@@ -13,13 +13,12 @@ export default async function DramaInfo({ params }) {
 	return (
 		<section
 			style={{
-				backgroundColor: "black",
 				backgroundImage: `radial-gradient(gray 1px, transparent 1px)`,
 				backgroundSize: "40px 40px",
 			}}
-			className="h-screen "
+			className="h-screen bg-white dark:bg-black"
 		>
-			<section className="absolute inset-0 bg-gradient-to-b from-transparent to-black">
+			<section className="absolute inset-0 bg-gradient-to-b from-transparent to-white-400 dark:to-black">
 				<section className="pt-12  lg:w-9/12 m-auto">
 					<div className="flex items-center justify-center lg:justify-start md:justify-start">
 						<Image
