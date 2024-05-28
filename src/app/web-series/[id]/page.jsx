@@ -1,111 +1,63 @@
-import Image from "next/image";
-import { SERIES_INFO, CREW_DETAILS } from "../components/data-fetch";
-import styles from "../styles/info.module.css";
-import { BiSolidUpvote } from "react-icons/bi";
-import { LiaStarSolid } from "react-icons/lia";
-import SeriesPlayer from "../components/videoPlayer";
+import { Image, Chip } from "@nextui-org/react";
+
+import { SERIES_INFO } from "../components/data-fetch";
+import Questions from "@/app/movies/components/faqs";
+import SeriesDescriptionTabs from "../components/descriptionTabs";
+import SeriesVideoPlayer from "../components/videoPlayer";
 
 const SeriesInfoPage = async ({ params }) => {
-	const id = params.id;
-	const data = await FetchSeriesInfo(id);
-	const crew_data = await CREW_DETAILS(id);
+	const { id } = params;
+
+	const data = await SERIES_INFO(id);
+
 	return (
-		<main
+		<section
 			style={{
-				// backgroundImage: `url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path})`,
-				background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #121212 100%), 
-                url(https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path}) no-repeat center center fixed`,
-				backgroundSize: "cover",
+				backgroundImage: `radial-gradient(gray 1px, transparent 1px)`,
+				backgroundSize: "40px 40px",
 			}}
-			className={styles.Main}
+			className="h-screen bg-white dark:bg-black"
 		>
-			<div className={styles.AnimeInfo}>
-				<section className={styles.AnimeInfoContainer}>
-					<div className={styles.TitleContainer}>
+			<section className="absolute inset-0 bg-gradient-to-b from-transparent to-white-400 dark:to-black">
+				<section className="pt-12 m-auto w-full lg:w-9/12">
+					<SeriesVideoPlayer id={data.id} />
+					<div className="flex items-center">
 						<Image
+							isBlurred
+							shadow="lg"
 							src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.poster_path}`}
-							width={190}
-							height={290}
-							alt="Series Poster"
-							priority
-						/>
-						<section className={styles.SideTitleContainer}>
-							<h2 className={styles.title}>{data.name}</h2>
-							<p className={styles.secondTitle}>
-								{data.original_name}
-							</p>
-							<p className={styles.tagline}>
-								<span>{data.tagline || "not found"}</span>
-							</p>
-							<p className={styles.description}>
-								{" "}
-								{data.overview}
-							</p>
-							<hr />
-							<p className={styles.genres}>
-								Genres:{" "}
-								{data.genres.map((item, index) => (
-									<span key={index}>
-										{item.name}
-										{index !== data.genres.length - 1 &&
-											", "}
-									</span>
-								))}
-							</p>
-							<p className={styles.epiInfo}>
-								Seasons: <span>{data.number_of_seasons}</span>
-							</p>
-							<p className={styles.epiInfo}>
-								Episodes: <span>{data.number_of_episodes}</span>
-							</p>
-							<div className={styles.votes}>
-								<section className={styles.vote}>
-									<BiSolidUpvote color="var(--nord-green)" />{" "}
-									<p>{data.vote_count}</p>
-								</section>
-								<section className={styles.vote}>
-									<LiaStarSolid color="var(--nord-green)" />{" "}
-									<p>{data.vote_average}</p>
-								</section>
+							width={180}
+							height={300}
+							alt="Anime Title Poster"
+							className="m-2"
+						></Image>
+						<div className="mx-5">
+							<h4 className={`text-2xl`}>
+								<strong>{data.name}</strong>
+							</h4>
+							<div className="mt-1">
+								{data.genres &&
+									data.genres.map((item, index) => (
+										<Chip
+											key={index}
+											color="warning"
+											variant="faded"
+											className="mr-1 mb-1"
+										>
+											<p className="text-xs">
+												{item.name}
+											</p>
+										</Chip>
+									))}
 							</div>
-						</section>
-					</div>
-					<section className={styles.CrewContainer}>
-						<h2>Crew</h2>
-						<div className={styles.CrewEntry}>
-							{crew_data &&
-								crew_data.cast.map((item, index) => (
-									<div
-										key={index}
-										className={styles.CastEntry}
-									>
-										<Image
-											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.profile_path}`}
-											width={140}
-											height={190}
-											alt="Crew Poster"
-										/>
-										<p>{item.name}</p>
-										<p style={{ fontSize: 11 }}>
-											{item.character}
-										</p>
-									</div>
-								))}
 						</div>
-					</section>
-
-					<section className={styles.VideoContainer}>
-						<SeriesPlayer id={data.id} />
-					</section>
+					</div>
+					<SeriesDescriptionTabs data={data} />
+					<Questions />
 				</section>
-			</div>
-		</main>
+			</section>
+		</section>
 	);
-};
-
-const FetchSeriesInfo = async (id) => {
-	const data = SERIES_INFO(id);
-	return data;
 };
 
 export default SeriesInfoPage;
