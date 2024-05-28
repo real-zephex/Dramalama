@@ -1,66 +1,76 @@
 "use client";
 
-import { useState } from "react";
-import styles from "../styles/videoPlayer.module.css";
+import { useEffect, useState } from "react";
 
-const SeriesPlayer = ({ id: id }) => {
-	const [iframe, iframeContent] = useState(null);
-	const [episode, setEpisode] = useState("");
-	const [season, setSeason] = useState("");
+import { Input } from "@nextui-org/react";
 
-	async function VideoPlayerInitialize() {
-		if (!episode || !season) {
-			alert("Please provide the required episode and season number.");
+const SeriesVideoPlayer = ({ id: id }) => {
+	const [seasonNumber, setSeasonNumber] = useState("");
+	const [episodeNumber, setEpisodeNumber] = useState("");
+	const [videoFrame, setVideoFrame] = useState(<></>);
+
+	useEffect(() => {
+		setVideoFrame(VideoFrameGenerator(1, 1));
+	}, []);
+
+	const VideoFrameGenerator = (sea, epi) => {
+		return (
+			<iframe
+				src={`https://vidsrc.pro/embed/tv/${id}/${sea}/${epi}`}
+				allowFullScreen
+				referrerPolicy="origin"
+				height={720}
+				className="w-full h-[240px] lg:h-[720px]"
+			></iframe>
+		);
+	};
+
+	function renderVideoFrame() {
+		if (seasonNumber === "" || episodeNumber === "") {
+			alert(
+				"Make sure that you have entered the episode number and the season number."
+			);
 			return;
 		}
-		iframeContent(await iframeGenerator(id, season, episode));
-		document.getElementById("video-player").style.display = "none";
+
+		setVideoFrame(VideoFrameGenerator(seasonNumber, episodeNumber));
 	}
 
 	return (
-		<main className={styles.Main}>
-			<div className={styles.EpisodeSeasonInput}>
-				<input
-					name="Season"
+		<div>
+			{videoFrame}
+			<div className="flex w-full items-center md:flex-nowrap gap-2 mt-2">
+				<Input
 					type="number"
+					label="Season"
 					placeholder="Season Number"
-					onChange={(e) => {
-						if (Number(e.target.value) > 0) {
-							setSeason(e.target.value);
+					isRequired
+					onChange={(event) => {
+						setSeasonNumber(event.target.value);
+					}}
+					onKeyDown={(event) => {
+						if (event.key === "Enter" || event.code === "Enter") {
+							renderVideoFrame();
 						}
 					}}
-				></input>
-				<input
-					name="Episode"
+				/>
+				<Input
 					type="number"
+					label="Episode"
 					placeholder="Episode Number"
-					onChange={(e) => {
-						if (Number(e.target.value) > 0) {
-							setEpisode(e.target.value);
+					isRequired
+					onChange={(event) => {
+						setEpisodeNumber(event.target.value);
+					}}
+					onKeyDown={(event) => {
+						if (event.key === "Enter" || event.code === "Enter") {
+							renderVideoFrame();
 						}
 					}}
-				></input>
-
-				<button onClick={() => VideoPlayerInitialize(id)}>
-					Search
-				</button>
+				/>
 			</div>
-
-			<div className={styles.VideoPlayer}>
-				{iframe}
-				<p id="video-player">
-					Please use adblockers to prevent ads and redirects. We have
-					no control over the amount of ads or the type of ads which
-					you might encounter.
-				</p>
-			</div>
-		</main>
+		</div>
 	);
 };
 
-const iframeGenerator = async (id, seasonNumber, episodeNumber) => {
-	const url = `https://vidsrc.pro/embed/tv/${id}/${seasonNumber}/${episodeNumber}`;
-	return <iframe src={url} allowFullScreen referrerPolicy="origin"></iframe>;
-};
-
-export default SeriesPlayer;
+export default SeriesVideoPlayer;

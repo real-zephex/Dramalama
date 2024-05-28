@@ -6,3 +6,12 @@
 	background-color: rgb(95, 95, 95);
 	border-radius: 1rem;
 }
+
+.ScrollBarAdjuster2::-webkit-scrollbar {
+	height: 0.1rem;
+}
+
+.ScrollBarAdjuster2::-webkit-scrollbar-thumb {
+	background-color: rgb(95, 95, 95);
+	border-radius: 1rem;
+}
