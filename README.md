@@ -1,3 +1,5 @@
+(outdated README, will update later)
+
 ## Dramalama
 
 Dramalama is an online service where you can watch kdramas and anime and read mangas for free.
