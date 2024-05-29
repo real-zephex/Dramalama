@@ -1,8 +1,11 @@
+"use server";
+
 import { search_results } from "../data-fetch/request";
 import { preFetchAnimeInfo } from "./cacher";
 import styles from "../../page.module.css";
 
-import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+import { Card, CardHeader, CardBody } from "@nextui-org/react";
+import Link from "next/link";
 import Image from "next/image";
 
 const SearchResults = async (title) => {

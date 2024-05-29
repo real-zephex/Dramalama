@@ -1,6 +1,8 @@
-import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
-import Image from "next/image";
+"use server";
 
+import { Card, CardHeader, CardBody } from "@nextui-org/react";
+import Image from "next/image";
+import Link from "next/link";
 import styles from "../../page.module.css";
 
 const MovieSearchFormatter = async (data) => {
