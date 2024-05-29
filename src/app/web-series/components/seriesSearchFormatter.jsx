@@ -1,3 +1,5 @@
+"use server";
+
 import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";

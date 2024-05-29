@@ -1,4 +1,7 @@
-import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
+"use server";
+
+import { Card, CardHeader, CardBody } from "@nextui-org/react";
+import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../../page.module.css";

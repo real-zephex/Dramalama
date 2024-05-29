@@ -9,7 +9,10 @@ const AnimeInfoHomepage = async ({ params }) => {
 	const id = params.id;
 	const data = await anime_info(id);
 
-	preFetchVideoLinks(data.episodes);
+	if (data.episodes.length > 50) {
+	} else {
+		preFetchVideoLinks(data.episodes);
+	}
 
 	return (
 		<section
