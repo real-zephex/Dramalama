@@ -51,9 +51,7 @@ const nextConfig = {
 			fullUrl: true,
 		},
 	},
-	experimental: {
-		reactCompiler: true,
-	},
+
 	// experimental: {
 	// 	serverActions: {
 	// 		allowedOrigins: ["localhost:3000"],
