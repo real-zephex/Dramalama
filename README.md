@@ -58,3 +58,7 @@ Live demo is available at [Dramalama - Vercel](https://dramalama.vercel.app) and
 
 ## License
 This project is licensed under the MIT License.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=real-zephex/Dramalama&type=Date)](https://star-history.com/#real-zephex/Dramalama&Date)
