@@ -37,7 +37,9 @@ const EpisodesContainer = ({ data: data }) => {
 							key={index}
 							className="mr-2 mt-2"
 							size="sm"
-							onClick={async () => {
+							onClick={async (event) => {
+								event.currentTarget.style.backgroundColor =
+									"orange";
 								await changeVideoLink(item.id);
 								store_to_local(
 									data.title,
