@@ -18,9 +18,9 @@ export default async function DramaInfo({ params }) {
 			}}
 			className="h-screen bg-white dark:bg-black"
 		>
-			<section className="absolute inset-0 bg-gradient-to-b from-transparent to-white-400 dark:to-black">
-				<section className="pt-12  lg:w-9/12 m-auto">
-					<div className="flex items-center justify-center lg:justify-start md:justify-start">
+			<section className="to-white-400 absolute inset-0 bg-gradient-to-b from-transparent dark:to-black">
+				<section className="m-auto pt-16 lg:w-9/12">
+					<div className="flex items-center justify-center md:justify-start lg:justify-start">
 						<Image
 							isBlurred
 							width={190}
@@ -39,7 +39,7 @@ export default async function DramaInfo({ params }) {
 											key={index}
 											color="warning"
 											variant="faded"
-											className="mr-1 mb-1"
+											className="mb-1 mr-1"
 										>
 											<p className="text-xs">{item}</p>
 										</Chip>

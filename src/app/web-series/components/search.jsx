@@ -6,8 +6,6 @@ import { Input, Progress } from "@nextui-org/react";
 import { SEARCH_TV } from "./data-fetch";
 import SeriesSearchFormatter from "./seriesSearchFormatter";
 import PreFecthSeriesInfo from "./cacher";
-// import { SearchMovie } from "./requestsHandler";
-// import MovieSearchFormatter from "./searchFormatter";
 
 const SeriesSearchBar = () => {
 	const [seriesTitle, setSeriesTitle] = useState("");
@@ -21,7 +19,7 @@ const SeriesSearchBar = () => {
 				isIndeterminate
 				aria-label="Loading..."
 				className="w-full"
-			/>
+			/>,
 		);
 		const data = await SEARCH_TV(seriesTitle);
 		PreFecthSeriesInfo(data);
@@ -31,7 +29,7 @@ const SeriesSearchBar = () => {
 
 	return (
 		<section>
-			<div className="flex flex-col w-full md:flex-nowrap gap-2 lg:w-1/2">
+			<div className="flex w-full flex-col gap-2 md:flex-nowrap lg:w-1/2">
 				<Input
 					type="text"
 					label="Search for series"

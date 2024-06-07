@@ -2,7 +2,7 @@ const MovieVideoPlayer = async ({ id: id }) => {
 	const videoFrameGenerator = (id) => {
 		return (
 			<iframe
-				src={`https://vidsrc.pro/embed/movie/${id}`}
+				src={`https://vidsrc.pro/embed/movie/${id}?player=new`}
 				allowFullScreen
 				referrerPolicy="origin"
 				height={720}

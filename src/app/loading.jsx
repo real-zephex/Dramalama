@@ -2,7 +2,7 @@ import { CircularProgress } from "@nextui-org/react";
 
 const LoadingScreen = async () => {
 	return (
-		<div className="w-screen h-screen flex gap-4 items-center justify-center">
+		<div className="flex h-[90dvh] w-screen items-center justify-center gap-4">
 			<CircularProgress
 				color="success"
 				aria-label="Loading..."

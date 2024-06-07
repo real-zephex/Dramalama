@@ -16,11 +16,11 @@ const SeriesVideoPlayer = ({ id: id }) => {
 	const VideoFrameGenerator = (sea, epi) => {
 		return (
 			<iframe
-				src={`https://vidsrc.pro/embed/tv/${id}/${sea}/${epi}`}
+				src={`https://vidsrc.pro/embed/tv/${id}/${sea}/${epi}?player=new`}
 				allowFullScreen
 				referrerPolicy="origin"
 				height={720}
-				className="w-full h-[240px] lg:h-[720px]"
+				className="h-[240px] w-full rounded-md lg:h-[720px]"
 			></iframe>
 		);
 	};
@@ -28,7 +28,7 @@ const SeriesVideoPlayer = ({ id: id }) => {
 	function renderVideoFrame() {
 		if (seasonNumber === "" || episodeNumber === "") {
 			alert(
-				"Make sure that you have entered the episode number and the season number."
+				"Make sure that you have entered the episode number and the season number.",
 			);
 			return;
 		}
@@ -39,7 +39,7 @@ const SeriesVideoPlayer = ({ id: id }) => {
 	return (
 		<div>
 			{videoFrame}
-			<div className="flex w-full items-center md:flex-nowrap gap-2 mt-2">
+			<div className="mt-2 flex w-full items-center gap-2 md:flex-nowrap">
 				<Input
 					type="number"
 					label="Season"

@@ -20,10 +20,10 @@ export default async function MovieHomepage() {
 	const dataFormatter = (title, data) => {
 		return (
 			<section className="flex flex-col">
-				<p className="text-sky-400 text-2xl font-bold">{title}</p>
+				<p className="text-2xl font-bold text-sky-400">{title}</p>
 
 				<div
-					className={`flex items-center overflow-auto pb-2 mt-1 ${styles.ScrollBarAdjuster}`}
+					className={`mt-1 flex items-center overflow-auto pb-2 ${styles.ScrollBarAdjuster}`}
 				>
 					{data &&
 						data.results.map((item, index) => (
@@ -31,22 +31,22 @@ export default async function MovieHomepage() {
 								key={index}
 								href={`/movies/${item.id}`}
 								aria-label="anime redirection links"
-								className="flex flex-col items-center mx-1 "
+								className="mx-1 flex flex-col items-center"
 							>
-								<Card className="overflow-visible " isPressable>
+								<Card className="overflow-visible" isPressable>
 									<CardBody>
 										<Image
 											alt="Movie Poster"
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
 											width={270}
 											height={180}
-											className="h-64 rounded-md overflow-hidden"
+											className="h-64 overflow-hidden rounded-md"
 											priority
 										/>
 									</CardBody>
 									<CardHeader>
 										<h4
-											className={`antialiased  text-small text-center uppercase w-44 overflow-hidden whitespace-nowrap text-ellipsis `}
+											className={`w-44 overflow-hidden text-ellipsis whitespace-nowrap text-center text-small uppercase antialiased`}
 										>
 											{item.original_title}
 										</h4>
@@ -60,7 +60,7 @@ export default async function MovieHomepage() {
 	};
 
 	return (
-		<main className="pt-12 ">
+		<main className="pt-4">
 			<div className="lg:ml-2">
 				<MovieSearchBar />
 			</div>

@@ -5,7 +5,6 @@ const nextConfig = {
 			{
 				protocol: "https",
 				hostname: "asianimg.pro",
-				pathname: "/cover/**",
 			},
 			{
 				protocol: "https",

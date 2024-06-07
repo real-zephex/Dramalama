@@ -18,7 +18,7 @@ const KdramaHomepage = async () => {
 
 	const header = (title) => (
 		<>
-			<p className="antialiased font-bold text-sky-400 text-2xl my-1">
+			<p className="my-1 text-2xl font-bold text-sky-400 antialiased">
 				{title}
 			</p>
 		</>
@@ -32,22 +32,22 @@ const KdramaHomepage = async () => {
 						key={index}
 						href={`/kdrama/${encodeURIComponent(item.id)}`}
 						aria-label="anime redirection links"
-						className="flex flex-col items-center mx-1"
+						className="mx-1 flex flex-col items-center"
 					>
-						<Card className="overflow-visible " isPressable>
+						<Card className="overflow-visible" isPressable>
 							<CardBody>
 								<Image
 									alt="Kdrama Poster"
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={270}
 									height={160}
-									className="h-60 rounded-md overflow-hidden"
+									className="h-60 overflow-hidden rounded-md"
 									priority
 								/>
 							</CardBody>
 							<CardHeader>
 								<h4
-									className={`antialiased  text-small text-center uppercase w-44 overflow-hidden whitespace-nowrap text-ellipsis `}
+									className={`w-44 overflow-hidden text-ellipsis whitespace-nowrap text-center text-small uppercase antialiased`}
 								>
 									{item.title}
 								</h4>
@@ -59,7 +59,7 @@ const KdramaHomepage = async () => {
 	);
 
 	return (
-		<section className="pt-12">
+		<section className="pt-4">
 			<div>
 				<Searchbar />
 			</div>

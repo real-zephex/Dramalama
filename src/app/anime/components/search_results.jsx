@@ -1,10 +1,8 @@
-"use server";
-
 import { search_results } from "../data-fetch/request";
 import { preFetchAnimeInfo } from "./cacher";
 import styles from "../../page.module.css";
 
-import { Card, CardHeader, CardBody } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,7 +13,7 @@ const SearchResults = async (title) => {
 
 	return (
 		<section
-			className={`flex items-center overflow-auto pb-2 ${styles.ScrollBarAdjuster}`}
+			className={`flex items-center overflow-auto pb-2 ${styles.ScrollBarAdjuster} `}
 		>
 			{data &&
 				data.results.map((item, index) => (
@@ -23,26 +21,31 @@ const SearchResults = async (title) => {
 						key={index}
 						href={`/anime/${item.id}`}
 						aria-label="anime redirection links"
-						className="flex flex-col items-center mx-1 "
+						className="mx-1 flex flex-col items-center"
+						title={item.title}
 					>
-						<Card className="overflow-hidden" isPressable>
+						<Card
+							className="overflow-hidden"
+							isPressable
+							shadow="lg"
+						>
 							<CardBody>
 								<Image
 									alt="Searched Anime Poster"
 									src={item.image}
 									width={190}
 									height={120}
-									className="rounded-md h-64"
+									className="h-64 rounded-md"
 									priority
 								/>
 							</CardBody>
-							<CardHeader>
+							<CardFooter>
 								<h4
-									className={`antialiased  text-small text-center uppercase w-44 overflow-hidden whitespace-nowrap text-ellipsis `}
+									className={`w-44 overflow-hidden text-ellipsis whitespace-nowrap text-center text-small uppercase antialiased`}
 								>
 									{item.title}
 								</h4>
-							</CardHeader>
+							</CardFooter>
 						</Card>
 					</Link>
 				))}

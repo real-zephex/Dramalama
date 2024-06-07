@@ -1,30 +1,38 @@
 import Link from "next/link";
-import styles from "../../page.module.css";
 import { ThemeSwitcher } from "../themeSwitcher";
+import {
+	Navbar,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem,
+	Button,
+} from "@nextui-org/react";
 
 export default async function Header() {
 	return (
-		<div className="fixed top-0 w-full flex items-center justify-between z-50  dark:bg-black bg-white">
-			<h4 className="text-teal-400 text-2xl p-2">
-				<Link href={"/"}>Dramalama</Link>
-			</h4>
-			{/* <div
-				className={`mx-2 flex items-center overflow-auto ${styles.ScrollBarAdjuster}`}
-			>
-				<Link href={"/anime"} className="mx-2 hover:text-sky-400">
-					<p>Anime</p>
-				</Link>
-				<Link href={"/kdrama"} className="mx-2 hover:text-sky-400">
-					<p>Kdrama</p>
-				</Link>
-				<Link href={"/series"} className="mx-2 hover:text-sky-400">
-					<p>Series</p>
-				</Link>
-				<Link href={"/movies"} className="mx-2 hover:text-sky-400">
-					<p>Movies</p>
-				</Link>
-			</div> */}
-			<ThemeSwitcher />
-		</div>
+		<Navbar isBordered>
+			<NavbarBrand>
+				<p className="text-2xl font-bold">
+					<Link href="/">Dramalama</Link>
+				</p>
+			</NavbarBrand>
+
+			<NavbarContent justify="end">
+				<NavbarItem>
+					<ThemeSwitcher />
+				</NavbarItem>
+				<NavbarItem>
+					<Button
+						as={Link}
+						color="success"
+						href="https://github.com/real-zephex/Dramalama"
+						variant="faded"
+						target="_blank"
+					>
+						Github
+					</Button>
+				</NavbarItem>
+			</NavbarContent>
+		</Navbar>
 	);
 }

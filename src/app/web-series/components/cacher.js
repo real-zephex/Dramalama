@@ -1,3 +1,5 @@
+"use server";
+
 import { SERIES_INFO } from "./data-fetch";
 
 const PreFecthSeriesInfo = async (data) => {
@@ -11,7 +13,7 @@ const PreFecthSeriesInfo = async (data) => {
 	} catch (error) {
 		console.error(
 			"Error occurred while pre-fetching series info page:",
-			error
+			error,
 		);
 	}
 };
