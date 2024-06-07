@@ -11,14 +11,14 @@ export default function DescriptionTabs({ data: data }) {
 		<div className="flex w-full flex-col">
 			<Tabs aria-label="Options" className={lexend.className}>
 				<Tab key="description" title="Description">
-					<Card>
+					<Card shadow="sm">
 						<CardBody className={atkinson.className}>
 							{data.overview || "No description found"}
 						</CardBody>
 					</Card>
 				</Tab>
 				<Tab key="episodes" title="Details">
-					<Card>
+					<Card shadow="sm">
 						<CardBody className={lexend.className}>
 							<h4>
 								<strong>Tagline</strong>:{" "}
@@ -62,7 +62,7 @@ export default function DescriptionTabs({ data: data }) {
 					</Card>
 				</Tab>
 				<Tab key="download" title="Download">
-					<Card>
+					<Card shadow="sm">
 						<CardBody className={lexend.className}>
 							<h4 className="flex items-center">
 								<Link

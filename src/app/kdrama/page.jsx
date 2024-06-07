@@ -34,7 +34,12 @@ const KdramaHomepage = async () => {
 						aria-label="anime redirection links"
 						className="mx-1 flex flex-col items-center"
 					>
-						<Card className="overflow-visible" isPressable>
+						<Card
+							className="overflow-visible"
+							isPressable
+							isHoverable
+							shadow="sm"
+						>
 							<CardBody>
 								<Image
 									alt="Kdrama Poster"

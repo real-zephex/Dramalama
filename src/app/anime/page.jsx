@@ -35,14 +35,19 @@ const AnimeHomepage = async () => {
 						aria-label="anime redirection links"
 						className="mx-1 flex flex-col items-center"
 					>
-						<Card className="overflow-visible" isPressable>
+						<Card
+							className="overflow-visible"
+							isPressable
+							isHoverable
+							shadow="sm"
+						>
 							<CardBody>
 								<Image
 									alt="Anime Poster"
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={270}
-									height={160}
-									className="h-60 overflow-hidden rounded-md"
+									height={170}
+									className="h-64 overflow-hidden rounded-md"
 									priority
 								/>
 							</CardBody>

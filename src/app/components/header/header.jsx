@@ -16,7 +16,33 @@ export default async function Header() {
 					<Link href="/">Dramalama</Link>
 				</p>
 			</NavbarBrand>
-
+			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+				<NavbarItem>
+					<Link href="/anime" className="text-sky-400">
+						Anime
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/kdrama" className="text-green-300">
+						K-Dramas
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/manga" className="text-orange-400">
+						Manga
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/web-series" className="text-violet-300">
+						TV shows
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/movies" className="text-teal-400">
+						Movies
+					</Link>
+				</NavbarItem>
+			</NavbarContent>
 			<NavbarContent justify="end">
 				<NavbarItem>
 					<ThemeSwitcher />

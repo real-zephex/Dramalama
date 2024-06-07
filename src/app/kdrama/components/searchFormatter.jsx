@@ -19,7 +19,12 @@ const SearchedDataFormatter = async (data) => {
 						className="mx-1 flex flex-col items-center"
 						title={item.title}
 					>
-						<Card className="overflow-hidden" isPressable>
+						<Card
+							className="overflow-hidden"
+							isPressable
+							isHoverable
+							shadow="sm"
+						>
 							<CardBody>
 								<Image
 									alt="Searched Kdrama Poster"

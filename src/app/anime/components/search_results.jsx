@@ -27,7 +27,8 @@ const SearchResults = async (title) => {
 						<Card
 							className="overflow-hidden"
 							isPressable
-							shadow="lg"
+							isHoverable
+							shadow="sm"
 						>
 							<CardBody>
 								<Image

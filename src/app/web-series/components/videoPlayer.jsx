@@ -16,7 +16,7 @@ const SeriesVideoPlayer = ({ id: id }) => {
 	const VideoFrameGenerator = (sea, epi) => {
 		return (
 			<iframe
-				src={`https://vidsrc.pro/embed/tv/${id}/${sea}/${epi}?player=new`}
+				src={`https://vidsrc.pro/embed/tv/${id}/${sea}/${epi}`}
 				allowFullScreen
 				referrerPolicy="origin"
 				height={720}
@@ -28,7 +28,7 @@ const SeriesVideoPlayer = ({ id: id }) => {
 	function renderVideoFrame() {
 		if (seasonNumber === "" || episodeNumber === "") {
 			alert(
-				"Make sure that you have entered the episode number and the season number.",
+				"Make sure that you have entered the episode number and the season number."
 			);
 			return;
 		}

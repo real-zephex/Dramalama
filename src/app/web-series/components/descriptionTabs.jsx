@@ -19,14 +19,14 @@ export default function SeriesDescriptionTabs({ data: data }) {
 		<div className="flex w-full flex-col">
 			<Tabs aria-label="Options" className={lexend.className}>
 				<Tab key="description" title="Description">
-					<Card>
+					<Card shadow="sm">
 						<CardBody className={atkinson.className}>
 							{data.overview || "No description found"}
 						</CardBody>
 					</Card>
 				</Tab>
 				<Tab key="episodes" title="Details">
-					<Card>
+					<Card shadow="sm">
 						<CardBody className={lexend.className}>
 							<h4>
 								<strong>Tagline</strong>:{" "}
@@ -86,7 +86,7 @@ export default function SeriesDescriptionTabs({ data: data }) {
 					</Card>
 				</Tab>
 				<Tab key="seasons" title="Seasons">
-					<Card>
+					<Card shadow="sm">
 						<CardBody>
 							{data.seasons &&
 								data.seasons.map((item, index) => (
@@ -94,7 +94,7 @@ export default function SeriesDescriptionTabs({ data: data }) {
 										key={index}
 										className="flex flex-row items-center mb-1"
 										isPressable
-										shadow="lg"
+										shadow="sm"
 									>
 										<Image
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
