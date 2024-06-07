@@ -74,7 +74,9 @@ const EpisodesContainer = ({ data: data }) => {
 		);
 		const videoURL = await video_url(id);
 		setVideoLoading(<></>);
-		setVideoLink(videoURL.sources[videoURL.sources.length - 2].url);
+		const video_link = videoURL.sources[videoURL.sources.length - 2].url;
+		await navigator.clipboard.writeText(video_link);
+		setVideoLink(video_link);
 	}
 
 	return (
@@ -88,8 +90,7 @@ const EpisodesContainer = ({ data: data }) => {
 						aspectRatio="16/9"
 						load="eager"
 						playsInline
-						volume={0.8}
-						autoPlay
+						volume={0.5}
 					>
 						<MediaProvider />
 						<DefaultVideoLayout icons={defaultLayoutIcons} />
