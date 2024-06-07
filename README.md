@@ -1,53 +1,64 @@
-(outdated README, will update later)
+# Dramalama
 
-## Dramalama
-
-Dramalama is an online service where you can watch kdramas and anime and read mangas for free.
-
-<p align="center">
-  <img width="300" height="300" src="https://github.com/real-zephex/Dramalama/assets/143923795/add2af15-7d1a-4185-8c48-c31be488d559">
-</p>
-
-## Description
-
-This web application, built with the Next.js framework, relies on data fetched from the Consumet API. The anime section benefits from server-side rendering, ensuring efficient performance. To maintain uniformity, both the kdrama and manga sections have been updated to utilize server-side rendering (SSR), aligning them with the architecture of the anime section.
+## Introduction
+Dramalama is a web application designed to provide detailed information about various entertainment media including Anime, K-Dramas, Movies, and Web Series. The application fetches data from various sources and displays it in an organized and user-friendly manner.
 
 ## Features
+- Detailed information pages for Anime, K-Dramas, Movies, and Web Series.
+- Search functionality for finding specific media.
+- Pre-fetching of video links for optimized performance.
+- User-friendly interface with responsive design.
 
-#### Kdrama
+## Technologies Used
+- **Framework:** Next.js
+- **Styling:** CSS, NextUI
 
--   Users can search for dramas by their title.
--   The platform is designed to be responsive, ensuring compatibility with all screen sizes.
--   HLS streams, meaning the quality will adapt to your network conditions automatically.
+## Data Sources
+Dramalama fetches data from multiple APIs to provide comprehensive and up-to-date information on various entertainment media.
 
-#### Anime
+### Anime
+- **API:** [Consumet](https://github.com/consumet/api.consumet.org)
 
--   The homepage displays top airing anime and recent episode releases.
--   Users have the option to search for anime titles.
--   Due to server-side rendering, requests are cached. This means that if a user visits a specific episode of an anime and then tries to revisit it, the page will load instantly. This caching benefits other users who are attempting to watch the same anime.
--   Vidstack serves as the video player.
 
-#### Manga
+### K-Dramas
+- **API:** [Dramacool API](https://dramacool-scraper.vercel.app) and [Consumet](https://github.com/consumet/api.consumet.org)
+- Endpoints:
+  - Popular: `/popular`
+  - Recent: `/recent`
 
--   Users can search for mangas/manhwa by their title
--   A good looking info page
--   ~~Ability to download mangas in `.pdf` format~~
 
-## Content Guidelines
+### Movies and Series
+- **API:** [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api)
 
-Dramalama doesn't stores any data. It fetches it data through Consumet API which in turns scrapes other websites to get that stream. If you have any problem, then try contacting the owner of those websites.
+## Setup Instructions
+To set up the project locally, follow these steps:
 
-## Deployments
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
--   Vercel: https://dramalama.vercel.app
--   Netlify: https://dramalama.netlify.app
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fb75c8f9-8be9-4244-9651-e206b91dd34d/deploy-status)](https://app.netlify.com/sites/dramalama/deploys)
+3. Run the development server:
+   ```
+   npm run dev
+   ```
 
-## Self Hosting
+4. Open your browser and navigate to `http://localhost:3000` to see the application in action.
 
-You are allowed to self host this project on your local machines, vps etc. But, please change the site name before hosting it.
+#### Demo
+Live demo is available at [Dramalama - Vercel](https://dramalama.vercel.app) and [Dramalama - Netlify](https://dramalama.netlify.app)
 
-## Contributing
+*Using the netlify one is recommended*
 
-Contributors are welcome!!
+## License
+This project is licensed under the MIT License.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=real-zephex/Dramalama&type=Date)](https://star-history.com/#real-zephex/Dramalama&Date)
