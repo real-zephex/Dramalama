@@ -20,27 +20,27 @@ const MangaSearchBox = () => {
 			<p className="text-center">
 				Start typing and results will show here
 			</p>
-		</div>,
+		</div>
 	);
-	const [loading, setLoading] = useState(<></>);
 
 	async function GetResults() {
 		if (!searchedMangaTitle) {
 			setResults(<></>);
 			return;
 		}
-		setLoading(
+		setResults(
 			<Progress
 				size="sm"
 				isIndeterminate
 				aria-label="Loading..."
 				className="mb-4 mt-4 w-full"
-			/>,
+			/>
 		);
+
 		const data = await SearchedMangaResults(searchedMangaTitle);
 		const format = (
 			<div className="mt-2 w-full">
-				{data && data.results.length > 0 ? (
+				{data && data.results && data.results.length > 0 ? (
 					data.results.map((item, index) => (
 						<Link href={`/manga/${item.id}`} key={index}>
 							<Card
@@ -56,6 +56,7 @@ const MangaSearchBox = () => {
 									isBlurred
 									shadow="sm"
 									className="p-1"
+									fetchPriority="high"
 								/>
 								<CardBody>
 									<p className="text-xl">
@@ -87,7 +88,6 @@ const MangaSearchBox = () => {
 				)}
 			</div>
 		);
-		setLoading(<></>);
 		setResults(format);
 	}
 	return (
@@ -102,11 +102,12 @@ const MangaSearchBox = () => {
 					onChange={(event) => {
 						setMangaSearchedTitle(event.target.value);
 					}}
-					onKeyDown={async () => {
-						await GetResults();
+					onKeyDown={async (event) => {
+						if (event.key !== "Control") {
+							await GetResults();
+						}
 					}}
 				/>
-				{loading}
 				{results}
 			</div>
 		</main>

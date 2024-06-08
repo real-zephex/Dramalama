@@ -10,7 +10,6 @@ const MangaChapters = async (id) => {
 	for (let items of data.chapter.data) {
 		chapterPages.push(`${data.baseUrl}/data/${data.chapter.hash}/${items}`);
 	}
-	console.log(chapterPages);
 
 	return (
 		<div className="flex flex-col items-center">
