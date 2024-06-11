@@ -12,7 +12,7 @@
     "@nextui-org/react": "^2.3.6",
     "@vercel/analytics": "^1.2.2",
     "@vercel/postgres": "^0.7.2",
-    "@vercel/speed-insights": "^1.0.10",
+    "@vercel/speed-insights": "^1.0.11",
     "@vidstack/react": "^1.10.9",
     "babel-plugin-react-compiler": "^0.0.0-experimental-487cb0e-20240529",
     "child_process": "^1.0.2",
