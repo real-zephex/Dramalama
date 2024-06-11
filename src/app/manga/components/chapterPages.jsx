@@ -21,7 +21,7 @@ const MangaChapters = async (id) => {
 							src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item}&referer=https://mangadex.org`}
 							width={1280}
 							height={720}
-							className="h-auto w-auto"
+							className="h-auto w-auto rounded-md"
 							alt="Manga Pages"
 						/>
 						<p className="text-center">{index}</p>

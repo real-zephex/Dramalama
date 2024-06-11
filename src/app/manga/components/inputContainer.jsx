@@ -103,7 +103,7 @@ const MangaSearchBox = () => {
 						setMangaSearchedTitle(event.target.value);
 					}}
 					onKeyDown={async (event) => {
-						if (event.key !== "Control") {
+						if (event.key === "Enter" || event.code === "Enter") {
 							await GetResults();
 						}
 					}}

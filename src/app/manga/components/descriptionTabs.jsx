@@ -9,6 +9,7 @@ import {
 	Image,
 	Select,
 	SelectItem,
+	Button,
 } from "@nextui-org/react";
 import { FaRegThumbsUp, FaRegStar } from "react-icons/fa";
 import Link from "next/link";
@@ -18,9 +19,11 @@ import MangaChapters from "./chapterPages";
 
 const MangaDescriptionTabs = ({ data }) => {
 	const [pages, setPages] = useState(<></>);
+	const [url, setUrl] = useState("");
 
 	async function get_pages(id) {
 		setPages(<p className="text-center">Loading...</p>);
+		setUrl(`https://manga-downloader-api.vercel.app/${id}`);
 		const data = await MangaChapters(id);
 		setPages(data);
 	}
@@ -121,31 +124,43 @@ const MangaDescriptionTabs = ({ data }) => {
 				</Tab>
 				<Tab key="chapter" title="Chapter">
 					<Card shadow="sm" className="p-2">
-						<Select
-							className="w-full lg:max-w-md"
-							label="Select chapter"
-						>
-							{data.chapters &&
-								data.chapters.length > 0 &&
-								data.chapters.map((item, index) => {
-									if (item.pages > 0) {
-										return (
-											<SelectItem
-												key={index}
-												onClick={async () =>
-													await get_pages(item.id)
-												}
-												textValue={item.title}
-											>
-												{item.title} -{" "}
-												{item.chapterNumber}
-											</SelectItem>
-										);
-									} else {
-										return;
-									}
-								})}
-						</Select>
+						<div className="flex items-center">
+							<Select
+								className="w-full lg:max-w-md"
+								label="Select chapter"
+							>
+								{data.chapters &&
+									data.chapters.length > 0 &&
+									data.chapters.map((item, index) => {
+										if (item.pages > 0) {
+											return (
+												<SelectItem
+													key={index}
+													onClick={async () =>
+														await get_pages(item.id)
+													}
+													textValue={item.title}
+												>
+													{item.title} -{" "}
+													{item.chapterNumber}
+												</SelectItem>
+											);
+										} else {
+											return;
+										}
+									})}
+							</Select>
+							<Button
+								as={Link}
+								href={url}
+								className="mt-2 ml-2"
+								size="lg"
+								color="warning"
+								variant="ghost"
+							>
+								Download
+							</Button>
+						</div>
 						<CardBody>
 							<div className="w-full">{pages}</div>
 						</CardBody>
