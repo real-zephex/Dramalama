@@ -1,7 +1,5 @@
 import "./globals.css";
 import Header from "./components/header/header";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 import { lexend } from "../../config/fonts";
 
 import { Providers } from "./themeManager";
@@ -56,15 +54,6 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={lexend.className}>
 			<body>
-				<SpeedInsights />
-				<Analytics />
-				{/* <NextUIProvider>
-					<NextThemesProvider attribute="class" defaultTheme="dark">
-						<Header />
-						{children}
-					</NextThemesProvider>
-				</NextUIProvider> */}
-
 				<Providers>
 					<Header />
 					{children}
