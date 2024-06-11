@@ -5,7 +5,12 @@ export default async function Home() {
 	const homePageCards = (title) => {
 		return (
 			<Link href={`/${title}`} className="focus:scale(90) mb-2 lg:mx-1">
-				<Card isPressable shadow="sm" isHoverable>
+				<Card
+					isPressable
+					shadow="sm"
+					isHoverable
+					className="bg-[#1f1f1f] border border-zinc-500"
+				>
 					<CardBody>
 						<p className="text-xl lg:text-2xl">{title}</p>
 					</CardBody>
@@ -20,8 +25,8 @@ export default async function Home() {
 				{homePageCards("anime")}
 				{homePageCards("movies")}
 				{homePageCards("kdrama")}
-				{homePageCards("web-series")}
 				{homePageCards("manga")}
+				{homePageCards("web-series")}
 			</section>
 		</main>
 	);

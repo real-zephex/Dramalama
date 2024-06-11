@@ -1,6 +1,11 @@
 import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
 import Image from "next/image";
 
+export const metadata = {
+	title: "Dramalama Movies",
+	description: "Movies page for Dramalama",
+};
+
 import MovieSearchBar from "./components/search";
 import { MovieHomepageDataFetcher } from "./components/requestsHandler";
 import PreFetchMovieInfo from "./components/cacher";
@@ -34,7 +39,7 @@ export default async function MovieHomepage() {
 								className="mx-1 flex flex-col items-center"
 							>
 								<Card
-									className="overflow-visible"
+									className="overflow-visible bg-stone-800"
 									isPressable
 									isHoverable
 									shadow="sm"
@@ -44,7 +49,7 @@ export default async function MovieHomepage() {
 											alt="Movie Poster"
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
 											width={270}
-											height={180}
+											height={170}
 											className="h-64 overflow-hidden rounded-md"
 											priority
 										/>

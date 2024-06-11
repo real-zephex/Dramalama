@@ -1,10 +1,7 @@
 import "./globals.css";
 import Header from "./components/header/header";
-import Footer from "./components/footer/page";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-// import { NextUIProvider } from "@nextui-org/react";
-// import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { lexend } from "../../config/fonts";
 
 import { Providers } from "./themeManager";

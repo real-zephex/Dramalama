@@ -1,4 +1,3 @@
-// app/providers.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -13,7 +12,6 @@ export function Providers({ children }) {
 	}, []);
 
 	if (!isMounted) {
-		// Render nothing on the server, ensuring HTML consistency
 		return null;
 	}
 

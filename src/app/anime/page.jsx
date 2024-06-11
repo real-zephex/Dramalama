@@ -2,6 +2,11 @@ import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
 import Image from "next/image";
 import styles from "../page.module.css";
 
+export const metadata = {
+	title: "Dramalama Anime",
+	description: "Anime page for Dramalama",
+};
+
 import { top_airing, recent, popular } from "./data-fetch/request";
 import SearchBar from "./components/search";
 import { preFetchAnimeInfo } from "./components/cacher";
@@ -19,7 +24,7 @@ const AnimeHomepage = async () => {
 
 	const header = (title) => (
 		<>
-			<p className={`my-1 text-2xl font-bold text-sky-400 antialiased`}>
+			<p className={`my-1 text-3xl font-bold text-sky-400 antialiased`}>
 				{title}
 			</p>
 		</>
@@ -34,9 +39,10 @@ const AnimeHomepage = async () => {
 						href={`/anime/${item.id}`}
 						aria-label="anime redirection links"
 						className="mx-1 flex flex-col items-center"
+						title={item.title}
 					>
 						<Card
-							className="overflow-visible"
+							className="overflow-visible bg-stone-800"
 							isPressable
 							isHoverable
 							shadow="sm"

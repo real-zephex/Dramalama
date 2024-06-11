@@ -1,6 +1,11 @@
 import { Card, CardHeader, CardBody, Link } from "@nextui-org/react";
 import Image from "next/image";
 
+export const metadata = {
+	title: "Dramalama K-Drama",
+	description: "k-drama page for Dramalama",
+};
+
 import { DramaDataFetcher } from "./components/requests";
 import styles from "../page.module.css";
 import { Searchbar } from "./components/searchBar";
@@ -35,7 +40,7 @@ const KdramaHomepage = async () => {
 						className="mx-1 flex flex-col items-center"
 					>
 						<Card
-							className="overflow-visible"
+							className="overflow-visible bg-stone-800"
 							isPressable
 							isHoverable
 							shadow="sm"
@@ -45,8 +50,8 @@ const KdramaHomepage = async () => {
 									alt="Kdrama Poster"
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={270}
-									height={160}
-									className="h-60 overflow-hidden rounded-md"
+									height={170}
+									className="h-64 overflow-hidden rounded-md"
 									priority
 								/>
 							</CardBody>

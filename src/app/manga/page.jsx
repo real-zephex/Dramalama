@@ -1,5 +1,10 @@
 import MangaSearchBox from "./components/inputContainer";
 
+export const metadata = {
+	title: "Dramalama Manga",
+	description: "Manga/Manhwa page for Dramalama",
+};
+
 const MangaHomePage = async () => {
 	return (
 		<main className="flex h-[90dvh] w-full flex-col items-center">

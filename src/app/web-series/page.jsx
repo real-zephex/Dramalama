@@ -2,6 +2,11 @@ import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+	title: "Dramalama TV-Shows",
+	description: "Web series page for Dramalama",
+};
+
 import {
 	TOP_SHOWS,
 	TRENDING_SHOWS,
@@ -39,7 +44,7 @@ const SeriesHomepage = async () => {
 								className="mx-1 flex flex-col items-center"
 							>
 								<Card
-									className="overflow-visible"
+									className="overflow-visible bg-stone-800"
 									isPressable
 									isHoverable
 									shadow="sm"
@@ -49,7 +54,7 @@ const SeriesHomepage = async () => {
 											alt="Movie Poster"
 											src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${item.poster_path}`}
 											width={270}
-											height={180}
+											height={170}
 											className="h-64 overflow-hidden rounded-md"
 											priority
 										/>
