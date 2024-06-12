@@ -23,7 +23,7 @@ const MangaDescriptionTabs = ({ data }) => {
 
 	async function get_pages(id) {
 		setPages(<p className="text-center">Loading...</p>);
-		setUrl(`https://manga-downloader-api.vercel.app/${id}`);
+		setUrl(`https://mangadex-downloader.onrender.com/${id}`);
 		const data = await MangaChapters(id);
 		setPages(data);
 	}
