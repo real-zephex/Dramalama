@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ThemeSwitcher } from "../themeSwitcher";
 import {
@@ -6,10 +8,17 @@ import {
 	NavbarContent,
 	NavbarItem,
 	Button,
+	Dropdown,
+	DropdownTrigger,
+	DropdownMenu,
+	DropdownSection,
+	DropdownItem,
 } from "@nextui-org/react";
+import { useState } from "react";
 
-export default async function Header() {
-	const sections = ["anime", "kdrama", "manga", "movies", "web-series"];
+export default function Header() {
+	const sections = ["anime", "kdrama", "movies", "web-series", "manga"];
+	const [currentPage, setCurrentPage] = useState("Homepage");
 
 	return (
 		<Navbar isBordered>
@@ -19,10 +28,39 @@ export default async function Header() {
 				</p>
 			</NavbarBrand>
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+				<Dropdown>
+					<DropdownTrigger>
+						<Button variant="bordered" size="sm">
+							{currentPage}
+						</Button>
+					</DropdownTrigger>
+					<DropdownMenu aria-label="Static Actions">
+						{sections &&
+							sections.slice(0, 4).map((item, index) => (
+								<DropdownItem
+									as={Link}
+									href={`/${item}`}
+									key={index}
+									onClick={() => setCurrentPage(item)}
+								>
+									{item}
+								</DropdownItem>
+							))}
+					</DropdownMenu>
+				</Dropdown>
 				{sections &&
-					sections.map((item, index) => (
+					sections.slice(-1).map((item, index) => (
 						<NavbarItem key={index}>
-							<Link href={`/${item}`}>{item}</Link>
+							<Button
+								as={Link}
+								href={`/${item}`}
+								size="sm"
+								color="success"
+								variant="faded"
+								onClick={() => setCurrentPage(item)}
+							>
+								{item}
+							</Button>
 						</NavbarItem>
 					))}
 			</NavbarContent>

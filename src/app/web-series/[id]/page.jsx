@@ -16,7 +16,7 @@ const SeriesInfoPage = async ({ params }) => {
 			<div className="flex items-center">
 				<Image
 					isBlurred
-					shadow="md"
+					shadow="sm"
 					src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.poster_path}`}
 					width={180}
 					height={300}
