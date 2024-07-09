@@ -52,9 +52,9 @@ To set up the project locally, follow these steps:
 4. Open your browser and navigate to `http://localhost:3000` to see the application in action.
 
 #### Demo
-Live demo is available at [Dramalama - Vercel](https://dramalama.vercel.app) and [Dramalama - Netlify](https://dramalama.netlify.app)
+Live demo is available at [Dramalama - Netlify](https://dramalama.netlify.app)
 
-*Using the netlify one is recommended*
+NOTE: Dramalama is only hosted on netlify unless stated otherwise. Someone hosted this site on vercel with the same url and everything, so use it at your own risk!
 
 ## License
 This project is licensed under the MIT License.
