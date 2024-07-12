@@ -14,7 +14,7 @@
     "@vidstack/react": "^1.10.9",
     "child_process": "^1.0.2",
     "framer-motion": "^11.2.12",
-    "media-icons": "^1.1.2",
+    "media-icons": "^1.1.5",
     "next": "^14.2.3",
     "next-themes": "^0.3.0",
     "node-hls-downloader": "^2.2.0",
