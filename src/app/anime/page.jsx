@@ -38,7 +38,7 @@ const AnimeHomepage = async () => {
 						key={index}
 						href={`/anime/${item.id}`}
 						aria-label="anime redirection links"
-						className="mx-1 flex flex-col items-center"
+						className="flex flex-col items-center"
 						title={item.title}
 					>
 						<Card
@@ -53,7 +53,7 @@ const AnimeHomepage = async () => {
 									src={`https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=${item.image}`}
 									width={270}
 									height={170}
-									className="h-64 overflow-hidden rounded-md"
+									className="h-64 overflow-hidden rounded-md w-auto"
 									priority
 								/>
 							</CardBody>
@@ -76,10 +76,10 @@ const AnimeHomepage = async () => {
 				<SearchBar />
 			</div>
 
-			<div className="mx-2">
+			<div className="p-1">
 				{header("Popular Animes")}
 				<div
-					className={`flex overflow-auto pb-3 ${styles.ScrollBarAdjuster} `}
+					className={`flex overflow-auto pb-3 2xl:grid 2xl:grid-cols-9 xl:grid xl:grid-cols-6 xl:overflow-none lg:grid lg:grid-cols-5 gap-2 ${styles.ScrollBarAdjuster}`}
 				>
 					{format(popular_data)}
 				</div>
@@ -88,7 +88,7 @@ const AnimeHomepage = async () => {
 			<div className="mx-2">
 				{header("Recent Animes")}
 				<div
-					className={`flex overflow-auto pb-3 ${styles.ScrollBarAdjuster}`}
+					className={`flex overflow-auto pb-3 2xl:grid 2xl:grid-cols-9 xl:grid xl:grid-cols-6 xl:overflow-none lg:grid lg:grid-cols-5 gap-2 ${styles.ScrollBarAdjuster}`}
 				>
 					{format(recent_data)}
 				</div>
@@ -96,7 +96,7 @@ const AnimeHomepage = async () => {
 			<div className="mx-2">
 				{header("Top Airing Animes")}
 				<div
-					className={`flex overflow-auto pb-3 ${styles.ScrollBarAdjuster}`}
+					className={`flex overflow-auto pb-3 2xl:grid 2xl:grid-cols-9 xl:grid xl:grid-cols-6 xl:overflow-none lg:grid lg:grid-cols-5 gap-2 ${styles.ScrollBarAdjuster}`}
 				>
 					{format(airing_data)}
 				</div>
