@@ -14,11 +14,19 @@ import {
 	DropdownSection,
 	DropdownItem,
 } from "@nextui-org/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-	const sections = ["anime", "kdrama", "movies", "web-series", "manga"];
-	const [currentPage, setCurrentPage] = useState("Homepage");
+	const path = usePathname();
+	const sections = ["anime", "kdrama", "movies", "web-series"];
+	const [currentPage, setCurrentPage] = useState("");
+
+	useEffect(() => {
+		setCurrentPage(
+			path.split("/")[1] !== "" ? path.split("/")[1] : "Homepage"
+		);
+	}, [path]);
 
 	return (
 		<Navbar isBordered>
@@ -36,7 +44,7 @@ export default function Header() {
 					</DropdownTrigger>
 					<DropdownMenu aria-label="Static Actions">
 						{sections &&
-							sections.slice(0, 4).map((item, index) => (
+							sections.map((item, index) => (
 								<DropdownItem
 									as={Link}
 									href={`/${item}`}
@@ -48,21 +56,18 @@ export default function Header() {
 							))}
 					</DropdownMenu>
 				</Dropdown>
-				{sections &&
-					sections.slice(-1).map((item, index) => (
-						<NavbarItem key={index}>
-							<Button
-								as={Link}
-								href={`/${item}`}
-								size="sm"
-								color="success"
-								variant="faded"
-								onClick={() => setCurrentPage(item)}
-							>
-								{item}
-							</Button>
-						</NavbarItem>
-					))}
+				<NavbarItem>
+					<Button
+						as={Link}
+						href={"https://mangathingy.netlify.app"}
+						size="sm"
+						color="success"
+						variant="faded"
+						target="_blank"
+					>
+						Manga
+					</Button>
+				</NavbarItem>
 			</NavbarContent>
 			<NavbarContent justify="end">
 				<NavbarItem>
