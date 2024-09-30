@@ -1,6 +1,8 @@
 # Dramalama
 
-This project is in the middle of a re-haul right now. Code will be made public soon, stay tuned!
+Checkout the main branch - https://github.com/real-zephex/Dramalama/tree/main.
+
+Updated code!
 
 ## Introduction
 Dramalama is a web application designed to provide detailed information about various entertainment media including Anime, K-Dramas, Movies, and Web Series. The application fetches data from various sources and displays it in an organized and user-friendly manner.
