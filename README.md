@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Well, you need to host a lot of stuff to get this project up and running on your system.
 
-## Getting Started
+These includes:
+1. Aniwatch to Gogo Mapper - https://github.com/real-zephex/gogoToAniwatchFinal
+2. Aniwatch API - https://github.com/ghoshRitesh12/aniwatch-api
+3. Consumet API - https://github.com/consumet/api.consumet.org
+4. Dramacool Scraper - https://github.com/real-zephex/dramacool-scraper
+5. M3U8 Proxy (for playing streams) - https://github.com/Gratenes/m3u8CloudflareWorkerProxy
+6. TMDB API KEY - https://www.themoviedb.org/
+7. CORS Proxy (for loading images) - https://github.com/real-zephex/Good-Proxy
 
-First, run the development server:
+Create a `.env` or use your hosting settings section to define the following environmnetal variable
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+ANIWATCH_GOGO_MAPPER
+ANIWATCH_URL
+CONSUMET_API_URL
+DRAMACOOL_SCRAPER
+M3U8_PROXY
+NEXT_PUBLIC_M3U8_PROXY
+NEXT_PUBLIC_PROXY
+NEXT_PUBLIC_PROXY_2
+PROXY
+TMDB_API_KEY
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For the proxies, you need to include the `/?url=` parameter in the end.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Basically, you will have a very hard time hosting this site on your own. I am not actively developing it as I don't own a laptop or a personal machine (I am pushing these changes from a public computer) so I cannot gurantee any support of any kind. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for your understanding
