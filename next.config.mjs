@@ -19,6 +19,7 @@ const nextConfig = {
     remotePatterns: remotePatterns.map((hostname) => ({
       hostname,
     })),
+    unoptimized: true,
   },
   logging: {
     fetches: {
