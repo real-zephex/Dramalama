@@ -19,7 +19,7 @@
     "next-themes": "^0.3.0",
     "node-hls-downloader": "^2.2.0",
     "react-icons": "^5.0.1",
-    "react-player": "^2.15.1",
+    "react-player": "^2.16.0",
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
