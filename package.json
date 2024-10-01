@@ -11,7 +11,7 @@
   "dependencies": {
     "@ffmpeg/ffmpeg": "^0.12.10",
     "@nextui-org/react": "^2.3.6",
-    "@vidstack/react": "^1.10.9",
+    "@vidstack/react": "^1.12.11",
     "child_process": "^1.0.2",
     "framer-motion": "^11.2.12",
     "media-icons": "^1.1.2",
