@@ -15,7 +15,7 @@
     "child_process": "^1.0.2",
     "framer-motion": "^11.2.12",
     "media-icons": "^1.1.2",
-    "next": "^14.2.3",
+    "next": "^14.2.14",
     "next-themes": "^0.3.0",
     "node-hls-downloader": "^2.2.0",
     "react-icons": "^5.0.1",
