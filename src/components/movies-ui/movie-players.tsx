@@ -7,7 +7,7 @@ const MoviePlayer = async ({ id }: { id: string }) => {
 
   const vidLinksArray = [
     // { title: "vidsrc.to", link: `https://vidsrc.to/embed/movie/${id}` },
-    { title: "embedded", link: `https://vidsrc.icu/embed/movie/${id}` },
+    { title: "embedded", link: `https://vidsrc.pro/embed/movie/${id}` },
     // {
     //   title: "multiembed",
     //   link: `https://multiembed.mov/directstream.php?video_id=${id}&tmdb=1`,
