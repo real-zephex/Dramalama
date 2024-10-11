@@ -39,7 +39,7 @@ const SeriesPlayer = async ({ params }: { params: { slugs: string[] } }) => {
           />
           <div role="tabpanel" className="tab-content p-2">
             <iframe
-              src={`https://vidsrc.icu/embed/tv/${series_id}/${season_number}/${episode_number}`}
+              src={`https://vidsrc.pro/embed/tv/${series_id}/${season_number}/${episode_number}`}
               allowFullScreen
               height={720}
               className="w-full h-[240px] md:h-[480px] lg:h-[720px] rounded-lg"
