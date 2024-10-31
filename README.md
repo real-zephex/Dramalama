@@ -1,6 +1,6 @@
 Well, you need to host a lot of stuff to get this project up and running on your system.
 
-These includes:
+It includes:
 1. Aniwatch to Gogo Mapper - https://github.com/real-zephex/gogoToAniwatchFinal
 2. Aniwatch API - https://github.com/ghoshRitesh12/aniwatch-api
 3. Consumet API - https://github.com/consumet/api.consumet.org
@@ -26,6 +26,6 @@ TMDB_API_KEY
 
 For the proxies, you need to include the `/?url=` parameter in the end.
 
-Basically, you will have a very hard time hosting this site on your own. I am not actively developing it as I don't own a laptop or a personal machine (I am pushing these changes from a public computer) so I cannot gurantee any support of any kind. 
+Basically, you will have a very hard time hosting this site on your own. 
 
 Thank you for your understanding
